@@ -1,2 +1,2 @@
-# sc3_microtonal
-Microtonal Algorithmic Music and Library for Supercollider3 (smrg-lm/sc3) in Python
+# AlgoMeson (temporary name, i hope)
+Algorithmic Music Composition Assistant, with a leaning towards (xen)tonality, in Python and Supercollider
