@@ -1,5 +1,5 @@
 <div align="center">
-  <img src="https://github.com/gexahedron/domblar/blob/master/assets/domblar0.png?raw=true">
+  <img src="https://github.com/gexahedron/domblar/blob/main/assets/domblar0.png?raw=true">
 </div>
 
 # Domblar
