@@ -1,7 +1,16 @@
 import math
+from typing import Tuple
 
 
-def freq2midi(freq):
+def freq2midi(freq: float) -> Tuple[int, int]:
+    """TODO:_summary_
+
+    Args:
+        freq (float): _description_
+
+    Returns:
+        Tuple[int, int]: _description_
+    """
     # this value works both for Dexed in non-MPE mode,
     # and for Plogue chipsynths in MPE mode
     pitch_bend_sensitivity = 48
