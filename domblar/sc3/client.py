@@ -1,5 +1,5 @@
 import pyOSC3
-from domblar.music_math import freq2midi
+from domblar.music_math import freq_to_midi
 
 
 class SC3Client:
@@ -38,6 +38,6 @@ class SC3Client:
         # if freq is not None:
         #     data += ['freq', freq]
         data = [synth_idx]
-        note, bend = freq2midi(freq)
+        note, bend = freq_to_midi(freq)
         data.extend([note, bend, dur, channel])
         self.send_msg('/tracker', data, timetag=timetag)
