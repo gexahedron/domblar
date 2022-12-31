@@ -16,7 +16,7 @@ s.waitForBoot({
 )
 
 // TODO: create a separate function
-// Server.killAll;
+Server.killAll;
 
 // TODO: create a separate function
 (
