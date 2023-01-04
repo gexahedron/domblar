@@ -1,7 +1,6 @@
 from typing import Tuple
 
 import math
-import numbers
 
 
 WESTERN_EDO = 12
@@ -23,18 +22,6 @@ def cents_from_hz(hz, ref_hz):
 
 def ratio_to_cents(m, n):
     return OCTAVE_IN_CENTS * math.log2(float(m) / n)
-
-
-# TODO: move to edo_math?
-def get_freq(note, scale, edo):
-    freq = None
-    if isinstance(note, numbers.Number):
-        in_oct = note % len(scale)
-        in_oct = scale[in_oct] / edo
-        oct_idx = note // len(scale)
-        note_in_linear = in_oct + oct_idx
-        freq = C4_FREQ * (2 ** note_in_linear)
-    return freq
 
 
 def freq_to_midi(freq: float) -> Tuple[int, int]:
