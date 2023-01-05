@@ -49,9 +49,13 @@ def play(chords, scale, edo, client, dur=0.25, sus=None, delay=None, synth_idx=0
             if sus:
                 send_note_dur = sus
             timetag = time.time()
+            # TODO: MPE with channels
+            # client.send_note(
+            #     synth_idx,
+            #     freq=freq, dur=send_note_dur, timetag=timetag, channel=note_idx)
             client.send_note(
-                synth_idx,
-                freq=freq, dur=send_note_dur, timetag=timetag, channel=note_idx)
+                synth_idx[note_idx],
+                freq=freq, dur=send_note_dur, timetag=timetag, channel=0)
             if delay:
                 time.sleep(delay)
         time.sleep(dur)

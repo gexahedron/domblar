@@ -20,7 +20,7 @@ Server.killAll;
 
 // TODO: create a separate function
 (
-~synth_count = 3;
+~synth_count = 4;
 a = Array.fill(~synth_count , nil); // synths
 c = Array.fill(~synth_count , nil); // controllers
 
@@ -34,7 +34,7 @@ c = Array.fill(~synth_count , nil); // controllers
 // TODO: create a separate function
 // reset MPE and Mono mode for Dexed
 (
-3.do { arg i;
+4.do { arg i;
 	c[i].loadPreset("dexed_preset");
 };
 )
