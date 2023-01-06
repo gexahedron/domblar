@@ -36,6 +36,7 @@ def iterate_voice_leadings(chord, transformations, permutation, sequential_units
     res = [chord]
     for idx in range(sequential_units - 1):
         chord = res[-1]
+        # TODO: reuse transpose() here
         new_chord = [chord[i] + transformations[i] for i in range(len(chord))]
         new_chord = [new_chord[i] for i in permutation]
         res.append(new_chord)
