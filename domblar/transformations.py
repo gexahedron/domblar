@@ -9,6 +9,10 @@ def transpose(n, m):
     return n
 
 
+def shift(voice, s):
+    return voice[s:] + voice[:s]
+
+
 def iterate_voice_leadings(chord, transformations, permutation, sequential_units):
     # Dmitri Tymoczko iterable voice-leading, repetitions
     # https://youtu.be/n0V6FI2eB68?t=3397

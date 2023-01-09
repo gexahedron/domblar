@@ -41,7 +41,9 @@ def play_voices(voices, timbres, scale, edo, client, dur=0.25, sus=None):
 
 def play(chords, scale, edo, client, dur=0.25, sus=None, delay=None, synth_idx=0):
     for chord_idx, chord in enumerate(chords):
-        if type(chord) is not list:
+        if type(chord) is tuple:
+            chord = list(chord)
+        elif type(chord) is not list:
             chord = [chord]
         for note_idx, note in enumerate(chord):
             freq = get_freq(note, scale, edo)

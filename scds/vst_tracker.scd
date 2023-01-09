@@ -43,14 +43,12 @@ c = Array.fill(~synth_count , nil); // controllers
 c[0].editor;
 
 // TODO: create a separate function
-c[0].getn(0, -1, action: {arg v; Post << v});
-
-// TODO: create a separate function
 // reset MPE and Mono mode for Dexed
 c[0].savePreset("dexed_instrument");
+// TODO: create a separate function
 c[0].loadPreset("dexed_instrument");
-
-
+// TODO: create a separate function
+c[0].getn(0, -1, action: {arg v; Post << v});
 
 
 // maybe TODO: replace Pbinds with midi commands
