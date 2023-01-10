@@ -40,4 +40,4 @@ class SC3Client:
         data = [synth_idx]
         note, bend = freq_to_midi(freq)
         data.extend([note, bend, dur, channel])
-        self.send_msg('/tracker', data, timetag=timetag)
+        self.send_msg('/play', data, timetag=timetag)

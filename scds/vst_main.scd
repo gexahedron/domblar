@@ -15,43 +15,20 @@ s.waitForBoot({
 });
 )
 
-// TODO: create a separate function
-Server.killAll;
 
-// TODO: create a separate function
-(
-~synth_count = 4;
-a = Array.fill(~synth_count , nil); // synths
-c = Array.fill(~synth_count , nil); // controllers
-
-~synth_count.do { arg i;
-	a[i] = Synth(\vst_plugin);
-	c[i] = VSTPluginController(a[i]);
-	c[i].open("Dexed.vst3");
-};
-)
-
-// TODO: create a separate function
-// reset MPE and Mono mode for Dexed
-(
-4.do { arg i;
-	c[i].loadPreset("dexed_preset");
-};
-)
-
-// TODO: create a separate function
-c[0].editor;
-
-// TODO: create a separate function
-// reset MPE and Mono mode for Dexed
-c[0].savePreset("dexed_instrument");
-// TODO: create a separate function
-c[0].loadPreset("dexed_instrument");
-// TODO: create a separate function
-c[0].getn(0, -1, action: {arg v; Post << v});
+Server.killAll; // also callable from Python
 
 
-// maybe TODO: replace Pbinds with midi commands
+
+
+
+
+
+
+//// some test code, not ready for production ////
+
+// possible TODO: replace Pbinds with midi commands
+// for more fine-grained sustain/duration control
 c[0].midi.noteOn(3, 60, 100);
 c[0].setn(0, [0.9]);
 (
