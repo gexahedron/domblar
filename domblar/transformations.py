@@ -13,6 +13,19 @@ def shift(voice, s):
     return voice[s:] + voice[:s]
 
 
+def split(voice):
+    voice1 = []
+    voice2 = []
+    for i, n in enumerate(voice):
+        n1 = '.'
+        n2 = n
+        if i % 2:
+            n1, n2 = n2, n1
+        voice1.append(n1)
+        voice2.append(n2)
+    return list(zip(voice1, voice2))
+
+
 def iterate_voice_leadings(chord, transformations, permutation, sequential_units):
     # Dmitri Tymoczko iterable voice-leading, repetitions
     # https://youtu.be/n0V6FI2eB68?t=3397
