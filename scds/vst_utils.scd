@@ -37,7 +37,7 @@ SynthDef(\vst_plugin, {|out, gate = 1, mix = 0.25, room = 0.15, damp = 0.5|
 ~save_preset_func = OSCFunc({ |msg, time, addr, port|
 	var synth_idx = msg[1];
 	var preset = msg[2];
-	~controllers[synth_idx].loadPreset(preset);
+	~controllers[synth_idx].savePreset(preset);
 }, "/save_preset");
 
 // useful for saving synth parameters

@@ -27,16 +27,21 @@ Server.killAll; // also callable from Python
 
 //// some test code, not ready for production ////
 
+~controllers[0].editor;
+~controllers[0].savePreset('dexed_instrument');
+~controllers[0].loadPreset('dexed_instrument');
+~controllers[0].getn(0, -1, action: {arg v; Post << v});
+
 // possible TODO: replace Pbinds with midi commands
 // for more fine-grained sustain/duration control
-c[0].midi.noteOn(3, 60, 100);
-c[0].setn(0, [0.9]);
+~controllers[0].midi.noteOn(3, 60, 100);
+~controllers[0].setn(0, [0.9]);
 (
-c[0].midi.noteOff(3, 60, 100);
-c[0].midi.noteOn(3, 61, 100);
+~controllers[0].midi.noteOff(3, 60, 100);
+~controllers[0].midi.noteOn(3, 61, 100);
 )
-c[0].midi.noteOff(3, 60, 100);
-c[0].midi.noteOff(3, 61, 100);
+~controllers[0].midi.noteOff(3, 60, 100);
+~controllers[0].midi.noteOff(3, 61, 100);
 
 (
 s.sendBundle(s.latency, c[0].midi.noteOn(0, 60, 100));
