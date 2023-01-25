@@ -41,3 +41,6 @@ class SC3Client:
         note, bend = freq_to_midi(freq)
         data.extend([note, bend, dur, channel])
         self.send_msg('/play', data, timetag=timetag)
+
+    def stop_server(self):
+        self.send_msg('/stop_server', [])

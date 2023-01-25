@@ -1,11 +1,11 @@
 import time
 
-def setup_instruments(client, count, vst_name, preset_name):
-    data = [count] + [vst_name] * count
+def setup_instruments(client, instrument_count, vst_name, preset_name):
+    data = [instrument_count] + [vst_name] * instrument_count
     client.send_msg('/vst_setup', data)
     time.sleep(5.0)
 
-    for i in range(count):
+    for i in range(instrument_count):
         data = [i, preset_name]
         client.send_msg('/load_preset', data)
 
