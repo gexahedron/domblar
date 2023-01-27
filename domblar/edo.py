@@ -4,6 +4,17 @@ import numbers
 from domblar.music_math import C4_FREQ
 
 
+class Scale():
+    def __init__(self, notes, edo) -> None:
+        self.notes = notes
+        self.edo = edo
+
+    def __getitem__(self, note_idx):
+        in_oct = self.notes[note_idx % len(self.notes)]
+        oct_idx = note_idx // len(self.notes)
+        return in_oct + oct_idx * self.edo
+
+
 def get_freq(note, scale, edo):
     freq = None
     if isinstance(note, numbers.Number):

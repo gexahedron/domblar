@@ -16,31 +16,31 @@ s.waitForBoot({
 )
 
 
-Server.killAll; // also callable from Python
-
-
-
-
+Server.killAll; // also callable from Python with d.stop_server()
 
 
 
 
 //// some test code, not ready for production ////
 
+~controllers[0].midi.noteOff(0, 1+60, 100);
+~controllers[1].midi.noteOff(0, 9+60, 100);
+~controllers[2].midi.noteOff(0, 4+12+60, 100);
+
 ~controllers[0].editor;
 ~controllers[0].savePreset('dexed_instrument');
 ~controllers[0].loadPreset('dexed_instrument');
 ~controllers[0].getn(0, -1, action: {arg v; Post << v});
 
-// possible TODO: replace Pbinds with midi commands
-// for more fine-grained sustain/duration control
-~controllers[0].midi.noteOn(3, 60, 100);
+
+~controllers[0].midi.noteOn(3, 60, 127);
+~controllers[0].midi.noteOff(3, 60);
+
 ~controllers[0].setn(0, [0.9]);
 (
 ~controllers[0].midi.noteOff(3, 60, 100);
 ~controllers[0].midi.noteOn(3, 61, 100);
 )
-~controllers[0].midi.noteOff(3, 60, 100);
 ~controllers[0].midi.noteOff(3, 61, 100);
 
 (

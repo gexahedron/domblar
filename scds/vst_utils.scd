@@ -1,10 +1,16 @@
 (
 //// synthdefs ////
-SynthDef(\vst_plugin, {|out, gate = 1, mix = 0.25, room = 0.15, damp = 0.5|
-	var sig = VSTPlugin.ar(numOut: 2);
+SynthDef(\vst_plugin, {|out, gate = 1, mix = 0.25, room = 0.15, damp = 0.5, dur = 1.0, amp = 1.0|
+	var env = Env.adsr(
+		attackTime: 0.000,
+		decayTime: 0.0,
+		sustainLevel: dur * 0.9,
+		releaseTime: dur * 0.1);
+    var gen = EnvGen.kr(env, gate, doneAction: Done.freeSelf);
+	var sig = VSTPlugin.ar(numOut: 2) * amp;
 	// var sig = VSTPlugin.ar(Silent.ar, numOut: 2);
 	sig = FreeVerb.ar(sig, mix, room, damp);
-	Out.ar(out, sig);
+	Out.ar(out, sig * gen);
 }).add;
 
 
@@ -44,8 +50,8 @@ SynthDef(\vst_plugin, {|out, gate = 1, mix = 0.25, room = 0.15, damp = 0.5|
 ~print_params_func.free;
 ~print_params_func = OSCFunc({ |msg, time, addr, port|
 	var synth_idx = msg[1];
-	var preset = msg[2];
 	~controllers[synth_idx].getn(0, -1, action: {arg v; Post << v});
+	"".postln;
 }, "/print_params");
 
 // useful for tinkering with synth parameters
@@ -69,29 +75,43 @@ SynthDef(\vst_plugin, {|out, gate = 1, mix = 0.25, room = 0.15, damp = 0.5|
 	var note = msg[2];
 	var bend = msg[3];
 	var dur = msg[4];
-	var chan = msg[5];
-	// TODO: add amp
+	var amp = msg[5];
+	var chan = msg[6];
 
-	SystemClock.sched(time - Main.elapsedTime, {
+	/*SystemClock.sched(time - Main.elapsedTime, {
 		p = Pbind(
 			\type, \vst_midi,
 			\vst, ~controllers[synth_idx],
 			\midinote, Pseq([note]),
 			\chan, chan,
 			\dur, Pseq([dur]),
-			\amp, 1.0
+			\amp, amp / 127
 		);
 
 		q = Pbind(
 			\type, \vst_midi,
 			\vst, ~controllers[synth_idx],
 			\midicmd, \bend,
-			\val, Pseq([bend]), // def 8192, min 0, max 16383
+			\val, Pseq([bend]),
 			\chan, chan,
 			\dur, Pseq([dur]),
 		);
 
 		r = Ppar([q, p]).play;
+	});*/
+
+	SystemClock.sched(time - Main.elapsedTime, {
+		s.bind {
+			~controllers[synth_idx].midi.noteOn(chan, note, 127);
+			~controllers[synth_idx].midi.bend(chan, bend);
+			~synths[synth_idx].set(\dur, dur);
+			~synths[synth_idx].set(\amp, amp / 127);
+		};
+	});
+	SystemClock.sched(time + dur - Main.elapsedTime, {
+		s.bind {
+			~controllers[synth_idx].midi.noteOff(chan, note);
+		};
 	});
 }, "/play");
 

@@ -7,7 +7,7 @@ class SC3Client:
         self.client = pyOSC3.OSCClient()
         self.client.connect((ip, port))
 
-    def send_msg(self, address, data, timetag=0):
+    def send_msg(self, address, data=[], timetag=0):
         """TODO: _summary_
 
         Args:
@@ -22,13 +22,14 @@ class SC3Client:
         bundle.append(msg)
         self.client.send(bundle)
 
-    def send_note(self, synth_idx, freq=None, dur=0.25, timetag=0, channel=0):
-        """TODO:_summary_
+    def send_note(self, synth_idx, freq=None, dur=0.25, amp=1.0, timetag=0, channel=0):
+        """TODO: _summary_
 
         Args:
             synth_idx (_type_): _description_
             freq (_type_, optional): _description_. Defaults to None.
             dur (float, optional): _description_. Defaults to 0.25.
+            amp (float, optional): _description_. Defaults to 1.0.
             timetag (int, optional): _description_. Defaults to 0.
             channel (int, optional): _description_. Defaults to 0.
         """
@@ -39,8 +40,20 @@ class SC3Client:
         #     data += ['freq', freq]
         data = [synth_idx]
         note, bend = freq_to_midi(freq)
-        data.extend([note, bend, dur, channel])
+        data.extend([note, bend, dur, int(amp * 127), channel])
         self.send_msg('/play', data, timetag=timetag)
 
     def stop_server(self):
         self.send_msg('/stop_server', [])
+
+    def open_editor(self, synth_idx):
+        self.send_msg('/open_editor', data=[synth_idx])
+
+    def save_preset(self, synth_idx, preset_name):
+        self.send_msg('/save_preset', data=[synth_idx, preset_name])
+
+    def load_preset(self, synth_idx, preset_name):
+        self.send_msg('/load_preset', data=[synth_idx, preset_name])
+
+    def print_params(self, synth_idx):
+        self.send_msg('/print_params', data=[synth_idx])

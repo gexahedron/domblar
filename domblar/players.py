@@ -1,6 +1,7 @@
 import time
 
 from domblar.edo import triad, get_freq
+from domblar.sc3.client import SC3Client
 
 
 def play_voice(notes, timbre, scale, edo, client, dur=0.25, sus=None, delay=None):
@@ -39,7 +40,14 @@ def play_voices(voices, timbres, scale, edo, client, dur=0.25, sus=None):
         time.sleep(dur)
 
 
-def play(chords, scale, edo, client, dur=0.25, sus=None, delay=None, synth_idx=0):
+def play(chords, scale, edo, client: SC3Client,
+         dur=0.25, sus=None, delay=None, synth_idx=[0], rep=1,
+         muls=[], amps=[]):
+    if chords and muls:
+        assert len(chords) == len(muls)
+    if chords and amps:
+        assert len(chords) == len(amps)
+    last_reps = [0] * len(synth_idx)
     for chord_idx, chord in enumerate(chords):
         if type(chord) is tuple:
             chord = list(chord)
@@ -50,17 +58,27 @@ def play(chords, scale, edo, client, dur=0.25, sus=None, delay=None, synth_idx=0
             send_note_dur = dur
             if sus:
                 send_note_dur = sus
+            if muls:
+                send_note_dur *= muls[chord_idx]
+            amp = 1.0
+            if amps:
+                amp = amps[chord_idx]
             timetag = time.time()
             # TODO: MPE with channels
             # client.send_note(
             #     synth_idx,
             #     freq=freq, dur=send_note_dur, timetag=timetag, channel=note_idx)
             client.send_note(
-                synth_idx[note_idx],
-                freq=freq, dur=send_note_dur, timetag=timetag, channel=0)
+                synth_idx[note_idx] + last_reps[note_idx],
+                freq=freq, dur=send_note_dur, amp=amp,
+                timetag=timetag, channel=0)
+            last_reps[note_idx] = (last_reps[note_idx] + 1) % rep
             if delay:
                 time.sleep(delay)
-        time.sleep(dur)
+        sleep_dur = dur
+        if muls:
+            sleep_dur *= muls[chord_idx]
+        time.sleep(sleep_dur)
 
 
 def play_triads(sub_scale, degrees, dur, scale, edo, client):
