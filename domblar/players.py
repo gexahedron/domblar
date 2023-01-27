@@ -47,6 +47,10 @@ def play(chords, scale, edo, client: SC3Client,
         assert len(chords) == len(muls)
     if chords and amps:
         assert len(chords) == len(amps)
+    if type(rep) is list:
+        assert len(synth_idx) == len(rep)
+    else:
+        rep = [rep] * len(synth_idx)
     last_reps = [0] * len(synth_idx)
     for chord_idx, chord in enumerate(chords):
         if type(chord) is tuple:
@@ -72,7 +76,7 @@ def play(chords, scale, edo, client: SC3Client,
                 synth_idx[note_idx] + last_reps[note_idx],
                 freq=freq, dur=send_note_dur, amp=amp,
                 timetag=timetag, channel=0)
-            last_reps[note_idx] = (last_reps[note_idx] + 1) % rep
+            last_reps[note_idx] = (last_reps[note_idx] + 1) % rep[note_idx]
             if delay:
                 time.sleep(delay)
         sleep_dur = dur

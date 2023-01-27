@@ -40,7 +40,8 @@ class SC3Client:
         #     data += ['freq', freq]
         data = [synth_idx]
         note, bend = freq_to_midi(freq)
-        data.extend([note, bend, dur, int(amp * 127), channel])
+        state = 0  # 0 means a non-drone note with finite duration
+        data.extend([note, bend, dur, int(amp * 127), channel, state])
         self.send_msg('/play', data, timetag=timetag)
 
     def stop_server(self):

@@ -1,3 +1,5 @@
+import time
+
 from domblar.sc3.client import SC3Client
 from domblar.sc3.instruments import setup_instruments, assign_instrument
 from domblar.players import play
@@ -38,4 +40,8 @@ class Domblar:
         self.client.load_preset(synth_idx, self.tmp_preset_name)
 
     def print_params(self, synth_idx):
+        self.save_preset(synth_idx)
+        time.sleep(0.5)
+        self.load_preset(synth_idx)
+        time.sleep(0.5)
         self.client.print_params(synth_idx)
