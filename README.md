@@ -6,6 +6,10 @@
 
 Algorithmic Music Composition Assistant, with a leaning towards (xen)tonality, in Python and SuperCollider.
 
+# Music examples
+
+Check out the `https://github.com/gexahedron/domblar/blob/main/assets/recordings/` folder.
+
 # Setup:
 
 1. Install Dexed VST, version 0.9.7 (version 0.9.6 has problems with parameter automation) - [https://github.com/asb2m10/dexed/releases/tag/NIGHTLY](https://https://github.com/asb2m10/dexed/releases/tag/NIGHTLY)

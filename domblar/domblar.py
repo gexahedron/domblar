@@ -54,3 +54,9 @@ class Domblar:
         self.load_preset(synth_idx)
         time.sleep(0.5)
         self.client.print_params(synth_idx)
+
+    def rec(self):
+        self.client.rec()
+
+    def stop_rec(self):
+        self.client.stop_rec()

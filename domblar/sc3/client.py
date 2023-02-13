@@ -60,3 +60,9 @@ class SC3Client:
         # TODO: rename param?
         # i have clash in terminology (params here, and params in synth like amp or room)
         self.send_msg('/print_params', data=[synth_idx])
+
+    def rec(self):
+        self.send_msg('/record', [])
+
+    def stop_rec(self):
+        self.send_msg('/stop_recording', [])
