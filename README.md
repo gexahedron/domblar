@@ -16,4 +16,5 @@ Algorithmic Music Composition Assistant, with a leaning towards (xen)tonality, i
 
 ## Current restrictions/assumptions:
 
-* The EDO code at the moment assumes octave equivalence.
+* The EDO code at the moment assumes octave equivalence
+* code is tested in Python 3.8.10, on MacOS
