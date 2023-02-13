@@ -42,7 +42,7 @@ def play_voices(voices, timbres, scale, edo, client, dur=0.25, sus=None):
 
 def play(chords, scale, edo, client: SC3Client,
          dur=0.25, sus=None, delay=None, synth_idx=[0], rep=1,
-         muls=[], amps=[]):
+         muls=[], amps=[], voice_amps=[]):
     if chords and muls:
         assert len(chords) == len(muls)
     if chords and amps:
@@ -67,15 +67,13 @@ def play(chords, scale, edo, client: SC3Client,
             amp = 1.0
             if amps:
                 amp = amps[chord_idx]
+            if voice_amps:
+                amp *= voice_amps[note_idx]
             timetag = time.time()
-            # TODO: MPE with channels
-            # client.send_note(
-            #     synth_idx,
-            #     freq=freq, dur=send_note_dur, timetag=timetag, channel=note_idx)
             client.send_note(
                 synth_idx[note_idx] + last_reps[note_idx],
                 freq=freq, dur=send_note_dur, amp=amp,
-                timetag=timetag, channel=0)
+                timetag=timetag, channel=0) # TODO: for MPE with channels use channel=note_idx
             last_reps[note_idx] = (last_reps[note_idx] + 1) % rep[note_idx]
             if delay:
                 time.sleep(delay)
