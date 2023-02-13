@@ -8,7 +8,7 @@ Algorithmic Music Composition Assistant, with a leaning towards (xen)tonality, i
 
 # Music examples
 
-Check out the `https://github.com/gexahedron/domblar/blob/main/assets/recordings/` folder.
+Check out the [https://github.com/gexahedron/domblar/blob/main/assets/recordings/](https://github.com/gexahedron/domblar/blob/main/assets/recordings/) folder.
 
 # Setup:
 
