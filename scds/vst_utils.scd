@@ -69,6 +69,14 @@ SynthDef(\vst_plugin, {|out, gate = 1, mix = 0.25, room = 0.15, damp = 0.5, dur 
 	~controllers[synth_idx].setn(shift, params);
 }, "/set_instrument");
 
+~set_param.free;
+~set_param = OSCFunc({ |msg, time, addr, port|
+	var synth_idx = msg[1];
+	var param = msg[2];
+	var val = msg[3];
+	~synths[synth_idx].set(param, val / 127);
+}, "/set_param");
+
 ~play_func.free;
 ~play_func = OSCFunc({ |msg, time, addr, port|
 	var synth_idx = msg[1];
