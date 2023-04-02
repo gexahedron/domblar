@@ -1,7 +1,10 @@
 (
 //// synthdefs ////
-SynthDef(\vst_plugin, {|out, gate = 1, mix = 0.25, room = 0.15, damp = 0.5, dur = 1.0, amp = 1.0|
-	// TODO: is it used at all?
+SynthDef(\vst_plugin, {|
+	out, gate = 1,
+	mix = 0.25, room = 0.7, damp = 0.5,
+	dur = 1.0, amp = 1.0|
+	// FIXME: i think the envelope is useless atm
 	var env = Env.adsr(
 		attackTime: 0.0,
 		decayTime: 0.0,
@@ -19,6 +22,14 @@ SynthDef(\vst_plugin, {|out, gate = 1, mix = 0.25, room = 0.15, damp = 0.5, dur 
 ~vst_setup_func = OSCFunc({ |msg, time, addr, port|
 	var synth_count = msg[1];
 	var synth_names = msg[2..];
+
+	// cleaning stuff
+	~synth_count.do { arg i;
+		~synths[i].free;
+		~controllers[i].free;
+	};
+
+	~synth_count = synth_count;
 	~synths = Array.fill(synth_count, nil);
 	~controllers = Array.fill(synth_count, nil);
 
@@ -66,7 +77,11 @@ SynthDef(\vst_plugin, {|out, gate = 1, mix = 0.25, room = 0.15, damp = 0.5, dur 
 	var synth_idx = msg[1];
 	var shift = msg[2];
 	var params = msg[3..];
-	~controllers[synth_idx].setn(shift, params);
+	SystemClock.sched(time - Main.elapsedTime, {
+		s.bind {
+			 ~controllers[synth_idx].setn(shift, params);
+		};
+	});
 }, "/set_instrument");
 
 ~set_param.free;
@@ -110,6 +125,7 @@ SynthDef(\vst_plugin, {|out, gate = 1, mix = 0.25, room = 0.15, damp = 0.5, dur 
 		},
 		{}
 	);
+	// used for drones
 	if ( state == 2,
 		{
 			SystemClock.sched(time - Main.elapsedTime, {

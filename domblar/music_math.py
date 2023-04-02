@@ -20,8 +20,13 @@ def cents_from_hz(hz, ref_hz):
     return math.log2(hz / ref_hz) * OCTAVE_IN_CENTS
 
 
+# FIXME: rename
+def ratio_to_floats(m, n):
+    return math.log2(float(m) / n)
+
+
 def ratio_to_cents(m, n):
-    return OCTAVE_IN_CENTS * math.log2(float(m) / n)
+    return OCTAVE_IN_CENTS * ratio_to_floats(m, n)
 
 
 def freq_to_midi(freq: float) -> Tuple[int, int]:

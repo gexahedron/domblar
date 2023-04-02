@@ -9,21 +9,38 @@ def transpose(n, m):
     return n
 
 
+# FIXME: what to do with defaults here? should i remove them?
+def cycle(a, dup_start=False, dup_end=False):
+    end = -2
+    if dup_end:
+        end = -2
+    if dup_start:
+        return a + a[end::-1]
+    else:
+        return a + a[end:0:-1]
+
+
+# FIXME: rename to shift_left
+# FIXME: rename voice
 def shift(voice, s):
     return voice[s:] + voice[:s]
 
 
-def split(voice):
+# FIXME: rename voice
+# FIXME: what to do with defaults?
+def split(voice, zipped=False):
     voice1 = []
     voice2 = []
     for i, n in enumerate(voice):
-        n1 = '.'
-        n2 = n
+        n1 = n
+        n2 = '.'
         if i % 2:
             n1, n2 = n2, n1
         voice1.append(n1)
         voice2.append(n2)
-    return list(zip(voice1, voice2))
+    if zipped:
+        return list(zip(voice1, voice2))
+    return [voice1, voice2]
 
 
 def iterate_voice_leadings(chord, transformations, permutation, sequential_units):

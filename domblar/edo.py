@@ -62,9 +62,11 @@ def intervals_in_edo(sub_scale, edo, scale=None):
     return res
 
 
+# NOTE: note is 0-indexed
 def note_in_scale(sub_scale_orig, note, edo):
     sub_scale = copy(sub_scale_orig)
-    if edo in sub_scale:
+    # FIXME: refactor so that we don't need this if
+    if sub_scale[-1] == sub_scale[0] + edo:
         sub_scale = sub_scale[:-1]
     in_oct = sub_scale[note % len(sub_scale)]
     oct_idx = note // len(sub_scale)

@@ -157,21 +157,23 @@ class MOS:
         # print('oct correction for', self.name, 'is', self.oct_corr)
         # print('adjusted:', abs(self.calc_adjusted_harmonics() - ji))
         # print('naive:', abs(self.calc_naive_harmonics() - ji))
+
     def calc_naive_harmonics(self):
         oct_steps = self.oct_map
         gen_steps = self.gen_map
         return self.oct * oct_steps + self.gen * gen_steps
-        # return self.oct * (oct_steps + (gen_steps // self.gen_count) * self.oct_corr) +\
-            # self.gen * (gen_steps % self.gen_count)
+
     def calc_adjusted_harmonics(self):
         oct_steps = self.oct_map
         gen_steps = self.gen_map
         return self.oct * (oct_steps + (gen_steps // self.gen_count) * self.oct_corr) +\
             self.gen * (gen_steps % self.gen_count)
+
     def calc_note_in_steps(self, oct_steps, gen_steps):
         # correct them for finitudeness of MOS
         return self.oct * (oct_steps + (gen_steps // self.gen_count) * self.oct_corr) +\
             self.gen * (gen_steps % self.gen_count)
+
     def calc_note_in_cents(self, note_in_ji_shift):
         # calc oct_steps and gen_steps:
         oct_steps = sum(self.oct_map * note_in_ji_shift)
@@ -199,12 +201,14 @@ miracle21 = MOS('miracle[21]', 1200, 116.63, 21, [1, 1, 3, 3, 2, 4], [0, 6, -7, 
 # print('15:14', miracle21_wiki.calc_note_in_cents([-1, 1, 1, -1, 0, 0]))
 # print('16:15', miracle21_wiki.calc_note_in_cents([4, -1, -1, 0, 0, 0]))
 
-# ksajdfk
 
+# fixme: why my maps are wrong?
+# probably because my assumption of how the scale is built is wrong
 # xen.wiki: [1, 1, 3, 3, 5, 4], [0, 6, -7, -2, -16, -3])
 # mine: [1 1 2 2 2 3] [ 0  6  3  8 15  7] - this one gives a comma pump
 
-# fixme: why my maps are wrong?
+
+
 # qcomma_meantone19 = MOS('1/4-comma-meantone[19]', 1200, 696.578, 19)
 # mavila16 = MOS('mavila[16]', 1200, 679.806, 16)
 # htt29 = MOS('secor-htt[29]', 1200, 703.5787, 29)
@@ -292,28 +296,3 @@ while True:
         prev_chord = deepcopy(cur_chord)
         cur_chord = [None] * len(cur_chord)
         cur_chord[note_map[1]] = prev_chord[note_map[0]]
-
-
-# melody = [
-#     ['-', '-', '-', 'c'],
-#     ['a', 'a', 'g', 'a'],
-#     ['f', 'c', 'c', 'c'],
-#     ['a', 'a', 'bb', 'g'],
-#     ['c2', '-', '-', 'c2'],
-#     ['d', 'd', 'bb', 'bb'],
-#     ['a', 'g', 'f', 'f'],
-#     ['a', 'a', 'g', 'a'],
-#     ['f', '-', '-']
-# ]
-#
-# harmonics = [3,5,7,11]
-#
-# for cycle in melody:
-#     for i, note in enumerate(cycle):
-#         time.sleep(sleep_time)
-#         tet_note = parse_note(note)
-#         if tet_note is None:
-#             continue
-#         note_in_hz = tet_to_hz(tet_note, base_hz)
-#         note_in_hz *= harmonics[i]
-#         send_msg(note_in_hz, 0, 3)
