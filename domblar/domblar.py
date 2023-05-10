@@ -52,8 +52,9 @@ class Domblar:
                     dur=dur, sus=sus, delay=delay, synth_idx=synth_idx, muls=muls, rep=rep,
                     amps=amps, voice_amps=voice_amps)
             else:
-                from domblar.chord_theory import Chords, Voices
-                if type(chords_or_voices) is Chords:
+                from domblar.chord_theory import Voices
+                if not type(chords_or_voices) is Voices:
+                    # FIXME: we imply here that we expect chords
                     voices = chords_to_voices(chords_or_voices.evaluate())
                 else:
                     voices = chords_or_voices
