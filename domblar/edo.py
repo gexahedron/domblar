@@ -14,6 +14,19 @@ class Scale():
         oct_idx = note_idx // len(self.notes)
         return in_oct + oct_idx * self.edo
 
+    def __add__(self, shift):
+        return Scale([n + shift for n in self.notes], self.edo)
+
+    def __iadd__(self, shift):
+        self.notes = [n + shift for n in self.notes]
+        return self
+
+    def __repr__(self):
+        return f'Scale({self.edo}edo, {self.notes})'
+
+    def __len__(self):
+        return len(self.notes)
+
 
 def get_freq(note, scale, edo):
     freq = None
