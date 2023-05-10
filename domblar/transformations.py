@@ -28,6 +28,7 @@ def shift(voice, s):
 
 # FIXME: rename voice
 # FIXME: what to do with defaults?
+# TODO: add parameter for number of voices; right now it's only 2
 def split(voice, zipped=False):
     voice1 = []
     voice2 = []

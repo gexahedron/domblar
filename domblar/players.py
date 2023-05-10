@@ -37,7 +37,7 @@ def play(chords, scale, edo, client: SC3Client,
             client.send_note(
                 synth_idx[note_idx] + last_reps[note_idx],
                 freq=freq, dur=send_note_dur, amp=amp,
-                timetag=timetag, channel=0) # TODO: for MPE with channels use channel=note_idx
+                timetag=timetag, channel=0)  # TODO: for MPE with channels use channel=note_idx
             last_reps[note_idx] = (last_reps[note_idx] + 1) % rep[note_idx]
             if delay:
                 time.sleep(delay)

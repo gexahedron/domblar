@@ -27,6 +27,7 @@ class Tracker():
         self.sleep_time = 4 * self.dur
         self.rep = 1
         self.loop = True
+        self.latency = 0  # 0.02  # FIXME: remove, or fix
 
         self.start(synth_count)
 
@@ -92,8 +93,10 @@ class Tracker():
         last_event_time = [0] * len(self.voices)
         final_sleep = 0
         start_time = time.time()
-        self.latency = 0  # 0.02  # FIXME: remove
         beats_ahead = 2  # FIXME: also move this somewhere else
+
+        # FIXME: this value is used only for visualizing/tracking progress
+        # move it somewhere else
         total_beat_count = 0
         for event in self.voices[0]:
             total_beat_count += event[1]
@@ -110,7 +113,12 @@ class Tracker():
                     continue
                 waiting = True
                 cur_beat = (time.time() - start_time) / self.dur
+
+                # FIXME: this line is for visualization purposes
+                # 1. it's only approximate
+                # 2. it should be separated from this code somehow ideally
                 self.progress.value = cur_beat / total_beat_count
+
                 if last_event_time[voice_idx] > cur_beat + beats_ahead:
                     continue
 
@@ -137,7 +145,7 @@ class Tracker():
                 self.client.send_note(
                     self.synth_idx[voice_idx] + last_reps[voice_idx],
                     freq=freq, dur=send_note_dur, amp=amp,
-                    timetag=timetag, channel=0) # TODO: for MPE with channels use channel=note_idx
+                    timetag=timetag, channel=0)  # TODO: for MPE with channels use channel=note_idx
                 last_reps[voice_idx] = (last_reps[voice_idx] + 1) % self.rep[voice_idx]
 
                 last_event_idx[voice_idx] += 1
