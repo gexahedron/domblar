@@ -15,6 +15,7 @@ class Domblar:
         self.vst_name = 'Dexed.vst3'
         self.init_preset_name = 'dexed_preset'
         self.tmp_preset_name = 'dexed_instrument'
+        # TODO: should be a enum
         self.mode = mode  # could be 'once', 'tracker', 'analysis'
         self.analysis_mode = (self.mode == 'analysis')
 
