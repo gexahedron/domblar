@@ -1,4 +1,5 @@
 import time
+from domblar.sc3.client import SC3Client
 
 
 def update_instruments():
@@ -50,7 +51,7 @@ def update_instruments():
 
     return instruments
 
-def setup_instruments(client, instrument_count, vst_name, preset_name):
+def setup_instruments(client: SC3Client, instrument_count, vst_name, preset_name):
     # TODO: this code is specific to Dexed VST, needs generalization
     assert vst_name == 'Dexed.vst3'
 
