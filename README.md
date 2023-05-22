@@ -20,8 +20,8 @@ Check out the [https://soundcloud.com/gexahedrop/sets/domblar-showcase](https://
   * on Linux:
     * put .vst3 file (actually, sometimes it is displayed as a folder) to "~/.vst3" folder (create folder if it doesn't exist);
     * copy preset `assets/presets/dexed_preset.vstpreset` to `~/.vst3/presets/Digital Suburban/Dexed/` folder (create folder if it doesn't exist)
-  * install SuperCollider
-  * install VSTPlugin for SuperCollider - get binaries here https://git.iem.at/pd/vstplugin/-/releases - and put the VSTPlugin folder to ~/.local/share/SuperCollider/Extensions/ - and do "Recompile Class Library" in SuperCollider
+  * install SuperCollider (on Linux I found the easiest to install Supercollider via ansible-tidalcycles)
+  * install VSTPlugin for SuperCollider - get binaries here https://git.iem.at/pd/vstplugin/-/releases - and put the VSTPlugin folder to ~/.local/share/SuperCollider/Extensions/ - and then run "Recompile Class Library" from SuperCollider, Menu -> Language -> Recompile Class Library
 2. Code is dependent on pyOSC3 library, to install it run `pip install pyOSC3` in terminal.
 
 ## Current restrictions/assumptions:
