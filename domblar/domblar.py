@@ -1,7 +1,7 @@
 import time
 
 from domblar.chord_theory import chords_to_voices
-from domblar.players import play
+from domblar.players import play, play_non_edo
 from domblar.sc3.client import SC3Client
 from domblar.sc3.instruments import setup_instruments, assign_instrument
 from domblar.tracker import Tracker
@@ -40,32 +40,48 @@ class Domblar:
         # assuming that val is float and in [0..1] range
         self.client.set_param(synth_idx, param, int(val * 127))
 
+    def play_non_edo(self, chords_or_voices,
+                     dur=0.25, sus=None, delay=None, synth_idx=[0], rep=1,
+                     muls=[], amps=[], voice_amps=[],
+                     once=False, loop_from=0):
+        if not self.analysis_mode:
+            assert(self.mode == 'once')
+            # FIXME: remove this, by reusing tracker
+            play_non_edo(chords_or_voices, self.client,
+                 dur=dur, sus=sus, delay=delay, synth_idx=synth_idx,
+                 muls=muls, rep=rep,
+                 amps=amps, voice_amps=voice_amps,
+                 )
+
     # FIXME: default values
     # FIXME: parameters are copied from inner methods
     def play(self, chords_or_voices, scale, edo,
              dur=0.25, sus=None, delay=None, synth_idx=[0], rep=1,
              muls=[], amps=[], voice_amps=[],
              once=False, loop_from=0):
-        if not self.analysis_mode:
-            if self.mode == 'once':
-                # FIXME: remove this, by reusing tracker
-                play(chords_or_voices, scale, edo, self.client,
-                    dur=dur, sus=sus, delay=delay, synth_idx=synth_idx, muls=muls, rep=rep,
-                    amps=amps, voice_amps=voice_amps)
+        if self.analysis_mode:
+            return
+        if self.mode == 'once':
+            # FIXME: remove this, by reusing tracker
+            play(chords_or_voices, scale, edo, self.client,
+                    dur=dur, sus=sus, delay=delay, synth_idx=synth_idx,
+                    muls=muls, rep=rep,
+                    amps=amps, voice_amps=voice_amps,
+                    )
+        else:
+            from domblar.chord_theory import Voices
+            if not type(chords_or_voices) is Voices:
+                # FIXME: we imply here that we expect chords
+                voices = chords_to_voices(chords_or_voices.evaluate())
             else:
-                from domblar.chord_theory import Voices
-                if not type(chords_or_voices) is Voices:
-                    # FIXME: we imply here that we expect chords
-                    voices = chords_to_voices(chords_or_voices.evaluate())
-                else:
-                    voices = chords_or_voices
-                assert type(voices) is Voices
-                print('voices.events', voices.events)
-                self.tracker.queue(voices.events, edo, dur,
-                                   sus=sus,
-                                   once=once,
-                                   loop_from=loop_from,
-                                   )
+                voices = chords_or_voices
+            assert type(voices) is Voices
+            print('voices.events', voices.events)
+            self.tracker.queue(voices.events, edo, dur,
+                                sus=sus,
+                                once=once,
+                                loop_from=loop_from,
+                                )
 
     def __lt__(self, events):
         # FIXME:
