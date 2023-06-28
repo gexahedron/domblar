@@ -12,7 +12,7 @@ Check out the [https://soundcloud.com/gexahedrop/sets/domblar-showcase](https://
 
 # Setup:
 
-1. Install Dexed VST, version 0.9.7 (version 0.9.6 has problems with parameter automation) - [https://github.com/asb2m10/dexed/releases/tag/NIGHTLY](https://https://github.com/asb2m10/dexed/releases/tag/NIGHTLY)
+1. Install Dexed VST, version 0.9.7 (version 0.9.6 has problems with parameter automation) - [https://github.com/asb2m10/dexed/releases/tag/NIGHTLY](https://github.com/asb2m10/dexed/releases/tag/NIGHTLY)
   * on MacOS
     * put .vst3 file to "/Library/Audio/Plug-ins/VST3" folder;
     * (on MacOS only) because version 0.9.7 is unsigned, run in terminal `sudo xattr -rd com.apple.quarantine /Library/Audio/Plug-Ins/VST3/Dexed.vst3` (which also requires sudo, unfortunately).
