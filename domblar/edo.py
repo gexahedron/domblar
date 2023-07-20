@@ -3,7 +3,7 @@ import numbers
 
 from domblar.music_math import C4_FREQ
 
-
+# FIXME: remove
 class Scale():
     def __init__(self, notes, edo) -> None:
         self.notes = notes
@@ -28,6 +28,7 @@ class Scale():
         return len(self.notes)
 
 
+# FIXME: deprecate this function
 def get_freq(note, scale, edo):
     freq = None
     if isinstance(note, numbers.Number):
@@ -39,7 +40,10 @@ def get_freq(note, scale, edo):
     return freq
 
 
-def build_mos_from_edo(n, gen, edo, down=0, shift=0):
+# FIXME: what should be the best order of parameters here?
+# FIXME: add period, multi-mos
+# FIXME: add octave size, and move out from edo file
+def mos(n, gen, edo, down=0, shift=0):
     notes = [0]
     cur = 0
     for _ in range(n - down - 1):
