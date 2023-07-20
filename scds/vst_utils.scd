@@ -1,19 +1,34 @@
 (
+//// constants ////
+~quant_steps = 127;
+
 //// synthdefs ////
 SynthDef(\vst_plugin, {|
-	out, gate = 1,
-	mix = 0.25, room = 0.7, damp = 0.5,
-	dur = 1.0, amp = 1.0|
+	out,
+	gate=1,
+	dur=1.0, amp=1.0,
+	mix=0.25, room=0.7, damp=0.5,
+	lpf=20000.0, lpr=1.0|
 	// FIXME: i think the envelope is useless atm
-	var env = Env.adsr(
-		attackTime: 0.0,
-		decayTime: 0.0,
-		sustainLevel: dur * 0.9,
-		releaseTime: dur * 0.1);
-    var gen = EnvGen.kr(env, gate, doneAction: Done.freeSelf);
-	var sig = VSTPlugin.ar(numOut: 2) * amp;
-	sig = FreeVerb.ar(sig, mix, room, damp);
-	Out.ar(out, sig * gen);
+	// var env = Env.adsr(
+	// 	attackTime: 0.0,
+	// 	decayTime: 0.0,
+	// 	sustainLevel: dur * 0.9,
+	// releaseTime: dur * 0.1);
+	// var gen = EnvGen.kr(env, gate, doneAction: Done.freeSelf);
+	var osc = VSTPlugin.ar(numOut: 2) * amp;
+	osc = FreeVerb.ar(osc, mix, room, damp);
+	osc = RLPF.ar(osc, lpf, lpr);
+	// Out.ar(out, osc * gen);
+	Out.ar(out, osc);
+}).add;
+
+// TODO:
+SynthDef.new(\lowPassFilter, {|bus, lpf, lpr|
+	var osc;
+	osc = In.ar(bus, 2);
+	osc = RLPF.ar(osc, lpf, lpr);
+	ReplaceOut.ar(bus, osc);
 }).add;
 
 
@@ -89,7 +104,7 @@ SynthDef(\vst_plugin, {|
 	var synth_idx = msg[1];
 	var param = msg[2];
 	var val = msg[3];
-	~synths[synth_idx].set(param, val / 127);
+	~synths[synth_idx].set(param, val / ~quant_steps);
 }, "/set_param");
 
 ~play_func.free;
@@ -101,15 +116,19 @@ SynthDef(\vst_plugin, {|
 	var amp = msg[5];
 	var chan = msg[6];
 	var state = msg[7];
+	var lpf = msg[8];
+	var lpr = msg[9];
 
 	if ( state <= 1,
 		{
 			SystemClock.sched(time - Main.elapsedTime, {
 				s.bind {
-					~controllers[synth_idx].midi.noteOn(chan, note, 127);
 					~controllers[synth_idx].midi.bend(chan, bend);
+					~controllers[synth_idx].midi.noteOn(chan, note, ~quant_steps);
 					~synths[synth_idx].set(\dur, dur);
-					~synths[synth_idx].set(\amp, amp / 127);
+					~synths[synth_idx].set(\amp, amp / ~quant_steps);
+					~synths[synth_idx].set(\lpf, lpf / ~quant_steps);
+					~synths[synth_idx].set(\lpr, lpr / ~quant_steps);
 				};
 			});
 		},
