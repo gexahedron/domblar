@@ -11,15 +11,15 @@ def play_non_edo(chords, client: SC3Client,
         assert len(chords) == len(muls)
     if chords and amps:
         assert len(chords) == len(amps)
-    if type(rep) is list:
+    if isinstance(rep, list):
         assert len(synth_idx) == len(rep)
     else:
         rep = [rep] * len(synth_idx)
     last_reps = [0] * len(synth_idx)
     for chord_idx, chord in enumerate(chords):
-        if type(chord) is tuple:
+        if isinstance(chord, tuple):
             chord = list(chord)
-        elif type(chord) is not list:
+        elif not isinstance(chord, list):
             chord = [chord]
         for note_idx, freq in enumerate(chord):
             send_note_dur = dur
@@ -46,6 +46,7 @@ def play_non_edo(chords, client: SC3Client,
         time.sleep(sleep_dur)
 
 
+# FIXME: remove this function; duplicates play_non_edo
 def play(chords, scale, edo, client: SC3Client,
          dur=0.25, sus=None, delay=None, synth_idx=[0], rep=1,
          muls=[], amps=[], voice_amps=[]):
@@ -53,15 +54,15 @@ def play(chords, scale, edo, client: SC3Client,
         assert len(chords) == len(muls)
     if chords and amps:
         assert len(chords) == len(amps)
-    if type(rep) is list:
+    if isinstance(rep, list):
         assert len(synth_idx) == len(rep)
     else:
         rep = [rep] * len(synth_idx)
     last_reps = [0] * len(synth_idx)
     for chord_idx, chord in enumerate(chords):
-        if type(chord) is tuple:
+        if isinstance(chord, tuple):
             chord = list(chord)
-        elif type(chord) is not list:
+        elif not isinstance(chord, list):
             chord = [chord]
         for note_idx, note in enumerate(chord):
             freq = get_freq(note, scale, edo)
@@ -90,8 +91,8 @@ def play(chords, scale, edo, client: SC3Client,
 
 
 # TODO: currently unused
-def play_voice(notes, timbre, scale, edo, client, dur=0.25, sus=None, delay=None):
-    if type(notes) is not list:
+def play_voice(notes, timbre, scale, edo, client, dur=0.25, sus=None):
+    if not isinstance(notes, list):
         notes = [notes]
     for note in notes:
         freq = get_freq(note, scale, edo)
@@ -131,5 +132,5 @@ def play_voices(voices, timbres, scale, edo, client, dur=0.25, sus=None):
 def play_triads(sub_scale, degrees, dur, scale, edo, client):
     chords = []
     for deg in degrees:
-        chords.append(triad(sub_scale, deg))
+        chords.append(triad(sub_scale, deg, edo))
     play(chords, scale, edo, client, dur=dur)
