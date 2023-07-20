@@ -1,6 +1,7 @@
+import math
 from typing import Tuple
 
-import math
+from domblar.synths import Synths
 
 
 WESTERN_EDO = 12
@@ -29,18 +30,8 @@ def ratio_to_cents(m, n):
     return OCTAVE_IN_CENTS * ratio_to_floats(m, n)
 
 
-def freq_to_midi(freq: float) -> Tuple[int, int]:
-    """TODO:_summary_
-
-    Args:
-        freq (float): _description_
-
-    Returns:
-        Tuple[int, int]: _description_
-    """
-    # this value works both for Dexed in non-MPE mode,
-    # and for Plogue chipsynths in MPE mode
-    pitch_bend_sensitivity = 48
+def freq_to_midi(freq: float, synth_idx: int) -> Tuple[int, int]:
+    pitch_bend_sensitivity = Synths.synths[synth_idx].pitch_bend_sensitivity
 
     bended_note = A4_MIDI + WESTERN_EDO * math.log2(freq / A4_FREQ)
 
