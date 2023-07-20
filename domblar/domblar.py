@@ -1,51 +1,109 @@
+import platform
 import time
+from enum import Enum, auto
 
 from domblar.chord_theory import chords_to_voices
 from domblar.players import play, play_non_edo
 from domblar.sc3.client import SC3Client
-from domblar.sc3.instruments import setup_instruments, assign_instrument
+from domblar.sc3.instruments import assign_instrument, setup_instruments
 from domblar.tracker import Tracker
+from domblar.beat_tracker import BeatTracker
+
+
+class Mode(str, Enum):
+    def _generate_next_value_(name, start, count, last_values):
+        return name
+
+    analysis = auto()
+    tracker = auto()
+    beat_tracker = auto()
+    once = auto()
 
 
 class Domblar:
     def __init__(self, synth_count, context, mode='once'):
         self.client = SC3Client()
+        self.synth_count = synth_count
+        self.context = context
+        self.mode = mode
+        self.instruments = {}
 
-        assert context == 'dexed'
-        self.vst_name = 'Dexed.vst3'
-        self.init_preset_name = 'dexed_preset'
-        self.tmp_preset_name = 'dexed_instrument'
-        # TODO: should be a enum
-        self.mode = mode  # could be 'once', 'tracker', 'analysis'
-        self.analysis_mode = (self.mode == 'analysis')
+        # beat_tracker mode specifics:
+        self.cur_track = None
+        self.chroma = None
+        self.scale = None
+        self.bpm = None
+        if self.mode == Mode.beat_tracker:
+            self.beat_tracker = BeatTracker(client=self.client)
 
-        if not self.analysis_mode:
+        match context:
+            case 'dexed':
+                self.vst_name = 'Dexed.vst3'
+                self.init_preset_name = 'dexed_preset'
+                self.pitch_bend_sensitivity = 48
+            case 'opl':
+                match platform.system():
+                    case 'Linux':
+                        self.vst_name = 'OPL.so'
+                    case _:  # 'Darwin' (MacOS) or 'Windows'
+                        self.vst_name = 'OPL.vst3'
+                self.init_preset_name = None
+                self.pitch_bend_sensitivity = 1
+            case 'portafm':
+                self.vst_name = 'chipsynth PortaFM'
+                # FIXME - create preset
+                # self.init_preset_name = 'portafm_preset'
+                self.init_preset_name = None
+                self.pitch_bend_sensitivity = 48
+            case 'tyrelln6':
+                match platform.system():
+                    case 'Linux':
+                        self.vst_name = 'TyrellN6.64.so'
+                    case _:  # 'Darwin' (MacOS) or 'Windows'
+                        self.vst_name = 'TyrellN6.vst'
+                self.init_preset_name = None
+                self.pitch_bend_sensitivity = 2
+            case _:
+                print(f'Unknown vst {context}')
+                assert False
+
+        self.tmp_preset_name = 'instrument_preset'
+
+        if self.mode != Mode.analysis:
             self.synths = setup_instruments(
                 self.client,
-                synth_count, self.vst_name, self.init_preset_name)
+                synth_count,
+                self.context, self.vst_name, self.init_preset_name,
+                self.pitch_bend_sensitivity)
             self.tracker = Tracker(client=self.client, synth_count=synth_count)
 
     def set_synth(self, synth_idx, synth_name, synth_name2=None, proportion=None,
                   shift=0, param_count=None):
-        if not self.analysis_mode:
-            import sys, importlib
-            importlib.reload(sys.modules['domblar.sc3.instruments'])
-            from domblar.sc3.instruments import update_instruments
-            self.synths = update_instruments()
-            assign_instrument(synth_idx, synth_name, self.synths, self.client,
-                              synth_name2=synth_name2, proportion=proportion,
-                              shift=shift, param_count=param_count)
+        if self.mode == Mode.analysis:
+            return
+        if synth_idx in self.instruments and self.instruments[synth_idx] == synth_name:
+            return
+        import importlib
+        import sys
+        importlib.reload(sys.modules['domblar.sc3.instruments'])
+        from domblar.sc3.instruments import update_instruments
+        self.synths = update_instruments(self.context)
+        assign_instrument(synth_idx, synth_name, self.synths, self.client,
+                            synth_name2=synth_name2, proportion=proportion,
+                            shift=shift, param_count=param_count)
 
-    def set_param(self, synth_idx, param, val):
+    def set_param(self, synth_idx, param, val: float):
         # assuming that val is float and in [0..1] range
+        assert 0 <= val <= 1
+        # FIXME: move 127 to shared-Python/SuperCollider-constants config file
         self.client.set_param(synth_idx, param, int(val * 127))
 
     def play_non_edo(self, chords_or_voices,
                      dur=0.25, sus=None, delay=None, synth_idx=[0], rep=1,
                      muls=[], amps=[], voice_amps=[],
                      once=False, loop_from=0):
-        if not self.analysis_mode:
-            assert(self.mode == 'once')
+        if self.mode != Mode.analysis:
+            assert self.mode == Mode.once
             # FIXME: remove this, by reusing tracker
             play_non_edo(chords_or_voices, self.client,
                  dur=dur, sus=sus, delay=delay, synth_idx=synth_idx,
@@ -59,45 +117,58 @@ class Domblar:
              dur=0.25, sus=None, delay=None, synth_idx=[0], rep=1,
              muls=[], amps=[], voice_amps=[],
              once=False, loop_from=0):
-        if self.analysis_mode:
-            return
-        if self.mode == 'once':
-            # FIXME: remove this, by reusing tracker
-            play(chords_or_voices, scale, edo, self.client,
-                    dur=dur, sus=sus, delay=delay, synth_idx=synth_idx,
-                    muls=muls, rep=rep,
-                    amps=amps, voice_amps=voice_amps,
-                    )
-        else:
-            from domblar.chord_theory import Voices
-            if not type(chords_or_voices) is Voices:
-                # FIXME: we imply here that we expect chords
-                voices = chords_to_voices(chords_or_voices.evaluate())
-            else:
-                voices = chords_or_voices
-            assert type(voices) is Voices
-            print('voices.events', voices.events)
-            self.tracker.queue(voices.events, edo, dur,
-                                sus=sus,
-                                once=once,
-                                loop_from=loop_from,
-                                )
+        match self.mode:
+            case Mode.analysis:
+                return
+            case Mode.once:
+                # FIXME: remove this, by reusing tracker
+                play(chords_or_voices, scale, edo, self.client,
+                        dur=dur, sus=sus, delay=delay, synth_idx=synth_idx,
+                        muls=muls, rep=rep,
+                        amps=amps, voice_amps=voice_amps,
+                        )
+            case Mode.tracker:
+                from domblar.chord_theory import Voices
+                if not type(chords_or_voices) is Voices:
+                    # FIXME: we assume here that we expect chords
+                    voices = chords_to_voices(chords_or_voices.evaluate())
+                else:
+                    voices = chords_or_voices
+                assert type(voices) is Voices
+                print('voices.events', voices.events)
+                self.tracker.queue(voices.events, edo, dur,
+                                    sus=sus,
+                                    once=once,
+                                    loop_from=loop_from,
+                                    )
+            case Mode.beat_tracker:
+                # FIXME
+                assert False
+
 
     def __lt__(self, events):
-        # FIXME:
-        assert self.mode == 'tracker'
+        assert self.mode in [Mode.tracker, Mode.beat_tracker]
 
-        # NOTE: this is some gimmicky
-        if type(events) is list:
+        # NOTE: this is a fancy thing,
+        # to allow notation such as "<["
+        if isinstance(events, list):
             assert len(events) == 1
             events = events[0]
 
-        # FIXME: remove scale, edo and config
-        self.play(events, None, events.config.edo,
-                  dur=events.config.dur,
-                  sus=events.config.sus,
-                  once=events.config.once
-                  )
+        if self.mode == Mode.tracker:
+            # FIXME: remove scale, edo and config
+            self.play(events, None, events.config.edo,
+                    dur=events.config.dur,
+                    sus=events.config.sus,
+                    once=events.config.once
+                    )
+        else:  # self.mode == Mode.beat_tracker
+            print('events', type(events))
+            print(events.notes)
+            if events.instrument is not None:
+                self.set_synth(self.cur_track, events.instrument)
+            events.notes = [self.scale.get_freq(n) for n in events.notes]
+            self.beat_tracker.queue(self.cur_track, events, self)
 
     def stop_server(self):
         self.client.stop_server()
@@ -118,8 +189,26 @@ class Domblar:
         time.sleep(0.5)
         self.client.print_params(synth_idx)
 
+    def finetune(self, state=0, synth_idx=0):
+        match state:
+            case 0:
+                self.open_editor(synth_idx)
+            case 1:
+                # transfer instrument to all synths
+                self.save_preset(synth_idx)
+                time.sleep(0.5)
+                for i in range(self.synth_count):
+                    self.load_preset(i)
+            case _:
+                self.print_params(synth_idx)
+
     def rec(self):
         self.client.rec()
 
     def stop_rec(self):
         self.client.stop_rec()
+
+    def __getitem__(self, item):
+        assert isinstance(item, int)
+        self.cur_track = item
+        return self
