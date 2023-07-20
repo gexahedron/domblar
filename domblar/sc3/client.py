@@ -9,6 +9,8 @@ class SC3Client:
     def __init__(self, ip='127.0.0.1', port=57120):
         self.client = pyOSC3.OSCClient()
         self.client.connect((ip, port))
+        # TODO:
+        # self.server = pyOSC3.OSCServer((ip, 7771))
 
     def send_msg(self, address, data=[], timetag=0, sleep=None):
         bundle = pyOSC3.OSCBundle(time=timetag)
@@ -19,26 +21,17 @@ class SC3Client:
         if sleep:  # for some heavy operations
             time.sleep(sleep)
 
-    def send_note(self, synth_idx, freq=None, dur=0.25, amp=1.0, timetag=0, channel=0):
-        """TODO: _summary_
-
-        Args:
-            synth_idx (_type_): _description_
-            freq (_type_, optional): _description_. Defaults to None.
-            dur (float, optional): _description_. Defaults to 0.25.
-            amp (float, optional): _description_. Defaults to 1.0.
-            timetag (int, optional): _description_. Defaults to 0.
-            channel (int, optional): _description_. Defaults to 0.
-        """
+    def send_note(self, synth_idx, freq=None, dur=0.25, amp=1.0, timetag=0, channel=0,
+                  lpf=20000.0, lpr=1.0):
         if freq is None:
             return
-        # TODO:
-        # if freq is not None:
-        #     data += ['freq', freq]
         data = [synth_idx]
-        note, bend = freq_to_midi(freq)
+        note, bend = freq_to_midi(freq, synth_idx)
+        # FIXME: maybe there's a better way to do this? instead of 0 state
         state = 0  # 0 means a non-drone note with finite duration
-        data.extend([note, bend, dur, int(amp * 127), channel, state])
+        # FIXME: move 127 to shared-Python/SuperCollider-constants config file
+        data.extend([note, bend, dur, int(amp * 127), channel, state,
+                     int(lpf * 127), int(lpr * 127)])
         self.send_msg('/play', data, timetag=timetag)
 
     def stop_server(self):
@@ -61,8 +54,11 @@ class SC3Client:
         # i have clash in terminology (params here, and params in synth like amp or room)
         self.send_msg('/print_params', data=[synth_idx])
 
+    # FIXME: convert this into resource handling, or into a decorator
     def rec(self):
         self.send_msg('/record', [])
+        time.sleep(2)
 
     def stop_rec(self):
+        time.sleep(5)
         self.send_msg('/stop_recording', [])
