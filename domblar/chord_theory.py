@@ -19,6 +19,7 @@ class Config():
         self.edo = None  # FIXME: remove
         self.once = False  # FIXME: default value should be None
 
+
 class Configurable():
     def __init__(self):
         self.config = Config()
@@ -55,6 +56,7 @@ class Configurable():
         self.config = config
         return self
 
+# FIXME:
 class Chord():
     def __init__(self):
         pass
@@ -90,6 +92,14 @@ class Chords(Configurable):
              #  always_jump_on=[],
              )
         return self
+
+    def __str__(self):
+        self.evaluate()
+        return str(self.chords)
+
+    def __repr__(self):
+        self.evaluate()
+        return self.chords.__repr__()
 
 
 class Voices(Configurable):
