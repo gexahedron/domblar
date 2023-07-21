@@ -22,9 +22,12 @@ class SC3Client:
             time.sleep(sleep)
 
     def send_note(self, synth_idx, freq=None, dur=0.25, amp=1.0, timetag=0, channel=0,
-                  lpf=20000.0, lpr=1.0):
+                  lpf=None, lpr=1.0):
         if freq is None:
             return
+        # FIXME
+        if lpf is None:
+            lpf = 20000.0
         data = [synth_idx]
         note, bend = freq_to_midi(freq, synth_idx)
         # FIXME: maybe there's a better way to do this? instead of 0 state
