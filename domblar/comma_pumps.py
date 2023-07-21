@@ -5,13 +5,7 @@ import pyOSC3
 import time
 import numpy as np
 import util
-import random
-import math
 from copy import deepcopy
-import ast
-
-import datetime
-from collections import defaultdict
 
 
 client = pyOSC3.OSCClient()
