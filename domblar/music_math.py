@@ -30,6 +30,10 @@ def ratio_to_cents(m, n):
     return OCTAVE_IN_CENTS * ratio_to_floats(m, n)
 
 
+def cents_to_ratio(cents):
+    return 2 ** (cents / OCTAVE_IN_CENTS)
+
+
 def freq_to_midi(freq: float, synth_idx: int) -> Tuple[int, int]:
     pitch_bend_sensitivity = Synths.synths[synth_idx].pitch_bend_sensitivity
 
