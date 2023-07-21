@@ -1,15 +1,14 @@
 import pyOSC3
 import time
 import numpy as np
-# FIXME:
-# import util
+
 import random
-import math
 from copy import deepcopy
 import ast
 
 import datetime
-from collections import defaultdict
+
+from music_math import ratio_to_cents, cents_to_ratio
 
 
 has_keyboard = False
@@ -51,7 +50,7 @@ scale = '1/1, 49/48, 36/35, 21/20, 16/15, 13/12, 11/10, 10/9, 9/8, 8/7, '\
 '11/6, 13/7, 15/8, 21/11, 35/18, 55/28'
 
 ratios = parse(scale)
-ratios.sort(key=lambda r: util.ratio_to_cents(r[0], r[1]))
+ratios.sort(key=lambda r: ratio_to_cents(r[0], r[1]))
 # print(len(ratios), ratios)
 
 up_rep_notes = [7, 21, 35, 56, 70, 84]
@@ -111,8 +110,7 @@ def calc_hz(ji_shift_orig, base_hz):
     return cur_hz
 
 def calc_hz_from_cents(cents, base_hz):
-    return base_hz * util.cents_to_ratio(cents)
-
+    return base_hz * cents_to_ratio(cents)
 
 # MOSes:
 # (octave, generator, gen_count); both in cents
@@ -130,8 +128,9 @@ class MOS:
               3368.825906469125, 4151.317942364757, 4440.527661769311]
         ji_octave = [1, 1, 2, 2, 3, 3]
         if oct_map is None or gen_map is None:
-            assert(util.same(1200, octave))
-            assert(generator < octave)
+            # assert(util.same(1200, octave))
+            assert (abs(1200 - octave) < 1e-4)
+            assert (generator < octave)
             self.oct_map = np.array([1, 0, 0, 0, 0, 0])
             self.gen_map = np.array([0, 0, 0, 0, 0, 0])
             notes = []
