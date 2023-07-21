@@ -21,8 +21,16 @@ class SC3Client:
         if sleep:  # for some heavy operations
             time.sleep(sleep)
 
-    def send_note(self, synth_idx, freq=None, dur=0.25, amp=1.0, timetag=0, channel=0,
-                  lpf=None, lpr=1.0):
+    @staticmethod
+    def q(val: float):
+        # FIXME: move 127 to shared-Python/SuperCollider-constants config file
+        return int(val * 127)
+
+    def send_note(self, synth_idx,
+                  timetag=0, channel=0,
+                  freq: float | None = None, dur=0.25,
+                  amp=1.0, pan=0.0,
+                  lpf: float | None = None, lpr=1.0):
         if freq is None:
             return
         # FIXME
@@ -32,9 +40,9 @@ class SC3Client:
         note, bend = freq_to_midi(freq, synth_idx)
         # FIXME: maybe there's a better way to do this? instead of 0 state
         state = 0  # 0 means a non-drone note with finite duration
-        # FIXME: move 127 to shared-Python/SuperCollider-constants config file
-        data.extend([note, bend, dur, int(amp * 127), channel, state,
-                     int(lpf * 127), int(lpr * 127)])
+        data.extend([note, bend, dur, self.q(amp), channel, state,
+                     self.q(pan),
+                     self.q(lpf), self.q(lpr)])
         self.send_msg('/play', data, timetag=timetag)
 
     def stop_server(self):

@@ -167,6 +167,7 @@ class Domblar:
             print(events.notes)
             if events.instrument is not None:
                 self.set_synth(self.cur_track, events.instrument)
+            # FIXME!
             events.notes = [self.scale.get_freq(n) for n in events.notes]
             self.beat_tracker.queue(self.cur_track, events, self)
 
@@ -189,7 +190,7 @@ class Domblar:
         time.sleep(0.5)
         self.client.print_params(synth_idx)
 
-    def finetune(self, state=0, synth_idx=0):
+    def finetune(self, synth_idx=0, state=0):
         match state:
             case 0:
                 self.open_editor(synth_idx)

@@ -63,21 +63,29 @@ class BeatTracker():
             timetag = self.next_time
             schedule_events = (timetag < cur_time + 2 * self.sleep_time)
         if schedule_events:
-            for synth_idx in self.events:
-                event = self.events[synth_idx]
-                freq = event.notes[self.beat_count % len(event.notes)]
-                send_note_dur = bpm_dur
+            if timetag >= cur_time:
+                for synth_idx in self.events:
+                    event = self.events[synth_idx]
+                    send_note_dur = bpm_dur
 
-                lpf = event.lpf_
-                import numbers
-                if lpf is not None and not isinstance(lpf, numbers.Number):
-                    lpf = lpf.get_val(self.beat_count)
+                    # FIXME
+                    import numbers
+                    freq = event.notes[self.beat_count % len(event.notes)]
+                    amp = event.amp_
+                    if amp is not None and not isinstance(amp, numbers.Number):
+                        amp = amp.get_val(self.beat_count)
+                    lpf = event.lpf_
+                    if lpf is not None and not isinstance(lpf, numbers.Number):
+                        lpf = lpf.get_val(self.beat_count)
+                    pan = event.pan_
+                    if pan is not None and not isinstance(pan, numbers.Number):
+                        pan = pan.get_val(self.beat_count)
 
-                if timetag >= cur_time:
                     self.client.send_note(
                         synth_idx,
                         timetag=timetag, channel=0,
-                        freq=freq, dur=send_note_dur, amp=event.amp_,
+                        freq=freq, dur=send_note_dur,
+                        amp=amp, pan=pan,
                         lpf=lpf
                     )
             self.last_time = timetag

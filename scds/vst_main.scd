@@ -21,6 +21,17 @@ s.waitForBoot({
 
 Server.killAll; // also callable from Python with "d = Domblar(...); d.stop_server()"
 
+
+
+
+
+
+
+
+
+
+
+
 ~controllers[0].editor;
 
 

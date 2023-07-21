@@ -6,7 +6,7 @@
 SynthDef(\vst_plugin, {|
 	out,
 	gate=1,
-	dur=1.0, amp=1.0,
+	dur=1.0, amp=1.0, pan=0.0,
 	mix=0.25, room=0.7, damp=0.5,
 	lpf=20000.0, lpr=1.0|
 	// FIXME: i think the envelope is useless atm
@@ -16,20 +16,21 @@ SynthDef(\vst_plugin, {|
 	// 	sustainLevel: dur * 0.9,
 	// releaseTime: dur * 0.1);
 	// var gen = EnvGen.kr(env, gate, doneAction: Done.freeSelf);
-	var osc = VSTPlugin.ar(numOut: 2) * amp;
+	var osc = VSTPlugin.ar(numOut: 1) * amp;
 	osc = FreeVerb.ar(osc, mix, room, damp);
 	osc = RLPF.ar(osc, lpf, lpr);
+	osc = Pan2.ar(osc, pan);
 	// Out.ar(out, osc * gen);
 	Out.ar(out, osc);
 }).add;
 
 // TODO:
-SynthDef.new(\lowPassFilter, {|bus, lpf, lpr|
-	var osc;
-	osc = In.ar(bus, 2);
-	osc = RLPF.ar(osc, lpf, lpr);
-	ReplaceOut.ar(bus, osc);
-}).add;
+// SynthDef.new(\lowPassFilter, {|bus, lpf, lpr|
+// 	var osc;
+// 	osc = In.ar(bus, 2);
+// 	osc = RLPF.ar(osc, lpf, lpr);
+// 	ReplaceOut.ar(bus, osc);
+// }).add;
 
 
 //// functions ////
@@ -116,8 +117,9 @@ SynthDef.new(\lowPassFilter, {|bus, lpf, lpr|
 	var amp = msg[5];
 	var chan = msg[6];
 	var state = msg[7];
-	var lpf = msg[8];
-	var lpr = msg[9];
+	var pan = msg[8];
+	var lpf = msg[9];
+	var lpr = msg[10];
 
 	if ( state <= 1,
 		{
@@ -127,6 +129,7 @@ SynthDef.new(\lowPassFilter, {|bus, lpf, lpr|
 					~controllers[synth_idx].midi.noteOn(chan, note, ~quant_steps);
 					~synths[synth_idx].set(\dur, dur);
 					~synths[synth_idx].set(\amp, amp / ~quant_steps);
+					~synths[synth_idx].set(\pan, pan / ~quant_steps);
 					~synths[synth_idx].set(\lpf, lpf / ~quant_steps);
 					~synths[synth_idx].set(\lpr, lpr / ~quant_steps);
 				};
