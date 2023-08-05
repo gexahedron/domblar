@@ -167,8 +167,6 @@ class Domblar:
             print(events.notes)
             if events.instrument is not None:
                 self.set_synth(self.cur_track, events.instrument)
-            # FIXME!
-            events.notes = [self.scale.get_freq(n) for n in events.notes]
             self.beat_tracker.queue(self.cur_track, events, self)
 
     def stop_server(self):

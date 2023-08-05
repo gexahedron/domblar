@@ -1,9 +1,9 @@
 from copy import deepcopy
-import math
 import threading
 import time
 
 from domblar.sc3.client import SC3Client
+from domblar.patterns import Patternable
 
 class BeatTracker():
     def __init__(self, client: SC3Client):
@@ -41,7 +41,8 @@ class BeatTracker():
 
     def single_run(self):
         if self.next_events and self.is_time_to_sync():
-            self.events = deepcopy(self.next_events)
+            for synth in self.next_events:
+                self.events[synth] = deepcopy(self.next_events[synth])
             self.next_events = {}
 
         if not self.running:
@@ -64,29 +65,30 @@ class BeatTracker():
             schedule_events = (timetag < cur_time + 2 * self.sleep_time)
         if schedule_events:
             if timetag >= cur_time:
-                for synth_idx in self.events:
-                    event = self.events[synth_idx]
+                for synth_idx, event in self.events.items():
                     send_note_dur = bpm_dur
 
-                    # FIXME
-                    import numbers
-                    freq = event.notes[self.beat_count % len(event.notes)]
-                    amp = event.amp_
-                    if amp is not None and not isinstance(amp, numbers.Number):
-                        amp = amp.get_val(self.beat_count)
-                    lpf = event.lpf_
-                    if lpf is not None and not isinstance(lpf, numbers.Number):
-                        lpf = lpf.get_val(self.beat_count)
-                    pan = event.pan_
-                    if pan is not None and not isinstance(pan, numbers.Number):
-                        pan = pan.get_val(self.beat_count)
+                    note = event.notes[self.beat_count % len(event.notes)]
+                    freq = self.d.scale.get_freq(note)
+
+                    # TODO: automate going through these params
+                    kwargs_keys = [
+                        'amp',
+                        'pan',
+                        'mix', # TODO: room, damp
+                        'lpf', 'lpr',
+                    ]
+                    kwargs = {}
+                    for key in kwargs_keys:
+                        kwargs[key] = getattr(event, f'{key}_')
+                        if isinstance(kwargs[key], Patternable):
+                            kwargs[key] = kwargs[key].get_val(self.beat_count)
 
                     self.client.send_note(
                         synth_idx,
                         timetag=timetag, channel=0,
                         freq=freq, dur=send_note_dur,
-                        amp=amp, pan=pan,
-                        lpf=lpf
+                        **kwargs
                     )
             self.last_time = timetag
             self.beat_count += 1

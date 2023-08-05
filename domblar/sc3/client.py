@@ -12,7 +12,9 @@ class SC3Client:
         # TODO:
         # self.server = pyOSC3.OSCServer((ip, 7771))
 
-    def send_msg(self, address, data=[], timetag=0, sleep=None):
+    def send_msg(self, address, data=None, timetag=0, sleep=None):
+        if data is None:
+            data = []
         bundle = pyOSC3.OSCBundle(time=timetag)
         msg = pyOSC3.OSCMessage(address=address)
         msg.append(data)
@@ -30,18 +32,22 @@ class SC3Client:
                   timetag=0, channel=0,
                   freq: float | None = None, dur=0.25,
                   amp=1.0, pan=0.0,
-                  lpf: float | None = None, lpr=1.0):
+                  mix=0.25,  # room, damp,
+                  lpf: float | None = None, lpr: float | None = None):
         if freq is None:
             return
         # FIXME
         if lpf is None:
             lpf = 20000.0
+        if lpr is None:
+            lpr = 1.0
         data = [synth_idx]
         note, bend = freq_to_midi(freq, synth_idx)
         # FIXME: maybe there's a better way to do this? instead of 0 state
         state = 0  # 0 means a non-drone note with finite duration
         data.extend([note, bend, dur, self.q(amp), channel, state,
                      self.q(pan),
+                     self.q(mix),
                      self.q(lpf), self.q(lpr)])
         self.send_msg('/play', data, timetag=timetag)
 
