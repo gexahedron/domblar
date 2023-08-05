@@ -1,6 +1,12 @@
 import numbers
 
 
+def map_note(indices, note):
+    if isinstance(note, int):
+        return indices[note]
+    return note
+
+
 def transpose(n, m):
     if isinstance(n, numbers.Number):
         return n + m
@@ -34,7 +40,7 @@ def split(voice, zipped=False):
     voice2 = []
     for i, n in enumerate(voice):
         n1 = n
-        n2 = '.'
+        n2 = '.'  # FIXME: use enum
         if i % 2:
             n1, n2 = n2, n1
         voice1.append(n1)
