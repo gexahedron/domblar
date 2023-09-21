@@ -17,12 +17,11 @@ s.boot();
 s.waitForBoot({
 	("vst_utils.scd").loadRelative;
 });
+StageLimiter.activate;
 )
 
+
 Server.killAll; // also callable from Python with "d = Domblar(...); d.stop_server()"
-
-
-
 
 
 

@@ -118,9 +118,13 @@ SynthDef(\vst_plugin, {|
 	var chan = msg[6];
 	var state = msg[7];
 	var pan = msg[8];
-	var lpf = msg[9];
-	var lpr = msg[10];
+	var mix = msg[9];
+	var lpf = msg[10];
+	var lpr = msg[11];
 
+	// state == 0: usual note
+	// state == 1: drone, midi.noteOn
+	// state == 2: drone, midi.noteOff
 	if ( state <= 1,
 		{
 			SystemClock.sched(time - Main.elapsedTime, {
@@ -130,6 +134,7 @@ SynthDef(\vst_plugin, {|
 					~synths[synth_idx].set(\dur, dur);
 					~synths[synth_idx].set(\amp, amp / ~quant_steps);
 					~synths[synth_idx].set(\pan, pan / ~quant_steps);
+					~synths[synth_idx].set(\mix, mix / ~quant_steps);
 					~synths[synth_idx].set(\lpf, lpf / ~quant_steps);
 					~synths[synth_idx].set(\lpr, lpr / ~quant_steps);
 				};
@@ -160,6 +165,20 @@ SynthDef(\vst_plugin, {|
 	);
 }, "/play");
 
+~modify_func.free;
+~modify_func = OSCFunc({ |msg, time, addr, port|
+	var synth_idx = msg[1];
+	var chan = msg[2];
+	var lpf = msg[3];
+	var lpr = msg[4];
+
+	SystemClock.sched(time - Main.elapsedTime, {
+		s.bind {
+			~synths[synth_idx].set(\lpf, lpf / ~quant_steps);
+			~synths[synth_idx].set(\lpr, lpr / ~quant_steps);
+		};
+	});
+}, "/modify");
 
 ~record_func.free;
 ~record_func = OSCFunc({ |msg, time, addr, port|
