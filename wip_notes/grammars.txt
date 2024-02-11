@@ -1,0 +1,127 @@
+todo:
+    - notation
+    - chord spaces; OPTIC; modulation
+    - minor harmony; melodic, harmonic
+    - form; repetitions, variations/mutations
+    - polyrhythms
+    - voices/melodies vs harmony
+    - quadruple hierarchy
+    - trichords/tetrachords/modality vs scales vs implied harmony
+    - non-western grammars
+    - constraint satisfaction
+    - polychords, bitonality
+    - other parameters: amplitude, ...
+    ...
+
+- Donya Quick - PTGG - "Probabilistic Temporal Graph Grammars"
+    - allow the simultaneous generation of harmonic and metrical structure
+    - example
+        0.2 I:t -> I:t
+        0.2 I:t -> II:t/4 V:t/4 I:t/2
+        0.2 I:t -> I:t/4 IV:t/4 V:t/4 I:t/4
+        0.2 I:t -> V:t/2 I:t/2
+        0.2 I:t -> I:t/4 II:t/4 V:t/4 I:t/4
+
+        0.8 II:t -> II:t
+        0.2 II:t -> (M2 V:t/2 I:t/2)
+        
+        0.7 III:t -> III:t
+        0.3 III:t -> (M3 I:t)
+
+        0.8 IV:t -> IV:t
+        0.2 IV:t -> (M4 I:t/4 V:t/4 I:t/2)
+
+        0.1 V:t -> V:t
+       0.15 V:t -> IV:t/2 V:t/2
+        0.1 V:t -> III:t/2 VI:t/2
+        0.1 V:t -> I:t/4 III:t/4 VI:t/4 I:t/4
+        0.1 V:t -> V:t/4 VI:t/4 VII:t/4 V:t/4
+        0.1 V:t -> V:t/2 VI:t/2
+        0.1 V:t -> III:t
+        0.1 V:t -> (M7 V:t)
+        0.1 V:t -> VII:t
+       0.05 V:t -> (M5 I:t)
+        
+        0.7 VI:t -> VI:t
+        0.3 VI:t -> (M6 I:t)
+        
+        0.4 VII:t -> VII:t
+        0.5 VII:t -> I:t/2 III:t/2
+        0.1 VII:t -> (M7 I:t)
+        
+        - Some undesirable dissonances resulted from the fact that our grammar does not account for differences between modes, particularly from transitions between modulations that occur back-to-back and II-chords interpreted in a minor setting. This is partly because our implementation interprets a II-chord in a minor key as a diminished chord, adhering strictly to the scale indices of the triad rooted at the second degree. Because of this, minor results tended to be more dissonant than major results, since II-chords were common in the output.
+        - As shown in our examples, it is possible to get back-to-back modulations, some of which can result in genre-inappropriate chord transitions. Because of problems like this, rules were designed to generally avoid the possibility of nested modulations without intermediate chord terminals, such as M5(M5(M5(...))). Such cases would easily result in transitions like C-major to F#-major or even C#-major, which although acceptable in some styles of modern music, would not be desirable in our target style of music (simple, chorale-like passages).
+
+    - ...
+
+- Orestis Melkonian - extending PTGG
+    https://soundcloud.com/haskell-music-grammars/sets
+    ...
+
+- Lukas Eibensteiner - Temporal-Scope Grammars
+    https://github.com/eibens/farm-2021
+    - Motifs
+        context: key, mode, harmony, tempo, beats, beatType
+        changeable: time, span, gain, freq
+        4 motifs: bass, pad, lead, drums
+    ...
+
+- Holtzman - GGDL
+    ...
+
+- L-systems
+    - https://observablehq.com/@kelleyvanevert/l-systems-2
+    - https://eliben.github.io/lsystem/
+        https://news.ycombinator.com/item?id=36748378
+    - https://m__nick.gitlab.io/l-systems/#Algle
+    - yield
+    - сделать их конкатенативными
+    - https://theseanco.github.io/howto_co34pt_liveCode/3-6-L-Systems-For-Rhythm/
+        - SuperCollider example
+            a = (1, // start with 1
+            Prewrite(
+            1: [0.25,2],
+            0.25: [3,3,2]/4,
+            3/4: [0.25,1,0.125,0.125],
+            ), 4); // 4 - depth level
+
+            With that grammar:
+
+            1 -> 
+            [0.25,2] -> 
+            [3/4,3/4,2/4],2 -> 
+            [0.25,1,0.125,0.125],[0.25,1,0.125,0.125],2/4,2 -> 
+            etc.
+
+            important points:
+            - repetition (3/4 x 2)
+            - cyclic return to previous hierarchy (1 -> ...0.25... -> ...3/4... -> ...1...)
+    - ...
+
+- micrograd / autograd
+    - https://github.com/karpathy/micrograd
+        from micrograd.engine import Value
+
+        a = Value(-4.0)
+        b = Value(2.0)
+        c = a + b
+        d = a * b + b**3
+        c += c + 1
+        c += 1 + c + (-a)
+        d += d * 2 + (b + a).relu()
+        d += 3 * d + (b - a).relu()
+        e = c - d
+        f = e**2
+        g = f / 2.0
+        g += 10.0 / f
+        print(f'{g.data:.4f}') # prints 24.7041, the outcome of this forward pass
+        g.backward()
+        print(f'{a.grad:.4f}') # prints 138.8338, i.e. the numerical value of dg/da
+        print(f'{b.grad:.4f}') # prints 645.5773, i.e. the numerical value of dg/db
+
+    - Tracing / visualization
+        from micrograd import nn
+        n = nn.Neuron(2)
+        x = [Value(1.0), Value(-2.0)]
+        y = n(x)
+        dot = draw_dot(y)

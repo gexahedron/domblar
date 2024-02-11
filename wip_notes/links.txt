@@ -1,0 +1,532 @@
+Nik Bärtsch Ronin Modul38_17 animation (KingTao)
+https://www.youtube.com/watch?v=BdJqOFLP4kA&list=PLlT2Gj--oLkPDzVWxhGaODqDGKw2Ccww_&index=95
+Modul 29_14 visual training - all parts
+https://www.youtube.com/watch?v=QlIIOrteIP4&list=PLlT2Gj--oLkPDzVWxhGaODqDGKw2Ccww_&index=88&t=70s
+minimalist_scores
+https://www.youtube.com/playlist?list=PLlT2Gj--oLkPzLN4YgQb3y6mPwRXwxQ2X
+william duckworth
+https://www.youtube.com/results?search_query=william+duckworth
+The Harp of New Albion: I. The New Abion Chorale / The Discovery
+https://www.youtube.com/watch?v=TmgWeioQoTU&list=OLAK5uy_lI5rJKDFOeqWn2Yr82DVik6DhsENUTWgY&index=2
+Timo Andres — Checkered Shade — score follow
+https://www.youtube.com/watch?v=GQXNgNPmp7k
+python "textual" jupyter notebook
+  -
+Agent-based modeling via graph rewriting
+https://blog.algebraicjulia.org/post/2023/07/graphical-schedule/
+Bill Evans 2-5-1; The chromatic line adds the magic✨ #jazzpiano #piano #pianotutorial
+https://www.youtube.com/watch?v=xEr4Y2BnpSA
+evans 251 piano transcription
+https://www.youtube.com/results?search_query=evans+251+piano+transcription
+
+
+
+xen
+    https://www.prismnet.com/~hmiller/music/warped-canon.html
+
+
+
+хотел вдохновиться чужими подходами
+    https://www.youtube.com/watch?v=kr4DdQuNAKc&t=10s&ab_channel=AlexMcLean
+    https://forum.toplap.org/t/what-is-this-live-coding-system-that-you-have-made/69
+    oxygene
+        https://dittytoy.net/ditty/59b8a8d54d
+    https://forum.toplap.org/t/how-to-actually-code-a-complete-song/691
+    https://extemporelang.github.io/docs/overview/time/
+        https://extemporelang.github.io/
+    https://www.youtube.com/results?search_query=Ryan+Kirkbride+foxdot
+    https://gitlab.com/iShapeNoise/foxdot_codingmusic_part1/-/blob/main/files/FoxDot_CodingMusic_Part1_en.md
+    https://sardine.raphaelforment.fr/pattern_languages/sardine/numbers.html
+    https://www.youtube.com/@kindohm/videos
+    https://tidalcycles.org/docs/patternlib/tutorials/course1/
+    Algorithmic Sound 1: Mark Fell Masterclass Full Video
+        https://www.youtube.com/watch?v=EcTAAdDPhTk&ab_channel=ArtScienceConnect
+    google:
+        music pattern language
+        foxdot pattern language
+
+pondskater
+    https://www.youtube.com/results?search_query=pondskater+tidalcycles
+    https://tidalcycles.org/blog/tidal_profile_pondskater/
+
+counterpoint/fugue
+    https://github.com/MichaelMansourati/counterpoint/blob/master/main.scd
+    https://github.com/MichaelMansourati/counterpoint/blob/master/leaps.scd
+    https://github.com/MichaelMansourati/counterpoint/blob/master/intervalValidations.scd
+    Counterpoint #20a - composing a whole fugue
+        https://www.youtube.com/watch?v=1DHNrAXrcPg&ab_channel=AlanBelkin
+    20 Little Fugues for Organ TWV 30:1-20 By Georg Philipp Telemann (with Score)
+        https://www.youtube.com/watch?v=Ym902CD0fc8
+    google:
+        counterpoint in jazz
+        jazz fugue
+    https://keyboardimprov.com/the-blossoming-of-jazz-fugues-during-the-1940s/
+    https://music.tutsplus.com/the-contemporary-musicians-guide-to-counterpoint--audio-4630t
+    https://hypocritereader.com/21/bwv
+    https://musictheory.pugetsound.edu/mt21c/FragmentSection.html
+    https://musictheory.pugetsound.edu/mt21c/FugueAnalysis.html
+    https://www.earsense.org/Earsense/WTC/Shostakovich/07/words.html
+    https://www.earsense.org/Earsense/WTC/Vocabulary/codetta.html
+    https://www.kunstderfuge.com/theory/smith/anatomy.htm
+
+ethiopian kignits
+    https://johncarlosbaez.wordpress.com/2023/04/05/kignits/
+    https://www.temesgen.com/learn/music-theory#h.p_nGjeUVVvlg6C
+    https://en.wikipedia.org/wiki/Qenet
+
+streams
+    https://github.com/tidalcycles/Tidal/blob/main/src/Sound/Tidal/Stream.hs
+    google
+        supercollider streams
+    https://doc.sccode.org/Overviews/Streams.html
+
+    https://thormagnusson.gitbooks.io/scoring/content/PartIV/chapter15.html
+
+Godfried Toussaint - Musical Rhythm through the Lens of Computational Mathematics
+https://www.youtube.com/watch?v=ATPhFbKqSwU&ab_channel=TheRhythmProject
+
+Donya Quick - Making Algorithmic Music
+https://www.youtube.com/watch?v=9Fg54XAr044&t=1508s&ab_channel=ComposeConference
+
+
+
+future books / not in the internet:
+  21st Century Guitar
+    https://www.bloomsbury.com/uk/21st-century-guitar-9781501373305/
+  The Oxford Handbook of Spectral and Post-Spectral Music
+    https://academic.oup.com/edited-volume/37085
+  Liam Cagney - Grisey & Spectral Music @CambridgeUP 2023
+  Dmitri Tymoczko - Tonality: An Owner's Manual
+    https://global.oup.com/academic/product/tonality-9780197577103?cc=de&lang=en&#
+  Ligeti's Macroharmonies
+    https://link.springer.com/book/10.1007/978-3-030-85694-6?awc=26429_1676824591_97888f63ddb7080b722d310ecd88a21d
+  Jeffrey Arlo Brown - The Life and Music of Gérard Grisey, Delirium and Form
+  Mathematical Music Theory: Algebraic, Geometric, Combinatorial, Topological and Applied Approaches to Understanding Musical Phenomena
+    https://www.worldscientific.com/worldscibooks/10.1142/10858#t=aboutBook
+
+- todo: скачать книги:
+  Thor Magnusson - Sonic Writing: Technologies of Material, Symbolic, and Signal Inscriptions
+  Marilyn Nonken - Identity and Diversity in New Music: The New Complexities
+  The Oxford handbook of sound and imagination (включает статью "Sonic Materialism: Hearing the Arche-Sonic" Voegelin)
+  Music as Atmosphere - Collective Feelings and Affective Sounds
+  Eleni Ikoniadou - The Rhythmic Event: Art, Media, and the Sonic
+  Between the Tracks: Musicians on Selected Electronic Music
+  Voicetracks: Attuning to Voice in Media and the Arts
+
+- upload
+Garth Knox (viola) in conversation with Martin Suckling 57:17
+https://medias.ircam.fr/xf81970
+Silvia Rosani, The roots and reasons of some composers' spectra 32:33
+https://medias.ircam.fr/x9e9193
+Liam Cagney. "Et le nuage est spectre, et le spectre est nuage": Murail, Poetics, Symbolism
+https://medias.ircam.fr/xf29578
+
+
+
+переоткрыть в safari:
+http://localhost:9999/notebooks/Downloads/my_music_research/algoraves/algorave_tresor/baroque_experiments4_merge.ipynb
+https://www.blogger.com/blog/post/edit/1164367183620962014/244004784343935073?hl=en
+https://www.blogger.com/blog/post/edit/1164367183620962014/2246035921075915027?hl=en
+https://www.blogger.com/blog/post/edit/1164367183620962014/244004784343935073?hl=en
+https://www.blogger.com/blog/post/edit/1164367183620962014/9128530790663016719?hl=en
+https://www.blogger.com/blog/post/edit/1164367183620962014/5204965045228674083?hl=en
+https://www.blogger.com/blog/post/edit/1164367183620962014/204362930559926679?hl=en
+
+
+AMS Special Session on Mathematical Techniques in Musical Analysis
+2003 - https://www.ams.org/meetings/sectional/2086_program_ssj.html
+  (no abstracts)
+  review - https://mtosmt.org/classic/mto.03.9.3/mto.03.9.3.peck_review.html
+2004 - https://www.ams.org/meetings/sectional/2113_program_ss23.html
+2004 - https://www.jointmathematicsmeetings.org/meetings/national/jmm/2078_program_ss1.html
+2011 - https://jointmathematicsmeetings.org/meetings/national/jmm/2125_program_ss19.html
+2016 - https://www.ams.org/meetings/sectional/2237_program_ss14.html
+2017 - https://www.jointmathematicsmeetings.org//meetings/national/jmm2017/2180_program_ss9.html
+2021 - https://www.jointmathematicsmeetings.org/meetings/national/jmm2021/pressroom2021
++
+http://www-personal.umd.umich.edu/~tmfiore/1/music.html
+
+
+Deconstructing NES Music using Famitracker
+https://www.youtube.com/watch?v=MQGfuRM2XQo&ab_channel=ChrisPlaysGames
+
+NorrinRadd22 - NES 8-bit Composition Methods
+https://www.youtube.com/playlist?list=PL-BpRdD12Tw7x-5SRxGmVnGS0m5xpTYBT
+
+Furnace Tracker
+https://github.com/tildearrow/furnace
+
+Loops Within Loops: A Modular Approach to Mystery in Pokemon Red and Blue
+https://www.youtube.com/watch?v=VOF-SijlAU8
+
+Modulation - AM, RM and FM synthesis
+https://thormagnusson.gitbooks.io/scoring/content/PartII/chapter7.html
+
+DOS games with good use of OPL2 FM synth?
+https://www.reddit.com/r/dosgaming/comments/4q3z29/dos_games_with_good_use_of_opl2_fm_synth/
+
+Programmer's Guide to Yamaha YMF 262/OPL3 FM Music Synthesizer
+https://www.fit.vutbr.cz/~arnost/opl/opl3.html
+
+Sound chip specifications
+https://github.com/chiptunecafe/VGMCK_Arch/wiki/Sound-chip-specifications
+
+FM Bass Patch Programming
+https://www.youtube.com/watch?v=1XbrTC0NndM
+
+How to Use Famitracker
+https://www.youtube.com/watch?v=Kg3UhEygz20&list=PLW08UHPY2AEoWhZJVfaE4tUF9jpso8KI0&index=3&ab_channel=BenBurnes
+https://btothethree.tumblr.com/post/104645271062/how-to-use-famitracker-chapter-2-getting
+
+
+
+chrome:
+https://www.youtube.com/user/explod2A03/videos
+Artist Feature #2: Tim Follin
+https://www.youtube.com/watch?v=GC1dTzyb5Gs&ab_channel=GSTChannel
+Tim Follin - “Black Lamp (ZXS 128k)” Full Soundtrack [Oscilloscope View]
+https://www.youtube.com/watch?v=Yshuz9jjc28&ab_channel=acrouzet
+google: c64 arpeggio
+https://www.youtube.com/results?search_query=DefleMask
+https://www.youtube.com/results?search_query=best+cracktros+music
+sc course - envelopes - http://cs.wellesley.edu/~cs203/lecture_materials/envelopes/envelopes.pdf
+https://www.youtube.com/results?search_query=2-5-1+voicings
+много всякого set theory
+https://www.youtube.com/user/AustinTPatty/videos
+
+
+safari:
+google: Maqam Saba
+Musical Form: Mapping the Territories
+https://mtosmt.org/issues/mto.14.20.2/mto.14.20.2.klorman.php
+google: Robert Rowe self-critical Algorithmic Composition
+https://github.com/mathigatti/moreAbstractLiveCoding
+https://www.reddit.com/r/musictheory/comments/gvsr0m/is_there_anyone_that_could_provide_me_with/fss6s90/?utm_source=reddit&utm_medium=web2x&context=3
+https://www.reddit.com/r/musictheory/comments/1jg8y4/explain_like_im_5_riemanns_music_theory/
+Parsimonious Voice Leading and the Stimmführungsmodelle
+https://mtosmt.org/issues/mto.18.24.4/mto.18.24.4.jessulat.html
+https://www.reddit.com/r/musictheory/comments/fuf7ab/does_anyone_use_neoriemannian_analysis_to_write/
+https://www.reddit.com/r/musictheory/comments/28z4vk/transformation_theory/
+google: musical set theory for music composition
+Review of Christopher F. Hasty, Meter as rhythm
+https://mtosmt.org/issues/mto.98.4.4/mto.98.4.4.roeder.html
+Jason Yust - Pedagogical materials for twentieth-century rhythm
+https://discuss.societymusictheory.org/discussion/134/pedagogical-materials-for-twentieth-century-rhythm
+https://www.youtube.com/results?search_query=Kofi+Agawu
+Review of Richard Cohn, Audacious Euphony: Chromaticism and the Triad’s Second Nature (Oxford University Press, 2012)
+https://mtosmt.org/issues/mto.12.18.3/mto.12.18.3.yust.html
+Richard Cohn, Audacious Euphony - Chromaticism and the Triad's Second Nature, New York: Oxford University Press 2012
+https://www.gmth.de/zeitschrift/artikel/755.aspx
+
+
+voice leading
+Birdcage Flights: A Perspective on Inter-Cardinality Voice Leading
+https://www.mtosmt.org/issues/mto.09.15.5/mto.09.15.5.rockwell.html
+A Tetrahedral Graph of Tetrachordal Voice-Leading Space
+https://mtosmt.org/issues/mto.03.9.4/mto.03.9.4.cohn.php
+Voice Leading in Set-Class Space
+https://www.jstor.org/stable/27639391
+
+
+
+todo: scores
+https://www.youtube.com/user/FabioCostaMusic/videos
+https://www.youtube.com/c/ClaudiMeneghin/videos
+https://www.youtube.com/channel/UCVxKPod3k3h1IObyq969cyw
+https://www.youtube.com/user/1234helloguy/videos
+
+
+
+https://www.youtube.com/c/NahreSol/videos
+Compositium
+  https://www.youtube.com/watch?v=Sfcq7oMoUx0
+Why Make Microtonal Music? (With Audio Examples)
+https://www.youtube.com/watch?v=LcUkK-CiGV4
+Making Microtonal Music (in 15edo)
+https://www.youtube.com/watch?v=ck0CH25V4zE
+
+
+
+https://www.youtube.com/channel/UCtYyHvCEB6rXZF7EIRjDeiQ/videos
+https://www.youtube.com/user/multiphony/videos
+https://www.youtube.com/user/RSwordIAAA/videos
+https://www.youtube.com/channel/UClM-wliCnfJEl3b0QSZp32Q/videos
+https://www.youtube.com/user/tirelat/videos
+https://www.youtube.com/c/OudforGuitarists/videos
+
+
+Toby Twining
+Kyle Gann
+extended JI
+world temperaments (chinese, african, arab, bulgarian, ancient Greek, ...)
+Dynamic Tonality
+Harry Partch
+microtonality in classical music
+Wendy Carlos
+Margo Schulter
+Gene Ward Smith
+James Tenney
+...
+
+
+# todo: просто любопытно - есть ли связь между subgroup temperaments и regular temperaments
+есть
+A just intonation subgroup is a group generated by a finite set of positive rational numbers via arbitrary multiplications and divisions. Using subgroups implies a way to organize just intonation intervals such that they form a lattice. Therefore it is closely related to regular temperament theory.
+# ещё todo: тогда видимо и zabka scales тут же где-то рядом
+
+https://www.huygens-fokker.org/docs/modename.html
+
+
+
+
+elia lrde
+http://localhost:9999/notebooks/Downloads/algorave_iclc_and_eulerroom/elia-lrde-22edo.ipynb#
+abjad
+http://localhost:9999/notebooks/Downloads/algorave_iclc_and_eulerroom/algorave3/abjad_studies_22edo.ipynb
+wip
+https://github.com/gexahedron/sc3_microtonal/wiki/WIP:-(current)-Music-theories-and-practices-(microtonal-and-algorithmic)
+
+fm
+https://www.youtube.com/watch?v=LJixLkMbJ1Y
+https://www.youtube.com/watch?v=1El2bmdcXxg
+
+Jazz
+https://www.youtube.com/c/JazzDuets/videos
+
+
+Harmony 3: Just Intonation and Equal Temperament
+https://www.youtube.com/watch?v=yS9dbH5qDV0
+
+https://github.com/madskjeldgaard/portedplugins
+https://github.com/redFrik/f0plugins/releases
+todo: opl2
+google:
+python metaprogramming functions partial name decorators memoization
+
+
+https://www.youtube.com/results?search_query=chiptune+sound+design+tutorial
+How to make 8-bit Music - Stage 1 (The Basics)
+https://www.youtube.com/watch?v=GI8UEI8JOyk
+
+22-tone equal temperament
+https://www.youtube.com/watch?v=oNPCiBY5IZ8&list=PL3mH2gZZv-Naff4R7euxY12msnJBbStvl&index=9
+
+FM synthesis tutorial - Xen-Arts FMTS 2 VST synth
+https://www.youtube.com/watch?v=Bc4xA-5hfUc
+
+IVOR Virtual Analog Microtonal Synthesizer - Free VST
+https://www.youtube.com/watch?v=hjXBNhA5USM
+
+
+
+foxdot breakbeats
+https://github.com/laelume/compositions/blob/master/breakbeats/amen-break.py
+
+
+
+https://learnmusictheory.net
+https://viva.pressbooks.pub/openmusictheory/chapter/texture/
+
+
+
+Kyle Gann
+A Course in Postminimalism
+https://www.kylegann.com/AshgatePostminimalism.html
+Subversive Prophet: Henry Cowell as Theorist and Critic
+https://www.kylegann.com/Cowell.html
+An Essay on Downtown Music
+https://www.kylegann.com/downtown.html
+
+
+BAIN MUSC
+file:///Users/gexahedron/Downloads/my_music_research/MUSIC%20TEXTS/mathematical%20music/BAIN%20MUSC%20726%20Music%20and%20Mathematics.webarchive
+https://reginaldbain.com/vc/musc726t/
+Post-Tonal Theory - https://reginaldbain.com/vc/musc525/
+
+
+
+Why are D-sharp and E-flat considered to be two different notes? (ethanhein.com)
+https://news.ycombinator.com/item?id=32626218
+https://www.ethanhein.com/wp/2022/why-are-d-sharp-and-e-flat-considered-to-be-two-different-notes/
+
+
+
+supercollider
+fm synthesis supercollider
+  https://www.youtube.com/results?search_query=fm+synthesis+supercollider
+supercollider chiptune
+  https://www.youtube.com/results?search_query=supercollider+chiptune
+timestretch
+  https://github.com/spluta/TimeStretch
+https://github.com/geoffroymontel/supercollider-experiments
+https://scsynth.org/t/non-working-second-order-system-code/6190
+Noob: How to do classic (DX7 style) operator feedback?
+  https://scsynth.org/t/noob-how-to-do-classic-dx7-style-operator-feedback/4753
+A House Track in SuperCollider
+https://truthindustri.es/supercollider/2019/01/05/supercollider-track.html
+google: stream of Events supercollider
+https://doc.sccode.org/Tutorials/A-Practical-Guide/PG_03_What_Is_Pbind.html
+google: supercollider portamento
+https://doc.sccode.org/Tutorials/A-Practical-Guide/PG_Cookbook06_Phrase_Network.html
+https://scsynth.org/t/how-to-sequence-glissando/479/3
+https://doc.sccode.org/Tutorials/Mark_Polishook_tutorial/10_Controls.html
+https://scsynth.org/t/slow-drone-improv/183/2
+https://scsynth.org/t/moog-dfam-synth/659
+Super Mario Theme
+  https://sccode.org/1-11N
+http://sccode.org/1-5d8
+http://sccode.org/1-5d7
+http://sccode.org/1-5cY
+http://sccode.org/1-5d1
+http://sccode.org/1-5el
++
+https://sccode.org/1-8
+https://sccode.org/1-d
+https://sccode.org/1-aN
+https://sccode.org/1-4QJ
+https://sccode.org/1-4QL
+https://sccode.org/1-5bV
+
+
+Oğuz Usman - Educational
+https://www.youtube.com/@oguzusman-educational6933/videos
+
+
+
+? algorithmic, constraints, ...
+Donya Quick
+  https://www.youtube.com/@DonyaQuick/videos
+Composing (Music) in Haskell - Stuart Popejoy
+  https://www.youtube.com/watch?v=Jmw6LLNQQfs
+  https://sirlensalot.github.io/posts/Pleonid.html
+  https://www.reddit.com/r/haskell/comments/4caxfn/video_composing_music_in_haskell_stuart_popejoy/
+Modes in modern music from a topological viewpoint
+  https://arxiv.org/pdf/1309.0687.pdf
+Strasheela
+  https://strasheela.sourceforge.net/strasheela/doc/StrasheelaExamples.html
+Constraint Programming in Music, book, chapters
+  http://www.iste.co.uk/book.php?id=413
+Örjan Sandred, Cluster Engine
+  https://sandred.com/research
+  Approaches to Using Rules as a Composition Method
+  https://www.tandfonline.com/doi/full/10.1080/07494460903322430
+
+
+links:
+  microtonal tidalcycles
+  https://tidalcycles.org/blog/blog_topic_relyt_r_xuixo/#microtonal-structure-and-production
+
+  famitracker
+  https://btothethree.tumblr.com/post/104644129447/how-to-use-famitracker-chapter-1-introduction
+
+  foxdot effect manager
+  https://github.com/Qirky/FoxDot/blob/76318f9630bede48ff3994146ed644affa27bfa4/FoxDot/lib/Effects/Util.py#L194
+
+  supercollider server architecture (for effects)
+  https://doc.sccode.org/Reference/Server-Architecture.html
+  https://doc.sccode.org/Reference/Server-Command-Reference.html
+
+  osc messages, sc3server, float type
+  https://github.com/Qirky/pyOSC3/blob/master/pyOSC3/OSC3.py
+
+  ? algorithmic jazz
+  https://mtosmt.org/issues/mto.20.26.3/mto.20.26.3.miller.html
+
+  microtonality, Comprehensibility and Ben Johnston’s String Quartet No. 9
+  https://mtosmt.org/issues/mto.19.25.1/mto.19.25.1.willis.html
+
+  foxdot timevar
+  https://github.com/Qirky/FoxDot/blob/76318f9630bede48ff3994146ed644affa27bfa4/FoxDot/lib/TimeVar.py
+
+  Neo-Riemannian Theory as Voice Leading Pedagogy
+  https://static1.squarespace.com/static/53777798e4b0875c41487b50/t/61eb728f7ee5600f71ef4d4a/1642820244374/OHara+-+Neo-Riemannian+Theory+as+Voice-Leading+Pedagogy+-+JMTP+35.pdf
+
+  google: python notebooks tests
+
+Jason Yust - A poll: Your definition of tonality
+  https://discuss-lts.societymusictheory.org/discussion/524/a-poll-your-definition-of-tonality.html
+
+Using theory behind FM synthesis in practice
+https://www.adsrsounds.com/fm8-tutorials/using-theory-behind-fm-synthesis-in-practice/
+
+Working with Bleeps (NSF) Study Time
+https://www.vg-resource.com/thread-18754.html
+
+
+tetrachords + arabic music:
+  Beyond 12-Tone Temperament in Oriental Music.
+    (Invited Paper in the 4th Micrötone, Salzburg, may 1991,  with Late modifications and corrections.)
+    SUMMARY. In this paper several related topics are reviewed, in order to present coherently oriental music systems. After some physiological hypothesis on tone and consonance perception, a modal music model is proposed. A traditional generative approach to tetrachordal and scale construction is briefly touched, presenting several oriental notations and its problems. Coming to actual playing we offer some analysis which validate and invalidate usual assumptions on that. The examples will be heard and its acoustical analysis shown graphical and numerically, to connect musical impression with objective measurements. In the appendix part we present a definition of dissonance which supports the modal music model, graphics of oriental notations and a short description of techniques used in this work, all developed in the LTPM.
+  http://www.aldebaransoft.es/Musica/beyond_12.htm
+
+  An innovative way to transfer the melodies of tetrachords to Arabic music
+  https://jedu.journals.ekb.eg/article_209533.html?lang=en
+
+  Importance of Mode Tetrachords in The Tonal and Modal Music Education
+  https://www.researchgate.net/publication/277971424_Importance_of_Mode_Tetrachords_in_The_Tonal_and_Modal_Music_Education
+
+xen.wiki:
+  https://en.xen.wiki/w/User:FloraC/Analysis_on_the_13-limit_just_intonation_space:_episode_i
+  https://en.xen.wiki/w/User:FloraC/Analysis_on_the_13-limit_just_intonation_space:_episode_ii
+  https://en.xen.wiki/w/User:FloraC/There_is_not_a_third_side_of_the_river
+  https://en.xen.wiki/w/Andrew_Heathwaite%27s_MOS_Investigations
+  https://en.xen.wiki/w/Kite_Giedraitis%27s_Categorizations_of_41edo_Scales
+
+наушники
+  fostex t60rp
+  Audeze
+  магнитопланары наушники
+
+voice leading, jazz
+https://www.reddit.com/r/Jazz/comments/n0favp/voice_leading_question/
+
+minimalism
+https://www.google.com/search?q=minimalism+music+process+analysis+harmony
+https://musictheoryprof.com/2019/01/composition-ii-minimalism/
+https://www.coursehero.com/study-guides/musicapp-medieval-modern/short-ride-in-a-fast-machine/
+
+
+Terry Riley / JI (just intonation) tunings
+https://www.google.de/search?q=riley+rosary+tuning&ie=UTF-8&oe=UTF-8&hl=ru-de&client=safari#ip=1
+Just Intonation and Indian Aesthetic in Terry Riley’s The Harp of New Albion
+http://www.ex-tempore.org/hudson/hudson.htm
+L’intonation juste, un renouveau esthétique et théorique
+https://music.arts.uci.edu/abauer/3.1/notes/Hasegawa_Just_Intonation.pdf
+I am not qualified to write about The Harp of New Albion.
+http://uncannyvalleymag.blogspot.com/2011/01/i-am-not-qualified-to-write-about-harp.html?m=1
+Terry Riley: The Harp of New Albion, Part 3/4
+https://www.sonoloco.com/rev/composers/riley/albion/albion3.html
+FJS Compared With Alternatives
+https://misotanni.github.io/fjs/en/compare.html
+The Harp of New Albion’s Tuning for Logic
+https://pemungkah.com/the-harp-of-new-albions-tuning-for-logic/
+SKETCHING A NEW TONALITY: A PRELIMINARY ASSESSMENT OF STEVE REICH’S SKETCHES FOR MUSIC FOR 18 MUSICIANS IN TELLING THE STORY OF THIS WORK’S APPROACH TO TONALITY
+https://research.gold.ac.uk/id/eprint/16372/7/AS%20REFORMATTED%20BY%20PIETER%209%208%2019%20POTTER_K_Rethinking_Chapter_withDiagrams%20(3).pdf
+
+
+"spectral chords"
+https://scholar.google.com/scholar?hl=en&as_sdt=0,5&q=%E2%80%9Cspectral+chords%E2%80%9D&btnG=
+
+Michaël Levinas (1949) Ouverture pour une fête étrange
+
+Spectral music: long-term perspectives
+http://www.philippe-hurel.fr/en/musique_spectrale.html
+
+Sound Synthesis Based on Ordinary Differential Equations
+https://www.jstor.org/stable/43829277
+
+Fb1_ODE – an Interface for Synthesis and Sound Processing with Ordinary Differential Equations in...
+https://www.youtube.com/watch?v=AcuKXxw4vrE
+
+On the Design of Spectral Tools in Blue
+A compositional account of working with Victor Lazzarini's PVS opcodes and Blue
+https://csoundjournal.com/issue7/onTheDesignOfSpectralToolsInBlue.html
+
+Analysis of a composition based on three sound gestures through spectral techniques
+https://www.piano-composer-teacher-london.co.uk/post/Analysis-of-a-composition-based-on-three-sound-gestures-through-spectral-techniques
+
+A Dynamical Systems Approach to Spectral Music: Modeling the Role of Roughness and Inharmonicity in Perception of Musical Tension
+https://www.frontiersin.org/articles/10.3389/fams.2020.00018/full
+
+RYUICHI SAKAMOTO | Tokyo Melody | 1984 
+https://www.facebook.com/watch/?v=1229273607448289

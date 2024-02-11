@@ -1,0 +1,111 @@
+https://nomnoml.com/
+[<start>start] -> [<state>plunder] -> [<choice>more loot] -> [start]
+[more loot] no ->[<end>e]
+
+[Pirate|
+  [beard]--[parrot]
+  [beard]-:>[foul mouth]
+]
+
+[<table>mischief| bawl | sing || yell | drink ]
+
+[<abstract>Marauder]<:--[Pirate]
+[Pirate] - 0..7[mischief]
+[<actor id=sailor>Jolly;Sailor]
+[sailor]->[Pirate]
+[sailor]->[rum]
+[Pirate]-> *[rum|tastiness: Int|swig()]
+
+
+
+практика:
+    sequences
+    ...
+
+
+- python
+    __getattr__
+        d.amp()
+    __getitem__
+        d['amp']
+
+
+- сначала надо попробовать без UI
+    - diagrams
+        https://diagrams.mingrammer.com/
+    - mermaid
+        https://mermaid.js.org/intro/
+    - graphviz
+
+
+- вводим новое понятие - блок
+    - (done) блок - это функция, на входе какой-то dict, на выходе - другой dict
+    todo:
+        - можно в двух режимах - assert и ignore
+        - нужно блоки научиться склеивать друг с другом
+        - нужно блоки научиться симулировать/запускать
+        - хочется также уметь работать с генераторами
+            - например L-системы
+
+
+- какие бывают структуры для циклов:
+    - linked list - есть начало, есть цикл
+    - цикл может быть может быть зависящим сам от себя
+        e. g., smooth chord progression
+        после конца надо пересчитать всю операцию заново
+
+
+- логики
+    https://en.wikipedia.org/wiki/Non-classical_logic
+    - modal
+        Temporal logics can be related via Curry-Howard to functional reactive programming (FRP). Suggestions of jumping-off points include de Paiva and Eades III, Constructive Temporal Logic, Categorically (2017), as well as this blog post by Philip Schuster alongside this interesting /r/haskell thread about it.
+    - temporal (? dynamic)
+    - linear/affine
+    - quantum
+    - paraconsistent
+
+
+топики:
+    - процессы
+    - генераторы
+    - блоки, входы и выходы
+    - зависимости
+    - совместимости
+    - constraints
+
+
+- что есть интересного в ресёрче про categorical systems theory:
+    https://topos.site/blog/
+    - красивый блог, красивые презентации, хороший маркетинг
+    - унификация систем
+    - какой-то код/синтаксис/структуры для Julia/Python
+        - глянуть (mini-)notation?
+    - open systems
+    - для подсчёта pushout используется union-find
+    - modularity в каких-то случаях, комбинируемость/аддитивность систем
+    - stock-flow diagrams
+    - catspeak:
+        (co)(pre)sheaves, topos, fibrations, pushout/pullback, lifts,
+        lenses/optics, ...
+            - lens
+                - Realizing design problems as lenses
+                https://www.cl.cam.ac.uk/events/act2021/slides/ACT_2021_slides_30.pdf
+                - as a synchronisation protocol
+                https://www.cl.cam.ac.uk/events/act2021/slides/ACT_2021_slides_29.pdf
+    - petri nets:
+        tokens, firing, ...
+    - resource sharing
+        ...
+    - multiphysics, Tonti diagrams
+    ...
+
+сбоку
+    - lattices/posets для type theory, и алгоритмы вокруг
+
+
+# TODO:
+# it's kind of possible to extend classes!
+# class Chords(Chords):
+#     def hi(self):
+#         print('hi!')
+#         return self

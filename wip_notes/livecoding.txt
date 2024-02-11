@@ -1,0 +1,244 @@
+operations, todo:
+    - для начала надо запустить какой-то процесс
+        - сделать loop 7th аккорда в каком-то жесте на 2 руки
+(t.context(edo=12)
+    .chords("...")
+    .gestures([""])
+)
+    - дальше понять как я применяю операции к этой конструкции
+?
+    - мб добавить проверку, что конструкция хорошо зацикливаема
+
+    - нужно понять - как устроено течение времени
+        и в какой момент нужно перейти с прошлого паттерна на новый
+        для начала допустим всё просто - всегда проигрываю паттерн до конца
+
+    - gestures/melodies
+        - triadic arpeggios
+        - sine-wave shaped
+
+    - mutations
+        ...
+
+    - # sliding window approach to form (similar to Riley's "In C", Rzewski's "Les Moutons de Panurge" Kyle Gann):
+        # https://www.kylegann.com/CallMyselfaMinimalist.html
+        # A, AB, ABC, BCD, BCDE, DEF, DEFG, EFGH...
+        # L-system rhythms? or L-system something
+        # although I also like Philip Glass approach, sounds very techno-like, jittery
+
+    - закодить (тональные) алгоритмические миниатюры, на основе вот этих идей:
+        http://nigel-morgan.co.uk/gifts-from-the-pavement-2/
+        https://www.youtube.com/watch?v=C24qhl7MLQU
+        http://nigel-morgan.co.uk/wp-content/uploads/ts_oldsite/files/Gifts%20from%20the%20Pavement.pdf
+        A bar is an independent musical object: it can be repeated ad lib or moved into a new location.
+        The tonality abstract is not sounded out, but shows the tonality which the miniature is created from. See how bar 3 is based on its interval structure, transposed a tone higher.
+
+
+models:
+    - Steve Reich
+        https://www.youtube.com/playlist?list=PLmB05ngLGnhHnPzL49m5N8fjwRWUrPZEI
+    - Sergei Zagny - Sonata
+        есть примерно 2 жеста, каждый в своей руке
+            (или для простоты можно предположить что это 1 жест, но с аккордами)
+            (судя по нотации - это 3 голоса)
+        каждый такт - это примерно какой-то аккорд
+        между ними - какой-то voice leading
+            который определяется постепенным движением вверх, затем обратно вниз
+        Bb diatonic: 10 0 2 3 5 7 9
+       (2_  2  5  10)x9=10 maj = I
+        3_ 10_ 7  10  =  3 maj = IV
+        3_  0  7      =  0 min = ii
+        5_  0  9   0^ =  5 maj = V (half cadence)
+        5_  2  9      =  2 min = iii
+        7_  2 10      =  7 min = vi
+        7_  3 10      =  3 maj = IV
+        9_  3  0^     =  9 dim = viio
+        9_  5  0^     =  5 maj = V
+       10_
+       10_
+         /
+        0
+        0
+        2
+        2
+        3
+        3
+        5
+        5
+        7
+        7
+        9
+        9
+         /
+       10
+       10   7^  2'    =  7 min = vi
+        0^  7^  3'    =  0 min = ii
+    !   0^  8^  3'    =  8 maj = IV/IV (3 diatonic: 3 5 7 8 10 0 2; expected viio, 0^ 9^ 3')
+        2^  8^  5'    =  2 dim = viio/IV (orig. should be iii, 2^ 9^ 5')
+        2^ 10^  5'    = 10 maj = V/IV == I (orig. should be I)
+        3^ 10^  7'    =  3 maj = I/IV == IV
+        3^  0'  7'    =  0 min = vi/IV == ii
+    !   5^  0'  9'    =  5 maj = V (expected ii/IV, 5^ 0' 8')
+        5^  2'  9'    =  2 min = iii
+        7^  2' 10'    =  7 min = vi
+        7^  3' 10'    =  3 maj = IV
+    v   5^  0'  9'    =  5 maj = V (expected viio, 9^ 3' 0/)
+         / было +3 -2, стало +1 -2
+        5^  2'  9'    =  2 min = iii
+        3^ 10^  7'    =  3 maj = IV
+        3^  0'  7'    =  0 min = ii
+        2^  9^  5'    =  2 min = iii
+        2^ 10^  5'    = 10 maj = I
+        0^  7^  3'    =  0 min = ii
+    !   0^  8^  3'    =  8 maj = IV/IV (expected viio, 0^ 9^ 3')
+        ...
+        
+
+        ...
+        4 - 2 - 5 - 3 - 6 - 4 - 7 - 5 - 1 - 6 - 2 - 7 - 3 - 1 - 4
+          t   t  HC   t   t   t   t   t   t   t   t   ?   ?   t
+        - как записать gesture?
+            имеем аккорд 3 7 10
+            тогда по голосам
+        [
+            [{(0, -1): 8}],
+            [{'.': 4}, {(2, -1): 2}, {(2, -1): 2}],
+            [1, 2, 1, 2, 1, 2, 1, 2]
+        ]
+
+        вторая интересная мне часть, phasing
+        https://youtu.be/NQ6SkKm7tu8?t=610
+        0: 2  6 9 11 : 2/D maj add6
+        1: 0  5 9 0^ : 5/F maj
+            0+1: OCT(0, 2)
+        2: 9_ 4 9 1^ : 9/A maj
+            1+2 or 2+3: HEX(0, 1)
+        3: 0_ 5 9 0^ : 5/F maj (почти возврат)
+
+        - как устроены ритмы в части B у Загния
+            если кратко - похоже на рандом
+            - стартует с 2 (важно для контраста с первым аккордом)
+            - основной ритм - это 2 2 2 1
+            - ни 2, ни 1 не встречаются более чем 3 подряд
+            - при это всегда есть 222
+            - 112 и 12 идут рядом
+        2 2 2 1, 1 2 1 2, 2 1 1 1
+            7 6 5
+        2 2 1 2, 1 1 2 2, 2 1 1 1
+            7 6 5
+        2 2 1 2, 1 1 2 2, 2 1 1 2
+            7 6 6
+        1 2 2 1, 1 1 2 2, 2 1 1 2
+            6 6 6
+
+        попробовал L-systems        
+        rules = {
+            '1': ['12', '112'],
+            '2': ['221', '21']
+        }
+        start = '2'
+        2, 2, 1, 2 / 1, 1, 2, 2 / 2, 1, 1, 1
+        2, 1, 2, 2 / 1, 2, 2, 1 / 2, 1, 1, 1
+        2, 1, 2, 1 / 1, 2, 2, 2 / 1, 1, 2, 2
+        1, 2, 2, 1 / 1, 1, 2, 2 / 1, 2, 2, 1
+        довольно похоже : ) хотя свойства не все совпали
+
+    - Modern Love Waltz
+    ? tintinnabuli
+    - cadences
+        - Sky Macklay - Many, Many Cadences
+        - тут можно было бы задавать граф
+        и модифицировать его на лету
+    - canto ostinato
+        - допустим мы сгенерили первую ячейку
+        - допустим мы можем попросить её как-то модифицировать
+        - как с этим дальше управлять?
+        cell1 = '...'
+        cell2 = mut(cell1, op='...')
+        cell3 = mut(mut(cell1, op='...'), op='...') = mut(cell2, op='...')
+        хорошо бы ещё как-то ячейки куда-то в память сохранять
+        - как это печатать на практике?
+    - minimalist processes
+        A, AB, ABC, BCD, BCDE, DEF, DEFG, EFGH...
+        L-systems
+    - live-coding with automata, graph, transitions between states
+    - adding second voice in counterpoint to the first voice
+        - in fixed intervals (in fifths)
+        - in contrary motion
+    - Fausto Romitelli - TRASH TV TRANCE
+    - La Monte Young - The Well-Tuned Piano
+
+
+plan:
+    0. just create some ideas for future live-coding at first
+    and implement them any easiest possible way
+        ...
+    1. then come up with nice syntax
+    2. then come up with UI
+
+syntax:
+(d.v1
+    .context(edo=12, scale="C acoustic")
+    .note(0)
+    .gesture(len=5)
+)
+__getattr__
+
+
+questions:
+    ...
+
+answers:
+    - loop or no loop?
+        - we don't have any defaults; however, we should have some configs
+
+
+
+
+
+philosophy:
+    - it's about creating (organized) complexity
+
+
+
+comments on other systems:
+    orca
+        Lovebyte 2023 - DJ / Algorave Set: Alicef
+        https://www.youtube.com/watch?v=NBJCxjqpPYI
+        - interactive game
+        - 2d grid, you can replace letters
+        - or move them around on the grid, selecting rectangles of letters
+        - and there are also some pointers moving on the grid
+        - bpm probably same simultaneously for all letters
+        - there could be dependencies between patterns (29:00, E, S, W)
+        - everything we hear is visualized, right?
+
+    tidalcycles
+        Dan Gorelick - Berlin Live Code performance and visualizer
+        https://www.youtube.com/watch?v=ji0OS9VqfU0
+        - it's a chain of operations
+        - each operation is on new line
+        - which allows to comment out some of the operations in chain
+        - each voice is separated as a block
+        - which allows updates to single voices
+        - there's a loop and bpm, to which all voices are synchronized
+        - (kind of) everything we hear is notated explicitly
+
+concepts/structures/operations/algorithms
+
+melodies
+harmonies
+chord progressions
+voice leading
+rhythms
+tonality
+musical form
+timbre, timbral effects
+dynamics
+semiotics?
+gestures
+visual app
+op1 as an input device
+c-thru axis 49
+операции с памятью, повторение мотивов
+саунд дизайн

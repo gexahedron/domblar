@@ -1,0 +1,129 @@
+- create/research other charts/maps
+    ! - add other scales
+        acoustic works nice, what about others?
+    - research connections between NRT and maps in various scales and modulations
+    - add minor map
+        with variable 6 and 7
+    - variable 6 and 7 for major map?
+    - explore microtonal maps
+    - research modes chord progressions
+    - research quartal voicings inside chord progressions
+- fixes
+    - recheck: BUG (probably also related to previous BUG)
+        looks like the chord progressions tend to go up
+        (if it's not 12edo)
+    - fix voice crossing
+    - fix bass
+    - add option to avoid I64
+    - add split voice-leading
+    - for each voice add preferred direction (up or down)
+    - add support for restricting voice-leading according to melody movement
+    - add support for decatonic scales
+    - add some things about contrary/similar motion
+        (like, no parallel fifths or whatever)
+    - understand how to mix NRT, scales and functional chord progressions together
+- more chords
+    - tritone substitutions
+    - Hendrix chord
+    - Tristan chord
+    - Elektra chord
+    - Petrushka chord
+    - Psalms chord
+    - https://en.wikipedia.org/wiki/Template:Chords
+    - add (jazz) chord(s) extensions
+        - 5 Chords EVERYONE Plays (And You Should Too)
+            https://www.youtube.com/watch?v=hiQdy_q-F2U
+                - Cmaj7
+                - C7 (понизили 7th)
+                - Cm7 (понизили 3rd)
+                - Cm7b5 (понизили 5th)
+                - Co7 (снова понизили 7th)
+                но можно же дальше попробовать пойти!
+                todo:
+                - C-D-Gb-A (понизили 3rd)
+                - C-D-F-A (понизили 5th)
+                - C-D-F-Ab (понизили 7th)
+                ? C-Dd-F-Ab (понизили 3rd)
+                ? C-Dd-E-Ab (понизили 5th)
+                ? C-Dd-E-G (понизили 7th)
+                C-C-E-G (наверно тут можно остановиться уже)
+        - avoid notes:
+            - 11th clashes with maj 3rd
+        (+ explore more voicings)
+        add6
+            https://en.wikipedia.org/wiki/Sixth_chord
+        https://en.wikipedia.org/wiki/Added_tone_chord
+        add2/add9
+        add4
+        6/9 chord
+        https://en.wikipedia.org/wiki/Jazz_chord
+        dominant 7♯9 chord
+            https://en.wikipedia.org/wiki/Dominant_seventh_sharp_ninth_chord
+        Dominant thirteenth
+            https://en.wikipedia.org/wiki/Thirteenth
+        Mystic chord
+            https://en.wikipedia.org/wiki/Mystic_chord
+        Lydian chord / major 7♯11 chord
+            https://en.wikipedia.org/wiki/Lydian_chord
+        Seven six chord
+            https://en.wikipedia.org/wiki/Seven_six_chord
+    - microtonal chords
+        - tonality flux
+            https://en.wikipedia.org/wiki/Tonality_flux
+        - Sensamagic dominant chord - Xenharmonic Wiki
+            https://en.xen.wiki/w/Sensamagic_dominant_chord
+        - Unusual Microtonal Chords - Xenharmonic Wiki
+            https://en.xen.wiki/w/Unusual_Microtonal_Chords
+        - Swiss tetrad
+            https://en.xen.wiki/w/Swiss_tetrad
+        - Dyadic chord
+            https://en.xen.wiki/w/Dyadic_chord
+        - Anomalous Saturated Suspensions
+            https://en.xen.wiki/w/Dyadic_chord#Anomalous_Saturated_Suspensions
+            http://x31eq.com/ass.htm
+            https://web.archive.org/web/20030705090146/http://www.cix.co.uk/~gbreed/ass.htm
+        https://en.xen.wiki/w/Delta-rational_chord
+        https://en.xen.wiki/w/Linear_chord
+        https://www.facebook.com/groups/497105067092502/?multi_permalinks=2740053656130954
+        Found a very interesting theoretical oddity today. It just goes to show how often we forget 12-EDO is amazing in the 17 and 19-limits! (Not to mention decent in the 27-odd-limit as well). The notes played are Bb-F-C, Cb-Db-F-G… a chord that should by all accounts sound super complex, but in this voicing and register, the higher limit consonances work in tandem with one another to produce this wonderfully resonant, buzzy septad.
+        2.3.17.19 subgroup
+        4:6:9:17:19:24:27
+        Notice some primary difference tones of 2, 3 and 8 reinforced, as well as 5 and 10, giving a really grounded sound.
+        Imagine this with distortion!
+        https://www.reddit.com/r/microtonal/comments/10e4nvu/what_is_your_favorite_microtonal_chord_besides/
+        # 8:9:10:11---
+        # 16:21:24:28---
+        # 10:13:15---
+        # 15:13:10---
+        # 4:5:6:7:9:11---
+        # 6:9:11---
+        8:11:13:19---
+    - add sus/suspension chords (sus2, sus4)
+    - add chromatic chords
+        mode mixture borrowed chords
+        Neapolitan
+        augmented sixth
+        Altered Dominant Seventh Chords
+        TODO: are there any others?
+- add cadences / more progressions
+    - add cadential six-four (I64-V7-I)
+    - ♭VII–V7 cadence
+    - ♭VI-♭VII–I cadence
+    - renaissance cadences
+    - double leading-tone cadence
+    - Cadenza doppia
+        https://www.youtube.com/watch?v=PAx8Y8UPxYo
+        https://de.wikipedia.org/wiki/Cadenza_doppia
+        https://www.researchgate.net/figure/Four-Variants-of-the-Cadenza-Doppia-Create-Four-Very-Different-Strings-of-Roman_tbl1_272578057
+        https://musescore.com/user/2951556/scores/7478720
+    - 17edo
+        https://www.anaphoria.com/Secor17puzzle.pdf
+    - double leading tone cadence
+    - http://www.medieval.org/emfaq/harmony/
+    - https://en.xen.wiki/index.php?search=cadence&title=Special%3ASearch&go=Go
+    - search in discord
+        https://discord.com/channels/332357996569034752/516075712566919169
+- Kostka-Payne:
+    - triads in first inversion
+        ? V - vi6 is a mistake
+    - triads in second inversion

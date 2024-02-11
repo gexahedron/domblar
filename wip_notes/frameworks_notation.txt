@@ -1,0 +1,476 @@
+парсеры в питоне
+    pyparsing
+        https://pyparsing-docs.readthedocs.io/en/latest/pyparsing.html
+        для скобок - Forward
+    https://github.com/lark-parser/lark
+    parsy
+    https://stackoverflow.com/questions/17140850/how-to-parse-a-string-and-return-a-nested-array
+    parsimonious - парсер в sardine
+
+
+
+
+
+== __eq__
+!= __ne__
+< __lt__
+> __gt__
+<= __le__
+>= __ge__
+unary + __pos__
+unary - __neg__
+~ __invert__
++ __add__ __radd__
+- __sub__ __rsub__
+* __mul__ __rmul__
+// __floordiv__ __rfloordiv__
+/ __truediv__ __rtruediv__
+% __mod__ __rmod__
+** __pow__ __rpow__
+<< __lshift__ __rlshift__
+>> __rshift__ __rrshift__
+& __and__ __rand__
+| __or__ __ror__
+^ __xor__ __rxor__
++= __iadd__
+-= __isub__
+*= __imul__
+//= __ifloordiv__
+/= __itruediv__
+%= __imod__
+**= __ipow__
+<<= __ilshift__
+>>= __irshift__
+&= __iand__
+|= __ior__
+^= __ixor__
+x[self]	__index__(self)
+self.name __getattr__(self, name) # name doesn't exist
+self.name __getattribute__(self, name)
+self[key] __getitem__(self, key)
+self(args) __call__(self [,...])
+in, not in __contains__(self, value)
+
+
+
+specification languages (maybe also should go to processes file)
+    mcrl2
+        https://www.mcrl2.org/web/user_manual/articles/basic_modelling.html
+        https://www.mcrl2.org/web/user_manual/articles/lts.html
+    KeYmaera x
+        https://keymaerax.org/Xtutorial.html
+    SPIN
+        https://spinroot.com/spin/whatispin.html
+
+
+news
+    Tidal 2.0 beatMode (TidalCycles vs TidalBeats?)
+        https://slab.org/2023/05/13/tidal-2-0-beatmode-tidalcycles-vs-tidalbeats/
+        Formalizing Konnakol using Haskell - GSoC '22
+        https://dev.to/aravindmohandas/formalizing-konnakol-using-haskell-gsoc-22-ekm
+        
+
+- what is a pattern
+    - done: tidalcycles
+        https://tidalcycles.org/docs/reference/patterns/
+        http://tidalcycles.org/docs/innards/what_is_a_pattern/
+    - todo: foxdot
+        [] - multiple samples in succession
+        () - alternate between samples
+        {} - one sample at random
+        var - states and beats
+        @nextBar
+    - todo: sardine
+    - todo: extempore
+        https://extemporelang.github.io/docs/guides/pattern-language/
+
+
+- диаграммные
+    c4model; diagrams as code 2.0
+        https://www.youtube.com/watch?v=Za1-v4Zkq5E
+        - diagrams as maps
+            zoom in, zoom out
+        - 4 levels; different level of details
+
+            - context
+            - containers
+            - components
+            - code
+        - structurizr
+    manaCompiler
+        https://hypertonal.net/manacompiler/
+    Bespoke Synth
+        https://github.com/BespokeSynth/BespokeSynth/
+    tweakable
+        https://tweakable.org/legacy
+        https://tweakable.org/reference
+        https://tweakable.org/examples
+        https://tweakable.org/edit/examples/pont_v1
+        https://tweakable.org/edit/examples/propfunctest_v2
+    VCV Rack
+    max/msp
+        google:
+            spectralism max/msp
+            live coding Max/MSP
+            algorithmic composition using Max/MSP
+    Pure Data / Purr Data / CEAMMC Puredata
+
+
+
+- python libraries
+    neoscore - for music notation
+        https://neoscore.org/index.html
+    maelzel is a framework for computer music in python
+        https://github.com/gesellkammer/maelzel
+        nice documentation!
+    ...
+
+
+- analysis
+    midiVERTO from Jason Yust
+        https://dcmlab.github.io/midiVERTO/#/
+
+
+- изучить другие диалекты, dsl, инструменты
+    Nestup, the Nested Tuplet Generator [[]_[]]
+        https://nestup.cutelab.nyc/
+        https://github.com/cutelabnyc/nested-tuplets
+    Helmholtz pitch notation
+        https://en.wikipedia.org/wiki/Helmholtz_pitch_notation
+        LilyPond music publishing software uses an all-lowercase variant, where pitches that would be uppercase in Helmholtz notation are written with an additional sub-prime: c,,, and c,, and c, represent Helmholtz C͵͵ and C͵ and C respectively.
+    XeTune
+        https://github.com/j5v/xetune
+        https://johnvalentine.co.uk/app/xetune/app.html
+    Apotome and Leimma
+        https://isartum.net/apotome
+        https://isartum.net/leimma
+        https://isartum.net/
+    xenpaper
+        https://xenpaper.com
+        {22edo}
+        (osc:triangle)
+        [1 8 14 23]--- [14 21 27 32]--- [9 17 22 31]--- [5 10 19 27]--- [1 8 14 23]---
+
+        https://github.com/dxinteractive/xenpaper
+
+        https://www.npmjs.com/package/rd-parse
+        https://github.com/dxinteractive/xenpaper/blob/64a311a5c1285a19343e1da992e6f7b25602a63c/packages/xenpaper-ui/src/data/grammar-to-chars.ts
+        https://github.com/dxinteractive/xenpaper/blob/64a311a5c1285a19343e1da992e6f7b25602a63c/packages/xenpaper-ui/src/data/grammar.ts
+        https://github.com/dxinteractive/xenpaper/blob/64a311a5c1285a19343e1da992e6f7b25602a63c/packages/xenpaper-ui/src/data/process-grammar.ts
+        https://github.com/dxinteractive/xenpaper/blob/64a311a5c1285a19343e1da992e6f7b25602a63c/packages/xenpaper-ui/src/data/__tests__/grammar.test.ts
+        +
+        https://github.com/dxinteractive/xenpaper/blob/974540234157d7f355e857ca6b5bc5c78cf6ed8c/packages/xenpaper-ui/src/Xenpaper.tsx
+    Rationale - A microtonal music composition sequencer in Python and C++.
+        https://github.com/chuckkh/Rationale
+    Microtuner by Ableton
+        https://www.ableton.com/en/packs/microtuner/
+        MIDI device that lets you import, edit, and generate microtonal scales. Load scale files, create custom scales, and morph between tunings in real time – all with polyphony, MPE, and Lead/Follow modes to sync your scales across instruments.
+    gibber
+        https://gibber.cc/playground/
+    ziffers
+        https://github.com/amiika/ziffers
+        https://github.com/amiika/ziffers/wiki/Chords
+    bol processor
+        https://bolprocessor.org/#colophon
+    supercollider
+        - co34pt
+            - as modular synthesizer
+                https://theseanco.github.io/howto_co34pt_liveCode/5-2-SuperCollider-as-a-Modular-Synth/
+            - drones
+                https://theseanco.github.io/howto_co34pt_liveCode/5-1-Drones/
+        - https://www.youtube.com/@synth_def/videos
+        - busses
+            https://doc.sccode.org/Tutorials/Getting-Started/11-Busses.html
+        - Superharmony is a SuperCollider library of utilities for exploring tonality
+            https://github.com/holomorfo/superharmony
+        - panola
+            https://github.com/shimpe/panola
+            http://sccode.org/1-5aq
+            https://pustota.basislager.org/_/sc-help/Help/Classes/Panola.html
+        - mitola - quark for microtonal music composition; microtonal counterpart to panola
+            https://github.com/shimpe/mitola
+        - Grimoire, a new live coding environment, for SuperCollider and WebGL
+            https://www.youtube.com/watch?v=5gwvkQCMBqo
+            https://github.com/pelletierauger/Grimoire
+            https://github.com/pelletierauger/Cauchemar
+        - TX Modular
+            http://palemoonrising.co.uk/
+        - JITLib (for modular synthesizing)
+        - JITModular
+            https://github.com/jamshark70/JITModular
+            ~lpf <>> ~eg <>> ~out;
+        - ... check algorave3_notes.txt
+            ... ddw
+    tidalcycles
+        quick reference
+            https://gist.github.com/mxactvtd/bf3fb357a419c7f063b98dfd9a66cf78
+        mini notation
+            https://tidalcycles.org/docs/reference/mini_notation/
+        http://tidalcycles.org/docs/reference/mini_notation/
+        https://tidalcycles.org/docs/configuration/AudioConfig/audio_outputs/
+        https://club.tidalcycles.org/t/the-routing-structure-of-a-dirt-orbit/3902
+        https://club.tidalcycles.org/t/creating-effects-chains-or-audio-buses/3707
+        - MrReason Setup
+            https://github.com/thgrund/mrreason-setup
+            Applying modern western music theory
+            Custom conditional functions
+            Live coding with parts and segments (for longer compositions)
+            Tips and hints for live coding with longer sets
+        - MrReason effects
+            https://github.com/thgrund/tidal-pedalboard-effects/blob/master/code.tidal
+            https://github.com/thgrund/tidal-pedalboard-effects/blob/master/effects.scd
+        - Autonomous Tidal Code Generation
+            https://club.tidalcycles.org/t/autonomous-tidal-code-generation/1064
+    foxdot
+        https://github.com/qantuum/foxDot_tunings
+        https://github.com/qantuum/foxdot_worksheets
+        https://gitlab.com/iShapeNoise/foxdot_codingmusic_part1/-/blob/main/files/FoxDot_CodingMusic_Part1_en.md
+        TimeVars
+            https://github.com/Qirky/FoxDot/blob/master/FoxDot/demo/10_using_vars.py
+        Effects
+    sardine
+        https://sardine.raphaelforment.fr
+    ratioscore
+        https://www.tenor-conference.org/proceedings/2021/01_Zhu_tenor21.pdf
+    Sevish scale workshop
+        https://sevish.com/scaleworkshop/?version=2.0.0
+    composing 8-bit chiptune in browser
+        https://jummbus.bitbucket.io/
+        (? older version) https://www.beepbox.co/
+    alda
+        https://alda.io/
+    textbeat - Plaintext music sequencer and interactive shell
+        https://github.com/flipcoder/textbeat
+    Music Macro Language
+        https://github.com/superctr/mmlgui
+    jazzElements
+        https://jazzelements.readthedocs.io/en/latest/readme.html
+    ixi lang
+        https://quod.lib.umich.edu/cgi/p/pod/dod-idx/ixi-lang-a-supercollider-parasite-for-live-coding.pdf?c=icmc;idno=bbp2372.2011.101;format=pdf
+    HMSL - Hierarchical Music Specification Language
+        http://www.softsynth.com/hmsl/
+        https://github.com/philburk/hmsl
+        https://github.com/philburk/hmsl/tree/master/docs
+        https://github.com/philburk/hmsl/tree/master/hmsl/pieces
+    Impromptu/Extempore - pattern language
+        https://extemporelang.github.io/docs/guides/pattern-language/
+        https://en.wikipedia.org/wiki/Impromptu_(programming_environment)
+        Andrew Sorensen - A Study in Keith
+    ChucK
+        https://en.wikipedia.org/wiki/ChucK
+    FRP/Reactive Programming in Python
+        ReactiveX/RxPY
+            https://rxpy.readthedocs.io/en/latest/
+            https://github.com/ReactiveX/RxPY
+            https://auth0.com/blog/reactive-programming-in-python/
+    JythonMusic
+        https://jythonmusic.me/a-variation-on-steve-reichs-piano-phase/
+        
+    
+    Kulitta
+        https://github.com/donya/Kulitta
+        https://github.com/donya/PythonKulitta
+        https://www.donyaquick.com/kulitta/
+    Donya Quick - Making Algorithmic Music
+        https://www.youtube.com/watch?v=9Fg54XAr044
+    Jazzkell
+        https://github.com/donya/Jazzkell
+    Euterpea
+
+
+    Cybin
+        https://github.com/efairbanks/cybin
+    Pharo
+        https://github.com/lucretiomsp/PharoLiveCoding
+    Algorithmic tracker music generator
+        https://chr15m.github.io/algotracker/
+    ORCΛ
+    https://en.xen.wiki/w/Software
+    overtone
+        ...
+    Sonic Pi
+    caffeine - livecoding environment for web browsers, Node.js, and WebAssembly
+        https://caffeine.js.org/
+        https://thiscontext.com/2021/07/14/realtime-vocal-harmonization-with-caffeine/
+    cacs.txt:
+        openmusic
+        bach/cage
+        pwgl
+    Renick Bell
+        Conductive - library for live coding and real-time musical applications in Haskell
+        https://hackage.haskell.org/package/conductive-base
+        Konduktiva - same, but in javascript
+        http://konduktiva.org/doku.php?id=concept
+    Mike's Super MOS Horogram Calculator!
+        https://mikebattagliamusic.com/MOS/flathorogram.html
+    dissonance curves
+        https://newtonality.net/lab
+    from David Ryan
+        https://re-tuner.web.app/
+    https://www.yacavone.net/xen-calc/?q=sqrt(25/24)
+    online temperament finder
+        http://x31eq.com/temper/
+    https://anaphoria.com/wilsontreasure.html
+        https://wilsonic.co/
+        https://infinitone.com/
+        https://entonal.studio/
+        https://oddsound.com/index.php
+        ...
+    http://jazz.computer/info/
+        markov chain
+    Jeff Brown - Montevideo
+        https://github.com/JeffreyBenjaminBrown/montevideo
+    Polymeter's user interface while it plays the song "Fazo Kanto" from my album "Akoko Ajeji."
+        https://www.facebook.com/groups/135186509846812/?multi_permalinks=6102176989814371&hoisted_section_header_type=recently_seen
+    opusmodus
+        https://opusmodus.com/
+    sunvox - Automation in SunVox
+        https://www.youtube.com/watch?v=OP17yOT5HPI
+    Melrōse - a language and runtime to program music By Ernest Micklei
+        https://www.youtube.com/watch?v=ioirMtNNqFM&ab_channel=Devoxx
+    "African Polyphony & Polyrhythm" by Chris Ford
+        https://www.youtube.com/watch?v=EK4qctJOMaU
+    "Making machines that make music" by Srihari Sriraman
+        https://www.youtube.com/watch?v=u9CGcusOz60
+    nanoloop
+    https://sdclibbery.github.io/limut/
+    scamp
+    QuaverSeries
+        https://quaverseries.web.app/
+        https://webaudioconf.com/posts/2019_26/
+        https://github.com/chaosprint/QuaverSeries
+    PunKt - Kotlin Punk
+        https://github.com/pjagielski/punkt
+    ete - web-based
+        https://gitlab.com/raphaelbastide/ete
+        https://raphaelbastide.com/ete/
+    Facet: live coding for Max/MSP in the browser
+        https://github.com/mjcella/facet
+        https://llllllll.co/t/facet-v0-1-0-live-coding-for-max-msp-in-the-browser/44709
+    Serpent
+        https://www.cs.cmu.edu/~music/serpent/doc/scheduling.htm
+    Nyquist Lisp
+    OsciStudio
+        https://oscilloscopemusic.com/software/oscistudio/
+    HexoSynth - A hexagonal modular synthesizer
+        https://github.com/WeirdConstructor/HexoSynth
+    Siren - pattern language - see paper pdf
+    miti - musical instrument textual interface
+        https://github.com/schollz/miti
+    Sintel 5-limit lattice with keyboard
+        https://www.youtube.com/watch?v=hM7p_VVyeQ0
+    Temperament calculator
+        https://sintel.pythonanywhere.com
+    MIDI Isomorphic Keyboards / Lumatones
+        https://www.facebook.com/groups/425257704250134/?multi_permalinks=5724788757630309&hoisted_section_header_type=recently_seen
+        Plainsound Hexatone (doesn't work for me, though)
+            https://github.com/000masa000/hexatone
+            https://www.plainsound.org/hex
+        https://sjoerdvisscher.glitch.me/lumatone
+        https://meta-meta.github.io/aframe-musicality/tonnetz
+    Music Notation Project
+        https://musicnotation.org/wiki/instruments/isomorphic-instruments/
+    abc notation
+        https://www.abcnotation.com/wiki/abc:standard:v2.1
+        https://composing.studio/gaudy-pollution-7087
+        https://rrherr.github.io/banjo-grammar/
+    lilypond
+        https://www.hacklily.org/
+    common music
+        https://commonmusic.sourceforge.net/
+    http://www.altkeyboards.com/instruments/isomorphic-keyboards
+    cabbage
+        https://cabbageaudio.com/
+    coltrane
+        https://github.com/pedrozath/coltrane
+    aphex twin samplebrain
+        https://gitlab.com/then-try-this/samplebrain
+    glicol
+        https://glicol.org
+    Steno
+        https://github.com/musikinformatik/Steno
+    Cane is a small vector language designed for making beats with realtime MIDI.
+        https://github.com/Jackojc/cane
+    max/msp
+        ...
+    konnakkol
+        https://www.arthurcarabott.com/konnakkol/
+    808 drum machine
+        https://peel.fm/
+        https://news.ycombinator.com/item?id=34795155
+    scale networks
+        https://scale-navigator-dashboard.vercel.app/chords
+    interactive Projective Tuning Space application
+        https://www.projectivetuningspace.com
+    Parametric Composition / Nigel Morgan
+        https://web.archive.org/web/20180116103923/http://tonalitysystemspress.co.uk/?page_id=634
+    Computoser
+        https://github.com/Glamdring/computoser
+        https://arxiv.org/pdf/1412.3079.pdf
+    https://pypi.org/project/mutwo/ (и список фреймворков внизу страницы)
+    How can I generate nice-sounding random chord progressions?
+        https://music.stackexchange.com/questions/3788/how-can-i-generate-nice-sounding-random-chord-progressions
+    JFugue
+        http://www.jfugue.org/
+        https://github.com/dmkoelle/jfugue
+    Fluid Music
+        https://web.media.mit.edu/~holbrow/project/fluid-music-beta/
+    Orestis Melkonian
+        https://soundcloud.com/haskell-music-grammars
+        https://omelkonian.github.io/data/publications/music-grammars.pdf
+    Hayward Tuning Vine
+        https://www.tuningvine.com/
+    Tonalsoft
+    Oxygene Pt 4 in javascript
+        https://dittytoy.net/ditty/24373308b4#echo=0.7979
+    mercury
+        https://github.com/tmhglnd/mercury
+    total serialism
+    https://github.com/tmhglnd/total-serialism
+    ch0p1n (nice blog post)
+        https://github.com/flujoo/ch0p1n
+    https://flujoo.github.io/en/my-approach-to-automatic-musical-composition/
+    nongkrong (gamelan, hexany)
+        https://github.com/levinericzimmermann/nongkrong
+    https://github.com/madskjeldgaard/komet
+
+    Samuele Giraudo, music box operad
+        https://arxiv.org/pdf/2104.13040.pdf
+        https://igm.univ-mlv.fr/~giraudo/Data/Papers/Generation%20of%20musical%20patterns%20through%20operads.pdf
+        https://igm.univ-mlv.fr/~giraudo/Research/Research.html
+        Calimba: a language for computer music
+        https://igm.univ-mlv.fr/~giraudo/Data/Talks/Calimba:%20a%20language%20for%20computer%20music.pdf
+        https://github.com/SamueleGiraudo/Bud-Music-Box
+        https://github.com/SamueleGiraudo/Calimba
+
+    Nyquist, Xmusic and Algorithmic Composition
+    https://www.cs.cmu.edu/~rbd/doc/nyquist/part15.html
+
+trackers:
+    furnace tracker
+    deflemask
+    renoise
+        - todo: кто-то в нём работает без сэмплов?
+    MilkyTracker
+
+
+
+hardware:
+    pocket operators
+    op-1
+    electron syntakt, digitakt, digitone, octatrack
+
+
+
+fancy UI:
+    https://www.modalics.com/
+    
+
+nope:
+    Gwion - 🎵 strongly-timed musical programming language
+        https://github.com/Gwion/Gwion
+        why not:
+            no tutorials (i saw 1 example, wasn't impressed)
+            it's compilation only
+    isobar (has some algorithms, but no audio examples)
+        https://github.com/ideoforms/isobar

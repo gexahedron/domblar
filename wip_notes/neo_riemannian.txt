@@ -1,0 +1,114 @@
+jazz
+    Transformations in Tonal Jazz: ii–V Space
+        https://mtosmt.org/issues/mto.17.23.1/mto.17.23.1.mcclimon.html
+        very nice
+        TODO:
+            ...
+    
+
+Теории тональности:
+    - (ренессанс)
+    - functional harmony
+        diatonic, circle of fifths, cadence
+        voice-leading
+        dominant, subdominant
+        augmented sixth, neapolitan
+    - counterpoint
+    - modes
+    - jazz chords extensions, voicings
+    - NRT
+        Tonnetz,
+        octatonic, hexatonic, RPL (SLIDE), chromatic mediants
+    - Scale networks
+        diatonic, octatonic, hexatonic,
+        acoustic, harm maj, harm min, whole-tone
+        voice-leading
+    - Zabka
+        + hungarian minor
+    - Tonfeld + Rohrmeier
+        Tonnetz,
+        octatonic, hexatonic, stack of fifths,
+        hierarchical tree
+    - Tone Clock theory
+        ...
+    - spectralism
+        harmonics
+        ...
+
+
+
+3 цикла:
+    PLPLPL - на самом деле это hexatonic scale
+    PRPRPRPR - на самом деле это octatonic scale
+    PLRPLR - вот здесь нет scale; здесь типа во всех аккордах есть общая нота
+
+
+https://michaelnorris.info/quizzes/neoriemannianquiz
+    David Kopp
+    L = Leichtonwechsel (root change = M3 up (for maj) or down (for min), mode change)
+    P = Parallel (no root change, mode change)
+    R = Relative (root change = m3 down (for maj) or up (for min), mode change)
+    S = SLIDE (root change = m2 up (for maj) or down (for min), mode change)
+    M = chromatic mediant (root change = major third down, no mode change)
+    M-1 = chromatic mediant inverse (root change = major third up, no mode change)
+    m = chromatic mediant (root change = minor third down, no mode change)
+    m-1 = chromatic mediant (root change = minor third up, no mode change)
+    D = dominant (root change = perfect fifth down, no mode change)
+    D-1 = dominant (root change = perfect fifth, no mode change)
+    N = ‘near’ fifth (root change = P4 up (if maj) or down (if min), mode change)
+    F = ‘far’ fifth (root change = P5 up (if maj) or down (if min), mode change)
+    H = ‘Hexatonic Pole’ (root change = M3 down (if maj) or up (if min), mode change)
+    T6 = Tritone transposition (root change = tritone, no mode change)
+https://www.reddit.com/r/musictheory/comments/ujtm65/basic_introduction_to_neoriemannian/
+    Frank Lehman gives these in Hollywood Harmony:
+    Abbr.	Full
+    Tn	Transpose by n
+    P	Parallel
+    L	Leading-tone exchange (Leittonwechsel)
+    R	Relative
+    S	Slide
+    N	Near fifth (Nebenverwandt—"neighbor-related")
+    F	Far fifth (I prefer M for Modalverwandt)
+    H	Hexatonic pole
+    D	Dominant
+    I	Identity or “E” (short for the German “Einheit”)
+    I would add O for the octatonic pole.
+
+
+Kyle Gann:
+    My microtonal music uses a process of micro-interval voice-leading that Harry Partch called “Tonality Flux,” related to Neo-Riemannian transformations, but of course not reducible to them
+
+
+        
+Neo-Riemannian Theory
+https://axesofcontextualinversion.com/
+    nice visualizations
+Dan Obluda
+    https://www.youtube.com/@danobluda3407/videos
+So I'm Neo-Riemannian: Who Knew?
+    https://www.kylegann.com/PC090306-SoImNeoRiemannian.html
+https://alpof.wordpress.com/2021/10/09/neo-riemannian-examples-in-music/
+Looking for literature on transformations between PCS
+  https://www.reddit.com/r/musictheory/comments/jpdxs0/looking_for_literature_on_transformations_between/
+Applying Riemannian Transformations in a Tetradic Context
+  https://www.reddit.com/r/musictheory/comments/4gjoms/applying_riemannian_transformations_in_a_tetradic/
+Is there a generalization of the neo-Riemannian analysis that include diminished and augmented triads?
+  https://www.reddit.com/r/musictheory/comments/c9l930/is_there_a_generalization_of_the_neoriemannian/
+https://www.jstor.org/stable/i235025
+https://music.arts.uci.edu/abauer/3.1/readings.html
+https://music.arts.uci.edu/abauer/3.1/week6.html
+Chord Proximity, Parsimony, and Analysis with Filtered Point-Symmetry
+  https://mtosmt.org/issues/mto.19.25.2/mto.19.25.2.plotkin.html
+https://www.reddit.com/r/musictheory/comments/gvsr0m/is_there_anyone_that_could_provide_me_with/
+  There have been a few papers that talk about "uncanniness" in relationship to neo-Riemannian transformations (or, more specifically, tritone progressions, tarnhelms and other compound transformations).
+    David Forest - PL Voice Leading and the Uncanny in Pop Music
+    Scott Murphy - The Major Tritone Progression in Recent Hollywood Science Fiction Films
+    Frank Lehman - Transformational Analysis and the Representation of Genius in Film Music
+    Adam Ricci - A 'Hard Habit to Break': The Integration of Harmonic Cycles and Voice-Leading Structure in Two Songs by Chicago
+  And these are good, from a methodological perspective:
+    Richard Cohn - Square Dances with Cubes
+    Richard Cohn - Neo-Riemannian Operations, Parsimonious Trichords, and Their "Tonnetz" Representations
+    Jack Douthett and Peter Steinbach - Parsimonious Graphs: A Study In Parsimony, Contextual Transformations, and Modes of Limited Transposition
+    Vaibhav Mohanty - Dodecatonic Cycles and Parsimonious Voice-Leading in the Mystic-Wozzeck Genus
+    Steven Strunk - Wayne Shorter's Yes and No: An Analysis
+    Joon Park - Some Reflections on (and in) Strunk's Tonnetz

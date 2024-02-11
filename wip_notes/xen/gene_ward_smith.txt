@@ -1,0 +1,370 @@
+Gene Ward Smith
+todo:
+https://en.xen.wiki/w/Regular_temperament
+https://en.xen.wiki/w/Gene_Ward_Smith
+https://microtonal.miraheze.org/wiki/Gene_Ward_Smith
+https://en.xen.wiki/w/Microtonal_Music_by_Gene_Ward_Smith
+Subject: Wedge products and the torsion mess
+http://www.robertinventor.com/tuning-math/s___3/msg_2075-2099.html#2098
+Subject: Unlocking the mysteries of the wedge invariant
+https://robertinventor.com/tuning-math/s___3/msg_2100-2124.html#2122
+
+
+https://web.archive.org/web/20190317163716/http://www.tonalsoft.com/gws/home.aspx
+todo: music links
+
+
+Circulating Temperaments
+https://web.archive.org/web/20121025200638/http://tonalsoft.com/gws/circ.html
+It is a sad fact that common practice Western music is based on triads, and the thirds of these triads are woefully out of tune. The major third in 12-equal is 13.69 cents sharp, and the minor third is 15.64 cents flat. Considering that anything beyond ten cents over or under a just intonation is entering the region of major cheeziness, we can see why 12-equal was not in general use during much of the common practice period, and that other systems held sway instead. One plan for dealing with the problem of the thirds is a circulating, or well-temperament. This makes the thirds which are most likely to be used a little bit better, at the expense of other thirds, which are made a little bit worse. The circulating temperments used on this website employ a new and bolder plan: the thirds are made a lot better, and instead of trying to make up the difference with out-of-tune versions of 5/4 or 6/5, we use instead in-tune versions of xenharmonic thirds: the supermajor third 9/7, the subminor third 7/6, along with 14/11 and 13/11. The resulting chords sound strange but not repulsive. Temperaments adopting this plan are [grail], [bifrost], and [cauldron]. Another approach leading to similar results is to well-tune a scale in just intonation, where a well-tuning is a regular tuning, meaning using fifths and thirds of the same size, whicb is chosen with an eye to tempering the scale to a circulating temperament. An example of this approach is [duowell].
+
+It is also possible to simply use a single meantone fifth for twelve notes, and bite the bullet of the resulting very sharp "wolf" fifth. One way to do this is to use a mild version of meantone, such as 1/6-comma. A way I think works better is to take a wolf fifth near or at 20/13. Systems adopting this approach are [ratwolf] and wilwolf.
+
+
+Grail
+http://tonalsoft.com/gws/grail.html
+Grail
+
+I spent some time trying to find a temperament of a type which I named to myself the "holy grail" type. This is "grail", the first such a one I found. For a grail-type temperament, I wanted the following attributes:
+
+(1) Near the key center, it functions as an honest meantone, with major thirds not too far off pure
+
+(2) All fifths must be usable; no wolf fifths are allowed
+
+(3) All thirds in all keys must be functional
+
+The key idea is to have two pure 14/11 major thirds and one pure 9/7 major third in the remote keys. By giving them a precise just value, even if that value is not 5/4, we get something which doesn't sound bad. For the minor thirds, I was happy to get two fine 7/6 subminors and settled for a couple of 13/11 intermediate minor thirds.
+
+Here are the fifths, major thirds, and minor thirds above each scale degree, in cents:
+
+0 695.623009 391.246018 304.376991
+
+1 708.753982 417.507964 304.376991
+
+2 700.000000 382.457951 308.753982
+
+3 708.788065 391.246018 273.703969
+
+4 695.623008 404.376991 304.376991
+
+5 695.623009 391.246018 291.246018
+
+6 708.788067 435.084096 317.542049
+
+7 700.000000 391.246017 317.542047
+
+8 708.753982 404.376991 291.246017
+
+9 695.623009 391.246018 304.376991
+
+10 691.211935 382.457953 273.703971
+
+11 691.211934 417.507965 308.753983
+
+The major thirds on degree 1 and 11 are exact 14/11's, and on degree 6 we have the 9/7. On degree 3 and 10 we get minor thirds of 273.7 cents, which are good subminor thirds (to my mind, this is very acceptable.) On degrees 5 and 8 we have 291 cent minor thirds, whichis pretty close to a 13/11 at 289 cents. All the other minor thirds improve on those of 12-equal. We have three sharp fifths a tad flatter than the 22-et fifth, which is quite acceptable, two of 12-et's excellent fifths, three 5/17-comma meantone fifths and two 1/2-comma meantone fifths; the last (over degrees 10 and 11) are the only fifths which might be kind of problem, being "flattone" fifths a cent flatter than the 26-equal fifth.
+
+Here is the Scala scl file:
+
+ ! grail.scl
+Holy Grail circulating temperament with two 14/11 and one 9/7 major third
+12
+!
+86.869027
+195.623009
+304.376991
+391.246018
+504.376991
+578.080960
+695.623009
+795.623009
+895.623009
+1013.165056
+1086.869026
+1200.000000
+
+
+
+
+todo:
+Music in graiil
+http://tonalsoft.com/gws/grailmus.html
+
+
+
+
+
+Bifrost
+
+This has six meantone fifths, leading to three pure thirds; on each side of the chain of meantones we put two pure 3/2's, so we have four pure fifths in total; we then round out with two sharp fifths of size sqrt(2048/2025 sqrt(5)), of size 706.355 cents. This leads to three sharp major thirds which are within a cent of being pure 14/11's, being of size 416.619 cents; and two more sharp thirds of size 406.843 at E and Ab, which are the only real problems with this temperament.
+
+! bifrost.scl
+! [45/64*5^(1/4), 1/2*5^(1/2), 16/45*5^(3/4), 5/4, 2/5*5^(3/4), 15/16*5^(1/4), 5^(1/4),
+! 1/2*10^(1/2), 1/2*5^(3/4), 8/15*5^(3/4), 5/4*5^(1/4), 2]
+!
+Six meantone fifths, four pure fifths, two on each side, two fifths of sqrt(2048/2025 sqrt(5))
+12
+!
+86.802144
+193.156856
+299.511569
+386.313714
+503.421572
+584.847143
+696.578428
+793.156857
+889.735285
+1001.466571
+1082.892142
+1200.000000
+
+todo: cauldron
+http://tonalsoft.com/gws/cauldron.html
+
+todo: duowell
+http://tonalsoft.com/gws/duowell.htm
+
+todo: ratwolf
+http://tonalsoft.com/gws/ratwolf.html
+
+
+
+Linear Temperaments
+https://web.archive.org/web/20121025200628/http://tonalsoft.com/gws/linear.htm
+A rank two temperament is a [regular temperament] with two generators. If it is possible for one of the generators to be an octave, such a temperament is called a linear temperament (in the strict sense.) However, rank two temperaments in general are often called linear. The most common choice for generators is for one generator to be an octave, or some nth part of an octave for some integer n; in this case this generator is called the period and the other the generator.
+
+A rank two temperament may be uniquely defined in various ways; one is by means of the [wedgie], another by way of the [comma sequence], and still another by means of the mapping, or [icon], for a reduced set of generators. Here we are calling a pair of generators reduced if one generator is the period, and the other is the unique generator greater than one and less than the square root of the period (or less than half the period in logarithmic terms) which together with the period gives a generator pair for the temperament. This last definition depends on the exact tuning, and hence in theory may not be uniquely determined; in practice this seldom matters but for this and other reasons when working with temperaments using computer programs the wedgie is preferable as a means of defining the temperament. The icon, or tuning map, for the reduced generator pair, listing the period first and the generator second, we may call the standard icon.
+
+[Here is a list of seven-limit linear temperaments.]
+
+Listed below are some of the important families of linear temperaments.
+[Meantone]
+[Miracle]
+[Orwell]
+
+
+todo:
+regular temperament
+http://tonalsoft.com/gws/regular.html
+wedgie
+http://tonalsoft.com/gws/wedgie.html
+comma sequence
+http://tonalsoft.com/gws/commaseq.htm
+list of seven-limit linear temperaments
+http://tonalsoft.com/gws/sevnames.htm
+meantone
+http://tonalsoft.com/gws/meantone.htm
+miracle
+http://tonalsoft.com/gws/miracle.htm
+orwell
+http://tonalsoft.com/gws/orwell.html
+
+
+Planar Temperaments
+http://tonalsoft.com/gws/planar.htm
+A rank three temperament is a [regular temperament] with three generators. If one of the generators can be an octave, it is called a planar temperament, though the word is sometimes applied to any rank three temperament. The octave classes of notes of a planar temperament can be embedded in a plane as a lattice, hence the name.
+
+The most elegant way to put a Euclidean metric, and hence a lattice structure, on the pitch classes of a planar temperament is to start from a lattice of pitch classes for just intonation, and orthogonally project onto the subspace perpendicular to the space determined by the commas of the temperament. For instance, 7-limit just intonation has a [symmetrical lattice structure] and a 7-limit planar temperament is defined by a single comma. If u = |* a b c> is the octave class of this comma, then v = u/||u|| is the corresponding unit vector. Then if g1 and g2 are the two generators, j1 = g1 - (g1.v)v and j2 = g2 - (g2.v)v will be projected versions of the generators, and (j1.j1)a^2 + 2(j1.j2)ab + (j2.j2)b^2 the projected quadratic form defining the metric stucture of the planar temperament lattice. Here the dot product is defined by the [bilinear form] giving the metric structure. One good, and canonical, choice for generators are the generators found by using [Hermite reduction] with the proviso that if the generators so obtained are less than 1, we take their reciprocal.
+
+The Hermite generators for marvel (225/224 planar) temperament are {2,3,5}, and the projected lattice strucuture is defined by the norm sqrt(11a^2-14ab+11b^2), where "a" is the exponent of 3 and "b" of five. The Hermite generators for breed (2401/2400 planar) temperament are {2,49/40,10/7}, and the projected lattice structure has 49/40 perpendicular to 10/7, so it has orthogonal axes, with a norm given by sqrt(11a^2+8b^2), where now "a" is the exponent of 49/40, and "b" the exponent of 10/7.
+
+
+todo:
+symmetrical lattice structure/7-limit lattice
+http://tonalsoft.com/gws/sevlat.htm
+
+Symmetric Bilinear Form
+http://mathworld.wolfram.com/SymmetricBilinearForm.html
+
+Hermite Normal Form
+http://mathworld.wolfram.com/HermiteNormalForm.html
+
+
+
+
+
+
+
+Crystal Balls
+http://tonalsoft.com/gws/crystal.htm
+We may define the nth q-limit Hahn shell as the octave classes at exactly Hahn distance n from the unison in terms of the q-odd-limit [Hahn norm]. The number of notes in the 5-limit Hahn shell is (for n>0) 6n, and in the 7-limit Hahn shell n has 10n^2+2 notes. If we take the union of the Hahn shells up to shell n we obtain the q-limit crystal ball; the reason behind that name is that the number of notes in the 7-limit crystal balls are called crystal ball numbers or magic numbers in some chemical and crystallographic contexts. The number of notes in the nth 5-limit crystal ball is 3n^2 + 3n + 1 and in the nth 7-limit crystal ball is (2n + 1)(5n^2 + 5n + 3)/3. Because of the way they are formed crystal balls are not especially regular as scales, but they are abundently supplied with chords.
+
+Here are the first few 5-limit Hahn shells:
+
+Shell 0
+[1]
+
+Shell 1 -- the 5-limit consonances
+[6/5, 5/4, 4/3, 3/2, 8/5, 5/3]
+
+Shell 2
+[25/24, 16/15, 10/9, 9/8, 32/25, 25/18, 36/25, 25/16, 16/9, 9/5, 15/8, 48/25]
+
+
+Shell 3
+[128/125, 27/25, 144/125, 125/108, 75/64, 32/27, 125/96, 27/20, 45/32, 64/45,
+40/27, 192/125, 27/16, 128/75, 216/125, 125/72, 50/27, 125/64]
+
+
+Shell 4
+[81/80, 648/625, 135/128, 625/576, 256/225, 625/512, 768/625, 100/81, 81/64,
+162/125, 512/375, 864/625, 625/432, 375/256, 125/81, 128/81, 81/50, 625/384,
+1024/625, 225/128, 1152/625, 256/135, 625/324, 160/81]
+
+
+Here are the first three 7-limit Hahn shells:
+
+Shell 0
+[1]
+
+Shell 1 -- the 7-limit consonances
+[8/7, 7/6, 6/5, 5/4, 4/3, 7/5, 10/7, 3/2, 8/5, 5/3, 12/7, 7/4]
+
+Shell 2
+[50/49, 49/48, 36/35, 25/24, 21/20, 16/15, 15/14, 35/32, 10/9, 28/25,
+9/8, 25/21, 60/49, 49/40, 32/25, 9/7, 64/49, 21/16, 49/36, 48/35,
+25/18, 36/25,35/24, 72/49, 32/21, 49/32, 14/9, 25/16, 80/49, 49/30,
+42/25, 16/9, 25/14, 9/5, 64/35, 28/15, 15/8, 40/21, 48/25, 35/18,
+96/49, 49/25]
+
+Here are the first two 7-limit crystal ball scales:
+
+Crystal ball 1 13 notes -- the 7-limit Tonality Diamond
+[1, 8/7, 7/6, 6/5, 5/4, 4/3, 7/5, 10/7, 3/2, 8/5, 5/3, 12/7, 7/4]
+
+Crystal ball 2 55 notes
+[1, 50/49, 49/48, 36/35, 25/24, 21/20, 16/15, 15/14, 35/32, 10/9,
+28/25,9/8, 8/7, 7/6, 25/21, 6/5, 60/49, 49/40, 5/4, 32/25, 9/7, 64/49,
+21/16, 4/3, 49/36, 48/35, 25/18, 7/5, 10/7, 36/25, 35/24, 72/49, 3/2,
+32/21, 49/32, 14/9, 25/16, 8/5, 80/49, 49/30, 5/3, 42/25, 12/7, 7/4,
+16/9, 25/14, 9/5, 64/35, 28/15, 15/8, 40/21, 48/25, 35/18, 96/49, 49/25]
+
+Crystal ball one can also be described as Cube[2], the 2x2x2 [cube scale], which consists of the notes of the eight chords [i, j, k] with i, j, and k either -1 or 0. Crystal ball two consists of Cube[4], the 4x4x4 cube with i, j, and k from -2 to 1, minus the eight chords [-2 -2 1], [-2 1 -2], [-2 1 1], [1 -2 -2], [1 -2 1], [-2 -2 -2], [1 1 -2], [1 1 1].
+
+The first two crystal balls can also equally well be described as Euclidean ball scales; they began to diverge with the third crystal ball. If we take everything within a radius of one of the unison, we get crystal ball one; if we take everything within a radius of two, we get crystal ball two. This means we also have two intermediate scales, Euclidean balls of radius sqrt(2) and sqrt(3).
+
+
+Euclid 2 19 notes
+
+[1, 21/20, 15/14, 8/7, 7/6, 6/5, 5/4, 4/3, 48/35, 7/5,
+10/7, 35/24, 3/2, 8/5, 5/3, 12/7, 7/4, 28/15, 40/21]
+
+Euclid 3 43 notes
+
+[1, 49/48, 36/35, 25/24, 21/20, 16/15, 15/14, 35/32, 10/9, 28/25, 8/7,
+7/6, 25/21, 6/5, 60/49, 49/40, 5/4, 9/7, 21/16, 4/3, 48/35, 7/5, 10/7, 35/24,
+3/2, 32/21, 14/9, 8/5, 80/49, 49/30, 5/3, 42/25, 12/7, 7/4, 25/14, 9/5, 64/35,
+28/15, 15/8, 40/21, 48/25, 35/18, 96/49]
+
+
+
+todo:
+Hahn norm/Hahn Distance
+http://tonalsoft.com/gws/hahn.htm
+
+
+
+
+
+Chord cubes/cube scale
+http://tonalsoft.com/gws/cube.htm
+A cube scale is a 7-limit scale (we might also consider the 9 odd limit) whose notes are derived from a cube in the [7-limit lattice] of chords. For odd n, we will call the octave-reduced set of notes deriving from all chords of the form [i, j, k], (1-n)/2 <= i, j, k <= (n-1)/2, Cube[n]. If n is even, we will use Cube[n] to refer to the notes of [i, j, k] with 1-n/2 <= i, j, k < n/2. If n is odd, Cube[n] has (n+1)^3/2 notes to it; if n is even, its growth is more complicated but still approximately cubic. For odd n, the inversion of the scale gives another scale, centered around a minor rather than a major tetrad. Here are the first three cube scales:
+
+Cube[2] -- the stellated hexany, 14 notes
+
+[1, 21/20, 15/14, 35/32, 9/8, 5/4, 21/16, 35/24, 3/2, 49/32, 25/16, 105/64, 7/4, 15/8]
+
+Cube[3] 32 notes
+
+[1, 49/48, 25/24, 21/20, 15/14, 35/32, 9/8, 8/7, 7/6, 6/5, 60/49, 49/40, 5/4, 9/7, 21/16, 4/3, 7/5, 10/7, 35/24, 3/2, 49/32, 25/16, 8/5, 105/64, 5/3, 42/25, 12/7, 7/4, 25/14, 9/5, 15/8, 35/18]
+
+Cube[4] 63 notes
+
+[1, 50/49, 49/48, 36/35, 25/24, 21/20, 16/15, 15/14, 35/32, 10/9, 28/25, 9/8, 8/7, 7/6, 25/21, 6/5, 128/105, 60/49, 49/40, 5/4, 32/25, 9/7, 35/27, 64/49, 21/16, 4/3, 168/125, 49/36, 48/35, 25/18, 480/343, 7/5, 10/7, 343/240, 36/25, 35/24, 72/49, 125/84, 3/2, 32/21, 49/32, 54/35, 14/9, 25/16, 8/5, 80/49, 49/30, 105/64, 5/3, 42/25, 12/7, 7/4, 16/9, 25/14, 9/5, 64/35, 28/15, 15/8, 40/21, 48/25, 35/18, 96/49, 49/25]
+
+
+
+
+
+
+Dwarves
+http://tonalsoft.com/gws/dwarf.htm
+Dwarves
+
+Suppose v is a val such that the gcd of the coefficients is 1, v(2)>0 and for every odd prime p, v(p)>=0. According to my original definition of val at any rate, vals are defined for all positive rational numbers, but for all but a finite number of primes they map the prime to 0. Bearing the precise definition in mind, we can define the dwarf scale for v, dwarf(v), as the reduction to the octave of the integers n of minimal Tenney height which form a complete set of residues v(n) mod v(2). The reason for the name "dwarf" is that height is as small as possible. The results are not extremely sensitive to this exact definition, as sorting by Hahn distance from unity and using Tenney height to break ties seems to usually lead to the same result.
+
+Because v(2n) mod v(2) = v(n) mod v(2), the integers n will always be odd. Because if v(q) = 0 then v(qn) = v(n), the integers n will always be in the p-limit, where p is the largest prime for which v(p)>0. If r is any prime for which v(r)=0, then r does not appear in the factorization of the integers n, so this definition also covers subgroup situations, such as {2,3,7}-scales, so long as 2 is in the picture and we are using octave equivalence.
+
+Because of the way they are constructed, dwarves are always permutation epimorphic and have a bias towards otonality over utonality. Here are some examples:
+
+<7 11 16| 1, 9/8, 5/4, 45/32, 3/2, 27/16, 15/8
+transposes to: 1, 9/8, 5/4, 4/3, 3/2, 5/3, 15/8
+<7 11 16 20| 1, 9/8, 5/4, 21/16, 3/2, 27/16, 7/4
+transposes to: 1, 9/8, 7/6, 4/3, 3/2, 5/3, 7/4
+<10 16 23 28| 1, 35/32, 9/8, 5/4, 21/16 45/32, 3/2, 105/64, 7/4, 15/8
+transposes to: 1, 16/15, 7/6, 6/5, 4/3, 7/5, 3/2, 8/5, 7/4, 15/8
+
+Marvelous dwarves
+
+A marvelous dwarf is a scale with the following attributes:
+
+(1) It is a marvel tempering of a 5-limit dwarf.
+(2) It has the same number n of otonal tetrads, otonal pentads, utonal tetrads and utonal pentads. As a consequence of this it also has n subminor and n supermajor tetrads.
+(3) It is covered by its pentads--that is, every note is harmonized by a pentad, and the scale is the union of its pentads.
+(4) It has more 5-limit triads than pentads.
+(5) It has no approximate tetrads deriving from anything but marvel; in the 5-limit scale which is tempered the smallest comma which produces approximate tetrads is 225/224.
+
+If every condition but the third--the covering condition--is satisfied, I call it a semimarvelous dwarf. Why there are these scales exhibiting such regularity as a result of finding the 5-limit dwarf is an interesting question. Whatever the reason for it, the marvelous dwarves--of size 12, 15, 18, 19, 20, 21, and 25--seem like excellent scales for instrumentalists and composers interested in 9-limit harmony and scales in this size range. The 25-note scale, whose 5-limit preimage is the Euler genus of 15^4, is particularly striking from the point of view of the quantity of pentads it supplies.
+
+There is a marvelous or semimarvelous dwarf for each scale size from 11 to 22, and then the 25 note scale. So far as I know this is the complete list.
+
+Here is a brief description; the numbers are pentad number, numbers of major-minor triads, and size/pentad ratio.
+
+<11 17 26| 1 6-6 11 semimarvelous
+<12 19 28| 2 6-6 6 marvelous
+<13 20 30| 1 7-6 13 semimarvelous
+<14 22 33| 2 7-6 7 semimarvelous
+<15 24 35| 3 8-8 5 marvelous
+<16 25 37| 2 7-6 8 semimarvelous
+<17 27 40| 4 10-9 4.25 semimarvelous
+<18 29 42| 4 10-10 4.5 marvelous
+<19 30 44| 5 12-11 3.8 marvelous
+<20 32 47| 6 12-12 3.333 marvelous
+<21 33 49| 5 12-12 4.2 marvelous
+<22 35 51| 6 14-13 3.667 semimarvelous
+<25 40 58| 9 16-16 2.778 marvelous
+
+
+
+
+todo:
+Composers
+http://tonalsoft.com/gws/composers.html
+Colleagues
+http://tonalsoft.com/gws/coll.htm
+Meantone Music
+http://tonalsoft.com/gws/meanmus.htm
+Modern Masters of Meantone
+http://tonalsoft.com/gws/mmm.htm
+Popular
+http://tonalsoft.com/gws/pops.html
+Mad Science Tuning
+http://tonalsoft.com/gws/mad.html
+
+Intervals and Vals
+http://tonalsoft.com/gws/intval.html
+The Wedge Product
+http://tonalsoft.com/gws/wedge.html
+The Brat
+http://tonalsoft.com/gws/brat.html
+Bosanquet Lattices
+http://tonalsoft.com/gws/bosanquet.html
+TOP and Tenney Space
+http://tonalsoft.com/gws/top.htm
+Kees space and Kees tuning
+http://tonalsoft.com/gws/kees.htm
+The Hermite Basis
+http://tonalsoft.com/gws/hermbas.htm
+Composing in Meantone
+http://tonalsoft.com/gws/composing.htm
+Names of seven-limit commas
+http://tonalsoft.com/gws/commalist.htm

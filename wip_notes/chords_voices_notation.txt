@@ -1,0 +1,30 @@
+microtonal chord notation
+    https://en.xen.wiki/w/Ups_and_downs_notation#Chords_and_Chord_Progressions
+    https://en.xen.wiki/w/Pergen#Chord_names_and_staff_notation
+    https://en.xen.wiki/w/22edo_Chord_Names
+
+
+TODO: add classes
+TODO: create/borrow notation for these things
+
+TODO, right now i use lists for everything:
+    - melody
+    - chords
+    - voicing
+    - gestures
+    - also, mapping
+        - treating notes as indices
+        - and later mapping into scale
+        - and later converting to frequencies, assuming fixed C4_FREQ
+
+    + patterns
+    + nesting
+
+TODO:
+    foxdot
+    lilypond
+    xenpaper
+    tidalcycles
+    openmusic
+    bol processor
+    gibber

@@ -1,4 +1,7 @@
 .DS_Store
 .ipynb_checkpoints
 *.py[cod]
-
+alpaca_notebooks
+ircam_notebooks
+private_notebooks
+archive/videos

@@ -1,0 +1,48 @@
+Flow-based programming
+    ещё как вариант
+    python + qt
+        https://github.com/dsideb/nodegraph-pyqt/blob/master/README.md
+        https://github.com/LeGoffLoic/Nodz/tree/master
+        https://github.com/paceholder/nodeeditor
+        https://github.com/jchanvfx/NodeGraphQt
+        https://github.com/bhowiebkr/python-node-editor/tree/GUI-nodes-only
+        https://github.com/bhowiebkr/python-node-editor
+
+
+    ещё как вариант
+    python+python+js:
+        - domblar гоняю отдельно, инфу посылаю через что-нибудь (e. g. OSC)
+        - GUI отдельно python+js
+            например NiceGUI
+
+    python+js?
+        JustPy + Vue.js
+        https://justpy.io/
+        +
+        https://vueflow.dev/
+        https://vuejsexamples.com/tag/flowchart/
+
+    js
+    https://github.com/open-source-labs/Svelvet
+    https://github.com/jerosoler/Drawflow
+    more
+        https://github.com/topics/flow-based-programming
+
+    python
+    there's nothing!
+    but i can try to use something like tkinter+graphviz
+        https://github.com/TomSchimansky/CustomTkinter
+            https://medium.com/@fareedkhandev/modern-gui-using-tkinter-12da0b983e22
+        https://schemdraw.readthedocs.io/en/latest/
+        - what about the ui design, though?
+        - visibility of textboxes
+        - creation/deletion
+        - hotkeys / switching between boxes
+
+        - (DONE) правда там мб проблема с event loop
+
+    js vs python
+        - в js хорошая инфраструктура готовая (e. g., syntax highlighting)
+            (в foxdot правда tkinter, и там есть highlighting)
+        - в js есть анимации
+        + возможно в питоне я смогу live кодом что-то поменять в UI

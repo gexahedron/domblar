@@ -1,0 +1,871 @@
+miracle10
+7-limit tetrad: X _ _ X _ _ X _ X _ X
+
+
+wagogo, harmonics 5 through 10, pentatonic scale
+    1/1 - 9/8 - 5/4 - 3/2 - 7/4
+    13 (or 15), +3, +7, +12, +17
+    13 - '316c 6/5', vs 15 - '266c 7/6'
+
+    possible alternatives
+    (1/1, 12/11, 9/7, 16/11, 9/5)
+
+
+- понять, что есть уникального в Blackjack в музыкальном плане
+    - miracle7?
+    - miracle10?
+    - диссонансы?
+    - 0-300-966 ?
+    - ass chords?
+    - часто замечаю, что многие пары интервалов не дружат друг с другом
+
+
+from arithmetic of listening:
+
+There has been widespread speculation that three degrees, at least, of the septimal scale — 7/6, 14/9, and 7/4 — might represent the intention of “blue” notes in blues and jazz performances.
+Isolated from cultural context, one can say something about the character of the intervals themselves. If 7/4 has a warm, well-blended sound, striking in its use as the first sound of La Monte Young’s The Well-Tuned Piano, 7/6 has a “bitter” quality in contrast to the more neutral 6/5 minor third, at least in conventionally melodic and triadic usage.
+
+Five-limit minor seventh
+C Eb G Bb
+10 : 12 : 15 : 18
+
+Seven-limit minor seventh
+C Eb7 G Bb7
+12 : 14 : 18 : 21
+
+C Eb G Bb7 1/1 6/5 3/2 7/4
+20 : 24 : 30 : 35
+
+half-diminished seventh chord
+C Eb7 Gb7 Bb7 1/1 6/5 7/5 9/5 5:6:7:9
+
+another half-diminished seventh chord
+C Eb7 Gb7 Bb7
+1/1 7/6 7/5 7/4
+60 : 70 : 84 : 105
+
+
+? Hendrix chord
+The hendrix chord, a dom7#9no5 chord, can be tuned as an 8:10:14:19 chord = h7,19o10no5. An alternate tuning is 12:15:21:28, or 1/1 - 5/4 - 7/4 - 7/3 = h7z10no5.
+
+
+TODO
+Forms of Tonality - blackjack lattice
+
+> You know, I really think it's important for me to understand this a
+> bit more fully. Could you please spell out, if you have the time,
+> how these "adjacencies" work and how they differ from a periodicity
+> block...?? I've gotta know this, or at least get a glimmer.
+> Probably once I see it, I'll understand it, since I've been over
+some
+> of this before...
+
+open up _the forms of tonality_, which is probably right next to you
+right now. it illustrates the answers to these very questions, in a
+form that most of its reviewers found very clear and accessible. read
+the mentions of tonality diamonds and periodicity blocks with
+particular attention.
+
+
+Of course you can't modulate very far by
+fifths in Blackjack, but more likely by secors or 7:8s (or 4:7s) or
+neutral thirds.
+
+
+(What's a magic chord, anyway?
+> Something you pull out of a hat?)
+>
+
+***In the Blackjack scale it would be a suspended chord that would be
+represented in 72-tET as: G:Bv:F<:C#v, for example... nice as
+transitional material...
+
+
+four
+available 7:9:11 (supermajor augmented) triads
+
+
+(? wrong notes)
+"magic" chord
+Db^:F:G:Bv (for this exercise I'm still using the "old" F-C-G blackjack key)
+"Ramos-influenced" chord:
+Db^:F:Ab^:C
+utonal tetrad through common tones:
+F:Ab^:C:D>
+"resolving" otonal tetrad:
+C:D>:Gb^:A>
+
+
+
+? ji dissonances:
+533c -
+    19/14 (hendrix 4th)
+    49/36 (Arabic lute acute 4th)
+    15/11 (undecimal aug 4th, subaug 4th)
+666c - 
+    22/15 (undecimal dim 5th, semidim 5th)
+    72/49 (septimal cata5th)
+    81/55 (undecimal cata5th)
+    28/19 (hendrix 5th)
+глянуть
+0-300-966
+    min3rd + 7/4
+21/16, 466c - это диссонанс?
+    sub-fourth, narrow fourth, 8ve-reduced 21st harmonic
+    64/49 (septatonic major 3rd)
+    17/13 (septendecimal sub-4th)
+32/21, 733c - это диссонанс?
+    super-fifth, wide fifth, octave-reduced 21st subharmonic
+    26/17 (septendecimal super-5th)
+    49/32 (superduper 5th, octave-reduced 49th harmonic)
+
+
+что если попробовать
+    - поиграться с нотами, вручную, или через axis 49
+    - получаю несколько buiding blocks, так сказать, гармонических
+    - и дальше программирую солвер, который пытается заиспользовать эти блоки
+    melodies:
+    - можно ещё на мелодии иногда смотреть как на аккорды во времени, или интервалы
+        арпеджио
+    - или же мелодии - это куски шкал, иногда с прыжками туда-сюда
+        тетракорды
+    
+
+
+https://www.facebook.com/groups/979055042181607/posts/2917264208360671/
+10 note scales are similar to 7 note scales, at least for "triadic" harmony. For 7 note scales, there is one passing note between each chord tone, and then two passing notes between the fifth and octave:
+X _ X _ X _ _ X
+For decatonic scales, there are instead 2 passing tones and 3 back to the octave:
+X _ _ X _ _ X _ _ _ X
+So the basic triad is now 1-4-7 instead of 1-3-5.
+7 and 10 note epimorphic scales are pretty unique in that they have this property without being too large...
+And for 7-limit tetrads, the decatonic pattern is
+X _ _ X _ _ X _ X _ X.
+
+
+что дальше:
+- закодить chord progression, и арпеджио вокруг этого
+
+
+- понять, что есть уникального в Blackjack в музыкальном плане
+- sustain, note off, vst midi messages
+- подключить c-thru axis 49
+- визуализатор нажатых нот
+- сопоставить интервалы между нотами с JI дробями
+- create a motif (melody + rhythm)
+- MPE
+- музыкальные девайсы/генераторы
+    - strumming up, strumming down
+    - ...
+- перкуссия
+- интересные ритмы, грув
+
+
+- kursk
+    - 1 - минорные интервалы, smooth
+    - 1 - всякие разные арпеджио
+    - 2 - аккорды
+
+
+
+
+https://dkeenan.com/Music/Miracle/BlackjackTetrads.txt
+P5-P4-P4
+    4:5:6:7
+    1/(9:7:6:5)
+P4-P5-P4
+    2:7/3:3:7/2
+    1/3:2/5:1/2:3/5
+P4-P4-P5
+    1/(7:6:5:4)
+    5:6:7:9
+P5-m3-P5
+    magic
+m3-M6-P4
+    4:9/2:6:7
+    1/(9:8:6:5)
+P4-M6-m3
+    1/7:1/6:2/9:1/4
+    5:6:8:9
+P5-P5-m3
+    augmagic-O
+m3-P5-P5
+    augmagic-U
+m3-TT-m3 (no dissonant chords?)
+    11-limit ASS
+    1/(12:11:9:8)
+    1/(12:11:9:8)
+    8:9:11:12
+    Pyth.tetratonic
+
+
+C   0
+C#v 1
+Db^ 2
+D   3
+D>  4
+Eb^ 5
+E[  6
+E>  7
+F<  8
+F]  9
+F#v 10
+G<  11
+G   12
+G#v 13
+Ab^ 14
+A   15
+A>  16
+Bb^ 17
+B[  18
+Bv  19
+C<  20
+
+
+P5-P4-P4
+    C   E>  G   Bb^
+    0   7   12  17
+P4-P5-P4
+    C   Eb^ G   Bb^
+    0   5   12  17
+P4-P4-P5
+    C   Eb^ F#v Bb^
+    0   5   10  17
+P5-m3-P5
+    C   E>  F#v Bb^
+    0   7   10  17
+m3-M6-P4
+    C   D   G   Bb^
+    0   3   12  17
+P4-M6-m3
+    C   Eb^ Ab^ Bb^
+    0   5   14  17
+P5-P5-m3
+    C   E>  Ab^ Bb^
+    0   7   14  17
+m3-P5-P5
+    C   D   F#v Bb^
+    0   3   10  17
+m3-TT-m3
+    C   D   F]  G
+    0   3   9   12
+
+m3 3
+P4 5
+TT 6
+P5 7
+M6 9
+
+
+
+https://dkeenan.com/Music/Miracle/BlackjackIntervalNaming.txt
+-8	267	 sm3	D:F<	6:7       subminor third
+-18	300	 nm3	A:C	          narrow minor third
+13	317	  m3	G:Bb^	5:6       minor third
+3	350	  N3	G:B[	9:11      neutral third
+-7	383	  M3	G:Bv	4:5       major third
+-17	417	nSM3	A:Db^	11:14     narrow supermajor third
+14	433	 SM3	C:E>	7:9       supermajor third
+4	467	  s4	G:C<	          sub fourth
+-6	500	  P4	G:C	3:4       perfect fourth
+-16	533	 nS4	A:D>	          narrow super fourth
+15	550	  S4	C:F]	8:11      super fourth
+5	583	  A4	G:C#v	5:7       augmented fourth
+-5	617	  d5	G:Db^	7:10      diminished fifth
+-15	650	  s5	A:E[	11:16     sub fifth
+16	667	 Ws5	C:G<	          wide sub fifth
+6	700	  P5	G:D	2:3       perfect fifth
+-4	733	  S5	G:D>	          super fifth
+-14	767	 sm6	A:F<	9:14      subminor sixth
+17	783	Wsm6	C:G#v	7:11      wide subminor sixth
+7	817	  m6	G:Eb^	5:8       minor sixth
+-3	850	  N6	G:E[	11:18     neutral sixth
+-13	883	  M6	D:Bv	3:5       major sixth
+18	900	 WM6	C:A	          wide major sixth
+8	933	 SM6	G:E>	7:12      supermajor sixth
+
+
+
+tone = 12
+# = +6
+b = -6
+] = +3
+[ = -3
+> = +2
+< = -2
+^ = +1
+v = -1
+
+0,5,7,12,14,...,63,68,70
+68,70,0 = 2,2
+C=0,D=12,E=24,F=30,G=42,A=54,B=66
+
+Bb^ = 61
+B[  = 63
+Bv  = 65
+C<  = -2 (70)
+C   = 0
+C#v = 5
+Db^ = 7
+D   = 12
+...
+A>  = 56
+
+C=0
+G=42=42
+D=12=14-2
+A=54=56-2
+
+72 edo
+выбираем в нём steps
+теперь это blackjack scale, 0-20
+про каждую ноту мы знаем точное положение в 72edo
+но в принципе мне хватит и freq значений
+- для сопоставления с JI мне надо
+    - выбрать primes - 2, 3, 5, 7, 11, что-то ещё?
+    - построить tonality diamond
+    - (бинарным) поиском сопоставить интервалы и запомнить в виде словаря какого-нибудь
+    - и понять что с этим можно дальше делать
+- можно ещё через set theory пойти
+    - зафиксировать интервалы
+- minor/major?
+
+
+opl2:
+wacky wheels
+zone 66
+inferno
+
+
+
+что дальше:
+FoxDot
+    - Clock
+        https://github.com/Qirky/FoxDot/blob/edf756f16c714d2c845a52f20e8bd131b81774ad/FoxDot/lib/TempoClock.py
+    The `TempoClock` is also responsible for sending the osc messages to SuperCollider. It contains
+    a queue of event blocks, instances of the `QueueBlock` class, which themselves contain queue
+    items, instances of the `QueueObj` class, which themseles contain the actual object or function
+    to be called. The `TempoClock` is continually running and checks if any queue block should 
+    be activated. A queue block has a "beat" value for which its contents should be activated. To make
+    sure that events happen on time, the `TempoClock` will begin processing the contents 0.25
+    seconds before it is *actually* meant to happen in case there is a large amount to process.  When 
+    a queue block is activated, a new thread is created to process all of the callable objects it
+    contains. If it calls a `Player` object, the queue block keeps track of the OSC messages generated 
+    until all `Player` objects in the block have been called. At this point the thread is told to
+    sleep until the remainder of the 0.25 seconds has passed. This value is stored in `Clock.latency`
+    and is adjustable. If you find that there is a noticeable jitter between events, i.e. irregular
+    beat lengths, you can increase the latency by simply evaluating the following in FoxDot:
+
+        def schedule
+        self.queue
+        def __iter__(self):
+        for x in self.queue:
+            yield x
+        то есть кто-то итерируется по Clock'у
+        todo: https://github.com/Qirky/FoxDot/blob/edf756f16c714d2c845a52f20e8bd131b81774ad/FoxDot/demo/13_advanced_clock.py
+    - что делает play?
+        todo: https://github.com/Qirky/FoxDot/blob/edf756f16c714d2c845a52f20e8bd131b81774ad/FoxDot/lib/Players.py
+- sustain, note off, vst midi messages
+- подключить c-thru axis 49
+- визуализатор нажатых нот
+- сопоставить интервалы между нотами с JI дробями
+- create a motif (melody + rhythm)
+- MPE
+- музыкальные девайсы/генераторы
+    - strumming up, strumming down
+    - ...
+- перкуссия
+- интересные ритмы, грув
+
+в процессе:
+- закодить подшкалы
+    - каждая третья нота, 7 нот
+        LsLsLss 0 2 4
+        sLsLsLs 1 18 20
+        sLsLssL 3 5 7
+        LsLssLs 6 8 10
+        sLssLsL 9 11 13
+        LssLsLs 12 14 16
+        ssLsLsL 15 17 19
+    10 нот:
+    - каждая вторая нота
+- разобраться с параметрами PortaFM
+    всего их 128
+
+
+
+
+
+
+какие глянуть логики/темы:
+- MOS, разные подшкалы, лады
+    MODMOSes?
+    Miracle is a cluster temperament with 10 clusters so I'm sure it has great 10-note modmoses (as well as great 10-note modes with alternatives for some scale degrees).
+- JI
+    - глянуть всякие JI scales
+    - допустим есть дробь 7/5 - что мне с этим поделать?
+- 72tet
+- maqam? через neutral third
+- матрица интервалов (для модуляций?)
+
+
+JI:
+...
+
+MOS scale:
+...
+
+
+intervals:
+ 0: 1/1
+ 1: dis (33c, 83c)
+ 2: dis (16/15 + 66c)
+ 3: 12/11, 9/8
+ 4: 8/7, 10/9 (2)
+ 5: 7/6, 6/5
+ 6: 11/9, 19/16 (3, 300c)
+ 7: 5/4, 9/7
+ 8: dis (21/16, 466c), 14/11 (4)
+ 9: 4/3, 11/8
+10: 7/5, dis (4, 533c)
+11: 10/7, dis (4, 666c)
+12: 3/2, 16/11
+13: dis (32/21), 11/7 (4)
+14: 8/5, 14/9
+15: 18/11, 32/19 (3, 900c)
+16: 12/7, 5/3
+17: 7/4, 9/5 (2)
+18: 16/9, 11/6
+19: dis (15/8 + 1133c)
+20: dis (1116c, 1166c)
+
+
+centaur
+1/1✓ 21/20✓,  9/8✓ 7/6✓,  5/4✓,  4/3✓ 7/5✓,
+3/2✓ 14/9✓,  5/3✓ 7/4✓,  15/8✓,  2/1✓
+9/8 and 7/6 never go together, we need a shift by 1 (or odd) step
+если брать 5/4, то 21/20 тоже нет
+1/1  (49/48), (12/11) 7/6, 5/4, 4/3 7/5,
+3/2, 14/9, 5/3 7/4, 15/8, 2/1
+
+
+316.66667  ! Bb^	
+350.00000  ! B[	
+383.33333  ! Bv	
+G
+G#v
+Ab^	
+A	
+A>	
+Bb^	
+B[	
+Bv	
+C<	
+C	
+C#v	
+Db^	
+D	
+D>	
+Eb^	
+E[	
+E>	
+F<	
+F]	
+F#v	
+G<
+
+! blackjack.scl
+!
+21 note MOS of "MIRACLE" temperament, Erlich & Keenan, TL 2-5-2001
+ 21
+!             G
+ 83.33333   ! G#v	
+ 116.66667  ! Ab^	
+ 200.00000  ! A	
+ 233.33333  ! A>	
+ 316.66667  ! Bb^	
+ 350.00000  ! B[	
+ 383.33333  ! Bv	
+ 466.66667  ! C<	
+ 500.00000  ! C	
+ 583.33333  ! C#v	
+ 616.66667  ! Db^	
+ 700.00000  ! D	
+ 733.33333  ! D>	
+ 816.66667  ! Eb^	
+ 850.00000  ! E[	
+ 933.33333  ! E>	
+ 966.66667  ! F<	
+ 1050.00000 ! F]	
+ 1083.33333 ! F#v	
+ 1166.66667 ! G<	
+ 2/1        ! G
+
+
+
+
+https://en.xen.wiki/w/Miracle_8
+! miracle_8.scl
+!
+tet3a.scl in 72-et
+8
+!
+116.66667
+316.66667
+433.33333
+583.33333
+700.00000
+816.66667
+933.33333
+2/1
+
+
+https://en.xen.wiki/w/Miracle_10
+! miracle_10.scl
+!
+Miracle[10] in 72EDO tuning
+10
+!
+116.66667
+233.33333
+350.00000
+466.66667
+583.33333
+700.00000
+816.66667
+933.33333
+1050.00000
+2/1
+
+
+
+https://en.xen.wiki/w/Miracle_12
+! miracle_12.scl
+!
+A 12-tone subset of Blackjack with six 4-7-9-11 tetrads
+12
+!
+116.66667
+233.33333
+350.00000
+433.33333
+466.66667
+550.00000
+583.33333
+666.66667
+783.33333
+900.00000
+1016.66667
+2/1
+
+
+
+neutral-3rd, neutral third, n3
+Neutral Thirds measure about 350 cents (¢) and typical examples are 11/9 (347¢), 27/22 (355¢) and 16/13 (359¢).
+
+
+
+nice compositions:
+Joseph Pehrson - Blacklight
+https://www.soundclick.com/music/songInfo.cfm?songID=710783
+Joseph Pehrson - Transpian
+https://www.soundclick.com/music/songInfo.cfm?songID=6593353
+Jack of All Trades
+https://sites.google.com/site/teamouse/home
+Gene Ward Smith - Rachmaninoff Plays Blackjack
+https://archive.org/details/RachmaninoffPlaysBlackjack
+Gene Ward Smith - Stained Glass
+https://archive.org/details/StainedGlass
+Stephen Weigel - We Stand on the Shoulders of your Miracle
+https://www.youtube.com/watch?v=-3mNZ-RQqq4
+Claudi Meneghin - Sicilienne in Miracle, by Claudi Meneghin
+https://www.youtube.com/watch?v=w6Bckog1eOM
+some counterpoints
+http://x31eq.com/music/counterpoint.html
+
+Joseph Pehrson - full list
+http://users.rcn.com/jpehrson/JosephPehrson.html
+
+
+
+
+https://www.facebook.com/groups/979055042181607/posts/2968597163227375/
+You might want to use the pitch labeled 850.0 as your "tonic" . . . That would be G in the colored 7-limit lattice above as well as the first interval matrix (first comment).
+
+
+https://www.facebook.com/groups/979055042181607/posts/2977792455641179/
+I think "8" is the answer. There are eight major triads in blackjack. All of these can be made into 7-limit tetrads because the 7:4 is simpler than 5:4 and generated in the same direction. None of them can have an 11:8 added. Only two can have a 9:4 added.
+Miracle isn't always about major triads, though. You get thirteen 4:6:7 or 6:7:8 chords in blackjack. You get fifteen essentially-tempered neutral triads, with two thirds approximating 11:9, because every 3:2 fifth can be equally divided. You also get six 8:9:11:12 chords and four 8:9:11:12:14 chords. What you can't do is mix 10 and 11. The interval 11:10 is outside blackjack
+
+
+interval matrix
+https://www.facebook.com/photo/?fbid=10156994804464367&set=gm.1227216284081373
+
+
+https://yahootuninggroupsultimatebackup.github.io/tuning/topicId_21894.html
+This scale would have 10 fewer of everything than the 31-tone MIRACLE
+scale -- so there are only eight major tetrads and eight minor
+tetrads and six hexanies . . . that's still quite a few!
+
+
+https://yahootuninggroupsultimatebackup.github.io/tuning/topicId_22519.html
+Yes, as scales of around 20 notes with many consonances go, the 2 of {1 3 5
+7 9 11} Eikosany is absolutely brilliant. I still remember how I felt when
+I first understood it. Wilson is a genius, no doubt. But as Kraig says, the
+Eikosany is essentially non-tonal and facilitates very different kinds of
+harmony and melody to what Blackjack does. Blackjack has a tonal centre,
+but still with plenty of opportunity for modulation.
+
+The Eikosany gives all 11 limit consonances equal billing. Blackjack
+favours the 7 limit (and the 9-limit sans 5's) (and the neutral, i.e.
+11-limit sans 5's and 7's). So you actually get more of the more readily
+recognised chords (but still exotic to most) and less of the _really_ exotic.
+
+Here are the numbers of otonal and utonal tetrads in Blackjack, for of each
+of the 15 possible kinds. e.g. The first line tells us that there are eight
+1:3:5:7 (or in more familiar terms 4:5:6:7) otonal tetrads and eight
+1/(7:6:5:4) utonal tetrads. Note that some are grouped according to what
+larger chords they are subsets of.
+
+1-3-5-7 8
+
+1-3-7-9 7
+
+1-3-9-11 6
+
+1-3-7-11 4
+1-7-9-11 4
+3-7-9-11 4
+as subsets of pentads
+1-3-7-9-11 4
+
+1-3-5-9 2
+1-5-7-9 2
+3-5-7-9 2
+as subsets of pentads
+1-3-5-7-9 2
+
+1-5-7-11 0
+1-5-9-11 0
+3-5-7-11 0
+3-5-9-11 0
+1-3-5-11 0
+5-7-9-11 0
+as subsets of hexads
+1-3-5-7-9-11 0
+
+
+
+
+That's a total of 39 otonal and 39 utonal quasi-just tetrads in 21 notes.
+Plus 6 otonal and 6 utonal pentads. Notice that there are no 5:11's in
+Blackjack. You'd need to extend the chain to 23 notes before you would
+obtain one of them (and hence a full 11-limit hexad).
+
+On the subject of triads: Here are the 20 kinds and their quantities.
+
+1-5-7 14
+1-3-7 13
+3-9-11 12
+1-3-9 9
+1-3-5 8
+3-5-7 8
+1-7-9 7
+3-7-9 7
+1-3-11 6
+1-9-11 6
+1-7-11 4
+3-7-11 4
+7-9-11 4
+1-5-9 2
+3-5-9 2
+5-7-9 2
+1-5-11 0
+3-5-11 0
+5-7-11 0
+5-9-11 0
+
+108 otonal and 108 utonal. But one mustn't forget there are also 15 neutral
+triads (1 : 11/9 : 3).
+
+
+Working out hexany patterns on the chain is not so straighforward as otonal
+chords. But the 1-3-5-7 hexany pattern is shown above, and we can see that
+there are 6 of them in Blackjack.
+
+
+
+> You will notice that the 10 note MOS has no tetrads or larger, but
+it has
+> triads.
+> 3-9-11 1
+> 1-3-7 2
+> 1-5-7 3
+> neutral 4
+>
+> That's 6 otonal, 6 utonal, and 4 neutral. 16 triads in 10-notes.
+
+This could be a place to start for composers. And the 11-note MOS,
+which has one more of each of those, so 23 triads.
+
+
+?
+As far as being the 1 odentity in the most (and lowest limit)
+otonalities, the notes 51 and 58 (of 72-tET) are equal winners in the
+Blackjack scale (not note 0).
+
+
+
+https://yahootuninggroupsultimatebackup.github.io/tuning/topicId_32971.html
+... say, the composer were relying on the
+difference in character between the "6:5" and the "25:21" in
+Blackjack, for example to evoke tension-resolution effects.
+
+
+BlackjackIntervalNaming.txt appeared here
+https://yahootuninggroupsultimatebackup.github.io/tuning/topicId_33331.html
+
+
+The three tetrachordal modes of the blackjack scale
+https://yahootuninggroupsultimatebackup.github.io/tuning/topicId_22000.html
+
+Tetrachordal alterations
+https://yahootuninggroupsultimatebackup.github.io/tuning/topicId_27221.html
+
+
+A weird 12-out-of-BlackJack
+https://yahootuninggroupsultimatebackup.github.io/tuning/topicId_22532.html
+
+
+https://yahootuninggroupsultimatebackup.github.io/tuning/topicId_43472.html
+> that's right, and the great thing is that it happens no matter where
+> you start, since every third note of 21 notes will always give you a
+> 7-tone scale, and in the case of blackjack, always a mode of mohajira
+> (in its 24-equal incarnation).
+
+
+
+
+https://en.xen.wiki/w/Miracle
+
+Chords of miracle
+https://en.xen.wiki/w/Chords_of_miracle
+
+https://en.wikipedia.org/wiki/George_Secor#Miracle_temperament
+
+http://lumma.org/tuning/gws/miracle.htm
+
+The Blackjack scale
+devised by George Secor, and Dave Keenan and Paul Erlich
+http://tonalsoft.com/monzo/blackjack/blackjack.htm
+http://tonalsoft.com/enc/m/miracle.aspx
+(meh) Autumn Leaves in Blackjack scale
+http://www.tonalsoft.com/monzo/blackjack/autumn-leaves.aspx
+
+https://dkeenan.com/Music/Miracle/
+
+http://x31eq.com/miracle.htm
+http://x31eq.com/decimal_lattice.htm
+https://x31eq.livejournal.com/14212.html
+
+secor.pdf
+SecorMiracle.pdf
+BlackjackChords.txt
+BlackjackIntervalNaming.txt
+MiracleIntervalNaming.txt
+
+
+========================
+
+https://www.facebook.com/groups/497105067092502/permalink/766458640157142/
+miracle tuning
+history of its independent rediscovery (all times EST?)
+here is the very beginning:
+after a discussion of 72-edo's value as a microtonal notation,
+joe pehrson concludes that 72-edo is an ideal tuning to explore on a synth
+but has a problem with the number of notes and need for other octaves:
+2001.0426.1314
+http://launch.groups.yahoo.com/group/tuning/message/21636
+https://yahootuninggroupsultimatebackup.github.io/tuning/topicId_21636.html
+David Beardsley recommends using a subset of 72-edo:
+2001.0426.1401
+http://launch.groups.yahoo.com/group/tuning/message/21639
+rick tagawa describes his 6-synth setup for complete 72-edo:
+as 6 bike-chains of 12-edo:
+http://launch.groups.yahoo.com/group/tuning/message/21645
+joe pehrson wants to use only one keyboard with 61 keys
+so paul erlich recommends using well-crafted subsets of 72-edo:
+http://launch.groups.yahoo.com/group/tuning/message/21648
+joe pehrson asks for 19-tone subsets of 72-edo:
+http://launch.groups.yahoo.com/group/tuning/message/21671
+paul erlich recommends dave keenan as the person with the solution:
+2001.0427.1858
+http://launch.groups.yahoo.com/group/tuning/message/21691
+paul erlich summarizes that joe pehrson has apparently switched
+from looking for a good JI notation, to wanting to actually
+use a subset of 72-edo tuning:
+2001.0427.1929
+http://launch.groups.yahoo.com/group/tuning/message/21697
+dave keenan suggests a chain of 18 minor-3rds in 72-edo:
+2001.0428.0148
+http://launch.groups.yahoo.com/group/tuning/message/21715
+keenan realizes that this is not exactly what pehrson wants:
+2001.0428.0406
+http://launch.groups.yahoo.com/group/tuning/message/21726
+keenan comes up with the correct 19-tone subset of 72-edo:
+2001.0428.0816
+http://launch.groups.yahoo.com/group/tuning/message/21734
+paul erlich recommends a 22-tone subset as a more even scale
+which gives good 11-limit approximations:
+2001.0428.2242
+http://launch.groups.yahoo.com/group/tuning/message/21789
+paul erlich's first 22-out-of-72-edo proposal,
+the core of what became miracle:
+2001.0428.2335
+http://launch.groups.yahoo.com/group/tuning/message/21792
+keenan analyzing the further division of step-sizes in his 19-tone subset:
+2001.0429.0144
+http://launch.groups.yahoo.com/group/tuning/message/21796
+dave keenan explaining how he calculated the 19-tone subset
+and his chance mention of the word "miracle":
+2001.0429.0227
+http://launch.groups.yahoo.com/group/tuning/message/21798
+dave keenan posts a 19-tone subset of 72-edo
+which is actually a subset of a very even 31-out-of-72-edo
+... the first posting of canasta? (not yet so named):
+2001.0429.0301
+http://launch.groups.yahoo.com/group/tuning/message/21805
+joseph pehrson questions the importance of ET/melodic vs JI/harmonic:
+2001.0429.2243
+http://launch.groups.yahoo.com/group/tuning/message/21836
+paul erlich posts 7 19-tone PBs translated into 72-edo:
+2001.0429.2357
+http://launch.groups.yahoo.com/group/tuning/message/21848
+paul erlich notices that 31-edo and 41-edo are both good for 11-limit
+and relates them to 31-out-of-72-edo:
+2001.0430.0825
+http://launch.groups.yahoo.com/group/tuning/message/21880
+paul erlich names dave keenan's 31-out-of-72-edo "MIRACLE"
+and analyzes its properties:
+2001.0430.1858
+http://launch.groups.yahoo.com/group/tuning/message/21894
+paul erlich first posts the actual blackjack scale
+without the name, as CS/DE 21-out-of-72-edo, subset of 31oo72:
+2001.0430.2114
+http://launch.groups.yahoo.com/group/tuning/message/21903
+paul erlich names the 21-out-of-72 "blackjack":
+2001.0501.0425
+http://launch.groups.yahoo.com/group/tuning/message/21938
+dave keenan gives paul erlich credit for finding the generator:
+2001.0501.0559
+http://launch.groups.yahoo.com/group/tuning/message/21940
+
+
+
+The three tetrachordal modes of the blackjack scale
+https://yahootuninggroupsultimatebackup.github.io/tuning/topicId_22000.html
+
+тут весь экшн
+https://yahootuninggroupsultimatebackup.github.io/tuning/topicId_21636.html
+ещё
+https://yahootuninggroupsultimatebackup.github.io/tuning/topicId_21894.html

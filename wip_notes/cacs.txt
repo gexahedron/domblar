@@ -1,0 +1,43 @@
+openmusic
+    Composing with OpenMusic
+        https://www.youtube.com/channel/UC96dznuO2_gR7WfahMXOPBw/videos
+    openmusic study group
+        https://www.youtube.com/@OpenMusicStudyGroup/videos
+
+    https://reginaldbain.com/vc/musc540/pub/learning/openmusic.html
+    https://openmusic-project.github.io/links.html
+    http://repmus.ircam.fr/_media/cao/rhythm/haddad-1.pdf
+
+    omtristan
+        https://github.com/openmusic-project/OMTristan/blob/master/sources/TMlibrairie-OM.lisp
+    esquisse
+        https://github.com/openmusic-project/Esquisse/blob/master/sources/esquisse.lisp
+        ; HARM-SERIES NTH-HARM FREQ-MOD RING-MOD M-VIR-FUN FSHIFT FDISTOR HARM-DIST VIRT-FUND BEST-FREQ BEST-TRANSP
+    https://openmusic-project.github.io/libraries.html
+
+    http://recherche.ircam.fr/equipes/repmus/RMPapers/CMJ98/
+    https://openmusic-project.github.io/libraries.html
+    https://github.com/openmusic-project
+
+    some thoughts (not mine):
+        Nevertheless, factors of good consistency are the recurrent strict patterns of voice movement — each voice moves according to a strict intervallic sequence — and the recurring transposed harmonic sequence of four chords. This last factor is very important as it immediately connects this technique with music cognition aspects I value:
+        1. Auditory memory is stimulated by the fact that the same chordal intervallic structures are reiterated every four chords.
+        2. Resemblance relations come into play as we compare two transpositions of those intervallic structures (they are similar, but not equal).
+
+        I have always admired the way Messiaen colours melodies, whether they are from birdsong, plainsong, or of his own composition. Melodic colouring is a widely known and discussed technique constituting one of the main foundations of French modern music. Bartók was probably one of the first ‘outsiders’ to take this influence from Debussy9 but, certainly, Stravinsky took it too. The way Messiaen approaches this technique, it seems to me, is frequently more dynamic. The timbres change as the melody progresses
+
+        In Appendix IV.4.8 (p.172), a description of the algorithm shown in Figure II.2-3 can be found.
+
+        While composing the piece Shapes, I programmed an algorithm to create a gradual shift from a homorhythmic texture of pulses to a polyrhythmic texture of pulses, or the inverse process: I call it pulse unfocusing, or focusing, respectively
+
+
+pwgl
+    ...
+
+
+max/msp
+bach/cage
+    ...
+mozlib/MOZ’Lib
+    https://github.com/JulienVincenot/MOZLib
+    ..

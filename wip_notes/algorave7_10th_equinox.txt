@@ -1,0 +1,237 @@
+план (что точно войдёт):
+    - ABA' microtonal scales
+        A: 22edo
+            # Porcupine bright harmonic 11th mode - Porcupine[7] 6|0 b7
+            scale = build_scale_from_steps('4333324', edo, -4)
+        B: 15edo
+            # Porcupine bright harmonic 11th mode - Porcupine[7] 6|0 b7
+            edo, steps = 15, '3222213'
+            and it's rotations
+        A': decatonic scales
+            по очереди: 12edo, 15edo, 17edo, 22edo
+            edo, steps = 12, '1121111211'  # 4-semitone tritone scale/Messiaen's 7th "mode"
+            edo, steps = 15, '2121212112'  # Blackwood decatonic
+            edo, steps = 17, '2122122212'  # neutrominant
+            edo, steps = 22, '3133131331'  # astrology[10] mode
+            edo, steps = 22, '2232222322'  # pajara[10] symmetric decatonic
+    - приблизительное время исполнения
+        A: 5 min
+        B: 2 min
+        A': 3 min
+    - всегда 4 голоса
+    - тембры
+        A: marimba20
+        A: tub_bells
+        A+A': celeste
+        A: piano3
+        B: big_grand
+        B+A': epiano1
+        A': *vibration
+    - gradual перформанс, с чем играю:
+        A:
+            - разные progressions
+            - gestures
+            - seq_type 1 vs 2
+            - modulate_to
+            - tub_bells vs celeste
+            - quality
+            - durs
+        B: 
+            - loop_count / inblock_reps / block_reps
+            - chord_loop
+            - gestures
+            - muls_version
+            - final_round
+        A':
+            - edo, steps
+            - random seq vs [1, -2, -1, 1]
+            - # stop_dur += 2
+            - rewrite={1: (5, 6)},
+            - gestures
+            - dur = 0.15, 0.15/2, 0.15/3
+
+
+
+какие кирпичи/bricks готовы:
+    chord_in_scale
+    cadence
+    cadence_in_edo
+    progress
+    sequence
+    cycle
+    apply_multi_gesture
+    play_events
+    split
+    acoustic_scale (решил не брать)
+    transpose
+    run_l_system
+
+какие использую напрямую (текущий "API"):
+    start
+
+    build_scale_from_steps
+    recalc_chord
+    progress
+    sequence
+    split, shift, cycle
+    chords_to_voices + queue
+    set_synth / modulate_synth
+    run_l_system
+    tonnetz / build_chord_loop
+    cadence_in_edo
+
+    open_editor + save_preset + load_preset + print_params
+
+    stop + stop_server
+
+
+archive:
+    - использовать более weird FM тембры
+    - подключить op-1 для управления громкостью
+    - вставить референс-оммаж к какому-нибудь известному лайвкодингу
+    - попробовать докинуть humanizing
+    - часть B - было бы забавно сюда зафигачить comma pump
+    - higher harmonics:
+        22edo:
+            3  = 35 (13)
+            5  = 51 (7)
+            7  = 62 (18)
+            11 = 76 (10)
+            porcupine 3334333: 0, 3, 6,  9, 13, 16, 19
+            porcupine 3433333: 0, 3, 7, 10, 13, 16, 19
+                has both 5th and 11th harmonics
+            porcupine 3333334: 0, 3, 6,  9, 12, 15, 18
+                has 7th harmonic
+            10, 18
+            diffs: 10, 8, 4
+            4424224
+            4334224
+            3434224
+            2232222322: 0, 2, 4, 7, 9, 11, 13, 15, 18, 20
+                даёт 2, 5, 7
+                10 нельзя получить никак
+            хочу steps 7, 10, 13, 18
+            Astrology[10] - 3133131331:
+                 0,  3,  4,  7, 10,
+                11, 14, 15, 18, 21
+        15edo:
+            3  = 24 (9)
+            5  = 35 (5)
+            7  = 42 (12)
+            11 = 52 (7)
+            steps: 5,7,9,12
+            todo:
+                Porcupine bright harmonic 11th mode - Porcupine[7] 6|0 b7 3222213
+                0,3,5,7,9,11,12
+        17edo:
+            3  = 39 (5)	
+            7  = 48 (14)
+            11 = 59 (8)
+            13 = 63 (12)
+            steps: 5,8,12,14
+            ? 2332223: 0,2,5,8,10,12,14
+
+    - add MOS scale constructor
+    - понять как заиспользовать tonal chord progressions в части A
+        - и как это сделать микротонально, потому что у меня нет NRT для микротональностей
+        - и как это сделать джазово, например, в 4 голоса
+        - но в принципе - мне не нужен NRT в данный момент сам по себе
+        мне нужен smooth voice leading между аккордами
+        то есть я бы мог просто задать 3 аккорда, и из них делается луп, и всё    
+    - rhythms
+        2 1 1 .. 1 2
+        ...
+    - visuals
+        ? what UI
+        https://github.com/plotly/dash-cytoscape
+    - microtonal
+            probable candidates: 22edo, 17edo, 15edo
+            15edo:
+                - parsimonious trichords/triads
+                - https://user-images.githubusercontent.com/1491908/160588361-ad7e83ca-2aab-41ac-8647-c95a309be9e7.png
+                major triads:
+                0 5 9
+                0 6 11
+                2 6 12
+                3 8 12
+                3 9 14
+                5 9 15
+                this looks like porcupine notation
+                https://en.xen.wiki/w/15edo
+                5 = major 3rd
+                4 = minor 3rd
+            у меня есть такое:
+                1, 5, 9, 11
+                0, 4, 6, 11 (включает 0,6,11)
+                2, 7, 11, 13 (включает 2,7,11)
+            
+
+
+идея для алгорейва:
+    - см. livecoding.txt
+    - algorave3_notes.txt
+        + "доделки по алгорейву3"
+    - 1st_domblar_album.txt:
+        - jazz
+        - neo-riemannian
+        - minimalism
+        - counterpoint
+        - spectralism
+        - miniatures with scales, or modal tetrachords
+        - something non-tonal, techno, noisy, rhythmic
+        - something microtonal
+        - something ligeti-like (e. g., 2 hands, each plays a complementary set of notes to other, but for example the overall harmonies are triadic)
+  - быстро определиться со сниппетами
+    типа дронов
+  - заценить как я могу менять их в лайв-режиме через питон или суперколлайдер
+  - всунуть туда темперации и сравнить их друг с другом
+  - подправить mos шкалы
+  - поизучать sccode примеры
+    там есть разные жанры
+    можно было бы устроить
+      лайвкодинг по жанрам, экскурс
+      и поизучать JI в применении к ним
+  - контрапункт на нейронных (вокодер) голосах
+  - фиксирую шкалу нот
+		хотя было бы прикольно делать микротональные сдвиги
+        - генерю такт
+        - генерю дерево с прогрессиями
+        - генерю ноты так, чтоб учесть voice-leading
+        - в конце нужно запилить мощную каденцию
+
+
+
+какой концепт?
+    ...
+
+
+todo:
+supercollider on algoraves:
+! redfrik
+	https://www.youtube.com/watch?v=VGoxpd3WPTc
+	https://www.youtube.com/watch?v=l3DfczLD9No
+! co34pt
+	https://www.youtube.com/watch?v=AMrnVt3ZbVw
++
+	https://www.youtube.com/watch?v=xsKIo0grDso
+		noise; 9 - todo sound design;
+	https://www.youtube.com/watch?v=yk3Z8O8-XrQ
+		норм инструменты
+	https://www.youtube.com/watch?v=Gm-EXf9hbxI
+		ничего нельзя прочитать, увы
+	https://www.youtube.com/watch?v=cWMWcWtpszg
+		хорошие инструменты
+	https://www.youtube.com/watch?v=wme5kms2zNg
+		есть интересные инструменты и саунд дизайн в районе 23
+	https://www.youtube.com/watch?v=mYO7H8Cln-g
+		тут вначале есть код, там чиптюн
+	последние полчаса https://www.youtube.com/watch?v=Y10DRyZRmo4
+	хорошие инструменты
+	первые полчаса https://www.youtube.com/watch?v=D7_yY1RFPao
+		хорошие инструменты
+co34pt
+	https://www.youtube.com/watch?v=AdKeJXLoGOA
+	EndlessWindowRehearsal_201016
+	https://soundcloud.com/co-3-4-pt/endlesswindowrehearsal_201016
+Guillaume Pelletier-Auger
+	https://www.youtube.com/watch?v=Y5In5kypNl0

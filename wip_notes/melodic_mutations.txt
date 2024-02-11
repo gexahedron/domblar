@@ -1,0 +1,9 @@
+- melody as data structure
+    - e. g., tree
+        - e. g. as computation graph
+        - we have primitives, like "scale"
+        - operations, like "sequence", "reverse", "inversion", ...
+
+- mutation
+    - TODO: research mutations in genetic algorithms for data structures
+        - (smth about gray codes)

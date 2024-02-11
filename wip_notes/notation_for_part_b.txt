@@ -1,0 +1,140 @@
+# part B
+# NRT Tonnetz progressions
+# PLR cycle
+# L-systems for rhythm
+# in the spirit of Sergei Zagny - Sonata
+
+rules = {
+    '1': ['2', '12'],
+    '2': ['21', '1']
+}
+l_rhythm = l_system(rules, start='2', append=True)
+
+# TODO: l_rhythm = l_system('2; 1->{2 12}; 2->{21 1}', append=True)
+
+# Porcupine bright harmonic 11th mode - Porcupine[7] 6|0 b7
+edo, steps = 15, '3222213'
+
+steps = [int(x) for x in steps]
+scale = build_scale_from_steps(steps, edo)
+
+once = False
+use_gestures = False
+# use_gestures = True
+# final_round = False
+final_round = True
+
+gestures = None
+if use_gestures:
+    gestures = [
+        '0 . 3 .',
+        '. 1 . 0',
+        '1 . 2 .',
+        '. 2 . 3'
+    ]
+
+
+def build_chord_loop(scale, edo, degree=1):
+    voicing = '0_ 2_'
+    chord_loop = []
+    chord_loop.append(tonnetz(scale, edo, mn=-1, mj=0, degree=degree, voicing=voicing,
+                              quality='add6'))
+    chord_loop.append(tonnetz(scale, edo, degree=degree, voicing=voicing,
+                              quality='add6'))
+    chord_loop.append(tonnetz(scale, edo, mn=0, mj=1, degree=degree, voicing=voicing,
+                              quality='add2'))
+    # chord_loop.append(tonnetz(scale, edo, mn=0, mj=2, degree=degree, voicing=voicing,
+    #                           quality='add2'))
+    # chord_loop.append(tonnetz(scale, edo, mn=-1, mj=2, degree=degree, voicing=voicing,))
+    chord_loop = cycle(chord_loop)
+    return chord_loop
+
+chord_loop = build_chord_loop(scale, edo)
+
+from domblar.transformations import shift
+
+# build chords
+chords = [chord_loop[-1]]
+if last_chord:
+    chords = [last_chord]
+
+# loop_count = 1
+loop_count = 4
+inblock_reps = 1
+block_reps = 1
+
+# loop_count = 3
+# inblock_reps = 3
+# block_reps = 3
+
+for _ in range(loop_count):
+    for _ in range(block_reps):
+        for rep in range(inblock_reps):
+            for chord in chord_loop:
+                chords.append(cadence_in_edo(chords[-1], chord, edo))
+        steps = shift(steps, 1)
+        steps = [int(x) for x in steps]
+        scale = build_scale_from_steps(steps, edo)
+        chord_loop = build_chord_loop(scale, edo)
+
+muls = [1]
+if last_chord is not None:
+    muls = []
+r_idx = 0
+
+muls_version = 2  # using l-rhythms
+# muls_version = 1
+
+if muls_version == 1:
+    for _ in range(loop_count):
+        for rep in range(inblock_reps):
+            for chord in chord_loop:
+                if (r_idx % (len(chord_loop) - 1) != 0):
+                    muls.append(1)
+                else:
+                    muls.append(2)
+                r_idx += 1
+else:
+    for _ in range(loop_count):
+        sub_muls = []
+        for rep in range(inblock_reps):
+            for chord in chord_loop:
+                sub_muls.append(int(l_rhythm[r_idx]))
+                r_idx += 1
+        muls.extend(sub_muls * block_reps)
+
+if final_round:
+    chords = chords[:1]
+    for chord in chord_loop[:2]:
+        chords.append(cadence_in_edo(chords[-1], chord, edo))
+    muls = [1, 15, 16]
+    once = True
+    use_gesture = False
+
+
+# some post-processing
+chords = chords[:len(muls)]
+loop_from = 1
+if last_chord is not None:
+    loop_from = 0
+    chords = chords[1:]
+    muls = muls[1:]
+
+
+voices_with_dur = chords_to_voices(chords, durs=muls,
+                                   gestures=gestures, edo=edo
+)
+
+dur = 0.25
+if use_gestures:
+    dur = 0.25/3
+
+if t.queue(
+    voices=voices_with_dur,
+    edo=edo,
+    dur=dur,
+    sus=dur * 0.7,
+    loop_from=loop_from,
+    once=once,
+):
+    last_chord = chords[-1]

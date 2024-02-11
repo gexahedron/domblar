@@ -1,0 +1,59 @@
+todo:
+    https://github.com/tanders/cluster-engine
+    https://github.com/tanders/cluster-rules
+
+
+rambling:
+    constraint programming
+    dynamic programming
+    melody
+    harmony
+    rhythm
+    form
+    fugue, 2d grid of cells
+    compatibility conditions; dependency of one structure on the other
+    melody - horizontal, harmony - vertical
+    melody, harmony, ... - pitch generators
+    L-system - as abstract machine
+    continuity / smooth transitions / зацепление
+
+    notation
+    performativity
+    microtonality
+    discovery
+
+
+
+Kimon: Object-Oriented Hierarchies
+In Formalising Form: An Alternative Approach To Algorithmic Composition, Hedelin proposes Kimon, an object-oriented programming environment for computer-aided composition [21]. Hedelin explores the relationship between the generative al- gorithm and the resulting musical structure. He is critical of algorithms in which musical form is not explicitly handled, but rather appears as a by-product of the algorithm. He points out that context is at the core of how music is perceived, where the listener "tends to structure the music in terms of parts, wholes and form-structural functions" (page 251) [21]. In Kimon, his proposed system, music is created as a hierarchy of musical objects, closer to how it is perceived, as groups containing groups, shown in figure 4.3.
+
+
+MorpheuS: constraining recurrent patterns
+MorpheuS is a music generation system by Herremans et al. that seeks to tackle the problem of generating music with long-term structure [20]. It is able to generate polyphonic pieces that both adhere to a given tension profile and feature repeated patterns in both the long- and short-term. The tension profile describes how the tension in a given piece should develop during its run time, and is expressed via a mathematical model for tonal tension. Repeated patterns are extracted from tem- plate pieces with a pattern detection algorithm.
+The system’s generative algorithm takes a given tension profile and pattern struc- ture as input, and then select pitches that best fit this profile with an optimization algorithm that constrains the long-term structure that is given by the pattern struc- ture. The system is quite successful, as music it has generated has been performed live in concerts. Still, as the generation system generates music based on an input piece, the generated output is highly constrained to the style of this input.
+
+
+GTTM For Generation In his paper Towards the Generation of Melodic Structure, Groves utilises a modified gttm-representation that is based on intervals, for his melody generation system [19].
+
+
+GEDMAS: Musical Structure Generated with Markov Chains
+GEDMAS, short for Generative Elecronic Dance Music Algorithmic System is a music generation system that generates full electronic dance music compositions, developed by Anderson et al. [16]. It uses a first order Markov chain model to first generate an overall form, and then fill in this form with chord progressions, melodies and rhythms. An nth-order Markov chain determines the probability of a given event occurring based on what has happened n steps in the past. Thus, a first order Markov chain is essentially a look-up table of transition probabilities. Figure 4.1 shows GEDMAS’s transition table for different sections in the overall form of a piece. Each numbered capital letter refers to an 8-bar section of a piece. Sections with the same letter are grouped together on a macro level. Within a given macro section the numbers must be from 1 to x in rising order. The probabilites of each Markov model are learned from a corpus.
+
+
+Representing Music with Prefix Trees
+The final existing system presented here is by Yan Han, presented at the FARM conference [1]. It details a novel approach to representing shared patterns across different hierarchical levels of a piece of music. This work serves as a basis for the work done in this project, so it will therefore be covered in its own section 4.3.
+It had a lot of weaknesses though - the main problem was that any kind of non-hierarchical relationship (e.g. to between adjacent pitches, or between arbitrary unrelated leaves on the tree) was difficult or messy to express. In the end, the music sounded complex but pretty weird. (Quoted with permission from Han)
+
+
+For example, PWConstraints by Rueda et al. [25] represents polyphonic music as a set of parallel voices, where each voice is a list of harmonies represented by sets of notes.
+
+
+The music representation framework MusES by Pachet et al. [15] uses a point in time and a duration for modelling temporal structures. This representation has been used for constraint programming by Roy and Pachet [24] and also as the basis of this work.
+
+
+TGGG/PTGG, Kulitta + Melkonian
+GGDL
+Rohrmeier jazz grammar
+Steedman blues grammar
+Temporal Scope Grammars
+CGA shape grammar/CGA++

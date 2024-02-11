@@ -1,0 +1,1316 @@
+journals:
+https://www.huygens-fokker.org/thirty-one/summer2009.html
+https://interval.xentonic.org/tables-of-contents.html
+https://xh.xentonic.org/tables-of-contents.html
+https://archive.org/details/sim_xenharmonikon_spring-1976_3_1/page/n1/mode/2up
+https://archive.org/details/sim_xenharmonikon_summer-1977_3_2/page/n1/mode/2up
+
+
+
+nice xen.wiki pages
+  https://en.xen.wiki/w/Orgone
+
+
+List of musical modes
+https://www.huygens-fokker.org/docs/modename.html
+
+The "Warped Canon" Page
+https://www.prismnet.com/~hmiller/music/warped-canon.html
+
+
+https://yahootuninggroupsultimatebackup.github.io/mills-tuning-list/
+https://yahootuninggroupsultimatebackup.github.io/tuning/
+https://yahootuninggroupsultimatebackup.github.io/tuning-math/
+https://yahootuninggroupsultimatebackup.github.io/makemicromusic/
+https://en.xen.wiki/w/YahooTuningListArchival
+
+
+todo: anaphoria
+Kraig Grady
+http://www.anothertimbre.com/kraiggrady.html
+https://www.anaphoria.com/music.html
+
+
+?
+https://www.anaphoria.com/secor-blarney.html
+https://www.anaphoria.com/secor.html
+https://en.xen.wiki/w/Blacksmith_temperament_modal_harmony_(in_15edo)
+https://en.xen.wiki/w/Porcupine_Temperament_Modal_Harmony
+https://anaphoria.com/centaur.html
+
+
+мой блог:
+Теории микротонов
+https://www.blogger.com/blog/post/edit/1164367183620962014/2076819277180771282
+Программирую микротона
+https://www.blogger.com/blog/post/edit/1164367183620962014/2406208735386934602
+Microtonal Reading List
+https://www.blogger.com/blog/post/edit/1164367183620962014/1631426254979294509
+
+
+доклад Paul Erlich
+https://www.youtube.com/watch?v=lbn-CMfPzJE
+harmonic entropy
+http://www.tonalsoft.com/enc/h/harmonic-entropy.aspx
+http://www.tonalsoft.com/enc/e/erlich/harmonic-entropy_with-commentary.aspx
+http://www.tonalsoft.com/enc/e/erlich/harmonic-entropy_original.aspx
+http://www.tonalsoft.com/sonic-arts/td/entropy.htm
+https://en.xen.wiki/w/Harmonic_entropy
+https://sethares.engr.wisc.edu/paperspdf/HarmonicEntropy.pdf
+http://www.soundofindia.com/showarticle.asp?in_article_id=1905806937
+https://en.wikipedia.org/wiki/Paul_Erlich
++
+https://yahootuninggroupsultimatebackup.github.io/tuning/topicId_93392.html
+https://github.com/brianbreitsch/exploring-harmonic-entropy-with-python
+TOP tempering, Tenney-optimal, slightly stretched octaves
+lattice
+horagram
+MOS scales
+projective tuning space
+generalized keyboard layout
+2 decatonic scales with 7-limit tetrads
+  pajara temperament
+  symmetrical decatonic scale
+  pentachordal decatonic scale
+bohlen-pierce scale
+  lambda scale
+  ? and it's still MOS scales
+  there's also 22ed2 lambda! (Bb = 1200, if we start scale from E), 35 notes in tritave
+
+
+xenharmonic stochastic synthesis (invented by Xenakis)
+  https://github.com/raphaelradna/xenos
+
+
+
+
+Diatonic set theory
+https://en.wikipedia.org/wiki/Diatonic_set_theory
+https://en.wikipedia.org/wiki/Bisector_(music)
+https://en.wikipedia.org/wiki/Cardinality_equals_variety
+https://en.wikipedia.org/wiki/Common_tone_(scale)
+https://en.wikipedia.org/wiki/Diatonic_scale
+https://en.wikipedia.org/wiki/Diatonic_and_chromatic
+https://en.wikipedia.org/wiki/Generated_collection
+https://en.wikipedia.org/wiki/Generic_and_specific_intervals
+https://en.wikipedia.org/wiki/Maximal_evenness
+https://en.wikipedia.org/wiki/Rothenberg_propriety
+https://en.wikipedia.org/wiki/Structure_implies_multiplicity
+
+
+
+https://en.xen.wiki/w/14/11
+https://en.xen.wiki/w/Orgonia
+https://dkeenan.com/Music/NobleMediant.txt
+https://en.xen.wiki/w/Gentle_chords
+https://en.xen.wiki/w/Interseptimal
+https://www.bestii.com/~mschulter/IntervalSpectrumRegions.txt
+
+
+
+gene ward smith
+http://gws.soonlabel.com/
+https://en.xen.wiki/w/Microtonal_Music_by_Gene_Ward_Smith
+https://archive.org/search.php?query=creator%3A%22Gene%20Ward%20Smith%22
+
+
+
+This time we will focus on microtonal solfège and theory: several MOS scales as subscales to 22-EDO, e.g. superpyth[7], pajara[10], porcupine[7], porcupine[8], machine[6], orwell[9].
+
+
+
+todo:
+  внимательнее пройтись по:
+    статьи margo schulter
+    https://www.bestii.com/~mschulter/IntervalSpectrumRegions.txt
+  
+    http://x31eq.com
+  
+  https://discord.com/channels/332357996569034752/590048567863934987
+
+
+
+todos:
+  Schillinger System Of Musical Composition
+
+  доизучать ссылки
+  https://web.archive.org/web/20040228013943/http://www-math.cudenver.edu/~jstarret/notes.html
+  начиная с John Allen on keyboard design
+
+  http://dkeenan.com/Music/ChainOfMinor3rds.htm
+  это про magic tuning?
+
+  https://en.wikipedia.org/wiki/Rothenberg_propriety
+  https://en.wikipedia.org/wiki/Maximal_evenness#Distributional_evenness
+  https://en.xen.wiki/w/Just_intonation_subgroups
+  https://en.xen.wiki/w/Cluster_temperament
+  https://en.wikipedia.org/wiki/Generated_collection
+
+  Tenney-Euclidean temperament measures
+  https://en.xen.wiki/w/Tenney-Euclidean_temperament_measures
+
+	22-edo
+
+  fokker periodicity block
+  http://www.tonalsoft.com/enc/p/periodicity-block.aspx
+  https://en.xen.wiki/w/Gallery_of_wakalixes
+
+	https://microtonal.miraheze.org/wiki/Main_Page
+
+	взять ноты от афекса
+		или ноты из моих micro песен
+		и закодить в питоне подбор JI дробей
+		ну или какой-то выдать анализ
+		или сверить их с другими системами
+
+	взять cps
+	и посмотреть - вписываются ли они в dynamic tonality или ещё куда-нибудь
+
+	http://tonalsoft.com/enc/w/wedgie.aspx
+	
+
+ещё ссылки
+https://www.prismnet.com/~hmiller/music/temp-porcupine.html
+https://www.prismnet.com/~hmiller/music/temp-diminished.html
+https://www.prismnet.com/~hmiller/music/temp-augmented.html
+https://www.prismnet.com/~hmiller/music/superpelog.html
+https://www.prismnet.com/~hmiller/music/zireen-music.html
+https://www.prismnet.com/~hmiller/music/regular-temperaments.html
+  здесь объясняются wedgie
+
+
+todo
+http://www.robertinventor.com/tuning-math/frame.html?s__12/msg_11100-11124.html
+	Like the tuning list but for folks who want to get mathematical. The going can be heavy at times, so here are theory-laden links to the work of some list members:
+	Paul Erlich
+	Gene Ward Smith
+	Graham Breed
+	Herman Miller
+	Dave Keenan
+	Kees van Prooijen
+
+
+группы в фейсбуке:
+17-Tone Workgroup
+https://www.facebook.com/groups/503990420199057/
+22-Tone Workgroup
+https://www.facebook.com/groups/370122423186931/
+31-Tone Workgroup
+https://www.facebook.com/groups/421996207912134/
+
+The Xenharmonic Alliance
+https://www.facebook.com/groups/476404232379884/
+The Xenharmonic Alliance - Mathematical Theory
+https://www.facebook.com/groups/xenharmonicmath/
+XA - Monthly Tunings
+https://www.facebook.com/groups/979055042181607/
+
+Microtonal Music and Tuning Theory
+https://www.facebook.com/groups/497105067092502/
+Erv Wilson Discussion Group
+https://www.facebook.com/groups/ErvWilsonDiscussionGroup/
+UnTwelve
+https://www.facebook.com/groups/untwelve/
+Tuning to Timbre Study Group
+https://www.facebook.com/groups/520478431698941/
+Small Equal Xenharmonic Temperaments
+https://www.facebook.com/groups/839632962721372/
+Quarterly Tunings Workshop
+https://www.facebook.com/groups/228574041389870/
+
+Xenharmonic Memes for Perceptually Aware Teens
+https://www.facebook.com/groups/841532689389565/
+
+
+================
+
+https://en.xen.wiki/w/Approaches_to_Musical_Tuning
+Approaches to Musical Tuning
+Just Intonation
+  the harmonic series
+  integer frequency ratios
+  tonality diamonds
+  combination product sets
+  Fokker blocks
+  etc.
+Generalized overtone tuning
+  the partials of a metal bar
+  drum head
+  synthesized timbre
+Equal tuning
+Historical Western Temperaments
+  meantone tunings
+  circulating temperaments
+Musical traditions of indigenous, ancient, and/or non-Western cultures
+  Arabic, Turkish, Persian
+  Indian (North, South)
+  African
+  Thai
+  Pre-Columbian South American (e.g. Maya, Inca, Aztec..)
+  Indonesian (Java, Bali)
+  Ancient Greek, Byzantine
+  Georgian
+Regular Temperaments
+  (including Linear Temperaments)
+Moment of Symmetry
+Empirical
+
+Tetrachordal Scales: the use of divided fourths as building blocks for composition.
+Isoharmonic chords/scales
+
+================
+
+
+285 Гц — сигналы клеткам и тканям к исцелению. Вызывает в теле ощущение обновления, приятной лёгкости;
+396 Гц — освобождает от чувства вины и страха, чтобы расчистить путь для эмоций более высоких вибраций;
+417 Гц — способствует «развязыванию» сложных ситуаций.
+528 Гц — сигнал к исцелению ДНК, восстановлению клеток и пробуждению сознания;
+639 Гц — это вибрация, связанная с сердцем. Она позволяет стереть различие между чувством любви к себе и к «другим». Слушайте эту частоту, чтобы сбалансировать отношения;
+741 Гц — сигнал к очищению и исцелению клеток от воздействия электромагнитного излучения. Помогает расширить возможности для создания желаемой реальности;
+852 Гц — пробуждает интуицию;
+963 Гц — активизирует деятельность шишковидной железы и приводит тело к его совершенному изначальному состоянию.
+
+Это так называемые Частоты Сольфеджио. Безусловно, существуют и другие частоты, многие из которых находятся за пределами диапазона человеческого слуха, но обладают исцеляющими свойствами.
+
+куда-то ещё потеряли
+174 Гц, 432 Гц
+
+================
+
+
+why temper commas:
+Paul Erlich We were discussing comma problems in scales on your Timeline, Bud . . . for the minor pentatonic/hexatonic/heptatonic, how the 9/5 and 16/9 choices for the seventh (ratio 81:80) each have advantages and disadvantages when the third is 6/5, and how the 7/4 and 16/9 choices for the seventh (ratio 64:63) have advantages and disadvantages when the third is 7/6. In each case you can "solve" the comma problem by tempering out the comma.
+Paul Erlich Half-joking, the idea of my paper is, well tempering out any comma can be a solution . . . but how do you find the problem?
+
+
+=================
+
+(UPD: книга так и не вышла, и уже не выйдет) (да и автор был анти-ваксер и трампист)
+
+https://www.facebook.com/groups/497105067092502/permalink/1788783321257997/?comment_id=1788796304590032
+
+The Nuts and Bolts of Musical Tuning
+
+Part 1 - Just Intonation
+ch0_Freeform Just Intonation
+ch1_Harmonic Series
+ch2_Discontinuous Harmonic Series
+ch3_Subharmonic Series
+ch4_Discontinuous Subharmonic Series
+ch5_Isoharmonic Series
+ch6_Discontinuous Isoharmonic Series
+ch7_Isosubharmonic Series
+ch8_Discontinuous Isosubharmonic Series
+ch9_Stretched or squashed versions of all above
+ch10_Tonality Diamonds
+(Sorted into limits and subgroups by folders)
+ch11_Combination Product Sets
+(Sorted into limits and subgroups by folders)
+ch12_Hobbit Scales
+(Sorted into limits and subgroups by folders)
+ch13_Dwarves Scales
+(Sorted into limits and subgroups by folders)
+ch14_Tritriadic Scales
+(Sorted into limits and subgroups by folders)
+ch15_Unnormalized Divisor Scales
+(Sorted into limits and subgroups by folders)
+ch16_Divisor Scales
+(Sorted into limits and subgroups by folders)
+ch17_Euler Fokker Genera
+(Sorted into limits and subgroups by folders)
+ch18_Modified Euler Fokker Genera
+(Sorted into limits and subgroups by folders)
+ch19_Fokker Periodicity Blocks
+(Sorted into limits and subgroups by folders)
+Part 2 - Temperaments
+ch20_Tempered Fokker Periodicity Blocks
+(Sorted into limits and subgroups by folders)
+ch21_Rank 5 Temperaments
+(Sorted into limits and subgroups by folders)
+ch22_Rank 4 Temperaments
+(Sorted into limits and subgroups by folders)
+ch23_Rank 3 Temperaments
+(Sorted into limits and subgroups by folders)
+ch24_Rank 2 Temperaments
+(Sorted into limits and subgroups by folders, each with one subfolder named Sorted by MOS and another subfolder named Sorted by Temperament and Scala files starting with TOP or POTE))
+ch25_Rank 1 Temperaments
+(Sorted into limits and subgroups by folders with each with one subfolder named ED2 MOS Sorted by MOS and another subfolder named ED2 MOS Sorted by EDO)
+Part 3 - Timeline of historical scales and tunings
+ch25_Tetrachordal Scales
+ch26_Historical Western Tunings
+ch27_World Music Traditional Scales
+
+
+
+================
+
+top tunings and commas
+
+diagrams and algorithm
+https://www.facebook.com/groups/497105067092502/permalink/849007645235574/?hc_location=ufi
+more diagrams!
+https://www.facebook.com/groups/239947772713025/permalink/1211214795586313/?hc_location=ufi
+
+recent question asking for algorithm
+https://www.facebook.com/groups/497105067092502/permalink/1834870529982609/
+
+
+=================
+
+Wilsonic
+
+The app features Wilson's most profound scale designs. Your hands and ears naturally find new melodic patterns and harmonies that touch on those feelings and emotions you couldn't find before. When you find that perfect scale export it as a Scala file to tune up your favorite software synthesizers. Share your favorite scales with your friends. This version of Wilsonic has the scales "Moments Of Symmetry", Co-Prime Grid, Tetrany Major, Hexany, Tetrany Minor, Mandala (Hexany Stellate), Tetradic Diamond, Hexany Diamond, Aggregate Rotations of Euler Genus 4, Eikosany, Partch 43, Harmonic Spiral, Highland Bagpipes, and Recurrence Relations.
+
+https://apps.apple.com/us/app/wilsonic/id848852071
+
+
+==================
+
+
+I was playing around with a non-octave phi-based tuning for the tuning
+of the month on Facebook but nothing came from that.
+
+φ+1 UDφ (unequal divisions of phi)
+
+! C:\music\scales\phi-plus-1-udphi.scl
+!
+13 notes of Phi+1 UDphi
+  13
+!
+  75.1197051607202
+  121.546236174916
+  196.665941335636
+  243.092472349832
+  318.212177510552
+  393.331882671272
+  439.758413685468
+  514.878118846189
+  589.997824006909
+  636.424355021105
+  711.544060181825
+  757.970591196021
+  833.090296356741
+
+
+====================
+
+A very simple Twitter-worthy summary of Sethares' main point: scales are in
+some sense 'optimal' when they employ pitches from a timbre's spectral
+content.
+
+For example, harmonic series timbres should use scales that try to optimize
+for the occurrence of harmonic series spectral content, so that overall
+beating is reduced.
+
+
+
+
+Somewhat tangential, but definitely related: the efficient creation of
+inharmonic timbres via additive synthesis wavetables!
+
+One can (e.g. in Csound) approximate an inharmonic spectrum with a normal
+harmonic wavetable (f-table) by using high-integer partials with a
+high-resolution table (say, 2^20 points (1,048,576 points)), and then
+playing the table at a frequency at 1/X times the normal phase rate, where
+X is the lowest integer harmonic present in the table. It is much more
+CPU-efficient than manually adding together a number of sine wave
+oscillators and mixing, although it doesn't afford the same level of
+control over the amplitude evolution of each partial.
+
+Anyway, outside of FM synthesis, where inharmonic spectra are created quite
+efficiently, cheaply, and trivially, this inharmonic wavetable-additive
+technique is a less-common synthesis technique, but one that is capable of
+a more organic-sounding timbre, especially for things that should sound
+like bells of all sorts.
+
+
+=====================
+
+
+I don't often use the same temperament more than once. In general I like
+to use temperaments that are relatively less complex (fewer notes) such
+as meantone, porcupine, mavila, etc. (including small EDOs). Many of the
+temperaments I like to use are ones that divide the minor third into two
+equal parts (porcupine, mavila, triforce, 15-EDO).
+
+
+
+======================
+
+todo:
+https://www.facebook.com/groups/xenharmonic2/permalink/3131625066857774/
+Is there a tuning like BP that's not based on a Tritave but based on a Twelfth? (Octave+third) I love the sound of twelfths. Would that be n divisions of 4|5?
+
+Antonius Nies Octave+third would be 2:5. I have made a sheet with the frequencies of n per 1:5 (2 octaves + third) tunings.
+4, 8, 12 etc. per 1:5 have a good 2:3 (fifth) and 3:10
+9, 18, 26, 27, 35, 36, 44, 45 etc. per 1:5 have a good 5:6 (minor third), 1:6 and 6:25
+9, 18, 27 etc. per 1:5 have a good 2:7 and 7:10
+17, 28, 34, 39, 45 per 1:5 have a good 3:4 (fourth) and 4:15
+19, 24, 29, 38, 43 per 1:5 have a good 1:7, 5:7 and 7:25
+19, 22, 38, 41, 44 per 1:5 have a good 1:3 (tritave) and 3:5 (major 6th)
+22, 29, 36, 43, 44 have a good 4:5 (major third) and 1:4 (double octave).
+
+Harrison Feiner Just some quick playing around in bitklavier I really liked 13 and 14 equal divisions of 1586¢
+
+
+====================
+
+THE AXIAL CHORD — A BASIS FOR 2.3.7.11 HARMONY
+https://www.xenharmonikon.org/2020/04/27/the-axial-chord-a-basis-for-2-3-7-11-harmony/
+
+32:33:42:44:56
+
+One final simple scale is a just intonation CS version of 15EDO’s Blackwood scale. It is:
+1/1, 33/32, 8/7, 77/64, 21/16, 11/8, 3/2, 11/7, 7/4, 231/128, 2/1,
+and I call it the Blackstar scale (this name will make more sense later). Like Blackwood, this scale is built from two 5EDO-adjacent chains, which for Blackstar are entirely within the 2.3.7 subgroup:
+1/1, 8/7, 21/16, 3/2, 7/4, 2/1.
+
+The second chain is transposed by 11:8, making 11/8 the root. This scale is a fantastic scale to compose with, as it contains both the primal scale and a 7-limit pentatonic. Like Blackwood, you can form chains of major and minor seventh chords, but in 2.3.7.11 JI the character of these chords vary wildly.
+
+Part 3 – Scales for a 12 Tone Halberstadt Keyboard:
+
+The first of these two scales places the axial scale within the full 11 limit:
+
+1/1, 33/32, 9/8, 7/6, 5/4, 21/16, 11/8, 3/2, 99/64, 5/3, 7/4, 15/8, 2/1.
+
+I named this scale the Janus scale, because it looks back on 5 limit harmony and ahead towards 2.3.7.11 harmony simultaneously. Mapping C to 1/1, the ionian mode on C is almost the Ptolemaic sequence (with 21/16 instead of 4/3), and the locrian on C is the axial scale. This scale is built by adding two 3/2s around each of the prime harmonics in the limit, which makes building chords easy for people familiar with the Western tonal system. It also approximates the 12EDO scale to within 50 cents, making it approachable for people new to xenharmony.
+
+The second 12-tone scale is a CS extension of primaxial, called primaxial[12]:
+
+1/1, 33/32, 9/8, 7/6, 77/64, 21/16, 11/8, 3/2, 99/64, 77/48, 7/4, 231/128, 2/1.
+
+
+Notice that this scale differs from the last by just 3 tones. It lacks a recognizable ionian mode however, as 77/64 is closer to a minor third. This scale is within the 2.3.7.11 subgroup, so is good for people who do not want any 5th harmonic intervals.
+
+
+
+
+
+====================================
+
+https://www.facebook.com/groups/497105067092502/permalink/1848298395306489/
+
+So, this poll is asking, what is your favourite regular temperament, and why? That means you can add options like “Meantone” or “Pajara”, but not like “Meantone[19]” or “Pajara[22]”.
+(I think you want to say rank-2 or 2D regular temperament? Otherwise people could answer 72-tET or Marvel etc.)
+
+Meantone
+Porcupine
+Superpyth
+Pajara
+Magic
+Blackwood
+Mavila
+Sensi
+Maqamic (Neutral 3rds)
+Tetracot
+Orwell
+Miracle
+Bug
+Injera
+Hanson
+Huxley (какой-то custom, см. тред)
+	https://www.youtube.com/watch?v=TgY4nQZ7HL8
+	This track makes distinct use of the 1 3 1 3 1 1 3 1 3 scale in 17 tone equal temperament, which can also be written as 4L 5s. The scale features (although not exclusively) throughout various sections of the track, and is constructed by stacking subminor thirds or supermajor sixths (4 or 13 steps) in the same way that the diatonic scale is constructed by stacking perfect fifths/fourths (10 or 7 steps in 17edo). The scale has a wealth of xenharmonic chords, every degree has either or both of an approximate 9:11:13 or 8:9:11:13 (from the harmonic series), three degrees have classic root-third-fifth style chords with the choice of at least two thirds, with one having all 3 thirds to choose from (subminor, neutral, supermajor). The tonic of the above mode, used most extensively in this track and in the album, has a subminor 7 chord. The scale could also be thought of as 'diminished-like', adding an extra semitone to the familiar diminished scale, making it no longer a mode of limited transposition and thus making it feel more 'rooted' than its 12edo cousin.
+Astrology
+Andromeda
+Mohajira
+Tsaharuk
+Pontiac
+Orgone
+Voltage
+Tertiaseptal
+
+
+
+===================
+
+41 vs 31
+
+https://www.facebook.com/groups/xenharmonic2/permalink/3117018504985097/
+
+Omg it sounds amazing. 12-edo-impossible chords that sound pretty wrong in 31-edo, like the closest approximation to (1,3/2,7/4,35/32), sound natural, downright relaxed in 41-edo.
+
+Paul Erlich I don't believe I said "absurd". 41 is great for some things (like Magic, Helmholtz, and Garibaldi scale systems/approaches), but awful for others (like conventional diatonic triadic music, where 31 excels). For other musical purposes you might need 22, 46, or something else. I'd be happy to discuss in a lot more detail at Microtonal Music and Tuning Theory, Jeff Brown. I don't follow this group so join me over there!
+
+
+Cam Taylor 41 is pretty damn great, and everyone who has spent some real time with the whole system will tell you it works amazingly for certain things. One thing it's a little wonky for is emulating 5-prime limit JI, maybe because of the *inflated* size of the comma, but I think even more than that, the size of 5:6 and 5:9 bother me a little much, probably because most other 11-limit intervals are so we'll under control that we notice the imperfections on those a bit more. With the right timbres, it can really rock though. I really enjoy using 41edo to play mostly in the 2.3.7 subgroup with occasional added colouring of other approximated primes. 41 is an ok Helmholtz tuning, but 53 and 65-equal fair much better. For Garibaldi, it does pretty well, but 94 blows it out of the water. Pretty darn good for Magic, where it's not beaten by much. Also just really nice at very slightly accentuated Pythagorean, alongside 29, but with more options for modulation and colouring.
+Of course there is no one true tuning, but there is a reason both Kite and AAH built whole systems around 41edo. If I had to choose a non-meantone Edo smaller than 53 to stick to it would probably be my first pick (although 46 is great too)
+
+
+
+===================
+
+maqams
+https://www.facebook.com/groups/497105067092502/permalink/1845245392278456/
+
+===================
+
+small edos
+https://www.facebook.com/groups/497105067092502/permalink/1847473818722280/
+
+Paul Erlich 22, because it's a great choice for 5-limit porcupine, srutal, magic, and superpyth; 7-limit pajara, hedgehog, superpyth, porcupine, magic, and doublewide; and 11-limit hedgehog, porcupine, pajara, pajarous, telepathy, porky, suprapyth, fleetwood, and astrology . . . Not to mention its subset 11 and its virtues for machine, etc.
+
+
+====================
+
+31edo
+
+https://www.facebook.com/groups/421996207912134/permalink/2734678049977260/
+
+Jeff Brown My path has been to learn modes, first of the diatonic scales, and then of variations thereof that are only possible in 31et. Whereas in 12et a diatonic scale has to be a stack of six perfect fifths (producing 7 tones), in 31et it can be two separate stacks of fifths. For instance from a dorian mode you might try using 7/4 (25\31) instead of the usual minor seventh, and then you can add the septimal minor third (7/6) instead of the usual minor third, and then the septimal fourth (21/16) instead of the usual fourth, etc. Each of those generates a slightly different set of modes. I believe at least two of those modes will always have a wolfy fifth.
+I don't really adhere to the modes very rigidly. I use them to increase my vocabular, and then I just play whatever sounds right. But I kind of force myself to use what initially seem like unnatural variations, until I learn why I would want them. The septimal minor thirds, for instance, are usueful if you plan to modulate down a septimal second. Septimal major thirds are useful as the third mode of a septimal minor. Septimal minor thirds are also useful for really smooth #9 chords (which I'll always think of as the Jimi chord, the weird one in Purple Haze).
+In 12et I was able to explore literally all the well-behaved scales, for a certain definition of well-behaved. (I defined well-behaved as having no gaps bigger than a minor third and no three consecutive tones in the space of a whole tone -- like C# D Eb.) In that case there are only 33 well-behaved scales (and their modes, which expands the set by almost a factor of seven).
+In higher ETs I don't expect ever to do that; the combinatorics are greater than I could ever explore in my lifetime. Still, though, the 12et forms an extremely useful basis for higher ETs. Everything from 12et has an analog in 31et. So learning those, and then learning what certain variations (a shorter minor sixth, the neutral 7th, etc) sound like, produces a palette that will already take longer than my life to explore.
+After that there are scales that simply have no analog in 12et, like 0 3 6 9 12 15 18 21 24 27 29 31. Again they generate too many modes to explore exhaustively, but having a general sense of what patterns are available gives you access to a bunch of shockingly weird colors.
+
+Joseph MonzoFor starters, note that 31 belongs to 2 important temperament families (among many others) : meantone and miracle.
+http://tonalsoft.com/enc/number/31edo.aspx
+
+Joseph Monzo I should update that page, because it focuses on meantone and doesn't talk about the other families. Canasta is another name for miracle[31], and 31edo (and 31oo41 and 31oo72) can do that too.
+
+Paul Erlich Joseph Monzo 31edo is too inaccurate for me to recommend it for Miracle, let alone for Canasta or Miracle[31] which just become the entire EDO with only 1 step size. For the 2D temperaments it supports without introducing too much "badness", I'd recommend 31-tET for
+5-limit -- meantone
+7-limit -- meantone, cynder, orwell
+11-limit -- meantone, orwell, squares, valentine, mohajira, meanpop, migration, nusecond (also meanenneadecal for the 31e breed instead of the 31p breed)
+as well as various subgroup temperaments.
+
+Paul Erlich Joseph Monzo, Canasta loses all intervallic or modal distinctions, becoming all of 31EDO, when tuned in 31EDO. See? It becomes completely unrecognizable.
+Yeah you can cite me and my Middle Path paper and include links to Graham's app (though don't you already have an Orwell page?). . . Miracle is already quite complex so increasing its error a lot gives it a high "badness" for me. Graham's ap gives the following figures for TE damage --
+31-tET, 7-limit: 1.432402
+31-tET, 11-limit: 1.486858
+41-tET, 7-limit: 1.101749
+41-tET, 11-limit: 1.320342
+72-tET, 7-limit: 0.515338
+72-tET, 11-limit: 0.493480
+Miracle, 7-limit: 0.514916
+Miracle, 11-limit: 0.484320
+
+
+=========================
+
+https://www.facebook.com/groups/xenharmonic2/permalink/3150621208291493/
+https://www.facebook.com/groups/xenharmonic2/permalink/3162399117113702/
+https://www.facebook.com/groups/xenharmonic2/permalink/3163583813661899/
+
+
+===========================
+
+
+Paul Johnson, Meta-Miracle
+
+https://www.facebook.com/groups/xenharmonicmath/permalink/1765367183603496/
+
+
+
+===========================
+
+
+
+Journals Covering Microtonal Music
+MicroMegas
+NewMusicBox
+P-ART Journal
+Perspectives of New Music
+Csound Magazine
+Interval
+Musicworks
+Xenharmonikon
+1/1
+Juxtaposition Ezine
+Experimental Musical Instrument Magazine
+MikroPolyphonie
+
+
+===========================
+
+Review: Toward the Expansion of Our Concepts of Intonation
+
+Reviewed Works: Pitch Notation and Equal Temperament: A Formal Study by Eric Regener; New Music with 31 Notes by Adriaan D. Fokker, Leigh Gerdine; Xenharmonikon: An Informal Journal of Experimental Music, Volume I, No. 1, 1973 ; The Scalatron by Motorola Inc.; The Archifoon by Hendrik van der Horst
+
+https://www.jstor.org/stable/832376?seq=1
+
+
+
+============================
+
+http://lumma.org/music/theory/tctmo/
+
+
+The Too-Condensed Tuning-Math Outline
+
+
+Introduction
+
+This document hopes to outline some of the stuff that happens on the
+tuning-math mailing list...
+http://groups.yahoo.com/group/tuning-math/
+
+
+
+==========
+
+
+about porcupine
+
+Mike Battaglia Should also add - the other scale type that tends to have 4:5:6 and 10:12:15 sharing the same triad shape are the decatonic scales. This is because both 7-edo and 10-edo temper 25/24, so 7 and 10-note MOS's tend to have 25/24 as chroma.
+There is a kind of metaphor where negri[10] is like "decatonic porcupine," and miracle[10] is like "decatonic tetracot." Maybe some food for thought...
+
+https://www.facebook.com/groups/xenharmonic2/permalink/3177109778975969/
+
+
+===========
+
+
+http://www.microtonal-synthesis.com/reclist.html
+
+Recommended Listening in Microtonal Synthesis
+
+Bill Alves The Terrain of Possibilities (Synclavier, CSOUND, just intonation) Some of the most interesting computer music out there. Whereas most academic based computer music draws upon its musique concrete origins, just intonation has freed Bill Alves to compose some very complex and at times rhythmically charged tonal music.
+
+Easley Blackwood Twelve Microtonal Etudes (Polyfusion modular analog synthesizer, non-12 equal temperament) Classically flavored studies, the 20th Century non-12 equal tempered version of the Well Tempered Clavier.
+
+Wendy Carlos Beauty in the Beast, Tales of Heaven and Hell (Synergy digital synthesizer, just intonation and non-octave equal temperament) Back in print, much of this album is inspired by the traditional world music of Tibet, Bali, Africa and Bulgaria. The title track is the most hauntingly beautiful song I've heard in any tuning. Tales of Heaven and Hell is a new release with a more medieval flavor.
+
+Charles Carpenter Frog a la Peche, Splat (Kurzweil synthesizer/samplers, Bohlen-Pierce scale) High energy progressive rock based music with similarities to King Crimson.
+
+Ivor Darreg Detwelvulate! (Ensoniq sampler, Yamaha FM synthesizer, 9 to 53 tone equal temperament) A series of etudes exploring the new moods possible with non-12 equal temperament from the father of Xenharmonics.
+
+Jean Piche Heliograms (Systems Concept Digital Synthesizer, just intonation) An academic composer with two very listenable microtonal pieces on this album from the early 1980's. "Ange" consists of ethereal chords floating in and out with some heavenly echoed voice. "La Mer A L'aube" has light melodic sequences which disappear into a powerful melody with ringing embellishments.
+
+Michel Redolfi Desert Tracks (Synclavier digital synthesizer, unknown tunings) The piece "Pacific Tubular Waves" is an avant garde musical representation of the ocean waves along the California coast.
+
+Robert Rich Geometry, Numena, Rainforest, Gaudi, Yearning, Propagation, A Troubled Resting Place, Seven Veils (Ensoniq sampler, Sequential analog synthesizer, E-mu and Korg wavetable synthesizers, just intonation) Space music with many world music influences. The more recent albums have seen a move towards some of the more unusual intervals.
+
+Francois Elie Roulin Disque Rouge (Yamaha FM synthesizers, just intonation) Very intricate and accomplished music, melodic and rhythmic with a highly ornamental style. Pretty, but not simplistic.
+
+Morton Subotnick Silver Apples of the Moon, The Wild Bull, Touch (Buchla analog synthesizer, unknown tunings) Early electronic music with avant garde leanings and a jazzy flair.
+
+Eric Stanley 25 Studies Opus 1 (Yamaha FM synthesizers, 19 tone equal temperament, well temperament) Complex computer music sometimes reminiscent of Conlon Nancarrow, other times of Frank Zappa's electronic works.
+
+Erling Wold Music of Love, I Weep (Yamaha FM synthesizers, just intonation, well temperament) Quirky instrumentals with a sense of humor.
+
+Recommended Listening in Microtonal Electric
+
+Glenn Branca Symphony No. 3 (Gloria) (custom made electric guitars, keyboards and mallet instruments, just intonation) Music with the flavor of rock and the style of a minimalist symphony, perhaps the ultimate sustained power chord.
+
+Catler Bros. Crash Landing (custom electric guitars, just intonation) The Catler Bros. take the intonational explorations of virtuoso jazz to their next natural step, just intonation. Includes a rendition of Ornette Coleman's "Free."
+
+Recommended Listening in Microtonal Acoustic
+
+Kraig Grady and Brad Laner Music from the Island of Anaphoria (custom built acoustic instruments, just intonation) Ambient world music flavored pieces that should appeal to any fans of Carlos' Beauty in the Beast.
+
+Neil Haverstick Acoustic Stick (custom guitars, 19 and 34 tone equal tempered) Neil Haverstick explores a variety of jazz and popular styles aided by bass and drums. Excellent playing by all make this a very enjoyable album.
+
+Lou Harrison Double Concerto for Violin and Cello, Gamelan Music, Piano Concerto, La Koro Sutro, Music for Guitar and Percussion (custom Javanese percussive instruments, orchestral instruments, just intonation) Lou Harrison is one of the most inventive and respected composers of modern "classical" music. His sense of melodicism is unparalleled in contemporary music.
+
+Michael Harrison From Ancient Worlds for Harmonic Piano (Schimmel grand piano, just intonation) The shimmering overtones of a modified grand piano are used to their full effect in these gentle excursions.
+
+David Hykes & Djamchid Chemirani Windhorse Riders (voice, zarb, just intonation) Hykes uses the techniques of Tibetan monks to sing up to three tones at once. The results are ethereal pieces that sound almost synthesized.
+
+Harry Partch The Music of Harry Partch, Revelation in the Courthouse Park, The Bewitched, Delusion of the Fury, Enclosure I & II, The Harry Partch Collection Vol. 1-4 (custom built percussive and stringed instruments, customized reed organ, just intonation) The father of just intonation in the 20th century. Partch's music was just as unique as his vision of true harmonic tunings. Imagine the music of a long lost Atlantis that has just been rediscovered. Very dynamic music, and unlike anything else that was done in the mid-20th century.
+
+Other Music Prime Numbers, Incidents Out of Context (custom built percussive instruments, adapted instruments, synthesizers, just intonation) Other Music composes with acoustic, electric and electronic instruments, but began with mostly acoustic compositions so I've categorized them here. Their first album seems to take its cue from the Asian flavored music of Lou Harrison, while the second album explores a broad pallette of classical, folk and rock.
+
+
+===========
+
+
+
+books
+
+https://www.facebook.com/groups/497105067092502/permalink/1853152668154395/
+
+Cody HallenbeckProbably "The Arithmetic of Listening" by Kyle Gann, "Genesis of a Music" by Harry Partch, "Harmonic Experience" by W.A. Mathieu. JI bias on my part showing strong here, though Gann does an okayish job writing about temperaments. Gann is probably the best general intro of these, Partch really led the way and its a great historical document but has it's works, Mathieu has some great practical exercises.
+
+
+Paul Erlich Fokker, _New Music with 31 Notes_.
+Partch, _Genesis of a Music_.
+Blackwood, _The Structure of Recognizable Diatonic Tunings_.
+Really hard to stop there. Depends so much on the person's background and goals. Unfortunately there is no one or even three books that suffice to paint a decent picture of the landscape.
+
+
+Bill WindesJoseph Yasser: Toward a Theory of Evolving Tonality.
+
+Joseph MonzoHelmholtz/Ellis: On the Sensations of Tone
+Maneri / van Duyne: Preliminary Studies in the Virtual Pitch Continuum
+
+Joseph MonzoI got started with Partch, followed him to Helmholtz, and hunted out as many of the references in both as I could, in the dark dusty shelves of big-city public and university libraries. Honestly that old stuff is good for a start, but what is available online now will take you much farther. Read Paul Erlich's papers and make use of my Encyclopedia.
+
+The 1980s Computer Music Journal issue on Microtonality was a must read too.
+Wendy Carlos et al
+
+http://tonalsoft.com/monzo/book/book.aspx
+
+============
+
+
+Anyone here have knowledge on Joseph Schillinger? Just finding out about him, his work, and his musical/art/creation related theories and kind of blow away and shocked I haven't heard about him much before.
+
+
+https://www.facebook.com/groups/xenharmonic2/permalink/3168161939870753/
+
+
+=============
+
+
+wedgie:
+
+https://www.facebook.com/groups/497105067092502/permalink/1853395531463442/
+
+Paul Erlich You can extract temperament mappings (how the primes are constructed from periods and generators, given any choice of whether you want your scales to repeat at 2:1, 3:1, 5:1 . . .) , as well as subgroup commas (which include a basis for the infinitude of vanishing commas), from the wedgie. Happy to explain with any examples you might wish to start with. I believe I have covered this with Joshua Sanchez so I invite him to take a stab at covering it here.
+
+
+TODO
+
+
+
+=============
+
+diminished, augmented triads / adaptive JI
+
+https://www.facebook.com/groups/497105067092502/permalink/1860781760724819/
+
+http://tonalsoft.com/enc/a/adaptive-ji.aspx
+http://tonalsoft.com/monzo/vicentino/vicentino.aspx
+http://tonalsoft.com/enc/a/adaptive-tuning.aspx
+
+
+
+======
+
+todo:
+
+links
+
+https://web.archive.org/web/20040222040008/http://chrysalis-foundation.org/Meyer's_Diamond.htm
+https://web.archive.org/web/20040215063318/http://www.math.uga.edu/~djb/html/math-music.html
+https://web.archive.org/web/20040402161438/http://www.microtonal.co.uk/tuning.htm
+https://web.archive.org/web/20040221021019/http://www.inteas.com/Penta01.htm
+https://web.archive.org/web/20040530201423/http://www-math.cudenver.edu/~jstarret/mclarenstudio.html
+https://web.archive.org/web/20040222135250/http://www.paristransatlantic.com/magazine/interviews/johnston.html
+https://web.archive.org/web/20040320043642/http://www.ircam.fr/sons/archives/MIDI/doc/scales
+
+
+
+==========
+
+https://www.facebook.com/groups/xenharmonic2/permalink/3200966576590289/
+James Mulvale поделился ссылкой.
+Эксперт по визуальному контенту · 11 ч.
+Did a cover of the 1969 classic Pop Corn but with each section in a different tuning including:
+Carlos Alpha
+10EDO
+Bohlen Pierce
+8ED 9/4
+9ED 7/4
+Please if you like, share. Promise I will too.
+Enjoy!
+
+
+
+
+==========
+
+https://www.facebook.com/groups/xenharmonic2/permalink/3201178146569132/
+
+
+What do you think of Barry Harris' teachings? He basically teaches everything around 3 basics:
+1. Dominant chords are double diminished chords, except there is either one note lowered (major dom7, resolves to a major chord, root moves up a fourth), or highered (min7 with a flattened 5, resolves to a minor chord, root moves one whole step down)!
+2. The major scale is missing just one note... if you add one chromatic note between G and A, you wil get very useful (double) diminished chords, namely 4 inversions of the chord these notes Ab, B, D, F. The new scale has been called the (major) sixth diminished scaled.
+3. Chromatic root movement in a bass line can be achieved by using tritone substitution, i.e. check to which double diminished chord the original dominant is related to, now use a different inversion (tritone up/down in the case of tritone subs) of that double diminished chord to create a new dominant chord with the tritone and minor third (e.g. B-D-F) that it contained now swapped in for its "inversion" (F-Ab-B)!
+Okay now for the microtonal part! What (maybe just intonation) tuning could you create using these playing/composition techniques (and modified 7-note scale with an extra flat 6)?
+
+
+Amelia HuffHi! I am very familiar with Barry Harris' views and have integrated his concepts into my thinking. Having freedom in drop 2/maj6dim scales is super valuable. That said, his theories work best when there is 4 way and 3 way symmetry across the octave.
+It doesn't really matter what JI colorings you choose as long as the spacing of the notes preserves a 3 way and 4 way symmetry across the octave. A 12-note JI collection works fine for maj6dim styles. The 12 note collection has to be near equally spaced which requires you to intentionally avoid the 5/4 to really get a similar sound.
+I have a 12-note near equal version for basically all the prime scales under 71. I'd say the 12 note near equal collection from 46:92 is one of the best to approximate Barry Harris style movements with JI in the way you are familiar with.
+That said, you can totally achieve this kind of sound in non 4 and 3 way symmetric tunings too. Often it can give the best sounds. I really love this kind of movement inside a 41-near equal just intonation scale. I have been using a 41-tone, 31*8:16 tuning. When doing Barry Harris style stuff you get the same type of motion but way more options. You can lean the diminished notes around and deeply alter the major6 color.
+
+
+
+==========
+
+https://www.facebook.com/groups/497105067092502/permalink/1865052846964377/
+
+What small rank 2 temperament MOS scales (i.e 5 to 9 notes) do you find the most melodically fun to use or interesting?
+Actually, just in general, what 5 to 8 note scales do you find the most melodically fun to use or interesting? 😊
+
+
+Declan ClarkHuxley[9]
+Declan Clark It plays a bit like a warped diminished scale, so if you like that scale you'll find it interesting. It's filled with 9:11:13 and 8:9:11:13 chords but only has 3 fifths iirc, and one subminor 7 chord. That makes the most sense as the tonic to me
+
+Casey HaleI like a lot of 9-note scales! Negri[9] (eg from 2\19), Progression[9] (eg from 2\17), Semaphore/Godzilla[9] (eg from 4\19)...
+
+
+==========
+
+
+про раскладку на изоморфной клавиатуре
+https://www.facebook.com/groups/xenharmonic2/?post_id=3218795234807423&comment_id=3219201294766817&reply_comment_id=3219559754730971
+
+I was psyched to sell myself into slavery for this until I realized I can't play 46-edo in the configuration (Magic, which for 46-edo means 9\46 between each chromatic column of notes) that I want. I mean I could, but there are only 11 notes per column on the Lumatone, so sometimes I'd have to reach up six instead of down three, or vice-versa, which would be hard.
+
+Cam Taylor
+Why not just play 46edo the same way I'd play any single ring EDO, in the Bosanquet layout? I can show you if you want. Ratios of 2.3.11.13.23 are all super close, 7 is not far, but most ratios involving primes 5 and 17 are pretty distant, with 4:5 = AAA1.
+
+
+
+===========
+
+Paul Johnson
+
+https://www.facebook.com/groups/ErvWilsonDiscussionGroup/permalink/1718321371642982/
+constant structure extension to the 11-limit Eikosany
+
+
+
+============
+
+19ed3
+
+https://www.facebook.com/groups/497105067092502/permalink/1872375249565470/
+
+Paul Erlich:
+Yeah, you can take any 2D temperament that works in 12ED2 and restate it in tritave-repeating terms, which gives MOS and other scales which repeat at the tritave. For example Meantone gets a tritave period and octave generator, so you get MOS scales like
+C c g
+C G c g
+C D G c d g
+C D F G A c d f g
+C D E F G A B c d e f g
+. . . and if you repeat that last one at the tritave, you get
+C D E F G A B c d e f g a b c' d' e' f#' g' a' b' c' d''.
+Notice the F in the lower octave and the f# in the higher octave. So this is different from how we normally think about scales.
+
+
+
+===========
+
+Paul Johnson
+
+I’d love to talk about like pelog scales or Erv Wilson’s papers on Meantone & Mavila or something so I can breathe normally again.
+
+https://www.facebook.com/groups/xenharmonicmath/permalink/1786261834847364/
+
+
+============
+
+https://www.facebook.com/groups/ErvWilsonDiscussionGroup/permalink/1724415197700266/
+
+
+eikosany vs Scriabin chord
+
+An alternative to always placing an eikosany within an octave and is to spread in to out is some some fashion where each sets of ratio only occurs in one direction. Such spacing i used on both mt tree instruments where each pitch only occurs once thus there is great advantage to letting it spread out in range a bit. Recently i had a dream where i seed the full dallesandro set with Scriabin's Prometheus chord with the idea of preserving the spacing between the notes. Since he thought of it as a consonant, i realised it as the harmonics 8-11-14-20-26-26 which takes over 6 octaves to realise to encompass the whole structure. one performance could be to play it in the morse code rhythm of the 100 letters words of thunder in finnegan's wake
+
+
+=============
+
+https://www.facebook.com/groups/ErvWilsonDiscussionGroup/permalink/1728061057335680/
+
+Paul Johnson
+
+This is a post inspired by Paul Erlich’s suggestion to use triangular matrices. Images are:
+1: a generalization of a 2)5+3)5 double dekany in the form 1-a-b-ac-bc. The lattice has been simplified to just show primes. A double dekany of this type is the basis for my Astral scales
+2: a tessellation of that lattice, which can also be seen as a tessellation of the double-dekany stellate
+3: Astral-19, which is one such stellation of 1-7-11-21-33. Image 2 provides a way of transposing this scale along 3 axis: 7:11, 3*11, and 3*7. I think this could lead to an extended Astral system in a very high EDO, where an Astral-19 keyboard can be modulated along the tessellation by using a 6-axis controller.
+4: Astral-21, which doesn’t fit into these tessellation. I used a more complicated lattice for this one, to show all the chords
+
+
+
+==========
+
+https://www.facebook.com/groups/xenharmonic2/permalink/3234359439917669/
+
+Anyone here ever messed around the scales used in Georgian polyphonic music? (https://arrow.tudublin.ie/cgi/viewcontent.cgi?article=1005&context=fema)
+
+
+===========
+
+https://www.facebook.com/groups/xenharmonic2/permalink/2965258160161133/
+
+
+Paul Johnson
+
+Hey team, wondering if anyone in this group with coding experience might help me with an iOS app. I was playing with the Wilsonic app, and had an idea for a keyboard that modulated between the hexanies of a given Eikosany. You’d load up generators and then there’d be two input methods.
+Along the bottom would be a linear keyboard. It would be color coded by cents & labeled with the harmonic number.
+In the middle there’d be 3 or 4 hexanies, each the same but separated by octaves, that are on a separate synth patch. These would be played like Wilsonic with the other hand, and would be used to hold chords for accompaniment. The hand could easily stretch to play across multiple octaves, and this gives a way to see how triads fit in the scales.
+Along the top would be 30 buttons in 2 rows of 15. Each column would be labeled with a different hexany, and the 2 buttons would toggle the 2 locations of that hexany in the Eikosany.
+Possibly there would be a setting to map different hexanies onto the middle instead of multiple octaves, and one to get the whole 20 note scale onto the lower keyboard (or 12 note scales from a hexany and its transposition). I was thinking the app could connect with Synth One, which supports micro tuning.
+I think this could be an awesome tool to familiarize people with Just Intonation, and shows how micro intervals apply both to scales and harmonies. I’ve coded a lot but never for app design, just for math & physics. If anyone’s interested I’d love to talk more.
+
+
+===========
+
+another Paul Johnson cps
+
+https://www.facebook.com/groups/ErvWilsonDiscussionGroup/?multi_permalinks=1730287247113061%2C1728061057335680%2C1729064150568704&notif_id=1591566611791638&notif_t=group_activity&ref=notif
+
+Two 32-tone extensions of the 1)6-3)6 1-3-5-7-9-11 CPS. 3&5*7*11 map to the same tone, so chose one to hide in a generalized keyboard and the remaining 31 tones will form a CS. The red tones, Janitorial, allow overlap with the 2)6+3)6 1-3-7-9-11-15 CPS shifted by 1/3. The green tones, Astral, take advantage that my scale Astral-21 shifted by 1/7 will overlap with 10 tones. This extension makes all but one extension tones also come from this set. (I’ve noted that the extra needed tone maps to the same place as 23/16; this is because as I build an instrument I can substitute that tone from another instrument I am working on for a short time)
+
+
+===============
+
+https://www.facebook.com/groups/xenharmonicmath/permalink/1794563454017202/
+
+Keenan Pepper
+
+A 9-note scale with the Tryhill property in the 2.3.7 subgroup (pattern abacabaca):
+9/8 7/6 21/16 4/3 3/2 14/9 7/4 16/9 2/1
+The mirror image is a different scale that also has the property.
+
+
+=============
+
+https://www.facebook.com/groups/xenharmonicmath/permalink/1794541047352776/
+
+Keenan Pepper
+
+I've been playing around looking for interesting rank-3 scales with no more than 3 flavors of each interval. The shining example of these everyone should know of is 16/15 5/4 4/3 3/2 8/5 15/8 2/1 (or you can marvel-temper that and get 7-limit intervals in there including a complete 4:5:6:7).
+But the one I want to present now is this:
+10/9 9/8 5/4 40/27 3/2 5/3 27/16 2/1
+which doesn't really cry out for any tempering, but you can actually anti-temper 81/80 to make it larger and more acceptable as a melodic step. Example tuning: https://tinyurl.com/yddqlcgr
+The pattern of steps is abacbabc.
+This scale obviously has a few wolf fourths and fifths, but the interesting thing is that 4/3s are always 3 steps (and so 3/2s are always 5 steps in this 8-note scale), whereas the wolves are always different numbers of steps. So, for example if you play parallel 3-step intervals going up and down the scale, you get this nice pattern of mostly pure 4/3s with a 5/4 thrown in there for variety (and also a 320/243 which is close to 8/7).
+To me it feels pretty coherent even though the steps are such different sizes.
+
+
+==================
+
+more georgian
+
+https://www.facebook.com/groups/xenharmonic2/permalink/1239427779410855/
+
+
+===================
+
+
+
+voice synthesis
+
+
+https://www.facebook.com/groups/xenharmonicmath/permalink/722198221253736/
+
+
+1) Yes, one can synthesize vowels with only additive synthesis. It's just very awkward to do so.
+2) Vowels are completely about spectra, not musical intervals.
+3) Best way to get a hang on this is to look up the spectral maps for "average" A E I O U, and set up a parametric EQ to model each of those formant maps. Then mess around, and find out by experience what happens when you shift bands away from those regions.
+4) Try this with white noise as input. "Whisper" modeling. It works just the same, which tells one this has nothing to do with musical intervals.
+5) Sawtooth is too "dark" as an input wave to properly model human voice. One needs something more like a click-pulse stream, making sure it has a fairly normal distribution of both even and odd harmonics.
+6) One can "prepare" a sawtooth wave to behave better for this application by giving it a hi-pass with a very gentle slope.
+
+
+=================
+
+phi
+золотое сечение
+scales of mt meru
+
+Golden Plastic Moments
+
+https://www.facebook.com/groups/xenharmonic/permalink/10150918761409482/
+https://www.facebook.com/groups/xenharmonic2/permalink/606575172696122/
+
+
+
+==================
+
+ещё Paul Johnson
+
+https://www.facebook.com/groups/497105067092502/permalink/1751824464953883/
+
+
+=================
+
+
+https://www.facebook.com/groups/xenharmonic2/permalink/3281125685241044/
+
+I started playing with quasiperiodic rhythms. The instruments and algorithmic melody here are pretty simplistic but the quasiperiodicity is working nicely.
+The algorithm is essentially "cut-and-project" (or maybe what Steinhardt calls the "Direct Projection Method"), where the quasicrystal is 1D and I'm projecting down from 3D, to obtain a long, medium and short interval. To be more specific, a straight line is passing through an infinite 3D lattice of cubes at an irrational angle. (Rational angles produce periodic rhythms.) So, the line passes through one cube at a time. Each time it passes into a new cube, we link the center of the new cube with the center of the old cube via a line segment. So we end up with a twisted line which tries to follow the straight line as closely as possible while only ever traveling straight along the x, y or z directions.
+Each time this twisted line passes through the center of a cube, a beat is produced on the straight line (at the point nearest the cube center). The beats are short, medium or long because the x, y and z directions appear short, medium or long from the line's 1D perspective.
+The melody is produced essentially the same way, with the centers of cubes being assigned pitch by a 3D pitch lattice. (x = a tempered 3/2, y = 9/7, and z selected to keep the melody from drifting up or down.) However, I came up with a neat trick to allow the melody to emphasize different notes than the main rhythm. The melody is produced by a straight line at the same angle as the rhythm but displaced slightly in 3D. This gives the melody the same quantity of rhythmic transitions but in a slightly different order, so that it might for example be off by exactly one medium interval for a few beats, and then get back on the beat.
+Honestly I should probably use 2D instead of 3D. Having three interval sizes is nice, but 2D quasiperiodic structures feels more intuitive.
+
+===============
+
+
+
+What's the most mystifying chord you've ever played/programmed?
+
+
+https://www.facebook.com/groups/xenharmonic2/permalink/3270803512939928/
+
+
+===============
+
+
+Halley Young
+
+If you have ever interacted with automated music generation capabilities, could you comment on your experience? Additionally/if you haven't, could you comment on what (if anything) you as a composer could conceive of that a computer could do that you would actually welcome?
+
+https://www.facebook.com/groups/xenharmonicOT/?post_id=3022455777824005
+
+Billy Stiltner
+Things I want to add to my sequencer are
+  auto chord stacking,
+  comma pump progressions,
+  regular progressions (whatever that means?),
+  progression maps.
+Is the intelligence really artificial if it's programmed in by a human?
+
+
+
+Paul W Smith
+I think getting AI to bridge the gap between rhythm and tone/harmonics would be interesting. Rhythms that have a beat close to the lower range of human hearing. I know it's already something people are doing, but it would be interesting to see what AI would do if you give it rules for both.
+
+
+Graham Breed
+I haven't used automatic music generation. Things a computer could do (and maybe can do now but I don't have the software / haven't got round to trying it):
+  adaptive tuning to arbitrary regular temperaments;
+  adaptive tuning with expressive intonation (which would be a machine learning project);
+  two-way MIDI support, so I can step-record into microtonal notations and hear what I'm working on;
+  different views of the same music in different notations (what I'm using LilyPond for now);
+  score-to-performance tools, so the MIDI preview is less mechanical;
+  indications of what chords I'm currently using and which pitches are making things dissonant or could be moved into some kind of consonance;
+  auto-accompaniment tools, taking a melody or melody plus bass line or melody plus chord symbols or whatever other fragments I want, and adding the rest for some style, and letting me override it when I think it's wrong;
+  the opposite to that, so I could start with some chords and it would throw out some example tunes
+
+
+
+The Machine Learners that train themselves, can discover patterns that might not be picked up by people, or in fact are out of the range of human senses and perception of time. That means a properly trained AI might make music that leveraged these patterns, but wouldn't necessarily be able to be enjoyed by people. I'm thinking of ultra short and ultra long compositions, ones made completely out of difference tones of hypersonic notes, trills that modulate between the perception of pitch and rhythm, etc. I've done experiments like that - the first thing I did with a drum machine was run up the BPM into audio rates, similarly, turning delays into comb filters.
+Basically, there's a continuum between rhythm and pitch, timbre and composition, and things we don't really have words for, music at the speed of seasons and years or at the speed of chemical reactions.
+What ML could turn up is a good analysis of the transitions between states in music. As a guy who does a lot of work with vocal synthesis, I find that steady state sounds like vowels and sibilants have very little information, the consonants and stops and phonemic pitch and intensity modulations are where the meaning comes from. Some of these transitions are perceived as ornamentation, others as parts of the melody and harmonic construction.
+
+
+
+
+===============
+
+
+wedgies:
+
+https://www.facebook.com/groups/497105067092502/permalink/1853395531463442/
+
+I have a fair grasp on monzos and vals, but I don't really understand higher tuning theory, like wedgies. Does a temperament (which I understand as one or more vals and the intervals that go with them) have infinite commas, and how is that encoded in a wedgie? Basically, how is a wedgie actually used? From http://tonalsoft.com/enc/w/wedgie.aspx I know how to construct a wedgie but not how to actually use one.
+
+178 ответов
+
+а ещё там ссылка на regular temperaments
+
+https://www.prismnet.com/~hmiller/music/regular-temperaments.html
+
+
+=======
+
+
+https://www.facebook.com/groups/xenharmonic2/permalink/3329367107083568/
+
+hey, who here has used the Blackwood[10] scale (preferably in 15-tone equal temperament)? I'm putting together a theory video on it and I want to make sure my observations are at least partially based on common usage. Obviously, Blackwood's 15 note etude and his 15-equal guitar suite are my places to start. I think Sevish wrote something with it, and Noah Jordan as well?
+
+
+
+======
+
+
+stellation
+https://www.facebook.com/groups/ErvWilsonDiscussionGroup/?multi_permalinks=1771710042970781&notif_id=1595617722134097&notif_t=group_activity&ref=notif
+
+
+========
+
+
+Paul Johnson
+Some initial sketches for the third of three papers I’m working on for resources in the 11 limit. The final structure doesn’t have the beautiful consistency of a FPB (particularly gets hairy in the 11 limit) but lets you do a lot with very few tones
+
+
+https://www.facebook.com/groups/ErvWilsonDiscussionGroup/permalink/1782750538533398/
+
+
+========
+
+
+Kraig Grady
+Администратор · 4 ч. ·
+Here is my lattice of the 3)7 set. What is interesting about this set and its inverse is that one can seed it with a 7 note scale. If you seed this 7 tone scale as a cycles of fourths or fifth-like intervals you end up with  the series of pentatonics one finds in the 7 tone scale spread out into different keys and regions in a cycle around the perimeter. While not very useful in 12 et, it is an easy to see example    illustratrating the occurrences of the pentatonics . In the middle lattice it is the shape seem in the dark blue that is the same as a cycle in yellow in the last one.  I think of the 3)7 as turning the scale inside out.
+
+https://www.facebook.com/groups/ErvWilsonDiscussionGroup/permalink/1793361847472267/
+
+
+
+=========
+
+красивый метод, todo
+надо поизучать
+
+https://www.facebook.com/groups/497105067092502/permalink/1991078434361817/
+
+Hey guys, a while back I posted about a method of constructing a scale based on the decomposition of a comma into ratios that multiply to that comma (or an octave equivalent of it), here is a graph of the lattice and nice sounding scale that comes from this process. the comma I chose was 441/440 which is about three cents so the primes are tempered less than a cent each so they are close to pure. this is the scale in cents
+
+
+============
+
+
+Paul Johnson
+https://www.facebook.com/groups/ErvWilsonDiscussionGroup/permalink/1836369746504810/
+It’s cool scale hours:
+The 1-3-7-13-21 2)5 dekany is a great 9-tone Constant Structure
+But if you add in 13/7 you get a fantastic 10EDO preimage CS that is very fun to compose with.
+Of course you can create a parallel scale using the 3)5, but I like otonal harmony more
+
+
+
+============
+
+Kraig Grady
+https://www.facebook.com/groups/ErvWilsonDiscussionGroup/?multi_permalinks=1908237005984750&notif_id=1607929534920561&notif_t=group_activity&ref=notif
+This shows the classic trichordal pentatonics in Wilson's 7-limit 22 tone scale. the scale was used by Emil Richards oon TV shows like Kung Fu as well as 80s new wave band Cypher ( Jose Hales-Garcia )which had both a guitar and bass fretted in it. Need less to say that these represent only the simplest which more complex forms as well as more higher number ratio transpositions are possible. The dotted lines outline the 9/8 disjunction. from  http://anaphoria.com/22tonescales.pdf which includes various 7 tone diatonic, chromatic and enharmonic tetrachordal scales
+
+
+
+
+E8_Heterotic
+Temperament Progressions
+https://www.reddit.com/r/microtonal/comments/u30jlb/temperament_progressions/
+
+E8_Heterotic
+Torsions, Contorsions, and Lattoids: The Weirdest Temperaments Possible
+https://www.reddit.com/r/microtonal/comments/t7i6iw/torsions_contorsions_and_lattoids_the_weirdest/
+
+
+
+==============
+
+https://www.facebook.com/groups/497105067092502/permalink/2214237875379204/?comment_id=2214713311998327
+
+
+Hermode retunes chords played on a keyboard normally in 12-equal into just tuning with itself (but not with the chords before and after it). It retunes all the notes in the chord so that the total signed retuning is 0; this helps reduce the impact of comma problems in strict JI.
+For a simple example, if you have the chord C E G, it will retune it so that the chord is tuned 4:5:6. That means 386 cents from C to E and 316 cents from E to G.
+One could get it pure by lowering E 14 cents and raising G 2 cents. But then the total signed retuning is 2-14 = -12 cents. So the solution is
+C +4
+E -10
+G +6
+Applying these cents deviations to the 12-equal C major triad puts it in just intonation within itself while keeping the total signed retuning to zero.
+So pitches shift but not as severely as they can in strict JI, and drift is eliminated entirely.
+
+
+
+Well 12-tET may already be deeply familiar, so I don't think one can generalize so broadly about what is easier. In many cases it's not the best teaching strategy to just jump in the deep end of strict JI, but really it depends on the goals, sensitivities, background, and perhaps ontological disposition of the student. Ultimately, seeking to understanding all of these constructs is valuable.
+And note that Hermode is often rather suboptimal, even among automatic schemes. Compare its largest pitch shifts given a typical comma pump with those in the system described in the two links below:
+http://tonalsoft.com/enc/a/adaptive-ji.aspx
+http://tonalsoft.com/monzo/vicentino/vicentino.aspx
+This will do much better than Hermode for diatonic or modulating music not exploiting enharmonic equivalence . . . while Hermode will be much better for progressions of consonant chords arising from the diminished scale or augmented scale (648;625 pumps and 128;125 pumps).
+
+
+
+
+There's limits to what an automatic algorithm can do. Especially if you use 7-limit JI, with ratios such as 7/6 and 7/4. Because if you play a minor 3rd, the software has to guess whether you intend 7/6 or 6/5. And if it guesses wrong, your music won't sound like what you want. But even in 5-limit, this comes up. If you play G A low-C as a chord, the A should be 10/9 above the G. But if you play G A low-D, the A should be 9/8 above the G. But until the 3rd note comes in, the software doesn't know how to tune the A. Software can't read your mind and it can't predict the future!
+
+
+
+
+
+====
+
+https://www.facebook.com/groups/xenharmonic2/posts/5878229718863948/
+
+This is a Polska from the roadless lands of the far north. The tune was originaly played by Fredrik Andersson (b. 1839) from Raukasjö, Frostviken parish in Jämtland but I got it from Sören Johansson (1939-2013) from Dorotea, Lappland. 
+
+
+
+=====
+
+The Bohlen-Pierce Scales
+https://preinfarction.blogspot.com/2022/11/the-bohlen-pierce-scales.html
+
+
+======
+
+Mozart's tuning: 55-EDO
+and its close relative, 1/6-comma meantone
+http://www.tonalsoft.com/sonic-arts/monzo/55edo/55edo.htm
+http://www.tonalsoft.com/monzo/55edo/55edo.aspx
+
+
+======
+
+ascii heji
+
+https://www.facebook.com/groups/497105067092502/?multi_permalinks=2660883254047995&hoisted_section_header_type=recently_seen
+
+
+
+========
+
+Mike Battaglia
+I was playing around with this idea during the holiday which, I guess, is basically "feudal intonation" on steroids. Kind of curious what people here may think of it.
+
+https://www.facebook.com/groups/xenharmonicmath/posts/2561484920658381/
+
+
+==========
+
+Petr Pařízek
+14 ч.  · 
+So, I'm thinking of making a (not necessarily large) list of pieces that have been composed with one specific 2D temperament in mind (there seem to be a lot of pieces focused on equal divisions of whatever; and I think 2D temperaments would deserve the same degree of attention as well).
+
+https://www.facebook.com/groups/497105067092502/posts/2666265430176444/
+
+
+
+============
+
+Meta mavila, 39edo vs 37edo
+https://anaphoria.com/metameantone-mavila.pdf
+
+
+============
+
+Cam Taylor - 29-WTs
+
+https://www.facebook.com/groups/497105067092502/posts/2671141816355472/
+
+
+============
+
+Matthew Tan - functional harmony
+
+https://www.facebook.com/groups/497105067092502/posts/2676984052437915/
+
+and
+
+Mike Battaglia
+Here is a thought about temperaments and "functional harmony," as a response to Matthew Tan's post. Very long mathy post here...
+
+https://www.facebook.com/groups/497105067092502/?multi_permalinks=2679137648889222&hoisted_section_header_type=recently_seen
+
+
+===========
+
+Paul Johnson
+
+Meta-Slendro
+
+https://www.facebook.com/groups/ErvWilsonDiscussionGroup/?multi_permalinks=2522087691266342&notif_id=1673632715345981&notif_t=group_activity&ref=notif
+
+Meta:
+  slendro
+  pelog
+  miracle
+  mavila
+  meantone
+  ptolemy
+  koga
+https://mizzan.de/scales
+https://www.huygens-fokker.org/docs/lintemps.html
+
+
+====
+
+Bill Alves - The Just Intonation System of Nicola Vicentino
+http://pages.hmc.edu/alves/vicentino.html
+
+====
+
+Mike Battaglia
+For maqam people: does anyone have any reference on what maqam there is which is just called "Awj?"
+
+https://www.facebook.com/groups/497105067092502/?multi_permalinks=2739974792805507
+

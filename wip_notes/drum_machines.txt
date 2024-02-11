@@ -1,0 +1,134 @@
+Axel F:
+  linndrum kick
+  snare
+  low/mid/hi tom
+  clap
+  cabasa (shaker)
+  closed hat
+  117 bpm
+  64 steps
+  accents
+  gated reverb
+
+
+PO-32
+    https://teenage.engineering/guides/po-32/en
+    sound 1-16
+    1. kick 1
+    2. snare 1
+    3. shaker / zap
+    4. lfo effect
+    5. kick 2 
+    6. snare 3
+    7. close / open hi-hat
+    8. claves / cowbell
+    9. low tom / kick 3
+    10. rimshot
+    11. tambourine / crash 
+    12. hand clap 
+    13. bass
+    14. fm snare
+    15. cymbal
+    16. high tom
+
+    effect 1-16
+    1. half rate
+    2. distortion
+    3. squash
+    4. echo fade
+    5. pitch lfo 
+    6. eq sweep 
+    7. mega morph
+    8. pitch bend up
+    9. punch
+    10. 6/8 quantize
+    11. beat-repeat
+    12. beat-repeat faster
+    13. fm
+    14. granular
+    15. reverse 
+    16. bouncing ball
+
+co34pt
+    https://github.com/theseanco/howto_co34pt_liveCode/blob/b51973baded5b521c66954739e443e7d0430a1d8/samples/set1/sampleList.md
+    k = basic kick, all quite powerful though.
+    s = basic snare
+    c = basic clap
+    t = basic tom
+    ch = closed hat
+    oh = open hat
+    sk = sub kick
+    pk = pitched kick
+    ht = 'hi tom', in this case hi brakedrum-type sound
+    mt = 'mid tom', ...
+    ding = 'diiiiiiiiing'
+    fx = longer effects sounds, to be used sparingly
+    sfx = shorter effects sounds, usually percussive in nature
+    q = quieter sounds
+    lfx = longer-er effects sounds, to be used super sparingly
+    gab = distorted long gabber kicks
+    Footer
+
+tidalcycles
+    https://github.com/ritchse/tidal-drum-machines
+
+    Drum	Abbreviation
+    Bass drum, Kick drum	bd
+    Snare drum	sd
+    Rimshot	rim
+    Clap	cp
+    Closed hi-hat	hh
+    Open hi-hat	oh
+    Crash	cr
+    Ride	rd
+    Shakers (and maracas, cabasas, etc)	sh
+    High tom	ht
+    Medium tom	mt
+    Low tom	lt
+    Cowbell	cb
+    Tambourine	tb
+    Other percussions	perc
+    Miscellaneous samples	misc
+    Effects	fx
+
+
+foxdot
+    https://github.com/Qirky/FoxDot/blob/edf756f16c714d2c845a52f20e8bd131b81774ad/FoxDot/lib/Buffers.py
+    DESCRIPTIONS = { 'a' : "Gameboy hihat",      'A' : "Gameboy kick drum",
+                    'b' : "Noisy beep",         'B' : "Short saw",
+                    'c' : "Voice/string",       'C' : "Choral",
+                    'd' : "Woodblock",          'D' : "Dirty snare",
+                    'e' : "Electronic Cowbell", 'E' : "Ringing percussion",
+                    'f' : "Pops",               'F' : "Trumpet stabs",
+                    'g' : "Ominous",            'G' : "Ambient stabs",
+                    'h' : "Finger snaps",       'H' : "Clap",
+                    'i' : "Jungle snare",       'I' : "Rock snare",
+                    'j' : "Whines",             'J' : "Ambient stabs",
+                    'k' : "Wood shaker",        'K' : "Percussive hits",
+                    'l' : "Robot noise",        'L' : "Noisy percussive hits",
+                    'm' : "808 toms",           'M' : "Acoustic toms",
+                    'n' : "Noise",              'N' : "Gameboy SFX",
+                    'o' : "Snare drum",         'O' : "Heavy snare",
+                    'p' : "Tabla",              'P' : "Tabla long",
+                    'q' : "Ambient stabs",      'Q' : "Electronic stabs",
+                    'r' : "Metal",              'R' : "Metallic",
+                    's' : "Shaker",             'S' : "Tamborine",
+                    't' : "Rimshot",            'T' : "Cowbell",
+                    'u' : "Soft snare",         'U' : "Misc. Fx",
+                    'v' : "Soft kick",          'V' : "Hard kick",
+                    'w' : "Dub hits",           'W' : "Distorted",
+                    'x' : "Bass drum",          'X' : "Heavy kick",
+                    'y' : "Percussive hits",    'Y' : "High buzz",
+                    'z' : "Scratch",            "Z" : "Loud stabs",
+                    '-' : "Hi hat closed",      "|" : "Hangdrum",
+                    '=' : "Hi hat open",        "/" : "Reverse sounds",
+                    '*' : "Clap",               "\\" : "Lazer",
+                    '~' : "Ride cymbal",        "%" : "Noise bursts",
+                    '^' : "'Donk'",             "$" : "Beatbox",
+                    '#' : "Crash",              "!" : "Yeah!",
+                    '+' : "Clicks",             "&" : "Chime",
+                    '@' : "Gameboy noise",      ":" : "Hi-hats",
+                    '1' : "Vocals (One)",
+                    '2' : 'Vocals (Two)',
+                    '3' : 'Vocals (Three)',
+                    '4' : 'Vocals (Four)'}

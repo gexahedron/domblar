@@ -1,0 +1,130 @@
+https://polytempo.zhdk.ch/
+An essential part of the project Polytempo is the development of software tools for the performance and the production of music with parallel tempo structures. These tools are available for download from this website. 
+
+
+problems:
+    - вообще говоря у меня все инструменты pitched
+    
+
+notation
+    https://en.wikipedia.org/wiki/Drum_tablature
+    https://en.wikipedia.org/wiki/ASCII_tab
+    https://github.com/thormagnusson/cmn
+        9) Rhythmic scores
+        perc = |q   c   q c q   |
+        perc = |q...c...q.c.q...|
+        drummer.playHard("o-x-o-xxo-x-")
+        drummer "[bd sn [bd sn] sn bd [sn [bd sn]]]"
+
+todo!
+    ellipsoidal rhythms
+    наверно это что-то типа time modulation, растяжение-сжатие течения времени
+
+todo:
+    https://nestup.cutelab.nyc/
+
+The Rhythm Project
+https://www.youtube.com/@therhythmproject570/videos
+
+Richard Cohn - A Platonic Model of Funky Rhythms
+https://mtosmt.org/issues/mto.16.22.2/mto.16.22.2.cohn.php
+
+North Indian or Hindustani school of Indian classical music
+https://raag-hindustani.com/Rhythm.html
+
+Dilla time
+Wonky - An exploration of rhythm and grooves that break the rules
+https://pudding.cool/2023/06/groove/
+https://news.ycombinator.com/item?id=36189583
+
+- euclid rhythms
+    - naming
+        - euclid/euclidean
+        - henfling
+            https://en.wikipedia.org/wiki/Euclidean_rhythm
+        - bjorklund
+        - MOS / wilson
+        - bresenham
+        - christoffel
+        - sturmian
+        - toussaint
+    https://math.stackexchange.com/questions/2082781/classification-of-christoffel-words
+    https://plus.maths.org/content/music-and-euclids-algorithm
+    https://chromatone.center/theory/rhythm/system/euclidean/
+    KID ALGEBRA
+        https://kuscholarworks.ku.edu/bitstream/handle/1808/19135/Osborn%20Kid%20Algebra.pdf?sequence=1
+    http://www.the-ica.org/Volumes/92/Reprints/BICA2020-19-Reprint.pdf
+    https://www.dynamictonality.com/xronomorph.htm
+    https://northcoastsynthesis.com/news/whats-euclid-got-to-do-with-it/
+    https://xenrhythmic.fandom.com/wiki/Euclidean_Rhythms
+
+
+- polyrhythms / Nik Bärtsch
+    - я вижу 3 возможности
+        - кластеры-круги, с разной скоростью
+        - внутри кластера можно иметь разное число бит
+        - внутри одного круга можно иметь несинхронизированный ритм, который потихоньку съезжает
+            кстати, ровно это и происходит в Nik Bärtsch Ronin Modul38_17
+            только там 2 круга, в одном 22 бита, в другом 20 битов
+            но биты одной длины, поэтому в смысле восприятия звука один из ритмов постоянно съезжает
+        - также должна быть возможность пересинхронизировать круг (взять за основу новый поворот)
+    https://www.youtube.com/watch?v=BdJqOFLP4kA
+        Nik Bärtsch Ronin Modul38_17
+        2 круга
+        в первом 22 бита
+        во втором 1
+        синхронизируются за 11 медленных / 12 (11+1) быстрых оборотов
+            то есть пока второй проходит полный оборот
+            первый проходит 20 битов из 22
+            22/(22-20)=11 оборотов
+            быстрый круг проходит на 1 оборот больше
+        clarinet
+            в быстром круге
+            сдвинут на 1
+            L=3, s=2
+            .x.x..x.x..x.x..x.x.
+            32*4
+            запущен на начале медленного круга
+    https://www.youtube.com/watch?v=5GU8VcfA990
+        ArbaA - Bald
+        2 круга
+        6:7
+        bass - .x..x..x..x.x/..x..x..x..x.x.
+        в более медленном круге 33332*2=28 битов (28:7=4)
+        в более быстром по идее 24 бита
+        в более быстром:
+            drums - x..x..x..x.x/..x...x...x.
+            3332/3442
+
+
+- todos
+    - Rhythmic Oddity
+        https://speedbagforum.com/forums/forum/speed-bag-discussion/126961-rhythmic-oddity
+
+    - circular notation
+
+    - portafm:
+        - kick
+        - snare
+        - closed hi-hat
+        - open hi-hat
+        - clap
+
+
+Axel F:
+  linndrum kick
+  snare
+  low/mid/hi tom
+  clap
+  cabasa (shaker)
+  closed hat
+  117 bpm
+  64 steps
+  accents
+  gated reverb
+
+
+Play With Your Rhythm: Drum Patterns
+https://www.youtube.com/watch?v=tm2BgO1VaRY
+    - four on the floor - 4 kick drums on strong beats
+

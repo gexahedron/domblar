@@ -1,0 +1,1293 @@
+Modul 34 - Nik Bärtsch - Transcription
+https://www.youtube.com/watch?v=gsSI9dHJ2iQ
+
+Ganimede
+Rethinking of Computational Notebooks, Jupyter Whiteboard
+https://github.com/nottherealsanta/ganimede
+
+https://en.xen.wiki/w/Bicycle
+https://github.com/tidalcycles/strudel/blob/main/paper/make.sh
+https://github.com/tidalcycles/strudel/tree/main/paper
+Besada - Timelines in Spectral Composition: A cognitive approach to musical creativity
+The empirical research of a Georgian sound scale
+
+- github
+    - livecoding performativity
+        orca
+        ...
+    
+    - TODO: Amiga music, chords, harmony
+        https://www.youtube.com/watch?v=0MjNsNW8DvM
+
+    - техно как (комбинаторно собранная) программа
+        глянуть видео про digitone techno в ableton
+        ...
+
+    - todo: глянуть livecoding languages конференции
+        farm
+        nime
+        icmc
+        iclc
+        xCoAx
+
+    todo: collect acoustic timbre effects, and simulate something similar with code:
+        Sul tasto
+        Sul ponticello
+        ...
+
+    - Between Possession and Depression: The Dark Continuum of Roman Techno
+    https://www.urbanomic.com/document/dark-continuum/
+
+    https://loophole-letters.vercel.app/
+
+    debussy score
+    https://www.youtube.com/results?search_query=debussy+score
+
+    - tetrachords, chords, scales, tonnetz
+        Listening with Two Ears: Conflicting Perceptions of Space in Tonal Music
+        https://core.ac.uk/download/161437717.pdf
+
+        Generalized Tonnetze and Zeitnetz, and the Topology of Music Concepts
+        https://people.bu.edu/jyust/tonnetzTopologyRev.pdf
+        p. 20, Figure 14. Tonnetz of scalar tetrachords
+
+        Harmonization of tetrachordal scales
+        https://eamusic.dartmouth.edu/~larry/published_articles/divisions_of_the_tetrachord/chapter7.pdf
+
+        https://dmitri.mycpanel.princeton.edu/debussy.pdf
+        SCALE NETWORKS AND DEBUSSY
+        p. 10, Example 4. The seven Pressing scales, 0145
+
+    Philip Glass, Concerto Grosso:
+        - TODO: how do i hear the progression?
+
+        - gesture
+            return [0, 1, 2,
+                    3, 2,
+                    3, 2]
+            ? return [0, 1, 2,
+                    (0, 1), 2,
+                    (0, 1), 2]
+        analysis
+        5F 9 11 12 11 12 11 F acoustic; c dia, a harm min, oct(0, 2)
+            5,9,12 = 5 maj
+        5F 8 11 12 11 12 11 c harm maj/min, a harm min, oct(0, 2)
+            +3: c harm min, oct(0, 2)
+            5,8,12 = 5 min
+        5F 8 10 11 10 11 10 много всего
+            5F ? какой-то prefix, не знаю какой; гибридный
+            +1: всё ещё много, C# acoustic, oct(1, 2)
+        5F 7  8 10  8 10  8 много всего
+            5F aeolian scale prefix
+            +11: C# acoustic, Eb harm maj, oct(1, 2)
+        здесь видимо речь про scales, не аккорды
+        но интересную мысль можно развить
+            о плавном переходе аккорда в шкалу
+        очень интересно сохранение 5 - в double bass и cello вообще только 5
+            а вот в скрипках не так
+            aba-ab-ab
+            a, b:
+            5+12, 5
+            3+12, 5
+            1+12, 5
+            11, 5
+        последние 2 пассажа видимо в одной шкале
+
+
+    BeepBox
+    https://www.google.com/search?q=BeepBox&rlz=1C5CHFA_enDE954DE954&sourceid=chrome&ie=UTF-8
+    https://twitter-archive.beepbox.co/
+
+    - node-based UI
+        https://github.com/mcejp/graphexec
+
+    - digitone studies
+        https://www.youtube.com/watch?v=hlZQWs22Ls0
+        https://www.youtube.com/watch?v=aYkBgy4iAh0
+        https://www.youtube.com/watch?v=CUMi6zErxV0
+        ? https://www.youtube.com/watch?v=gZdws87Mc8E
+        ? https://www.youtube.com/watch?v=eq3_2DcYB6g
+
+    - pip install + tests
+        https://github.com/karpathy/micrograd/blob/master/setup.py
+        https://github.com/karpathy/micrograd/blob/master/test/test_engine.py
+
+    - tetracot
+        rank-2 tuning, 5-limit
+        => 2.3.5 tonnetz
+        period is 1200 cents (octave)
+        generator is roughly 176 cents
+        ? choose MOS? go infinite?
+        Zhea Erose - Modal Studies in Tetracot
+        https://www.youtube.com/watch?v=xYZwye9PWSo
+
+    - 14edo
+
+    - patreon
+        https://www.patreon.com/synthdef
+
+    - вкратце:
+        opl2+timbres/notation/livecoding+design/algorithms/book
+        microtonality/fugue+counterpoint
+        techno/jazz/vgm/spectralism+liminal/minimalism+mutation/rhythms
+        tonnetz+visualisation/performance
+
+    - techno:
+        - acid
+            https://sccode.org/1-5dD
+            https://sccode.org/1-5d8
+            https://sccode.org/1-4Wz
+        - echo, as operation
+        - P as Protocol
+        - foxdot
+            https://www.youtube.com/watch?v=NTgJIOeRaZw
+        - Making A Techno Track With Elektron Digitone Only
+            https://www.youtube.com/watch?v=DT4zd3dXAU8
+        - How to DETROIT TECHNO full track in 1 hour + Free Ableton Live 11 Project // Peerk
+            https://www.youtube.com/watch?v=1Bwry6qib2Q
+        - chords, chord stabs
+
+    - jazz+techno
+        - Karen Tanaka - Techno Etudes (2000)
+            notes+analysis
+        - Karen Tanaka - Techno Etudes II (2020)
+        - Nik Bartsch's Ronin - Modul 48
+            https://www.youtube.com/watch?v=cDwOwOslUXE
+            + analysis
+        - This is Techno Jazz
+            https://jazz-o-tech.bandcamp.com/album/this-is-techno-jazz-vol-1
+            https://jazz-o-tech.bandcamp.com/album/this-is-techno-jazz-vol-2
+
+        - klangphonics
+            - chord progressions
+            - arpeggios
+        - triad pairs
+            https://www.youtube.com/watch?v=rIaprQiT2Dg&list=PLlT2Gj--oLkNBmx8aErFIZKLRIej5dC0x&index=7
+        - 22edo
+            quartal/quintal harmonies
+                https://www.youtube.com/shorts/d7oOb7h-By8
+            Monzo, 2021-1106: Pajara10 Jazz, tuned in 22edo (MuseScore score)
+                https://www.youtube.com/watch?v=bYBo9fw6hRU
+                https://www.youtube.com/watch?v=BF28U5D25nw
+            Toccata in D(?), for keyboard(?) in 22edo
+                https://www.youtube.com/watch?v=hipRpvksdyE
+            Octatonic Groove (22 EDO version)
+                https://www.youtube.com/watch?v=wYgGP50D4bA
+        - technique of layering; Marc Rebillet
+            adding voices progressively enriching harmony
+        - Nik Bärtsch Ronin Modul38_17 animation (KingTao)
+            https://www.youtube.com/watch?v=BdJqOFLP4kA
+        - Jazz Piano Practice Session - 8 Modern Jazz Patterns
+            https://www.youtube.com/watch?v=6FpqBhM4h6I
+        - DX7 Drums Wavpack download (VCR-104)
+            https://www.youtube.com/watch?v=7bley39f3nQ
+        - Ultimate DX7 - DRUMATRON - minimal / electro / noise
+            https://www.youtube.com/watch?v=BHgekiOhV7A
+        
+    ? tidalcycles
+        https://github.com/m-onz/tidalcodes/blob/main/m-onz-memk-001.tidal
+
+    - причесать код
+        - починить github actions
+            - mos_projections
+        - make a package:
+            pip install domblar
+            https://betterscientificsoftware.github.io/python-for-hpc/tutorials/python-pypi-packaging/
+        - сделать release в github (0.1)
+        - поправить файлы на soundcloud
+        - убрать code duplication
+            - d.finetune
+            - d.play
+        - спрятать массивы с синтами в конфиги
+        - добавить unit-тесты
+        - выкинуть все дефолты
+        - подумать как быть с octave equivalence
+        - поправить readme про VST
+        - написать план и идеологию
+        - добавить поддержку одновременно нескольких разных VST
+        
+    - digitone
+        https://0daysysex.bandcamp.com/album/mindmelt
+
+    прям щас:
+        - выписать roadmap, пока свежа память
+            (джаз, гармонии, fm тембры, оркестровка, ...)
+            math/music-theory models, for music generation
+
+        opl2
+        0 Carrier Wave
+        1 Modulator Wave
+        2 Carrier Frequency Multiplier
+        3 Modulator Frequency Multiplier
+        4 Carrier Attenuation
+        5 Modulator Attenuation
+        6 Tremolo Depth
+        7 Vibrato Depth
+        8 Carrier Tremolo
+        9 Carrier Vibrato
+        10 Carrier Sustain
+        11 Carrier Keyscale Rate
+        12 Modulator Tremolo
+        13 Modulator Vibrato
+        14 Modulator Sustain
+        15 Modulator Keyscale Rate
+        16 Carrier Keyscale Level
+        17 Modulator Keyscale Level
+        18 Algorithm
+        19 Modulator Feedback
+        20 Carrier Attack
+        21 Carrier Decay
+        22 Carrier Sustain Level
+        23 Carrier Release
+        24 Modulator Attack
+        25 Modulator Decay
+        26 Modulator Sustain Level
+        27 Modulator Release
+        28 Carrier Velocity Sensitivity
+        29 Modulator Velocity Sensitivity
+        30 Emulator
+        31 Percussion Mode
+
+        - tuning of the month
+            - Zil[14] is the following 2.3.5.7 group constant structure (or its chiral inverse): 36/35 16/15 8/7 6/5 128/105 4/3 48/35 3/2 32/21 8/5 12/7 9/5 64/35 2/1. It is diheptatonic with the 5-limit Zarlino heptatonic 16/15 6/5 4/3 3/2 8/5 9/5 2/1, separated by an offset of 8/7.
+            - dwarf17marv Semimarvelous dwarf
+                https://en.xen.wiki/w/Dwarf17marv
+
+
+        - добавить поддержку C-Thru AXiS-49
+        - добавить поддержку op-1 для того, чтоб крутить ручки
+        - добавить текст про ресёрч по svan tuning и аудио-примеры
+        - drum machine/sequencer
+        - techno/opl2
+            tidalcycles + microtonal
+                https://relytr.bandcamp.com/album/xuixo
+            foxdot
+                https://www.reddit.com/r/Techno/comments/ih6s1h/techno_programmed_in_python_foxdot_source_code/
+                SynthDef.new(\eeri, ...
+                https://github.com/MrMebelMan/algorithmic-music/blob/master/FoxDot/lifeweb.py
+            ...
+        - other people examples
+            - jazz examples
+                - плейлист "jazz to code"
+                    https://www.youtube.com/playlist?list=PLlT2Gj--oLkNNo6xgdLsWHSiv3dGeCodY
+                    - triad pairs
+                    ...
+            - плейлист "music exercises"
+                https://www.youtube.com/playlist?list=PLlT2Gj--oLkPvbP59lXHaLFRCTmZyOU2l
+                ...
+            - bossa nova from donya quick
+                https://www.youtube.com/watch?v=9Fg54XAr044
+                +
+                https://www.donyaquick.com/an-infinite-jazz-music-generator/
+            - foxdot - повторить успешные примеры
+                ...
+            - co34pt
+                - L-system rhythms
+                - chaos systems
+                ...
+            - закодить пример из gibber
+                https://gibber.cc/playground/
+                    - правда slendro тут примерно как пентатоника
+                    - поэтому и звучит хорошо
+                - sine-wave melodies
+            - iterable voice-leading from Tymoczko
+                https://musmat.org/wp-content/uploads/2018/06/06-Tymoczko-1.pdf
+                ...
+            - mad musical science
+                https://www.madmusicalscience.com/software.html
+                https://www.madmusicalscience.com/movies.html
+
+        - bach, invention ...
+            - hierarchies in melody
+                ...
+        - opl2/furnace tracker
+            - сочинить что-нибудь в furnace tracker
+            - какие там есть спецэффекты?
+                - glissando
+                ...
+        - formal fugue
+            - melody transformations/mutations
+                - Bach-style:
+                    - we need to analyse the intervals
+            ...
+        - grammars
+            - chord progressions
+            ...
+        - miniatures
+            - fix a list of pitch classes, generate some gestures/bars
+            ...
+        - ? jazz theory
+        - закодить glissando
+        - закодить vibrato
+        - minimalist processes
+            - layering of voices, in and out; similar to "In C"
+
+        - foxdot: повторить успешные примеры
+            ...
+
+        - notation: foxdot + xenpaper + lilypond + tidalcycles
+            - todo: voicings, gestures, extensible notation parsers (sardine: parsimonious)
+                https://github.com/erikrose/parsimonious
+
+        - (микротональные) композиционные миниатюры
+            - add generative composition things:
+                - Nigel Morgan - Gifts from the Pavement
+                    ...
+                - Philip Glass - Modern Love Waltz - create gestures
+                - initial voicing
+                    e. g.
+                    https://www.youtube.com/watch?v=qP578gAvsTs
+                    - take C7
+                    - remove 5th
+                    - drop root an octave or 2 below
+                    - add color notes - 9th, 13th/4th
+                - allowed chords (vocabulary, grammar)
+                - allowed steps for each voice
+                - create transformations
+                - notation
+                    - say we composed parts a, b, c
+                    - we can try to connect them: a < b < c
+                ...
+            ...
+
+        - Смешать piano phase и clapping music
+        - startup.scd
+        - mdbook
+            mdbook serve --open
+        - научиться делать более танцевальный алгорейв
+            - изучить туториалы по tidalcycles
+        - microtonal
+        - 8-bit/chiptune
+        - mixing/production/sound design:
+            - envelope
+            +3 eq
+            +1 compress
+            +2 reverb
+
+        - formal fugue
+            http://www.dezrann.net/~/bach-fugues/bwv849?m=29
+            http://www.algomus.fr/fugues/wtc-i.html
+            http://www.algomus.fr/fugues/
+
+            - может какой-то совсем простой proof-of-concept
+                - Alan Belkin - 22 measures
+                - https://en.wikipedia.org/wiki/Fugue#Musical_outline
+                - find a simple fugue
+                    - https://www.pianostreet.com/smf/index.php?topic=10085.0
+                    - Shostakovich 1
+                        - http://www.algomus.fr/fugues/shosta/index.html
+                    - https://www.reddit.com/r/classicalmusic/comments/jf6e7z/what_are_the_shortest_bach_fugues/
+        - mixing in supercollider/tidalcycles
+            - bus routing
+            - Here is a practical example using a reverb and a delay for a snare
+                https://leanpub.com/ScoringSound/read
+                https://leanpub.com/ScoringSound/read#leanpub-auto-chapter-14---busses-nodes-groups-and-signalflow
+            - eq
+            - compression
+            https://club.tidalcycles.org/t/multiband-compression-soundgoodizer-a-copycat-for-supercollider/4167
+            - reverb
+            - delay
+            - AnalogVintageDistortion
+            - tidalcycles
+                https://club.tidalcycles.org/t/live-workflow-and-mixing-eq-options/2026?page=2
+                https://tidalcycles.org/docs/reference/audio_effects/
+        - ? Существует ли шкала где только мажоры и миноры, нет dim или aug
+            - на 7 нотах - по идее нет - 7 прыжков должно дать расстояние в 2*scale
+            - но maj и min чередуются
+            - значит надо искать на 8 нотах; но тут как будто слишком много нот
+        - Python generators are neat. There is a rarely used feature of them that makes them even neater. It turns out, you can have the yield statement not only output a value to the outside, but also receive one via the function send which is a brother of next. See here for example usage https://realpython.com/introduction-to-python-generators/#how-to-use-send). In this way, generators can be used not only to create values, but to transform a stream of them. They are a coroutine.
+        - jazz theory
+        - a study in keith
+        - discovery: pressing scale finder
+        - попробовать чужие фреймворки
+            - выписать что там есть хорошего
+            - foxdot
+                - _microdose - https://www.instagram.com/p/Cq245uiOJMy/
+                    ...
+        - notation
+        - закодить proof-of-concept пример processes/blocks/graphs
+        - analysis
+            - barbershop quartet/harmony
+                https://www.youtube.com/watch?v=dt2jTMVOj28
+            - maqamat
+            - georgian harmonies
+        - ? karakalpakstan music
+        shostakovich
+            https://musescore.com/user/109573/scores/4391071
+
+        - refactoring:
+            - rewrite d.play
+                - add timer
+            - add global/local context, to keep info about edo, scale and such
+                - rewrite players - they depend on edo right now
+                - rewrite Domblar class, it depends on edo also
+            - где-то 0-index, где-то 1-index
+                - todo: принять hard decision (no configs)
+                    - everything will become 0-based
+                    - i'll add roman numerals parser, though
+                    - why hard decision: so that no confusion, when reading other people code
+            - мб вынести трекер/таймер в отдельную сущность,
+                без логики про play
+            - по-моему есть implicit assumption в разных местах
+                - что synth_idx это voice, что каждый синт - mono
+            - octave equivalence
+                - в арабской музыке нет octave euqivalence
+                - в грузинской - тоже
+                - в carlos alpha тоже нет
+                как быть?
+                    - ? вынести в конфиг?
+        - 22edo
+            https://www.youtube.com/playlist?list=PL05e5iE9qTUR4Rw6g6EVu5biWqF7lpjJB
+        - Dune - Water
+            - add other instruments
+            - finish composition
+            - rewrite Dune - Water:
+                as a list of (NRT?) operations applied to a basic motif
+                todo: analysis - maybe it's easier to analyse the parts
+                    with tetrachords and not scales?
+        - todo:
+            - I just learnt that on Mac M1 it actually works a lot better to have a lower buffer size, so increasing the server latency actually gives _more_ late messages
+            - In Ableton I reduced my block size from 512 to 64 and my CPU usage went down from 30% to 8%
+        - notation для части a
+            - добавить куда-то логику про last chord, last edo, ...
+        - notation для части b
+            ...
+        - notation для части c
+            ...
+        - возможность одновремено послать 2 потока в tracker
+            как массив? типа d[0] <[
+        - treat time as flowing
+            типа циклы-циклами,
+            но какие-то параметры эволюционируют постоянно между циклами
+        - other genres
+            - rave, something danceable
+            - techno
+                rumble kick
+                ...
+            - Henry Homesweet
+            - ...
+        - xenpaper parser
+            - CLI support
+        - microtonal parsers
+            https://www.facebook.com/groups/xenharmonicmath/posts/2731397007000504/
+            For example, to go from Dv7 up a plain major 3rd to F#v7 in 4 moves:
+            D vF# A vC ->
+            D vF# G# vB ->
+            C# vE# G# vB ->
+            C# vE G vB ->
+            C# vE F# vA#
+
+
+    - вдохновиться
+        - todo: ambiguity
+        - Notes from the Metalevel
+            вся книжка хороша
+        - Temperley - Cognition of Basic Musical Structures
+            любопытно как минимум
+        - Nierhaus - Algorithmic Composition
+            заценить hierarchical подходы
+            и mutation штуки из genetic algorithms
+        - The Language of Electroacoustic Music
+             статья Barry Truax - "Computer Music Language Design and the Composing Process"
+             + соседние статьи
+        - Conceptual Spaces, convexity, convex calculus
+            https://www.cl.cam.ac.uk/events/act2021/slides/ACT_2021_slides_66.pdf
+        - AlgebraicJulia
+            https://www.algebraicjulia.org/#packages
+            https://blog.algebraicjulia.org/post/2022/06/chase/
+            https://blog.algebraicjulia.org/post/2021/01/machines/
+            https://blog.algebraicjulia.org/post/2021/01/resource_sharers/
+            https://blog.algebraicjulia.org/post/2020/12/cset-conjunctive-queries/
+        - pdf
+            - category theory for computing science
+            - LegoFieldGuide
+
+    - midi / musicxml playback?
+        - mido
+            https://www.twilio.com/blog/working-with-midi-data-in-python-using-mido
+            https://www.youtube.com/watch?v=BvT8-m3Rycc&ab_channel=Music%2BAIReadingGroup
+        + turkish maqams
+            https://github.com/MTG/SymbTr
+
+    - fugue machine
+        https://alexandernaut.com/fuguemachine/
+        интересная штука! можно было бы попробовать в лайв-кодинг такое перегнать
+            как операции над мотивом
+
+    - filter "cutoff" sequencer kraftwerk
+
+    - memory
+        - stochastic process with autocorrelations
+            - google:
+                2d chaotic stochastic process
+                stochastic process with memory
+                python generate autoregressive process sine autocorrelation repetition of values
+        - how to work with it?
+        - what are available computational models here?
+
+    - continuous time models
+        - sin
+        - ode
+            - runge-kutta
+        - sde
+        - delays, feedback, control theory, subgradients, convexity, ...
+        - chaotic stuf
+        - ...
+
+    - а ещё бывают events/notes, которые между лупами
+        с конца одного на начало следующего заходят
+
+    - minimal support for effects/processing/mastering:
+        dx7 videos:
+            https://www.youtube.com/watch?v=BHgekiOhV7A
+                No processing other than
+                    some LF EQ cut, 
+                    reverb and 
+                    master bus compression was used.
+            https://www.youtube.com/watch?v=j1KTAkoAj38
+                Most of the sounds play first only with some reverb and then with a strong chorus effect in order to give you an idea how DX7 can sound with a 80's DCO synth style chorus.
+            https://www.youtube.com/watch?v=M1SKNSFVtrE
+                - hi-pass filter at 40Hz
+                - klanghelm IVGI saturation plugin (at default setting, just to add some color to the highs and tame the DX7's top-end a bit)
+                - digital delay and reverb from Zoom MS-70cdr stomp box
+            https://www.youtube.com/watch?v=iYhs4vy6UW4
+                This time I didn't use a chorus effect but only a slightly modulated reverb and delay (some patches use both, some only reverb and some only delay). No EQ or other processing was used.
+            https://www.youtube.com/watch?v=EbCwPemMQQ4
+                Most of the sounds play first only with some reverb and then with a strong chorus effect in order to give you an idea how DX7 can sound with a 80's DCO synth style chorus.
+
+    - js/ts/svelte/vite/react/flask
+
+    - Algorithimic Sound
+        Mark Fell
+        https://www.youtube.com/watch?v=EcTAAdDPhTk
+        Malitzin Cortez (CNDSD)
+        https://www.youtube.com/watch?v=tyQcoqflhbY
+        Jr Clark Smartphones
+        https://www.youtube.com/watch?v=RJ3e_jhg6vk
+        Soyun Park
+        https://www.youtube.com/watch?v=g740o1cj5Pw
+        Matthew Gantt
+        https://www.youtube.com/watch?v=-YDS9nFSKhI
+        Sarah Belle Reid
+        https://www.youtube.com/watch?v=aTSNjmsdJsg
+        Levy Lorenzo
+        https://www.youtube.com/watch?v=HIYqXVmyjzw
+        Khyam Allami
+        https://www.youtube.com/watch?v=afr6ifnt6ho
+        Matthew Ryals
+        https://www.youtube.com/watch?v=mVSKZCakeUU
+
+    - timbre modulation
+        - todo:
+            https://depts.washington.edu/dxscdoc/Help/Classes/VSTPluginController.html
+            Realtime Safety
+            VSTPlugin tries its best to be as realtime safe as possible. Plugins are always opened/closed asynchronously in the NRT thread. Some methods, like -loadPreset and -savePreset, offer two options via the async parameter:
+
+            async: true means that the plugin method is called on the NRT resp. UI thread and will never block the Server. However, plugin processing is temporarily suspended and you can't call other methods until the command has finished.
+            async: false means that the plugin method is simply called on the RT thread. The advantage is that the command is performed synchronously and plugin processing doesn't have to be suspended. Depending on the plugin, this might be just fine - or block the Server. You have to test yourself!
+        - todo: потестить на дроне
+        - todo: накинуть правильный envelope
+
+    - add '%' into mini-notation
+
+    - рефакторинг
+        - problems with (live-coding) notation:
+            - код в виде блоков - не очень удобно для запуска
+                связные куски кода наверно тоже неудобно
+                - удобнее было бы UI какой-то иметь, типа графов, с expandable вершинами
+            - как лучше раскинуть операции по классам?
+
+    - update SuperCollider to 3.13
+
+    - организовать что-то крупное
+        концерт/альбом/перформанс/open-call
+    - повысить modularity
+        а-ля sardine, foxdot, gibber, manaCompiler
+        - например
+            - а-ля airflow, диаграммы, manaCompiler
+            - возможность быстро написать какой-то свой код/метод
+                который легко встраивается к другим блокам
+            ...
+            - добавить notation, а потом возможность расширить/кастомизировать notation
+                - например - добавить новый символ
+                - и как мы должны его обрабатывать
+            - конфиги
+            - hacking code:
+                - add method to class
+                    https://www.seanosier.com/2021/03/20/python-add-method-existing-class/
+    - notation ideology:
+        - verbs and nouns
+        - actions, properties
+        - configs
+    - more musical compositions
+        - discovery; more analysis
+            - scales and modes analysis
+            - list all modes
+            - sort them by brightness
+            - list intervals for each mode
+            - generate some chord progressions for each mode
+            - generate some melody for mode
+    - добить лайвкодинг
+        - добавить ручки
+            - reverb
+            - pan
+        - устранить неудобности (меняющийся dur, last_*)
+    - abjad/lilypond
+    - UI
+    - документация
+    - ресёрч
+
+    - call and response
+    - tension and release
+
+    - 26edo
+        https://www.reddit.com/r/microtonal/comments/7d7xi5/lets_talk_tunings_26edo/
+        https://en.xen.wiki/w/26edo
+        https://www.facebook.com/groups/979055042181607/
+
+
+    - анализ моей музыки (micros + archeo-hommage-octan):
+        ...
+
+    - documentation / research
+        https://github.com/gexahedron/domblar/wiki/WIP:-Transformational-smooth-voice-leading-music-practices
+
+    - chord progressions
+        https://www.huygens-fokker.org/docs/terpstra_chord_progressions.html
+        https://www.reddit.com/r/microtonal/comments/8zf9s4/some_chord_progressions/
+
+    - algoraves
+        https://www.youtube.com/@Eulerroom/videos
+    
+    - mathematical music theory
+        https://music.arts.uci.edu/abauer/3.1/week1.html
+    
+    - discord
+        https://discord.com/channels/779427371270275082/827264480999243836
+
+    - ambisonics
+        https://depts.washington.edu/dxscdoc/Help/Tutorials/ABCs-of-the-ATK.html
+        http://doc.sccode.org/Guides/Intro-to-the-ATK.html
+        https://github.com/Seminar-In-Computer-Music/CB-sc-tutorials
+
+
+    - production techniques / sound design
+        - some example filters:
+            hpf/lpf/bpf
+            ? Resonz
+        - pan
+        - reverb
+            FreeVerb
+        - echo
+        - flanger
+        - phaser
+        - limiter
+        - decay2
+
+
+    - open studio
+        https://www.youtube.com/watch?v=_5_lEYU5Z1w&list=PLIHculvWp71pZbB2EoKHzFlreq-LTnr6t&index=13&ab_channel=OpenStudio
+    
+    - документация
+        sardine - mdBook
+        material mkdocs
+        just the docs
+        read the docs
+        gitbook
+
+    - сделать перезагрузку файла более быстрой
+        - детектить, что синты уже загружены в суперколлайдере
+            - и не делать time.sleep в этом случае
+        - importlib очень удобная штука, нужно чаще её заюзывать как-то
+
+    - sequences
+        понять как работать с non-chord tones
+            по идее ничего сложного, просто проверить
+            на Bach - Invention 13
+            https://www.youtube.com/watch?v=tVzVqJkMpzA
+
+    - maybe easy things:
+        - пофиксить mp3 файлы
+            - начало слишком резкое
+            - концы обрезаны - лучше я буду вручную делать stop_rec
+        - comma pumps in EDOs and MOS scales
+        - iterate_voice_leadings
+            - jazz chord analysis
+            - abjad notation
+        - Neo-Riemannian
+            - 15edo - decatonic RL cycle
+                I – viii – V – ii – IX – vi – III – x – VII – iv – I
+            - add examples of loops
+                PLPLPL - на самом деле это hexatonic scale
+                PRPRPRPR - на самом деле это octatonic scale
+                PLRPLR - вот здесь нет scale; здесь типа во всех аккордах есть общая нота
+                - abjad for loops
+            - NRT problems:
+                - maj add6 == min7
+                    https://en.wikipedia.org/wiki/Sixth_chord
+                    https://en.wikipedia.org/wiki/Minor_seventh_chord
+                - у aug нет root, все ноты равнозначны
+        - Stephane Picq
+            - timbres: spice opera 5, 6
+            - terminal city
+        - input notes as names (C, Bb, ...)
+        - implement detection of Pressing scales
+
+
+
+    not-so-easy things:
+        - design live-coding pipeline (+ interaction with algorithms)
+        - jazz
+        - кодить что-нибудь каждый день, наращивая мощь framework'а
+        - писать заметки каждый день
+        - formal 4-voice triple fugue, all necessary components
+        - string quartet example
+        - affix grammar
+
+
+    - using comma pump as a modulation device
+
+    - z-related sets
+        https://jeremiahgoyette.com/defense-presentation/#/z-set-list
+        {0,1,4,6} and {0,1,3,7}
+            1, 4, 6, 3, 5, 2
+            1, 3, 7, 2, 6, 4
+            both are part of OCT(0, 1)
+        01356 and 01247
+        01457 and 01258
+        01348 and 03458
+
+        16edo
+        For example, in \mathbb{Z}_{16}, the sets {0,1,3,5,7,8}, {0,5,7,8,9,11}, and {0,3,5,7,8,9} are homometric. This example was noticed by Lewin in a short article:
+        Lewin, D. “ON EXTENDED Z-TRIPLES.” Theory and Practice, vol. 7, no. 1, 1982, pp. 38–39.
+
+
+    - Mad Musical Science
+    - Bohlen-Pierce example
+    - jazz
+        walking bass
+        guide tones
+        ...
+        voicings
+            drop 2
+            drop 3
+            mu chord
+            root/shell/pretty
+            ...
+        ...
+    
+    - modal(ity) chunks:
+        maj/min chords
+        ajnas / trichords / tetrachords / pentachords
+        jazz chords
+        scales
+
+    - scales
+        - MOS scales
+            what should I add here?
+        - 12 edo
+            Octatonic scale
+                https://en.wikipedia.org/wiki/Octatonic_scale
+            Tcherepnin scale
+                http://www.tcherepnin.com/alex/basic_elem1.htm
+            Shostakovich scale
+                https://ianring.com/musictheory/scales/2779
+            Messiaen scales
+        - overtone scales
+
+    - transformation theory modulations
+        - iterable voice leading examples
+        - Tymoczko papers
+        - mad musical science
+        - ...
+        - scale networks
+
+    - music composition
+        https://viva.pressbooks.pub/openmusictheory/
+        https://milneopentextbooks.org/fundamentals-function-and-form/
+        https://offtonic.com/theory/book/8-3.html
+        - Daniel Lewis
+            https://www.youtube.com/@daniellewis1058/videos
+        - Voice leading course
+            https://www.youtube.com/@vornskr181st/videos
+        - Oğuz Usman Composition Workshop
+            https://www.youtube.com/playlist?list=PLuCtXy59LdVMOuAX66bLA0tgJTgKM9NCU
+        - about Henry Cowell
+            https://www.kylegann.com/Cowell.html
+    - tintinnabuli: try 7th chord, or microtonal
+    - jazz grammar
+    - JI
+    - Sagittal chord progression
+        https://sagittal.org/exmp/index.htm
+    - research on Svan tuning
+    - Kyle Gann book, "The Arithmetic of Listening"
+    - rule of the octave
+    
+    - polytonality
+        
+    - support tunings of the month and create some compositions:
+        golden meantone
+        porcupine
+        9edo
+        26edo
+        43edt
+        37edo
+        23edo
+        Blackjack/Miracle[21]
+        ...
+    - links at the end of this file
+
+    - ideas for live coding:
+        - turning percussions into timbres and vice versa
+            - timbre modulation
+        - dynamic tonality
+        - tintinnabuli - as transformations and operations
+        - automata, graph, transitions between states
+        - ...
+    - add phaser
+    - non-vst non-Dexed timbres
+        - https://composerprogrammer.com/teaching/supercollider/sctutorial/11.1%20Physical%20Modelling.html
+        - synthdef на youtube
+    - python file as a single composition
+        - and also possible to add unit tests
+    - нужны музыкальные примеры
+        - one-page-performances
+            https://github.com/kindohm/expedition/blob/master/tracks/12-sorting-through-wreckage.tidal
+            https://github.com/kindohm/expedition/tree/master/tracks
+                https://open.spotify.com/album/77cqNSXQZWe5QCwpBoEGCn
+            - возможно в исполняемые скрипты надо будет добавить сверху
+            #!/usr/bin/env python3
+        - fixed JI, (12 notes)
+            - Riley "Cactus Rosary"
+                https://en.xen.wiki/w/Riley_rosary
+                49/48 9/8 7/6 5/4 21/16 11/8 3/2 49/32 13/8 7/4 15/8 2/1
+            - Brendan Byrnes - Kaleidoscopic
+                1/1, 22/21, 9/8, 7/6, 5/4, 11/8, 7/5, 3/2, 11/7, 27/16, 7/4, 11/6
+            - Riley "The Harp of new albion"
+                ...
+            - La Monte Young "The Well-Tuned Piano"
+                ...
+            - https://misotanni.github.io/fjs/en/compare.html
+                ...
+        - tonnetz geometric transformations
+        - MUSIC TO CODE
+            ...
+        - barbershop
+            Depends on the function of the chord (dominant or not), but usually around: 386 - 404c major third 677 - 706c perfect fifth 971 - 1003c harmonic seventh
+            at least in warmups in this paper:
+            http://citeseerx.ist.psu.edu/viewdoc/download?doi=10.1.1.587.9702&rep=rep1&type=pdf
+            not JI, nor ET.
+            JI is not necessary to lock in the chord as minor pitch fluctuations in the human voice make beating irregular and nearly unnoticable. The tuning tends towards JI, but the harmonic seventh is usually distinctly sharpened (between 7/4 and 16/9) as is the major third.
+        - swing
+            Downbeat delays are a key component of swing in jazz
+            https://www.nature.com/articles/s42005-022-00995-z
+        - Sky Macklay - Many, Many Cadences
+            https://www.youtube.com/watch?v=mrI39Nf7cj4&ab_channel=ScoreFollower
+            https://symposium.music.org/index.php/58-1/item/11367-a-new-contemporary-endeavor-an-analysis-of-triadic-post-tonality-in-sky-macklay-s-many-many-cadences-for-string-quartet
+        - Mystery Music Machine
+            там есть интересная идея
+            берутся 2 ритма - из них генерится скомбинированный
+            a+b, a*b, a xor b
+            можно было бы саму операцию тоже свитчить по паттерну
+        - Stretto fuga - How to make a masterpiece out of two intervals
+            https://www.youtube.com/watch?v=zGZjzBvXCzg&ab_channel=EarlyMusicSources
+        - how to modulate between 2 scales/modes?
+            if we have a path between the scales
+            i think we can calculate how notes shift
+            how chromatics change
+        - additive processes
+        - circle of fifths
+        - https://yahootuninggroupsultimatebackup.github.io/tuning/
+        - https://groups.google.com/g/rec.music.theory
+        - Tymoczko
+            (in progress) Geometry of Music
+                https://global.oup.com/us/companion.websites/9780195336672/examples/chapter1/figure_121/
+            https://dmitri.mycpanel.princeton.edu/robotsexplanation.html
+            - Scale Networks
+                https://dmitri.mycpanel.princeton.edu/debussy.pdf
+                https://scale-navigator-dashboard.vercel.app/chords
+        - Debussy - pentatonics in La fille aux cheveux de lin
+            https://www.youtube.com/watch?v=LNOTeF-CshU
+        - Shostakovich - Fugue in A Major
+            https://www.youtube.com/watch?v=sHJzdEGq26I
+        - Pärt "tintinnabuli"
+        - In C
+            https://teropa.info/blog/2017/01/23/terry-rileys-in-c.html
+        - Chowning "Stria"
+            but maybe it's a bit dissonant
+        - Steve Reich
+            - "Piano Phase"
+                - скрестить piano phase и clapping music
+            - https://www.youtube.com/playlist?list=PLmB05ngLGnhHnPzL49m5N8fjwRWUrPZEI
+        - counterpoint (см файл)
+        - Philip Glass
+            Music in Fifths
+            Glass symphony 3, mvt 4
+            https://musescore.com/user/35473295/scores/6217685
+        - Autechre
+        - spectralism
+        - (hard) Satie Gnossienne
+        https://www.youtube.com/watch?v=em4DWxZORI8
+        https://www.youtube.com/watch?v=PQ_HcMoZR3E
+        - (Dan Tepfer) guy with supercollider and piano, on youtube
+        - Dan Gorelick
+        - Renick Bell
+        - ambient music
+        - Warren Burt
+        - more comma pumps
+        - всякий live coding всяких музыкантов
+            - supercollider
+            - tidalcycles
+            - foxdot
+            - overtone
+        - ? Igor Stravinsky - first of Three pieces for String Quartet
+        - Conlon Nancarrow
+        - Olivier Messiaen
+        - James Tenney
+        - Tom Johnson (не знаю правда тут хороших примеров)
+        - György Ligeti (some of the piano etudes)
+        - Coltrane changes
+            https://www.youtube.com/watch?v=LRSDgID_c7s&t=120s
+        - примеры из моего блогпоста:
+        https://www.blogger.com/blog/post/edit/1164367183620962014/7822343642228570755
+            - Lejaren Hiller + Isaacson
+            - ...
+        - algocomp blog
+            http://algocomp.blogspot.com/
+        - rhythmic modulation
+        - dynamic tonality
+            - C to shining C
+        - Rodolfo Coelho de Souza
+        - Strasheela
+        https://strasheela.sourceforge.net/strasheela/doc/MusicalCSPs.html
+        - tetris
+        https://musescore.com/user/18277881/scores/6812117
+
+    - закоммитить весь мой код с алгорейвов
+        + incompossible approximations
+
+    - add gitter/matrix/discord
+
+
+
+project generator - https://github.com/pyscaffold/pyscaffold
+pip install mkdocs==1.3.0 mkdocstrings==0.18.1
+    https://madewithml.com/courses/mlops/documentation/
+
+- vscode
+code --install-extension ms-python.python
+code --install-extension njpwerner.autodocstring
+code --install-extension shardulm94.trailing-spaces
+?
+code --install-extension bierner.markdown-preview-github-styles
+code --install-extension alefragnani.project-manager
+code --install-extension christian-kohler.path-intellisense
+code --install-extension euskadi31.json-pretty-printer
+code --install-extension mikestead.dotenv
+code --install-extension mohsen1.prettify-json
+code --install-extension ms-azuretools.vscode-docker
+code --install-extension ms-vscode.sublime-keybindings
+code --install-extension PKief.material-icon-theme
+code --install-extension redhat.vscode-yaml
+code --install-extension ritwickdey.live-sass
+code --install-extension ritwickdey.LiveServer
+code --install-extension streetsidesoftware.code-spell-checker
+
+
+
+TODOS:
+- презентация в вебе
+    https://fly.io/blog/wal-mode-in-litefs/
+    хорошие шрифты
+    https://eric-wieser.github.io/fmm-2021/#/
+    слайдами
+- Building an interactive clickable map for my blog
+    https://tomcritchlow.com/2023/04/03/blog-maps/
+    https://news.ycombinator.com/item?id=35431328
+- https://topos.site/blog/2023/01/recursive-types-via-domain-theory/
+    просто красиво пост оформлен, даже если и не про музыку
+
+- https://github.com/corrscope/corrscope
+- handle ipython "interrupt kernel":
+    I could be wrong, but I'm pretty sure that the "interrupt kernel" button just sends a SIGINT signal to the code that you're currently running (this idea is supported by Fernando's comment here), which is the same thing that hitting CTRL+C would do. Some processes within python handle SIGINTs more abruptly than others.
+
+- notations
+    micxrotonal scores
+    https://musescore.com/sheetmusic?text=microtonal
+    heji
+    sagittal
+    http://lumma.org/music/theory/notation/
+    https://en.xen.wiki/w/Rational_comma_notation
+    fjs (similar to rcn)
+    https://en.xen.wiki/w/Notation
+    https://en.xen.wiki/w/Category:Notation
+    https://en.xen.wiki/w/Color_notation
+    https://en.xen.wiki/w/Category:Color_notation
+    https://en.xen.wiki/w/Ups_and_downs_notation
+    https://en.xen.wiki/w/Category:Ups_and_Downs_Notation
+    https://github.com/euwbah/musescore-ji-rtt-plugin
+        https://www.facebook.com/groups/497105067092502/?multi_permalinks=2700729770063343&hoisted_section_header_type=recently_seen
+- keyboard designs
+
+    
+todo - webpages with interactive elements:
+    https://dsego.github.io/demystifying-fourier/
+
+
+
+
+links and info about indian music
+https://news.ycombinator.com/item?id=35634963
+
+
+links for algocomp:
+https://www.blogger.com/blog/post/edit/1164367183620962014/7822343642228570755
+https://open.spotify.com/playlist/45ZeUDjweP4chJ2kuGNy0D
+https://github.com/topics/algorithmic-composition
+https://www.euterpea.com/examples/
+https://www.youtube.com/watch?v=9Fg54XAr044
+pop2piano
+https://colab.research.google.com/drive/1rBAs2TkryDnnQOhcM-mtlrgtL2h3ekml?usp=sharing
+https://llllllll.co/t/algorithmic-composition/2222/26
+machine duet 1 (VCV Rack + piano improv)
+https://www.youtube.com/watch?v=J3vud1r7lQc&ab_channel=JeremyDormitzer
+mark fell podcast
+https://rwm.macba.cat/en/buscador/radio/etiquetas/musica-generativa-9814
+Mark Fell’s pattern synthesis and “regularly irregular” rhythm
+Mark Fell’s pattern synthesis
+https://llllllll.co/t/pattern-synthesis/6115
+https://llllllll.co/t/more-or-less-in-the-style-of-mark-fell-out-now-on-new-york-haunted/51806
+ALGORITHMIC COMPOSITION AS A MODEL OF CREATIVITY
+https://user.eng.umd.edu/~blj/algorithmic_composition/algorithmicmodel.html
+https://greyfade-label.bandcamp.com/album/from-the-machine-volume-i
+https://newmusicusa.org/search-results/?_sf_s=Joseph%20Branciforte
+https://www.youtube.com/watch?v=7U-E78AHmHM&ab_channel=JosephBranciforte
+https://www.actoolbox.net/data/documents/AC_Toolbox_Tutorial.pdf
+Six Techniques for Algorithmic Music Composition
+http://peterlangston.com/Papers/amc.pdf
+Focus On: David McDonnell, Computer Music Programmer | DePaul VAS
+https://www.youtube.com/watch?v=5ECXj3Bzss4&ab_channel=DePaulVisitingArtistsSeries
+nice slides
+https://rawgit.com/hecanjog/algotalk/master/index.html
+Techniques For Generative Music? Max
+https://cycling74.com/forums/techniques-for-generative-music
+Real Time Composition Library
+https://www.essl.at/works/rtc.html
+Flow Machines
+https://arxiv.org/pdf/2006.09232.pdf
+https://www.facebook.com/groups/AlgoComp
+
+
+constraint based:
+https://www.diva-portal.org/smash/get/diva2:1561768/FULLTEXT01.pdf
+https://uobrep.openrepository.com/bitstream/handle/10547/622708/Anders%20-%202018%20-%20Oxford%20handbook%20-%20Compositions%20Created%20with%20Constraint%20Programming%20-%20preprint.pdf?sequence=2&isAllowed=y
+Miranda (2011). A Computational Model for Rule-Based Microtonal Music Theories and Composition
+https://www.academia.edu/2543685/A_Survey_of_Constraint_Programming_Systems_for_Modeling_Music_Theories_and_Composition
+https://www.academia.edu/333600/Constraint_Application_With_Higher_Order_Programming_for_Modeling_Music_Theories
+https://www.researchgate.net/publication/29833083_Algorithmic_music_composition_using_XML_a_constraint-based_approach
+google:
+    constraint based algorithmic music composition
+    constraint based generative model dynamic programming
+
+
+https://en.xen.wiki/w/Historical_temperaments
+https://en.xen.wiki/w/Regular_temperament
+    https://en.xen.wiki/w/Dave_Keenan_%26_Douglas_Blumeyer%27s_guide_to_RTT
+https://en.xen.wiki/w/MOS_scale
+https://en.xen.wiki/w/Equal-step_tuning
+https://en.xen.wiki/w/EDO
+https://en.xen.wiki/w/Just_intonation
+https://en.xen.wiki/w/Tetrachord
+https://en.xen.wiki/w/Approaches_to_musical_tuning
+https://en.xen.wiki/w/Listen
+https://en.xen.wiki/w/Why_use_alternative_tunings%3F
+https://en.xen.wiki/w/Arabic,_Turkish,_Persian
+Persian classical music
+https://lilypond.org/doc/v2.24/Documentation/notation/persian-classical-music
+
+
+- Kulitta
+    https://github.com/donya/KulittaCompositions/tree/master/PianoEtude
+    https://www.donyaquick.com/kulitta/#publications
+    https://www.donyaquick.com/compositions-using-euterpea/
+- Ligeti
+    http://selma.hfmdk-frankfurt.de/finnendahl/algorithmische-komposition/kapitel_3_ubungen/35_gyorgy_ligeti_etude_desordre.html
+    https://www.explorethescore.org/pgs/ligeti/inside_the_score/etude_2_cordes_a_vide.html
+    https://www.explorethescore.org/pgs/ligeti/inside_the_score/etude_8_fem.html
+    https://www.explorethescore.org/pgs/ligeti/inside_the_score/etude_12_entrelacs.html
+    https://www.explorethescore.org/pgs/ligeti/inside_the_score/etude_13_l-escalier_du_diable.html
+
+    course on Ligeti
+    https://music.arts.uci.edu/abauer/1.3/ligetisem.html
+
+    Review of Emmanuel Amiot, Music through Fourier Space: Discrete Fourier Transform in Music Theory
+    https://mtosmt.org/issues/mto.17.23.3/mto.17.23.3.yust.html
+
+
+Common Lisp and Music Composition (ldbeth.sdf.org)
+https://news.ycombinator.com/item?id=34415889
+https://ldbeth.sdf.org/articles/cm.html
+
+
+githubs:
+https://github.com/dxinteractive/xenpaper/issues
+https://github.com/euwbah/musescore-xen-tuner
+https://github.com/xenharmonic-devs/scale-workshop
+https://github.com/SeanArchibald/scale-workshop
+
+
+?
+algorithmic composition:
+    Karlheinz Essl
+    Charles Dodge
+    Pauline Oliveros
+    Morton Subotnick
+    Mario Davidovsky
+    Paul Lansky
+
+
+live-coding:
+A Study In Keith
+https://www.youtube.com/watch?v=bq-260NUw5o
+
+
+contrapuntal jazz
+    Nikolay Kapustin
+    Fred Hersch
+    Lennie Tristano
+    Keith Jarrett
+    Brad Mehldau
+
+post-tonal analysis
+    Chapter 31. Caroline Shaw, Valencia (for String Quartet) (2012)
+    https://global.oup.com/us/companion.websites/9780197543986/ch31/
+    Chapter 25. Kaija Saariaho, Papillons (for solo cello), No. 3 (2000)
+    https://global.oup.com/us/companion.websites/9780197543986/ch25/
+    ? Chapter 26. Joan Tower, Vast Antique Cubes (2000)
+    https://global.oup.com/us/companion.websites/9780197543986/ch26/
+    Chapter 24. Shulamit Ran, Soliloquy (for Violin, Cello, and Piano) (1997)
+    https://global.oup.com/us/companion.websites/9780197543986/ch24/
+    ...
+
+tone-clock theory:
+Jenny McLeod tone clock
+https://michaelnorris.info/downloads/mmass1.pdf
+https://en.wikipedia.org/wiki/Tone_Clock
+https://duodenum.home.xs4all.nl/triosonic/docs/toonklok-e.html
+https://sites.google.com/site/peterschattoneclock/
+http://www.hoogstins.com/toonklok/index.html
+
+Amy Bauer:
+    https://music.arts.uci.edu/abauer/video.html
+    post tonal:
+        https://music.arts.uci.edu/abauer/5.1/index.html
+        https://music.arts.uci.edu/abauer/2.2/posttonal.html
+        https://music.arts.uci.edu/abauer/2.2/downloads.html
+    https://music.arts.uci.edu/abauer/3.1/
+    Art Music of Indonesia and India
+        https://music.arts.uci.edu/abauer/148_2018/
+    Ligeti
+        https://music.arts.uci.edu/abauer/1.3/ligetisem.html
+
+
+google:
+    VadimFilter
+
+
+vpavlenko links
+https://github.com/vpavlenko/study-music/blob/main/README.md
+https://github.com/vpavlenko/study-music/tree/ba716e653befb6db995346732a351471d2081efc
+https://github.com/vpavlenko/study-music/tree/main/parts
+
+
+
+- заметки после алгорейва 7
+    - очень много ad-hoc кода вылезло, надо причесать
+    - для многих штук нужно придумать notation
+        - нужно продумать дизайн rewrite, modulate_to и modulate_from
+        ...
+    - нужно что-то сделать с названиями операций
+        - и с названиями параметров, потому что очень длинные они
+    - (outdated) в dexed сложно сделать timbre modulation
+        - нужно научиться modulate synth без проблем в звуке
+    - очень часто разные microtonal scales в разных edo звучат очень похоже
+        то есть ощущение, что гармонии не работают как надо
+        нужно делать ресёрч
+        как связать аккорды, гармонии, и какую-то логичность/coherence/style
+        как заиспользовать особенности какждой EDO системы
+    - (done) когда пытался сделать modulate_on для прогрессии
+        типа после каждого I аккорда мы делаем modulation дополнительный
+        проблема в том, что я уже посчитал dur для каждого аккорда,
+        а для modulation мне нужно снова считать, и вообще я не знаю где он добавлен
+    - (done) когда делал rewrite аккорда в прогрессии
+        я потерял логику, что это был sequence аккордов
+        типа было [+3, -2]
+        но в rewrite я просто поменял аккорд vii на IV/IV
+        и дальше будет не IV+3 и не IV-2, а будет vii+3 или vii-2
+    - (todo) я хотел сохранить smooth voice-leading между блоками,
+        и в итоге код вышел очень негибким
+        потому что я не могу вытащить инфу из трекера про текущий блок
+        - нужно научиться склеивать последовательные запуски друг с другом
+    - (todo) допустим меняю gesture, меняю число нот,
+        была 1, стало 2
+        надо понять как с этим красиво взаимодействовать,
+        чтоб делать как можно меньше ошибок
+    - (todo) нужно добавить проверку на voice range, и какие-то стратегии вокруг этого
+    - (todo) нужно рандом сделать более контролируемым
+    - (todo) сейчас все EDO имеют привязку 0 == C4
+    - (todo) наверно мне надо сделать 2 режима работы - с assert'ами и без
+    - код, который попал в библиотеку, сложно модифицировать на лету
+        - но наверно по дефолту это ожидаемое поведение
+        - но мб можно что-то ещё придумать, более гибкое тут?
+
+        - композиционные штуки
+        - допустим ритм зависит от текущей ступени аккорда
+            - реализовано ad-hoc, можно это сделать явно концептуальнее
+            - и в целом интересно подумать, кто от кого зависит
+            - также эта зависимость сейчас довольно простая и резкая по ритмы
+                - научиться это делать более плавно
+        - сейчас нет почти никаких штук про память
+            - только небольшая зависимость от последнего аккорда последнего блока
+        - интересно попробовать полиритмы в ближайшем будущем
+        ...
+
+
+other vsts:
+    - add one more vst for drum machines
+    - Dexed
+        - попробовать 0.9.4
+        https://github.com/asb2m10/dexed/releases/tag/v0.9.4hf1
+    - vst - OB-Xd
+        https://www.discodsp.com/obxd/#home
+        - not for commercial use (49$)
+        - ...
+    - чекнуть wine + plogue OPS7 в ubuntu
+    https://plexwave.org/free-plugins
+    - чеклист пресетов: перкуссия, духовые, струнные, металлические/колокола, басс, пианино
+    - triple cheese
+        + всё довольно хорошо в плане производительности и кроссплатформенности
+        - тонкий звук
+        - мб мало перкуссии
+    - tyrellN6
+        + всё хорошо
+        + звук похож на kraftwerk
+        - немного однообразный тембр у всех пресетов
+        ? у некоторых пресетов не ретригеррится начало, видимо это хорошо
+    - helm
+        TODO: чекнуть yee.helmbank
+        + опен-сорс!
+        - сложноватые пресеты, честно говоря
+        - был 1 раз баг с саундом, харшнойз, пришлось перезапускать
+        - на дефолтном синте - если 2 синта играют похожую ноту - громкость прыгает в macos (мб потому что это синусоида, мало гармоник)
+    - Dexed
+        - добавить тембр Lavitar Y
+        + чем хорош dx7 - у него есть культурные коды, коннотации 80ых, узнаваемость
+            - какие-то пресеты хорошо считываются
+
+
+pdfs:
+- Philip Glass - Concert Grosso
+- Easley Blackwood - Modes and Chord Progressions in Equal Tunings
+- Gareth Hearne - Roman numeral and neo-Riemannian analyses of Blackwood’s Suite for Guitar in 15-note Equal Tuning
+- Counterpoint textbook Feraru
+- How to write a fugue in 20 steps

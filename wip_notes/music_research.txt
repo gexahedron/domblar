@@ -1,0 +1,271 @@
+todo:
+    - VampNet: Music Generation via Masked Acoustic Token Modeling
+        https://hugo-does-things.notion.site/VampNet-Music-Generation-via-Masked-Acoustic-Token-Modeling-e37aabd0d5f1493aa42c5711d0764b33
+        https://github.com/hugofloresgarcia/unloop
+    - AudioPALM — аудио-языковая модель от Google
+        arxiv.org/abs//2306.12925
+    - High-Fidelity Audio Compression with Improved RVQGAN
+        https://arxiv.org/abs/2306.06546
+        https://twitter.com/ritheshkumar_/status/1668444429236023297
+    - Hierarchical Timbre-Painting and Articulation Generation
+        https://github.com/mosheman5/timbre_painting
+    - Is Disentanglement enough? On Latent Representations for Controllable Music Generation
+        https://arxiv.org/abs/2108.01450
+    - Axel Roebel: Deep learning methods for voice processing: Neural vocoding for voice transformation 56:17
+        https://medias.ircam.fr/x209fa0_axel-roebel-methodes-dapprentissage-pro
+    - Ircam RAVE 2: It’s the upgrade of RAVE, a model that performs neural audio synthesis using a variational autoencoder.
+    - MeLoDy - Efficient Neural Music Generation
+        https://efficient-melody.github.io/
+        https://huggingface.co/papers/2305.15719
+    - Autocoder: a Spectrum Based Variational Autoencoder Environment 27:52
+        https://medias.ircam.fr/x6f6653_autocoder-a-spectrum-based-variational-au
+        https://github.com/franzson/autocoder
+    - Artificial Creativity - some AI-based composition techniques 34:42
+        https://medias.ircam.fr/x30d48a_artificial-creativity-some-ai-based-comp
+    - PandaGPT
+        6 modalities
+        https://twitter.com/yixuan_su/status/1661064018868551691
+        https://panda-gpt.github.io/
+        https://huggingface.co/spaces/GMFTBY/PandaGPT
+        https://github.com/yxuansu/PandaGPT
+    - CoDi
+        text, audio, image, video
+        https://twitter.com/ZinengTang/status/1660726723955007488
+        https://codi-gen.github.io/
+    - AudioToken: Adaptation of Text-Conditioned Diffusion Models for Audio-to-Image Generation
+        demo
+            https://huggingface.co/spaces/GuyYariv/AudioToken
+        https://huggingface.co/papers/2305.13050
+        https://pages.cs.huji.ac.il/adiyoss-lab/AudioToken/
+    - GETMusic: Generating Any Music Tracks with a Unified Representation and Diffusion Framework
+        https://www.reddit.com/r/MachineLearning/comments/13ol78c/r_getmusic_generating_any_music_tracks_with_a/
+        https://ai-muzic.github.io/getmusic/
+    - Pengi: An Audio Language Model for Audio Tasks
+        https://huggingface.co/papers/2305.11834
+    - Google's AI Music Datasets: MusicCaps, AudioSet and MuLan
+        https://www.audiocipher.com/post/musiccaps-audioset-mulan
+    - SoundStorm: Efficient Parallel Audio Generation
+        https://arxiv.org/pdf/2305.09636.pdf
+        https://google-research.github.io/seanet/soundstorm/examples/
+    - Bark is a transformer-based text-to-audio model
+        https://github.com/suno-ai/bark/blob/main/README.md
+    - ddsp и аналоги
+        https://github.com/magenta/ddsp-vst
+        https://midi-ddsp.github.io/
+    - ISMIR 2022
+        https://ismir2022.ismir.net/
+        Reviewing ISMIR Papers: Some Personal Thoughts (Meinard Müller)
+        https://www.youtube.com/watch?v=hSsVktr1huQ
+    coursera course with Xavier Serra
+        https://www.coursera.org/learn/audio-signal-processing
+    Deploy to github and gitlab from same local project
+        https://stackoverflow.com/questions/34114527/deploy-to-github-and-gitlab-from-same-local-project
+    Xavier Serra (creator of SMS for spectral analysis)
+        https://www.upf.edu/web/mtg/sms-tools
+        https://en.wikipedia.org/wiki/Xavier_Serra
+        https://www.upf.edu/web/xavier-serra/publications
+        https://paperswithcode.com/search?q=author%3AXavier+Serra
+        https://www.upf.edu/web/xavier-serra/selected-talks-on-video
+
+    - затестить AIVA
+    - AudioGPT
+    - подписаться на каналы в ютубе, твиттере
+    - затестить so-vits-svc
+        https://github.com/voicepaw/so-vits-svc-fork
+        https://www.youtube.com/watch?v=tZn0lcGO5OQ
+    - насколько устарел jukebox?
+    - чекнуть ISMIR
+    - завести github для экспериментов
+    - neural VSTs
+    - MusicLM
+    - Neural Codec Language Models are Zero-Shot Text to Speech Synthesizers
+        https://arxiv.org/abs/2301.02111
+    - MuLan: A Joint Embedding of Music Audio and Natural Language - A research paper introducing a model that connects music and captions in a single latent space. Ideal for music retrieval tasks with free-form text queries.
+        https://research.google/pubs/pub51582/
+    - check out links https://thesoundofai.com/accelerator.html
+    - 3. #Mousai: Text-based music generation using diffusion models, capable of generating long music clips at 48kHz.
+    - 4. #AudioLDM: Audio generation from text descriptions using diffusion models. The model has been trained on the AudioCaps dataset on a single GPU.
+    - 5. #SingSong: Music accompaniment generation for a lead voice line, using an architecture similar to MusicLM but conditioned on the voice.
+    - Riffusion
+
+    - Jukebox
+    - NSynth
+    - DiffWave
+        https://github.com/philsyn/DiffWave-unconditional
+    - prism SampleRNN
+        https://colab.research.google.com/gist/relativeflux/10573e9e1b10b1ff45e3a00099259741/prism-samplernn.ipynb
+    google
+        "Unconditional" "Audio Generation" "samplernn" 2021
+        "diffwave" "samplernn"
+        neural music generation
+    - ddsp
+        https://github.com/magenta/ddsp
+    - unagen
+        https://github.com/ciaua/unagan
+    - https://paperswithcode.com/task/audio-generation/latest#code
+
+
+
+hiring
+    1. Experience building #MusicInformationRetrieval and/or #GenerativeMusic systems. Candidates who have developed real-world music AI systems have likely encountered and solved common challenges in the field. For junior candidates, having three or four solid portfolio projects (e.g., music recommendation system, melody generator) is a great starter. 
+
+    2. Strong AI knowledge. Candidates should have a good understanding of contemporary #MachineLearning techniques - CNNs and transformers above all. For generative music, knowledge of traditional symbolic #AI techniques (such as rule-based or generative grammars) is a great plus, as they can aid in controlling the wilderness of #DeepLearning generative models.
+
+    3. Familiarity with #DigitalSignalProcessing. If a company works with music, 90% of the time they’ll handle audio data. Experience with DSP is crucial for manipulating and extracting information from audio signals.
+
+    4. Strong #music background. Ideally, a candidate should have a deep understanding of music theory and composition. A working understanding of music perception is a plus. This knowledge will help inform the development of music AI algorithms both for generative and analytical purposes. The idea of just throwing AI at a music problem doesn’t work. Domain knowledge is key.
+
+    5. Excellent engineering skills. The majority of (music) AI researchers I know are bad software engineers. If you’re building a product, and not just running academic research, you need people who can carry out research in a reliable and scalable manner. The ideal candidate should write clean code, have a clue on how to productionise the system they build, and, above all, despise technical debt.  
+
+    6. Eagerness to learn. Music AI is an ever-evolving field that is highly interdisciplinary. Successful music AI engineers are always curious to pick up new skills and experiment with new techniques.
+
+
+
+Music Informatics Researcher
+
+As​ ​a​ ​researcher​ ​in​ ​our​ ​core​ ​technical​ ​team​ ​with​ ​a​ ​background​ ​in​ ​Music​ ​Informatics,​ ​you​ ​will​ ​directly​ ​contribute​ ​to AIVA’s​ ​development.​ ​You​ ​can​ ​expect​ ​to​ ​work​ ​in​ ​a​ ​small​ ​team​ ​of​ ​dedicated​ ​engineers​ ​and​ ​researchers​ ​on​ ​various projects,​ ​relying​ ​on​ ​your​ ​research​ ​experience​ ​and​ ​expertise​ ​in​ ​symbolic​ ​music​ ​analysis​ ​and​ ​manipulation.​ ​You​ ​will have​ ​the​ ​opportunity​ ​to​ ​work​ ​on​ ​various​ ​tasks,​ ​such​ ​as​ ​identifying​ ​and​ ​analyzing​ ​musical​ ​attributes​ ​in​ ​existing datasets,​ ​designing​ ​hierarchical​ ​symbolic​ ​representations​ ​and​ ​developing​ ​methodologies​ ​for​ ​interactive​ ​composition. Ultimately,​ ​you​ ​will​ ​play​ ​a​ ​central​ ​role​ ​in​ ​pushing​ ​the​ ​boundaries​ ​of​ ​personalised​ ​music​ ​generation.
+
+What we are looking for
+We​ ​are​ ​looking​ ​for​ ​a​ ​candidate​ ​with​ ​a​ ​strong​ ​knowledge​ ​of​ ​music​ ​theory​ ​and​ ​representation,​ ​as​ ​well​ ​as​ ​statistical expertise.​ ​The​ ​candidate​ ​should​ ​have​ ​experience​ ​modelling​ ​and​ ​generating​ ​music​ ​at​ ​the​ ​symbolic​ ​level.​ ​Familiarity with​ ​modern​ ​machine​ ​learning​ ​tools​ ​is​ ​strongly​ ​preferred.
+
+Essential:
+At​ ​least​ ​2​ ​years​ ​of​ ​experience​ ​in​ ​Music​ ​Informatics​ ​research
+Bachelor​ ​Degree​ ​in​ ​Computer​ ​Science,​ ​Statistics,​ ​Music​ ​Technologies​ ​​ ​or​ ​equivalent​ ​form​ ​of​ ​qualification (academic,​ ​professional)
+Experience​ ​working​ ​with​ ​generative​ ​models
+Strong​ ​programming​ ​skills,​ ​particularly​ ​in​ ​Python
+Enthusiasm​ ​and​ ​resilience​ ​in​ ​a​ ​fast-paced​ ​startup​ ​work​ ​environment
+Strong​ ​team​ ​player​ ​and​ ​communicator
+
+Please​ ​talk​ ​about​ ​your​ ​experience​ ​with​ ​generative​ ​models.
+Describe​ ​your​ ​past​ ​research​ ​work​ ​which​ ​involved​ ​a​ ​novel​ ​contribution.
+Which​ ​tool​ ​and​ ​skills​ ​do​ ​you​ ​think​ ​will​ ​help​ ​you​ ​the​ ​most​ ​in​ ​this​ ​role?
+Please​ ​include​ ​any​ ​web​ ​links​ ​or​ ​references​ ​to​ ​past​ ​projects​ ​you​ ​have​ ​worked​ ​on.
+Do​ ​you​ ​have​ ​a​ ​Github​ ​profile?​ ​A​ ​LinkedIn?​ ​An​ ​artist​ ​page​ ​?​ ​Please​ ​include​ ​any​ ​relevant​ ​links​ ​in​ ​the​ ​answer.
+What​ ​interests​ ​you​ ​the​ ​most​ ​about​ ​this​ ​opportunity?
+
+
+
+Deep Learning Engineer
+
+Description
+As​ ​a​ ​Deep​ ​Learning​ ​Researcher,​ ​you​ ​will​ ​be​ ​facing​ ​a​ ​challenging​ ​and​ ​exciting​ ​opportunity​ ​to​ ​innovate.​ ​You​ ​can expect​ ​to​ ​work​ ​in​ ​a​ ​small​ ​team​ ​of​ ​dedicated​ ​engineers​ ​and​ ​researchers​ ​on​ ​various​ ​projects,​ ​relying​ ​on​ ​your​ ​research experience​ ​and​ ​expertise​ ​in​ ​Deep​ ​Learning​ ​to​ ​adapt​ ​and​ ​reapply​ ​proven​ ​methodologies​ ​from​ ​other​ ​domains,​ ​such​ ​as natural​ ​language​ ​processing,​ ​as​ ​well​ ​as​ ​develop​ ​novel​ ​solutions​ ​to​ ​unsolved​ ​problems.​ ​You​ ​will​ ​have​ ​the​ ​opportunity to​ ​work​ ​on​ ​various​ ​tasks,​ ​such​ ​as​ ​designing​ ​models​ ​to​ ​achieve​ ​state-of-the-art​ ​music​ ​classification,​ ​extracting​ ​high level​ ​musical​ ​features​ ​using​ ​deep​ ​neural​ ​networks​ ​and​ ​developing​ ​new​ ​methods​ ​for​ ​conditional​ ​and​ ​structured generation.​ ​​ ​Ultimately,​ ​your​ ​work​ ​will​ ​directly​ ​impact​ ​the​ ​company’s​ ​progress​ ​towards​ ​fulfilling​ ​its​ ​vision​ ​of empowering individuals by creating personalised soundtracks with AI.
+
+What we are looking for
+We​ ​are​ ​looking​ ​for​ ​a​ ​candidate​ ​with​ ​a​ ​strong​ ​foundation​ ​in​ ​Machine​ ​Learning,​ ​who​ ​can​ ​rely​ ​on​ ​their​ ​in-depth knowledge​ ​and​ ​intuition​ ​to​ ​contribute​ ​novel​ ​ideas,​ ​rigorously​ ​evaluate​ ​empirical​ ​evidence​ ​and​ ​make​ ​educated adjustments​ ​to​ ​proposed​ ​methods.​ ​The​ ​candidate​ ​should​ ​be​ ​versatile​ ​in​ ​​ ​working​ ​with​ ​common​ ​Deep​ ​Learning frameworks,​ ​such​ ​as​ ​Tensorflow,​ ​and​ ​prototyping​ ​custom​ ​network​ ​architectures.​ ​At​ ​the​ ​same​ ​time,​ ​the​ ​candidate would​ ​benefit​ ​from​ ​a​ ​good​ ​intuition​ ​in​ ​music​ ​theory​ ​and​ ​structure,​ ​as​ ​well​ ​as​ ​familiarity​ ​with​ ​symbolic​ ​music representation​ ​formats.
+
+Essential:
+At​ ​least​ ​2​ ​years​ ​of​ ​experience​ ​designing​ ​and​ ​deploying​ ​Deep​ ​Neural​ ​Networks
+2​ ​or​ ​more​ ​years​ ​of​ ​experience​ ​working​ ​on​ ​Machine​ ​Learning​ ​projects
+Bachelor​ ​Degree​ ​in​ ​Computer​ ​Science,​ ​Applied​ ​Mathematics,​ ​Statistics​ ​or​ ​equivalent​ ​form​ ​of​ ​qualification (academic,​ ​professional)
+Fluency​ ​in​ ​common​ ​Deep​ ​Learning​ ​libraries​ ​such​ ​as​ ​Tensorflow,​ ​Theano,​ ​etc
+Enthusiasm​ ​and​ ​resilience​ ​in​ ​a​ ​fast-paced​ ​startup​ ​work​ ​environment
+An​ ​interest​ ​in​ ​music
+Strong​ ​team​ ​player​ ​and​ ​communicator
+Desirable:
+Co-authored​ ​one​ ​or​ ​more​ ​research​ ​publications
+Experience​ ​working​ ​with​ ​generative​ ​models
+Knowledge​ ​of​ ​basic​ ​music​ ​theory​ ​and​ ​encoding​ ​formats​ ​such​ ​as​ ​MIDI
+
+Please​ ​talk​ ​about​ ​your​ ​most​ ​relevant​ ​Deep​ ​Learning​ ​project.
+Describe​ ​your​ ​past​ ​research​ ​work​ ​which​ ​involved​ ​a​ ​novel​ ​contribution.
+Discuss​ ​​ ​a​ ​difficult​ ​problem​ ​you​ ​faced​ ​and​ ​to​ ​which​ ​you​ ​found​ ​a​ ​solution​ ​by​ ​combining​ ​your​ ​knowledge​ ​and empirical​ ​evidence.
+Describe​ ​your​ ​experience​ ​working​ ​with​ ​common​ ​Deep​ ​Learning​ ​libraries,​ ​such​ ​as​ ​Tensorflow.
+Please​ ​include​ ​any​ ​web​ ​links​ ​or​ ​references​ ​to​ ​past​ ​projects​ ​you​ ​have​ ​worked​ ​on,​ ​whether​ ​they​ ​are​ ​related​ ​to Deep​ ​Learning​ ​or​ ​not.
+Do​ ​you​ ​have​ ​a​ ​Github​ ​profile?​ ​A​ ​LinkedIn?​ ​An​ ​artist​ ​page​ ​?​ ​Please​ ​include​ ​any​ ​relevant​ ​links​ ​in​ ​the​ ​answer.
+What​ ​interests​ ​you​ ​the​ ​most​ ​about​ ​this​ ​opportunity?
+
+
+
+
+Jukebox
+    One Click Jukebox with Autosave
+    https://colab.research.google.com/drive/1gWP6fSqd_vs65tI5uOGcJssGqTq2YWzO?usp=sharing
+    Jukebox Songeater - multiple artist support
+    https://colab.research.google.com/github/songeater/jukebox/blob/master/jb_songeater_github_v5.ipynb
+    K80 Safe Jukebox 1b_Finetuned
+    https://colab.research.google.com/drive/1IZl9V2PAvaGBvPShNhAITi7OclufJhxD?usp=sharing
+    a notebook for free or pro users to access finetuned models provided by the community (keep in mind that if too many people want to access the same model at the same time, Google will "block" it for a while
+    K80 Safe Jukebox SMarioMan notebook + speed upsampling - optimized for 1b_lyrics model
+    https://colab.research.google.com/drive/1FZpXEK_LWyoIYoef408SXbe51S9GrJwY?usp=sharing
+
+    Yes, I can run it on Ubuntu 18 with a 1070. To sum up,
+
+    Allocate heaps of swap space if you have <32GB system RAM
+    Use 1b_lyrics (not 5b)
+    Try n_samples=1
+    Set a short sample_length, but not too short (any less than 20 seconds might return an error)
+    Don't use sample.py, but create your own based on the code in the jupyter notebook. The crucial difference is that the top prior (which generates the initial sample) is loaded separately from the two upsamplers that follow. sample.py loads them all in one, which causes OOM.
+    It's possible to save the intermediate results to disk with torch.save(zs, PATH) and continue later. On a low-end machine, I would create two separate scripts, one for drawing from the top prior and one for the upsampling. Sampling the top prior just takes a couple of minutes, you can already listen to it and decide if you want to upsample it.
+
+
+    Are you running sample.py or jukebox/interacting_with_jukebox.ipynb? The notebook seems to be new and needs less memory.
+
+
+    sample.py needs more system RAM because it loads all three priors at once. The code in the jupyter notebook loads only the lvl2 prior, draws samples, deallocates memory, and only afterwards loads the lvl1 and lvl0 upsamplers.
+
+    Also, the code in the notebook has different hyperparams as sample.py, so you might want to play around with sample length, total length, etc. I had to figure this out yesterday.
+
+
+    https://colab.research.google.com/drive/1qvLwirubD85OgZoS7WxLq3ghF8AxTjER#scrollTo=65aR2OZxmfzq
+
+
+    CUDA_VISIBLE_DEVICES=0,1 python jukebox/sample.py --model=1b_lyrics --name=reconstructions3 --levels=3  --mode=primed --audio_file=sound_seed.wav --prompt_length_in_seconds=10 --sample_length_in_seconds=60 --total_sample_length_in_seconds=180 --sr=44100 --n_samples=3 --hop_fraction=0.5,0.5,0.125 > out 2> err &
+
+
+    export CUDA_VISIBLE_DEVICES=1; python jukebox/sample.py \
+    --model=5b \
+    --name=reconstructions \
+    --levels=3 \
+    --mode=primed \
+    --audio_file=sound_seed.wav \
+    --prompt_length_in_seconds=10 \
+    --sample_length_in_seconds=20 \
+    --total_sample_length_in_seconds=180 \
+    --sr=44100 \
+    --n_samples=6 \
+    --hop_fraction=0.5,0.5,0.125
+
+
+    https://colab.research.google.com/github/tg-bomze/Jukebox_Colab/blob/master/Jukebox_Rus.ipynb#scrollTo=7D9AUdX1cdaG
+
+
+fm vsts:
+    OPL2
+        https://www.discodsp.com/opl/
+    Digits
+        http://www.extentofthejam.com/
+    odin2
+        https://thewavewarden.com/pages/odin-2
+        https://github.com/TheWaveWarden/odin2
+    Vital
+    Oxe FM
+    OctaSine
+        - getting error in supercollider
+        ? no microtuning
+        - no wayland
+        https://github.com/greatest-ape/OctaSine
+        https://www.octasine.com/
+    
+
+done:
+    - partial tracking in Python - loristrck
+        https://github.com/gesellkammer/loristrck
+    - ring modulation in domblar
+
+
+art
+https://colab.research.google.com/github/deforum-art/deforum-stable-diffusion/blob/main/Deforum_Stable_Diffusion.ipynb#scrollTo=0D2HQO-PWM_t
+https://colab.research.google.com/github/dmarx/notebooks/blob/main/Stable_Diffusion_KLMC2_Animation.ipynb#scrollTo=15BNHICpOOXg
+https://colab.research.google.com/drive/1m8ovBpO2QilE2o4O-p2PONSwqGn4_x2G
+
+german
+    I don't know why people pay LingQ. TransOver + Foreign Language Reader + 5min DWs Video Thema is pretty much A2-B2 on steroid if you do it every day.
+
+    Writing in Lang-8, talking in iTalk, Anki for vocabulary and you pretty much good to go. Just don't forget to check übung on Video Thema which teach grammar on every video. I learn more here than my 2 month superintensive course in Goethe-Institut
+
+    https://www.reddit.com/r/German/comments/awic9y/best_online_courses_for_learning_german/
+    https://www.reddit.com/r/German/wiki/index/
+    https://www.reddit.com/r/German/wiki/freecourses/
+    https://www.reddit.com/r/German/comments/bkmtx3/the_ultimate_link_guide_to_german/?utm_source=share&utm_medium=ios_app
+    https://deutsch.lingolia.com/de/grammatik
+    https://learngerman.dw.com/de/anf%C3%A4nger/s-62079021

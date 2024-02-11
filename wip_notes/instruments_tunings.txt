@@ -1,0 +1,13 @@
+instruments/tunings
+
+qanun
+    https://en.xen.wiki/w/Qanun
+shakuhachi
+    https://senryushakuhachi.com/scale-and-temperament
+koto
+    см. koto_scales.pdf
+gamelan
+    https://newworldrecords.bandcamp.com/album/american-works-for-balinese-gamelan
+    https://jgpercussion.wordpress.com/2015/07/13/balinese-gamelan-kotekan-you-dig-it/
+        rhythmic style: kotekan
+    google: kulintang

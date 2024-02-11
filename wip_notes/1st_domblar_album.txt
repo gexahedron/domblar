@@ -1,0 +1,19 @@
+ideas:
+- amiga-based compositions
+- fm-based compositions
+
+genres/features:
+- jazz
+- neo-riemannian
+- minimalism
+- counterpoint
+- spectralism
+- techno
+- microtonal
+
+- miniatures with scales, or modal tetrachords
+- something non-tonal, noisy, rhythmic
+- with sound design a-la Stephane Picq
+- something Ligeti-like, constraint-based, conceptual but still musical
+    - e. g., 2 hands, each plays a complementary set of notes to other, but for example the overall harmonies are triadic
+- something algorithm-based, or data-structures based

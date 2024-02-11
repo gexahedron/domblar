@@ -1,0 +1,452 @@
+Shostakovich #7:
+	todo:
+		- как работают зацепления?
+
+		- finish annotating motives
+			- maybe try to improve the idea/annotation of motives
+			- write out all of motives in one place somewhere, with rhythms
+			- (classify) rhythms, harmony rhythm
+		- поискать комбинаторику:
+			- reversals
+			- inversion
+				- тут наверно ещё negative harmony можно поискать
+			- палиндромы
+		- понять как устроены I/iii/V ступени, где они расположены
+		- как устроен voice-leading
+		- write out the form of the fugue,
+			- and what i need to code to come up with something good
+			- разбить на блоки без зацеплений
+			- понять как устроены зацепления
+		- check midi in python that harmonies are correct
+		- release the files, do a write-up/blog-post
+
+		- CS1 заполняет дырки
+			- что он делает гармонически?
+		- что делает CS2?
+			adds second note (and in 1 place a major chord)
+			(first note is duplicated though or зацеплена)
+		- analyze motion: contrary, similar, oblique
+			по-моему в этой фуге это not important
+		
+
+	S+CS1
+	0..0/0000+0..0/0.00+0.00/0.00+0..0/0000
+	111./.11.+.11./.11.+.11./.11.+.11./..1.
+	=
+	x110/0cc0+0110/01s0+01s0/01c0+0110/00s0
+	CS2
+	2.2./..2.+2..2/2..2+2..2/2..2+2222/2.??
+	
+	S+CS2 не работает, есть дырки
+	CS1+CS2 почти работает:
+	x1x./.12.+2112/2112+2112/2112+2xx2/2.1?
+	S+CS1+CS2:
+	?121/1231+2112/2122+2122/2122+2222/21??
+
+	chords in measures:
+		01-04: I=9/A
+				I=9/A, ii=11/Bmin, iii=1/C#min, IV=2/D, V=4/E, vi=6/F#min
+				(vii0=8/G#dim, not used)
+		05-08: V=4/E
+		09-10: (IV=2/D + I=9/A)*2
+		11-14: I = 9/A
+		15-16: (V=4/E + IV=2/D)*2
+		17-18: (iii=1/C#min + ii=11/Bmin)*2
+		   19: I=9/A + ii=11/Bmin
+		   20: (I=9/A + V=4/E)*2
+		21-24: vi=6/F#min
+		25-28: iii=1/C#min
+		29-30: (ii=11/Bmin + vi=6/F#min)*2
+		31-32: (iii=1/C#min + ii=11/Bmin)*2
+		33-36: I=9/A
+		37-40: V=4/E
+		modulation to 5/F ionian
+		41-42: (IV=2/D + I=9/A)*2
+		   43: iii=9/Amin, I=5/F, IV=10/Bb
+				switched to 5/F ionian: 5, 7, 9, 10, 0, 2, 4
+					(? 9/Amin phrygian)
+				I=5/F, ii=7/Gmin, iii=9/Amin, IV=10/Bb, V=0/C, vi=2/Dmin
+				(vii0=4/Edim, not used)
+				iii=9/Amin ~ P(9/A)
+				- DONE: why this scale? how it relates to 9/A ionian?
+				it's chromatic mediant
+				i think actually all of non-diatonic modulations here are with 1 common tone
+		   44: I=5/F
+		   45: I=5/F + ii=7/Gmin
+		   46: vi=2/Dmin + V=0/C + IV=10/Bb + V=0/C
+		47-50: I=5/F
+		51-54: IV=10/Bb
+		modulation to IV=10/Bb ionian ~ 3/Eb Lydian
+			(or same as 3/Eb ionian with viio replaced with vii,
+				because we don't use ii and iv chords here)
+			3/Eb lydian: 3, 5, 7, 9, 10, 0, 2
+				I, V, I, vii (lyd), I, V, vi, I, iii, V, I
+			(ionian: 10, 0, 2, 3, 5, 7, 9
+				IV, I, IV, iii, IV, I, ii, IV, vi, I, IV)
+		   55: I=3/Eb + V=10/Bb
+		   56: I=3/Eb + vii=2/Dmin
+		   57: I=3/Eb + V=10/Bb
+		   58: vi=0/Cmin
+		   59: I=3/Eb + iii=7/Gmin + V=10/Bb
+		   60: I=3/Eb
+		modulation to F# harm min: "9/A (ionian) with III instead of iii"
+				DONE: how it relates to 3/Eb (or 10/Bb)?
+				6/F#min is chromatic mediant of 3/Eb
+		   61: III=1/C# + vi=6/F#min + IV=2/D
+		   		there's no single diatonic scale here
+					1/C#: 1,5,8; 6/F#min: 6,9,1; 2/D: 2,6,9
+					1,2,5,6,8,9(,11)
+					6/F# harm min — missing B/11
+					1/C# Phrygian dominant
+					9/A Major #5 (this is exactly "III instead of iii")
+				III=1/C# is probably P(iii=1/C#min)
+				if this is F# harm min, then progression is
+					V=1/C# + i=6/F#min + vi=2/D
+				if we reinterpret 6/F#min as part of I=9/A, then
+				i=6/F#min + vi=2/D ~ vi=6/F#min + IV=2/D
+		62-65: I=9/A
+				NOTE: after this point, no more chromatics in bass voice!
+		Tonnetz: all major chords connected by held 4/E in bass
+		   66: !=0/C + !=9/A
+		   67: !=4/E + !=0/C
+		   68: !=9/A
+		   		comments on 66-68:
+				4/E is iii in 0/C
+				4/E is V in 9/A
+				4/E is I in 4/E
+				9/A is chromatic mediant of 0/C
+				(roots 9,0,4 are also forming an Amin chord)
+				- Tonnetz: 3 major chords with common vertex
+				- every second (major) chord in PRLPRL cycle
+				- 2 of them in octatonic cycle/stripe
+				- 2 of them in diatonic scale/stripe
+				- 2 of them in hexatonic cycle/stripe
+		(here it feels like a modulation to home)
+		   69: I=9/A + V=4/E
+		70-75: I=9/A
+		76-78: IV=2/D
+		79-82: I=9/A
+		some more Tonnetz chromatics
+		   83: !=0/C
+		   		C ~ PR(A); octatonic strip
+				chromatic mediant
+		   84: I=9/A
+		   		(as if we modulated back home)
+		modulation to F#
+		   85: V=1/C# + iii=10/A#min
+		   		at first the C# could be heard as a chromatic mediant, so !=1/C#
+				C# ~ LP(A)
+		   		NOTE: what is interesting - in middle voice we have only C# notes, no A#
+				C# ~ LP(A); hexatonic strip
+				A#min ~ R(C#); octatonic or diatonic move
+		   86: I=6/F#
+		   		85-86; C#+A#min+F# = F# ionian
+				I=6/F#, ii=8/G#min, iii=10/A#min, IV=11/B, V=1/C#, vi=3/D#min
+				(vii0=5/E#dim, not used)
+		   87: !=2/D
+		   		D ~ PL(F#); hexatonic strip
+					(it's reverse move compared to A->C#)
+		   		6/F# + 2/D have same bass hote
+				implying D harm maj, or HEX(1, 2)
+					1,2,6,9,10
+					HEX(1, 2): 1,2,5,6,9,10
+					D harm maj: 1,2,4,6,7,9,10
+					A#min: 10,1,5, also in HEX(1, 2)
+				or maybe we are already home
+					I=9/A, ..., IV=2/D, ..., vi=6/F#min
+					but vi is switched from minor to major
+					then it's VI-IV-VI-IV-I
+		   88: I=6/F# + !=2/D
+		   		IV=2/D in 9/A ionian
+		final modulation to home
+				DONE: what is this modulation from 2/D (or 6/F#) to 9/A?
+				i think it's still a chromatic mediant
+		89-90: I=9/A + vi=6/F#min + I=9/A
+		   91: V=4/E
+		   92: I=9/A
+		   93: (I=9/A + iii=1/C#min)*2
+		   94: I=9/A
+		   95: (I=9/A + iii=1/C#min)*2
+		96-99: I=9/A
+
+
+Bach #4 C# minor
+	m030: 3/D# 6/F# 10/A# 3/D# 11/B
+	m112: 1/C# 9/A 5/E# 8/G# 1/C#
+
+
+https://www.organduo.lt/blog/how-to-improvise-prelude-and-fugue-for-the-organ-in-the-baroque-style
+The steps for improvising the fugue:
+	1. Choose a meter and a theme (subject) of 2-3 measures long.
+	2. Exposition: play the subject in tenor (tonic key) with the left hand. Other voices are silent.
+	3. Play the answer in alto (dominant key) with the right hand. Tenor plays counter-subject at that time which contrasts with the subject rhythmically and melodically. Tip: do not mix duplets and triplets together into one subject or counter-subject. End in the tonic.
+	4. Play the subject in the soprano with the right hand (tonic key). Alto and tenor (the left hand) move as little as possible.
+	5. Play the answer in the bass with pedals (dominant key). One of the three upper voices play in paralel thirds or sixths with the bass. This concludes the exposition (end in the dominant).
+	6. With soprano silent, play a 2 measure sequence with the material taken from the subject.
+	7. Counter-exposition: play the answer in the soprano in the dominant key (4 voice texture with pedals).
+	8. With the pedals silent, play a 2 measure sequence leading to the tonic key.
+	9.  Play the theme in the pedals in the tonic key (4 voice texture).
+	10. Play 2 measure interlude with the material from the subject in the soprano (4 voices with pedals).
+	11. Play the answer in the pedals in the dominant key (4 voice texture).
+	12. Play the answer in the soprano in the dominant key (4 voices with pedals). At the end make a modulation to the tonic and conlude wih a perfect cadence in the home key.
+
+
+
+
+Improvising Fugue: A Method for Keyboard Artists
+https://academic.oup.com/book/45559/chapter-abstract/394705232?redirectedFrom=fulltext
+	- 1 Introduction to Furno
+		This chapter presents preliminary information concerning the study of Giovanni Furno’s ten partimenti. Readers learn what a partimento is and how it is to be studied, and a system of solving partimenti known as “recognize, realize, stylize.” The chapter explains the limits of the Roman numeral system of musical analysis and why thinking in partimento terms is better for improvisation. A brief overview of figured bass explains that technique’s basics. The chapter explains Rule of the Octave in major and minor keys along with the 4-6 Exceptions, and provides instruction in how these ideas are to be studied. The chapter concludes with recommendations for practicing Rule of the Octave.
+			Consonance and Dissonance
+			Root Position and Inversion
+			Figured Bass
+			Rule of the Octave
+			Voice Leading and Parallels
+			Simple RO
+			4-6 Exceptions
+			Practicing
+	...
+
+- fugue / counterpoint
+  - BAIN MUSC 726C - The Counterpoint of J.S. Bach
+  https://reginaldbain.com/vc/musc726c/
+
+
+- изучить код mansourati для контрапункта на supercollider/python
+	https://github.com/MichaelMansourati/counterpoint
+		- тут оказывается другой код, чем у меня
+	- интересная штука
+		lastDegreeDict = (
+		1: degree,
+		2: degree + 4,
+		3: degree - 3
+		);
+	- ...
+
+- Palestrina Style
+	https://www.ars-nova.com/cpmanual/palestrina.htm
+
+- Mathematical Musick
+	The Contrapuntal Formula of Dr. Thomas Campion
+	https://www.shipbrook.net/jeff/counterpoint/
+
+
+контрапункт/counterpoint:
+    - 1.1 lines/motifs/melodies
+        ...
+    - 1.2 motif/melody reuse, constraint
+        ...
+    - 2. harmonies, constraint
+        - jazz
+            -voicing
+                root-shell-pretty
+            ...
+        - functional harmony:
+            secondary dominants
+            borrowed chords
+            (?) chromatic mediant
+                но в принципе эта штука работает через voice-leading, через арпеджио
+            non-diatonic harmony (7th chords)
+            (?) comma pumps and enharmonicity
+            non-chord tones
+            big 18
+            cadences
+
+
+
+Consonances according to Tomás de Santa María
+https://www.youtube.com/watch?v=oIMNTMreIig
+The first piece with basso continuo and how it can teach you counterpoint!
+https://www.youtube.com/watch?v=lq2gmVqaM6k
+
+
+
+rules for second line in 1st counterpoint:
+	rules for starting and ending
+		1. first and last intervals = perfect consonances
+		2. next-to-last interval = sixth
+	rules of motion:
+		1. from any consonance (perfect or imperfect) to
+			a perfect consonance, the voices must move in
+			oblique or contrary motion
+		2. from perfect to imperfect, the voices must move
+			in oblique, contrary or similar motion
+		3. from imperfect to imperfect, any motion is allowed
+
+контрапункт
+	строим мелодию вверх
+	на каждую ноту
+	получаем массивы вариантов
+	нам нужно построить одну траекторию
+	можно ещё зафиксировать стартовый интервал (хотя можно и забить)
+	и финал в виде каденции (вот это лучше сделать)
+	получаем на самом деле граф
+	хотя если мы хотим ещё учесть всякую иерархию, имитацию, voice exchange,
+		проходные диссонансы, suspension'ы
+	но думаю можно всё же, какое-то динамическое программирование с небольшой памятью
+
+ещё:
+	диссонансы на слабой доле
+		поправить параллельные октавы и квинты с учётом слабых долей
+	можно ещё добавить ограничение на неповторение одного и того же интервала 3 раза подряд
+		хотя это редко будет происходить
+	google: voice exchange counterpoint
+		хотя вроде понятно
+	google: 7-6 2-3 suspension
+	google: cadential formula
+
+
+
+Repeating Contrapuntal Patterns
+Dmitri Tymoczko (Princeton University)
+Abstract: In my talk I will define a new theoretical tool, the “repeated contrapuntal pattern,” which can be found throughout music from the Renaissance to the present day.  Repeated contrapuntal patterns unify a host of common devices from sequences to rounds to atonal “wedge” voice leadings to Renaissance idioms having no common name.  Musically, they combine a voice leading with a permutation determining how that voice leading is to be reapplied.  Geometrically, they are closely related to the parallel transport of vectors.  I provide examples from rock music, Palestrina, Beethoven, jazz, Stravinsky, Schoenberg, and Ligeti.
+
+
+todo:
+Polymodal chromaticism
+https://en.wikipedia.org/wiki/Polymodal_chromaticism
+
+
+https://en.wikipedia.org/wiki/Counterpoint
+Considerations for all species
+The following rules apply to melodic writing in each species, for each part:
+
+The final must be approached by step. If the final is approached from below, then the leading tone must be raised in a minor key (Dorian, Hypodorian, Aeolian, Hypoaeolian), but not in Phrygian or Hypophrygian mode. Thus, in the Dorian mode on D, a C♯ is necessary at the cadence.[13]
+Permitted melodic intervals are the perfect fourth, fifth, and octave, as well as the major and minor second, major and minor third, and ascending minor sixth. The ascending minor sixth must be immediately followed by motion downwards.
+If writing two skips in the same direction—something that must be only rarely done—the second must be smaller than the first, and the interval between the first and the third note may not be dissonant. The three notes should be from the same triad; if this is impossible, they should not outline more than one octave. In general, do not write more than two skips in the same direction.
+If writing a skip in one direction, it is best to proceed after the skip with motion in the other direction.
+The interval of a tritone in three notes should be avoided (for example, an ascending melodic motion F–A–B♮)[14] as is the interval of a seventh in three notes.
+There must be a climax or high point in the line countering the cantus firmus. This usually occurs somewhere in the middle of exercise and must occur on a strong beat.
+An outlining of a seventh is avoided within a single line moving in the same direction.
+And, in all species, the following rules govern the combination of the parts:
+
+The counterpoint must begin and end on a perfect consonance.
+Contrary motion should dominate.
+Perfect consonances must be approached by oblique or contrary motion.
+Imperfect consonances may be approached by any type of motion.
+The interval of a tenth should not be exceeded between two adjacent parts unless by necessity.
+Build from the bass, upward.
+
+
+First species[edit]
+In first species counterpoint, each note in every added part (parts being also referred to as lines or voices) sounds against one note in the cantus firmus. Notes in all parts are sounded simultaneously, and move against each other simultaneously. Since all notes in First species counterpoint are whole notes, rhythmic independence is not available.[15]
+
+In the present context, a "step" is a melodic interval of a half or whole step. A "skip" is an interval of a third or fourth. (See Steps and skips.) An interval of a fifth or larger is referred to as a "leap".
+
+A few further rules given by Fux, by study of the Palestrina style, and usually given in the works of later counterpoint pedagogues,[16] are as follows.
+
+Musical scores are temporarily disabled.
+Short example of "first species" counterpoint
+Begin and end on either the unison, octave, or fifth, unless the added part is underneath, in which case begin and end only on unison or octave.
+Use no unisons except at the beginning or end.
+Avoid parallel fifths or octaves between any two parts; and avoid "hidden" parallel fifths or octaves: that is, movement by similar motion to a perfect fifth or octave, unless one part (sometimes restricted to the higher of the parts) moves by step.
+Avoid moving in parallel fourths. (In practice Palestrina and others frequently allowed themselves such progressions, especially if they do not involve the lowest of the parts.)
+Do not use an interval more than three times in a row.
+Attempt to use up to three parallel thirds or sixths in a row.
+Attempt to keep any two adjacent parts within a tenth of each other, unless an exceptionally pleasing line can be written by moving outside that range.
+Avoid having any two parts move in the same direction by skip.
+Attempt to have as much contrary motion as possible.
+Avoid dissonant intervals between any two parts: major or minor second, major or minor seventh, any augmented or diminished interval, and perfect fourth (in many contexts).
+In the adjacent example in two parts, the cantus firmus is the lower part. (The same cantus firmus is used for later examples also. Each is in the Dorian mode.)
+
+Second species[edit]
+In second species counterpoint, two notes in each of the added parts work against each longer note in the given part.
+
+Musical scores are temporarily disabled.
+
+Short example of "second species" counterpoint
+Additional considerations in second species counterpoint are as follows, and are in addition to the considerations for first species:
+
+It is permissible to begin on an upbeat, leaving a half-rest in the added voice.
+The accented beat must have only consonance (perfect or imperfect). The unaccented beat may have dissonance, but only as a passing tone, i.e. it must be approached and left by step in the same direction.
+Avoid the interval of the unison except at the beginning or end of the example, except that it may occur on the unaccented portion of the bar.
+Use caution with successive accented perfect fifths or octaves. They must not be used as part of a sequential pattern.
+Third species[edit]
+Musical scores are temporarily disabled.
+
+Short example of "third species" counterpoint
+In third species counterpoint, four (or three, etc.) notes move against each longer note in the given part.
+
+Three special figures are introduced into third species and later added to fifth species, and ultimately outside the restrictions of species writing. There are three figures to consider: The nota cambiata, double neighbor tones, and double passing tones.
+
+Double neighbor tones: the figure is prolonged over four beats and allows special dissonances. The upper and lower tones are prepared on beat 1 and resolved on beat 4. The fifth note or downbeat of the next measure should move by step in the same direction as the last two notes of the double neighbor figure. Lastly a double passing tone allows two dissonant passing tones in a row. The figure would consist of 4 notes moving in the same direction by step. The two notes that allow dissonance would be beat 2 and 3 or 3 and 4. The dissonant interval of a fourth would proceed into a diminished fifth and the next note would resolve at the interval of a sixth.[13]
+
+
+This is an example of a double passing tone in which the two middle notes are a dissonant interval from the cantus firmus. A fourth and a diminished fifth.
+
+This is an example of a descending double neighbor figure against a cantus firmus.
+
+This is an example of an ascending double neighbor figure (with an interesting tritone leap at the end) against a cantus firmus.
+Fourth species[edit]
+In fourth species counterpoint, some notes are sustained or suspended in an added part while notes move against them in the given part, often creating a dissonance on the beat, followed by the suspended note then changing (and "catching up") to create a subsequent consonance with the note in the given part as it continues to sound. As before, fourth species counterpoint is called expanded when the added-part notes vary in length among themselves. The technique requires chains of notes sustained across the boundaries determined by beat, and so creates syncopation. Also it is important to note that a dissonant interval is allowed on beat 1 because of the syncopation created by the suspension.
+
+Musical scores are temporarily disabled.
+Short example of "fourth species" counterpoint
+
+Fifth species (florid counterpoint)[edit]
+In fifth species counterpoint, sometimes called florid counterpoint, the other four species of counterpoint are combined within the added parts. In the example, the first and second bars are second species, the third bar is third species, the fourth and fifth bars are third and embellished fourth species, and the final bar is first species.
+
+Musical scores are temporarily disabled.
+Short example of "Florid" counterpoint
+
+
+
+
+
+
+
+Counterpoint from the works of Schoenberg, Stravinsky, Crumb, Lutoslawski
+
+The course is based on the examination of different realms of 20th-century counterpoint through the detailed analysis of contrapuntal styles and techniques of leading innovative composers such as Ravel, Stravinsky, Shostakovich, Hindemith, Bartók, Messiaen, Honegger, Barber, and composers of the New Viennese School. More recent stages in the evolution of counterpoint will be studied in examples by Ligeti, Lutoslawski, Penderecki, Schnittke, and Gubaidulina, as well as contemporary American composers.
+
+KS Sorabji wrote a few fugues, and other contrapuntal works that are a far pace from the norm. Just ask nearly anyone here for an opinion! :P
+
+Paul Hindemith is someone who would be good to look at. He is sort of the "new Bach", who created many works that parallel those of Bach, such as his Ludus Tonalis (sort of a new WTC) or his Kammermusik series (sort of a new set of Brandenburg Concertos). He has 3 great piano sonatas and lots of other piano works.
+
+One major (and obvious) composer comes to mind: Shostakovich. His Preludes and Fugues, Op.87 are a landmark of 20th century counterpoint. He wrote some other smaller sets of contrapuntal piano music as well. Of course this music from Stalinist USSR which kept Shosty under its thumb, and it isn't "contemporary/modernist" is any real way, but there's a lot of fine counterpoint there. I hear that Jenny Lin has just released a new recording of the work.
+
+Bartok (string quartets), some of the Ligeti etudes, Shosta p/f, Berg chamber concerto...
+
+A lot of 8 bit music does this, because it helped cover up the inherently bad quality of their medium. Pokemon springs to mind.
+	The pokemon centre theme is actually insanely good for this
+	Every pokemon song fr. Learning Pallet Town on the keyboard was harder than some Bach.
+	I think Scarborough Fair / Canticle by Simon and Garfunkel classes as counterpoint
+But I assume that when you say "counterpoint", you mean a part where the different voices are pretty much equally important and there isn't necessarily one "main melody". The chorus of "Africa" by Toto would be a pretty good example. It starts with just one simple two-note melody, but more and more voices are added to it, and when people sing along with the chorus, they many times actually change to another voice as the chorus progresses (probably partly because it's a bit boring to sing the same two notes over and over again, and what is happening in the other voices sounds more interesting, but maybe also because what some people perceive as the "main melody" changes during the chorus - at first they hear the two-note melody as the main melody, but when more voices are added, they start hearing one of the "more interesting parts" as the main melody).
+The intro of "Stairway to Heaven" could also be seen as a good example of counterpoint. The acoustic guitar is playing the main melody and a descending bassline at the same time. You could see those as just blocks of notes and just analyze them as chords, but if that's the only thing you do, that would kind of miss the point of what is happening - there is a melody that is harmonized with a chromatically descending line. In the beginning they move in contrary motion, and the two middle voices stay still. What chord label do we give to the second chord? Who really cares? The contrary motion in the top voice and the bassline, and the stationary middle voices, are what result in that chord. Saying that it is an Am Eaddb6/G# C/G D/F# Fmaj7 progression and analyzing it with roman numerals i V bIII IV bVI on its own doesn't really tell much about how it actually works. I mean, why does the V go to bIII? Where does the major IV chord come from? I guess it could be argued that the major IV is "borrowed from Dorian" and the V bIII progression is some kind of a "deceptive resolution", but does that really explain much about how it actually works? I think it at least misses the point.
+
+Not exactly popular, but the prog rock band Gentle Giant was full of counterpoint
+	Knots
+	No God's a Man
+	On Reflection 1978 BBC
+
+
+counterpoint
+https://www.youtube.com/watch?v=DWjyds4yRAA&list=PLSntcNF64SVW2hG6S7j78_cXg_13ZWN0q&index=2
+
+
+
+Dynamic Programming Algorithms Applied to Musical Counterpoint in Process Composition: An Example Using Henri Pousseur’s Scambi
+	https://github.com/ljcochrane/Scambi_Kit
+Automatic species counterpoint composition by means of the dominance relation
+Algorithmic composition based on optimization of self-similarity and vividness corresponding to "A Harmonics-Based Algorithm Unifying Counterpoint and Harmony".
+	http://www.kramann.info/unifying/
+Composing Fifth Species Counterpoint Music With A Variable Neighborhood Search Algorithm
+COUNTERPOINT BY CONVOLUTION
+	https://github.com/czhuang/coconet
+	https://github.com/magenta/magenta/tree/master/magenta/models/coconet
+	https://coconets.github.io
+COUNTERPOINT GENERATOR
+	http://www.danieliglesia.com/research/
+https://github.com/wbowditch/Algorithmic-Species-Counterpoint
+A machine learning approach to two-voice counterpoint composition
+	https://www.researchgate.net/publication/223684209_A_machine_learning_approach_to_two-voice_counterpoint_composition
+Algorithmic Counterpoint: How I Wrote a Computer Program to Generate Music at Mathcamp 2011
+	https://luckytoilet.wordpress.com/2011/08/10/algorithmic-counterpoint-how-i-wrote-a-computer-program-to-generate-music-at-mathcamp-2011/
+	https://code.google.com/archive/p/contrapunctus/
+Pseudo-Genetic Algorithmic Composition
+	https://www.cs.miami.edu/home/harald/pgac/index.html
+
+
+https://music.tutsplus.com/tutorials/the-contemporary-musicians-guide-to-counterpoint--audio-4630
+https://music.tutsplus.com/tutorials/music-theory-intervals-and-how-to-derive-them--audio-4559
+8bit counterpoint

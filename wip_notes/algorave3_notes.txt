@@ -1,0 +1,988 @@
+для klangfarbenmelodie можно:
+  Permutational algorithms that change the order or patterning of pitch sequences to generate new ones
+  Change Ringing
+  Rotational Technique
+  которые в Кнуте есть алгоритмы
+
+
+базовая система композиции:
+  - беру мотиф, например, сочинённый вручную
+  с темпами
+  - фиксирую шкалу нот, нехроматическую
+  - докидываю преобразований
+  - создаю какое-нибудь дерево рекурсивное, которое будет описывать линейное
+
+
+music21 анализ:
+http://web.mit.edu/music21/doc/usersGuide/usersGuide_23_romanNumerals.html#usersguide-23-romannumerals
+http://web.mit.edu/music21/doc/usersGuide/usersGuide_20_examples2.html
+https://web.mit.edu/music21/doc/moduleReference/moduleAnalysisDiscrete.html
+
+analysis
+https://en.wikipedia.org/wiki/Schenkerian_analysis
+https://en.wikipedia.org/wiki/Musical_syntax
+https://en.wikipedia.org/wiki/Prolongation
+https://en.wikipedia.org/wiki/Implication-Realization
+GTTM
+
+Cymbal synthesis tutorial
+http://www.mcld.co.uk/cymbalsynthesis/
+
+композиция
+  есть пул музыкальных моделей
+  примеры музыкальных моделей:
+    контрапункт
+    прогрессии аккордов
+    какая-нибудь сонорика
+    что-то со спектром
+    что-то с ритмом
+
+  музыкальная модель - это база
+  эта база обладает какой-то психоакустической логикой
+    например, контрапункт учитывает консонантность интервалов
+    прогрессия аккордов строится на основе какой-то музыкальной шкалы
+
+  эту логику надо учитывать при построении композиции
+    при склеивании соседних кусков, например
+
+  есть форма композиции
+    генерируется тема-база
+    и всячески трансформируется
+
+  форма представляет из себя процесс/form growth
+    например динамическую систему
+    или какой-нибудь логический вывод/доказательство
+
+  где-то отдельно ещё - взаимодействие с supercollider'ом
+
+  есть ещё правда момент оркестровки
+
+
+план по computer music:
+  logic/linguistics/form growth
+    хочу как-то эти три штуки скрестить в одну
+    причём в виде музыкальных композиций
+    учитывающих психоакустику
+  есть набор музыкальных модулей
+    и операций трансформаций
+  есть наборы логик
+    типа контрапункта
+
+  в результате хочу получать музыкальные композиции
+    а также логическое обоснование полученной композиции
+    возможно и психоакустическое
+
+  во, хорошая метафора:
+    https://ebsynth.com
+    "Bring your paintings to animated life."
+    правда у них буквально на вход подаются видео и стилизованная первая картинка
+  вот я наверно что-то такое же хочу
+    типа есть какой-то сид, мотив
+    и дальше идёт процесс (логического, психоакустического) оживления этого мотива
+
+  но для начала можно попробовать просто поискать логику развития, скажем
+  в ode/pde
+
+timbre:
+https://www.actorproject.org/tor/timbre-lingo
+https://www.actorproject.org/tor/amazing-moments-in-timbre
+
+computer music
+https://github.com/HeinrichApfelmus/david-cope-cmmc
+
+supercollider 8bit
+https://github.com/redFrik/f0plugins
+
+supercollider sound design
+https://www.youtube.com/watch?v=0REQ4dAoimg
+
+
+
+==============================
+
+
+tidalcycles, классный пример
+https://twitter.com/moistpeace/status/1316423875358420993
+
+
+ddw livecode
+http://www.dewdrop-world.net/display.php?src=works.md
+альтернатива
+https://depts.washington.edu/dxscdoc/Help/Tutorials/JITLib/jitlib_basic_concepts_04.html
+
+
+Sleet – A library / factory for SuperCollider sound effects
+Particular – A package for particle synthesis
+AllBuf – Create all possible buffer player patches as SynthDefs in SuperCollider (all = many)
+Else – A collection of useful and/or weird pattern classes
+PolyBuf – Easily load and access a bunch of audio files into collections of buffers
+KFilter – Tiny quark that adds a nodeproxy role for \kfilter
+
+синты
+https://github.com/theseanco/awesome-synthdefs
+Week 3: SynthDef, Synth, Iteration, Routines - MUS 499C Fall 2019 - Audio Coding with SuperCollider
+https://www.youtube.com/watch?v=fRJf98iwNE0
+https://github.com/SCLOrkHub/SCLOrkSynths
+https://github.com/everythingwillbetakenaway/Synthdefs
+https://github.com/supercollider-quarks/SynthDefPool/tree/master/pool
+перкуссия
+https://github.com/josecaos/caosperclib
+8бит
+https://github.com/redFrik/f0plugins
+
+
+General strategies
+1. Building / reworking an instrument (using NodeProxy/Ndef)
+2. Writing or modifying patterns (using ProxySpace/Pdef)
+3. A mix of the above~snip.("gran")
+
+
+
+
+что с этим можно сделать?
+https://github.com/cmloegcmluin/Scala-scale-archives
+тонны scala файлов со шкалами
+
+
+detunedFreq actual "pitch" of a synth, determined by:
+  freq + detune;
+  freq     = (midinote + ctranspose).midicps * harmonic
+  midinote = (note + gtranspose + root) / stepsPerOctave * octave * 12
+  note     = (degree + mtranspose).degreeToKey(scale, stepsPerOctave)
+
+
+
+было бы забавно сделать незаметно сдвиг на такт каким-нибудь образом
+в ритме
+
+
+31edo
+1/4-meantone:
+maj2 min3 maj3 perf5
+ 5    8    10   11
+
+
+перед алгорейвом
+  перезапустить ноут
+  проверить качество интернета
+  привести экран в порядок
+
+todo:
+  - доразобраться с нотами, аккордами
+  - доизучить breakcore
+    bbcut
+https://www.celesteh.com/blog/tag/bbcut/
+pdf: Towards Autonomous Agents for Live Computer Music: Realtime Machine Listening and Interactive Music Systems
+bbcut2.scd
+  - поизучать синты
+  - поизучать bjorklund
+https://github.com/supercollider-quarks/Bjorklund/blob/master/Bjorklund.sc
+https://github.com/supercollider-quarks/Bjorklund/blob/master/Bjorklund2.sc
+https://github.com/supercollider-quarks/Bjorklund/blob/master/Pbjorklund.sc
+https://github.com/supercollider-quarks/Bjorklund/blob/master/Pbjorklund2.sc
+
+
+Pdefn(\m, -4); // change takes effect on 4-beat boundary.
+
+todo:
+можно попробовать закодить идеально сбалансированные ритмы
+
+todo:
+научиться в сниппеты
+
+todo:
+добить dynamic tonality или тему вложений
+что-то удобное придумать
+и распознаваемое на слух
+цикл for
+http://danielnouri.org/docs/SuperColliderHelp/Language/Control-Structures.html
+
+todo:
+breakbeat in supercollider
+или попробовать через синхронизацию с tidal
+tidal https://www.youtube.com/watch?v=BzDy8r1Bjz8
+
+todo
+изучить все эффекты tidal'а
+https://tidalcycles.org/index.php/All_effects_and_synths
+
+
+=========
+=========
+
+
+demo0:
+сначала задаю oh
+добавляю l и sn, h, k
+потом ring1
+потом копирую ring1
+потом кодю et31
+потом фигачу мелодии
+потом stop и fade
+
+
+
+0,1,..,11
+это et12
+
+я хочу чуть подвинутые числа
+надо
+
+Scale.new(degrees: 'ionian', pitchesPerOctave, tuning, name: "Unknown Scale")
+
+
+значит хитро
+если я хочу сыграть до-ми-соль
+в dynamic tonality
+и сделаю сдвиг 700+k центов,
+то
+  до стоит на месте,
+  соль сдвинется на k центов,
+  ми сдвинется на 4k центов
+(а ведь можно ещё и следующих гармоник накинуть по фану)
+
+как это удобнее всего закодить?
+
+
+
+DYNAMIC TONALITY
+Dynamic Tonality consists of two related ideas: Dynamic Tuning and Dynamic Timbres.
+Dynamic Tuning
+Tuning invariance enables real-time changes in tuning along its tuning continuum while retaining consistent fingering. We call such a smooth, real-time, polyphonic tuning change, driven by widening or narrowing the tempered P5, a polyphonic tuning bend.
+In such a bend, the notes flatter than the tonic (around a circle of fifths) change pitch in one direction while those sharper than the tonic change pitch in the other direction, with each note’s rate of change being directly proportional to its distance from the tonic along a line of P5’s.
+Enhancing Expressiveness
+Altering the width of the P5 in real time allows a performer to emulate the dynamic tuning of string and wind players who prefer Pythagorean (or higher) tunings when playing expressive melodies, _-comma meantone when playing consonant harmonies, and 12-TET when playing with fixed pitch instruments such as the piano [18].
+
+
+Tuning Progressions
+A sequence of tuning bends can form a tuning progression. One could start by playing C Major’s tonic triad in 12-TET (P5 = 700), then sliding the width of the P5 generator up to 5-TET (P5 ≈ 720). The pitch of C would not change at all (because it is the tonic). However, the pitch of G would rise by 20 cents (because it’s one P5 away from C, and all P5’s have been widened by 20 cents), and the width of E would rise by 80 cents (because it is four P5’s away from C). This would widen the gap between C and E from 400 cents (14 cents sharper than a just major third) to 480 cents (18 cents flatter than a just perfect fourth).
+William Sethares’ composition C to Shining C uses this tuning progression (http://tinyurl.com/6ksc9b).
+
+
+Temperament Modulations
+A temperament modulation involves a change of temperament via a pivot tuning.
+12-TET tuning falls within the tuning continua of both the syntonic and schismatic temperaments. In 12-TET tuning, the diminished fourth (d4) and major third (M3) have the same width: 400 cents. This makes the schismatic and syntonic temperaments enharmonically equivalent in 12- TET, so 12-TET can be used as a pivot tuning between the schismatic and syntonic temperaments.
+One could start a tuning progression in 31-TET/syntonic, using syntonic note-choice rules. For example, one would play major triads as (root, M3, P5).
+Then one could tune up to 12-TET, and indicate a change in temperament to schismatic through a user interface gesture. One would then also change note-choice to match the new temperament, playing (for example) major triads as (root, d4, P5). This change of temperament would not be detectable in 12-TET, because the syntonic & schismatic temperaments are enharmonic in that tuning.
+Then, one could tune up to 53-TET, continuing to use schismatic note-choice rules, playing musical patterns that are indigenous to the schismatic temperament but not to the syntonic, to emphasize the effect of the temperament modulation.
+One could then either tune back to 31-TET/syntonic by using 12-TET as a pivot tuning, or modulate from 53- TET/schismatic to some other temperament via some other pivot tuning. Cyclical temperament modulations that pass through a number of different temperaments before returning to the initial temperament would enable temperament progressions.
+
+
+To have the option of consonance in any tuning, tuning and timbre must be tempered together.
+Dynamic Timbre
+In Dynamic Tonality, a given temperament defines (through its generators and comma sequence) an invariant pattern which is used to electronically temper both tuning and timbre dynamically in real time. Aligning tuning with timbre (or vice versa) maximizes consonance [17].
+The syntonic temperament associates the Harmonic Series’
+- 2nd partial with the octave (P8),
+- 3rd partial with the tempered perfect fifth (P5),
+- 5th partial with the tempered major third (M3), which is defined to be four P5’s wide, minus two P8’s (i.e., [(4 * P5) + (-2 * P8)]).
+Note that the width of the M3is defined by a combination of P5’s and P8’s (those being the temperament’s generators). The same is true for every interval in the syntonic temperament.
+In Dynamic Tonality, the structure of a tempered timbre is modified away from the Harmonic Series (exactly as a tempered tuning is modified away from Just Intonation) by adjusting its partials to maintain their alignment with the current tuning’s notes.
+
+For example, in 12-TET tuning,
+- the P8 is untempered at 1200 cents wide, aligning with the timbre’s 2nd partial 1200 cents above the 1st partial (i.e., the fundamental);
+- the P5 is tempered to be 700 cents wide, and the timbre’s 3rd partial is placed 700 cents above its 2nd partial; and
+- the M3 is tempered to be 400 cents wide (i.e., [(4*700) + (-2*1200)] = [(2800) + (-2400)] = 400), and the timbre’s 5th partial is placed 400 cents above its 4th partial.
+Similarly, in _-comma meantone tuning,
+- the P8 is untempered at 1200 cents in width, aligning with the timbre’s 2nd partial 1200 cents above the 1st partial (i.e., the fundamental);
+- the P5 is tempered to be 696.6 cents wide, and the timbre’s 3rd partial is placed 696.6 cents above its 2nd partial, and
+- the M3 is tempered to be 386.4 cents wide (i.e., [(4*696.6) + (-2 * 1200)] = [(2786.4) + (-2400)] = 386.4), and the timbre’s 5th partial is placed 386.4 cents above its 4th partial.
+All along the syntonic tuning continuum, the width of the tempered P5 (combined with the unchanging width of the P8 at 1200 cents and the unchanging rules of the syntonic temperament, such as M3 = [(4*P5) + (-2*P8)]), determines the placement of the timbre’s partials and the width of the tuning’s intervals. This paired tempering of tuning and timbre maximizes the consonance of tonal intervals all along the tuning continuum.
+Dynamic Tonality, combined with the Wicki note-layout, appears to offer a general solution to the problem of temperament [8]—i.e., a solution that delivers both consonance and modulatory freedom across all keys and tunings, enabling the performer to slide smoothly among tunings with consistent fingering and without loss of consonance. It is general in that it works for every octave, key, and syntonic tuning; however, it is specific in that it only works for isomorphic button-fields driving compatible electronic synthesizers (not traditional acoustic instruments).
+Timbre Effects
+Dynamic Tonality enables efficient timbre manipulations that are relevant to the structure of tonality, including sonance and primeness [14].
+Sonance
+Dynamic Tonality enables one to adjust a timbre’s partials to change their sonance— i.e., consonance or dissonance—on the fly, in real time.
+Primeness
+Consider a harmonic timbre’s 2nd, 4th, 8th, 16th, ...2nth partials. Their prime factorization contains only the number “two,” so they can be said to embody twoness. Likewise, the 3rd, 9th, 27th, ...3nth partials are factored only by three, and so can be said to embody threeness; while the 5th, 25th, 125th,...5nth partials embody fiveness, and so on. On the other hand, the 10th partial can be factored into both 2 and 5, so it embodies both twoness and fiveness, while the 20th partial, being factored as 2*2*5, can be said to embody twice as much twoness as fiveness.
+In Dynamic Tonality, one can manipulate a tempered timbre to enhance its twoness, threeness, fiveness, etc.—generally, its primeness—on the fly.
+Turning twoness down will lead to an odd-partial-only timbre like that of closed-bore cylindrical instruments (e.g., the clarinet). Turning up the twoness would gradually re-introduce the even-numbered partials, creating a sound like that of open-bore cylindrical instruments (e.g., flute or shakuhachi) or conical bore instruments (e.g., the saxophone, bassoon, or oboe). Adjusting the other primenesses would produce different but highly-distinctive changes in timbre.
+Likewise, one could use real-time timbre changes to emphasize the bluesy quality of a piece, phrase, or even a single note by turning up the sevenness (given the role of the 7th partial in defining the width of the “blue intervals” of the blues scale [11]).
+
+
+- про вложения
+надо подумать ещё про визуализацию
+и про аттрактор лоренца или рёсслера
+
+
+live coding
+  https://iclc.toplap.org/2015/html/5.html
+  google: Tartini (The real time music analysis tool)
+
+
+spectral attack
+release
+granular sustain
+decay
+спектральная нормализация
+
+
+
+https://github.com/yacodes/sclang-tutorials
+https://oro.open.ac.uk/28690/1/ScaleLabyrinth-Final.pdf
+https://github.com/toplap/awesome-livecoding
+http://jeremah.co.uk/blog/permalink/livecoding_with_supercollider_learning_to_crawl
+https://leanpub.com/ScoringSound/read#leanpub-auto-preface
+
+
+
+supercollider live coding
+  t.schedAbs( t.nextBar
+  Pbind
+  Pseq
+  Pxrand
+  Array.series
+  Pstutter
+  Place
+  Scale.minor
+  Pseries
+
+\scale, \root, \amp, \pan, \dur, \sustain, \octave, \degree
+\instrument, \kit
+
+You can go to Edit -> Preferences -> Editor -> Fonts & Colours and change the colours for each attribute such as background, font, or highlight colour. Hope that helps.
+
+
+
+
+How do you make the Pbinds play in this case?
+I got it to work after sometime as this:
+(
+a.schedAbs({a.nextBar,{
+    Routine.run({
+        ~melody.stop;
+        s.sync;
+        ~melody = Pbind( pairs with changes ).play;
+        })
+    }
+})
+)
+
+
+
+ddwSnippets
+https://github.com/jamshark70/ddwSnippets
+scvim
+https://github.com/sbl/scvim
+
+Euclidean Rhythms
+https://github.com/supercollider-quarks/Bjorklund
+Chaos?
+http://doc.sccode.org/Classes/ChaosGen.html
+? Common fundamental frequencies
+https://github.com/cappelnord/BenoitLib/blob/efca4d59cd570deb2e2f3edd3b526ab33b45b411/patterns/Pkr.sc
+о, есть партч
+http://doc.sccode.org/Classes/Scale.html
+
+
+Install the recommended Quarks
+(
+Quarks.install("Bjorklund");
+Quarks.install("BatLib");
+Quarks.install("ddwSnippets");
+)
+
+
+
+
+
+
+https://vk.com/wall-165133811_373
+заявка
+https://forms.gle/TxDgKK9wEvbVLJuh8
+https://docs.google.com/forms/d/e/1FAIpQLSePXfVk4doMG3woHqctjMm9dcb6wjLOg9Lt4U-2T1xkZjx3fw/viewform
+
+
+
+Ризомское биеннале
+
+Мы объявялем Open Call на 1-ю Ризомскую Биеннале Современного искусства. Тема биеннале - TAB PORN. Присылайте скриншоты, фотографии, монументальную графику, карманные инсталляции. Ваши работы станут частью экспозиции. !!! В рамках биеннале пройдет КОНКУРС на лучшую работу и победитель получит ценный приз и рецензию на работу от нескольких передовых критиков и одного мертвого.
+
+Некоторые пояснения темы Tab Porn. Речь идет в первую очередь о вкладках в интернет браузере. У нас часто одновременно открыто много страниц, о некоторых мы забываем и они вместе с актуальными страницами висят мертвым грузом и образуют ризоматический порядок наших интересов. Именно этот порядок и становится темой биеннале. Вы можете просто сделать скриншот открытых страниц в интернет-браузере и прислать нам, или же вы можете как-то более сложно поработать с этой темой.
+
+1-е Ризомское Биеннале. Спешите! Это Ваш шанс поучаствовать в одном проекте с лучшими российскими художниками! Арсений Жиляев, Алиса Йоффе, Алексей Таруц, Кирилл Савченков, Виталий Безпалов, Алена Селецкая, Ирина Горбачева, Ирина Петракова... и многие-многие другие из тех, кто создаёт сегодня новую культуру для всех нас, жителей Земли.
+
+
+
+
+что-нибудь спекулятивное нужно?
+типа что такое вклад*ка будущего?
+
+вклад*ка - инклюзивная вкладка
+включает в себя:
+  вкладки в браузере (tab),
+  вкладки в стоматологии (inlay/onlay/overlay/pinlay),
+  вкладки в книгопечатании (вложенный в книгу особый дополнительный лист)
+вложение - в почте (attachment), в экономике (investment), в математике (embedding)
+(+ вклад, вкладыши, вложенный, вложенность, вкладывать, вложить, вложиться)
+(embedding - это ещё и векторный имбеддинг)
+вкладка - волос укладка
+вкладка (феминитив для "вклад")
+  попалось во вкладке
+  вкладка за вкладкой
+  закрыть вкладку
+  разбирал вкладки
+  переключать вкладки
+  переключиться на другую вкладку
+  перстень со вкладкой
+вложения
+  нулевые вложения
+  доля вложений
+  иностранные вложения
+  вложения такого типа
+  без лишних вложений
+  во вложении выше
+  добиться вложений
+  финансовые вложения
+  вложения в торговлю
+  симметричное вложение
+  прибыльное вложение
+  вложения не окупаются
+  серьёзные вложения
+вложенность
+  вложенные нарративы
+  вложенный смысл
+  вложенное отображение
+  вложенный вызов "композиция морфизмов осуществляется через композицию функций (т.е. их вложенный вызов)"
+  вложенный труд
+  уровни вложенности
+складка - pli, вкладка - onglet
+
+украдкой
+а лучше в закладки упрячу навечно
+каждое падение браузера с сотнями вкладок
+является хорошей инвестицией в экономику спасённого времени
+
+
+
+складки делёза:
+  складка Бытия
+  складка экстериорности
+
+Идея складки (и разглаживания [dépli]) всегда преследовала Фуко: не только его стиль, даже синтаксис у него то образует складки, то разглаживается, но так работает сам язык в книге о Русселе («сгибать слова»), так работает мысль в «Словах и вещах», и главным образом именно в этом состоит открытие, сделанное Фуко в его последних книгах: так работает искусство жить (субъективация).Что такое складки и разглаживания хорошо знают читатели Хайдеггера. Тут — несомненно ключ ко всей его философии («Близящаяся мысль на пути к Складке бытия и бытийствующего»). У Хайдеггера находим «Открытость»**, складку бытия и бытийствующего как условие любой видимости феномена, человеческая действительность как бытие далей***. У Фуко: внешнее, изгиб линии Внешнего, человеческая реальность как бытие Внешнего. Вероятно, отсюда — сближение с Хайдеггером, о котором Фуко говорит в последних интервью.
+
+В «Пространстве внутреннего» Мишо пишет: «Ребёнок появляется на свет с двадцатью двумя складками. Их необходимо разгладить. Тем самым жизнь человека будет завершена. В таком виде он умирает. У него не остаётся ни одной складки. Редко умирает человек, совсем не имея складок, которые надо разглаживать. Но такое случалось». Мне кажется, этот текст очень близок Фуко. Складки и разглаживания резонируют у него схожим образом. Только у него всего четыре главных складки, а не двадцать две:
+  складка, образуемая нашим телом (это если мы греки, а если христиане — то плотью, то есть для каждой складки возможны вариации),
+  складка, образуемая силой в момент, когда она обращается на саму себя, а не на другие силы,
+  фальцовка, образуемая истиной в её отношении к нам, и наконец,
+  последняя складка — складка самой линии внешнего, благодаря которой возникает «внутреннее измерение ожидания» [intériorité d’attente].
+
+
+
+О складке:
+
+Когда-то я написал книгу о великом философе Лейбнице, в которой я развиваю понятие, незначительное для него, но важное для меня — понятие «складки». И что же произошло потом? Я, как всегда, получил множество писем — замечательных, ярких писем, которые меня очень тронули… Но два письма были совершенно особенными, они меня поразили. Первое письмо было от французской ассоциации производителей складных картонных папок. Они писали, что полностью со мной солидарны, так как мы с ними занимаемся одним делом. Ну ладно, думаю, может быть и так… Затем я получил второе письмо, от серфингистов. На первый взгляд ничего общего с производителями папок. Но серфингисты также утверждали, что «складка» — это они, так как они постоянно погружаются в складки волн. То, что говорят эти люди, замечательно. Они действительно размышляют о том, что они делают. Что может быть прекраснее?
+
+
+14. Pliability — отсылка одновременно к «складке» Делёза (pli; соответственно — гибкость, складчатость) и к переговорам между акторами (соответственно — сговорчивость, уступчивость). — Прим. ред.
+
+
+кладка и ложка
+
+клад,     кладка,                     лог,     ложка,
+вклад,    вкладка,    вкладывание,    влог,             вложение,
+          выкладка,
+доклад,
+заклад,   закладка,                   залог,            заложение,
+наклад,   накладка,                   налог,            наложение,
+оклад,
+          обкладка,   обкладывание,   облог,   обложка, обложение,
+переклад, перекладка, перекладывание, перелог,          переложение,
+                                      полог,            положение,
+          подкладка,                  подлог,
+                                      предлог,          предложение,
+приклад,  прикладка,  прикладывание,                    приложение,
+          прокладка,                  пролог,
+                      откладывание,
+склад,    складка,    складывание,                      сложение,
+расклад,  раскладка,  раскладывание,                    разложение,
+уклад,    укладка,                                      уложение,
+яйцеклад, яйцекладка
+
+перезаклад
+самонаклад
+трубоклад
+содоклад
+самоклад
+нефтесклад
+зерносклад
+
+гладко
+
+путеукладка
+
+раскладушка
+
+блог
+
+перезалог
+диалог
+налог
+аналог
+продналог
+сельхозналог
+каталог
+послелог
+эпилог
+монолог
+аполог
+мартиролог
+некролог
+
+суперобложка
+неотложка
+
+изложение
+низложение
+возложение
+отложение
+
+налогообложение
+самообложение
+капиталовложение
+контрпредложение
+саморазложение
+предположение
+противоположение
+рукоположение
+законоположение
+соположение
+местоположение
+расположение
+предрасположение
+нерасположение
+благорасположение
+месторасположение
+жироотложение
+
+
+Лейбниц — философ складки и сложности
+лучший из возможных миров внутри предустановленной гармонии,
+  допускающей разнообразие лишь при ограниченном наборе законов
+Складка есть различие или сгиб, который может быть отличным и различаться.
+Складка не есть точка, доля или часть материи;
+она
+  избегает оппозиции Единое — Многое, общее — индивидуальное,
+  рассматривает материю как множественную и одновременно непрерывную и
+  предлагает решение вечного философского вопроса о дуализме души и тела от Платона до Уайтхеда.
+Развёртывание может лишь образовать новую складку.
+В «барочной» монадологии Лейбница всё складывается, развёртывается, изгибается.
+Барокко есть линия, которая создаёт складки и скручивает их до бесконечности:
+описание интерьера дома барокко есть аллегория пространства складки.
+
+
+Складка позволяет миру помещаться в субъекте (монаде): монада находится внутри мира и является миром, хотя и не включает в себя его основание[486]. Так, мир согрешившего Адама существует только в самом Адаме (и в других монадах), хотя это Бог создал мир, в котором Адам согрешил[487][488]. Монада формируется складкой как «линией внешнего»: сгиб в темпоральных процессах производит точку зрения[489]. Место включения монады в мир и сама монада попадают в точку зрения и пребывают в ней: вариация точки зрения пересекает душу и тело, как волна звука или света[490][486]. В мире нет единой точки зрения, поскольку сам мир — складка, он существует в виде бесконечного множества сходящихся и расходящихся серий[490]. Это не относительность истины, а условие видимости субъектом истины относительности[491][492]. У монады «нет окон и дверей», она выражает весь мир с её точки зрения, а поскольку она выражает тот же мир, что и другие монады, то у них нет потребности в коммуникации[493]. Монада радуется гармониям мира и испытывает радость от самой себя[К 23][494][493]. Монада ясно выражает лишь небольшую часть мира: степень ясности зависит от степени силы, поэтому цель монад в усилении знания как ясности, их силы и способности к радости[493]. Возникающие диссонансы можно разрешить, обращаясь к другим гармониям; крайний пример — христианские мученики, которые пели гимны во время казней[493].
+
+Крах теологического конструкта в середине XVII века драматично открыл эпоху модерна; коперниканско-галилеевский переворот впервые столкнулся с бесконечностью, которая была вызовом для философов того века[495]. Решая проблему времени, Лейбниц допустил существование Бога и предустановленной гармонии: мир бесконечен, но закрыт, поскольку избран Богом как лучший из возможных миров[496][497]. Однако этот мир не единственный, ведь возникают расхождения и несовозможности[496]. Лейбниц сконструировал серии миров, где расходящиеся серии и несовозможные события подчиняются закону противоречия, поскольку происходят в различных мирах и совершаются разными самостями[498][496]. Лейбниц спас истину и решил проблему зла, но ценой проклятия — в прерванных становлениях и расходящихся мирах сингулярности[К 24] обречены провести вечность, а «лучший из возможных миров стоит на плечах про́клятых»[495][497]. Лейбниц верил в этический характер суждения Бога, который знал разницу между добром и злом и выбрал лучший из миров. Без этой веры во врождённую добрую природу самого разума существующий мир можно было бы опровергнуть как вопиющую ошибку, неистину, ложь[500].
+
+Монады обладают одинаковым потенциалом, но принципы гармонии и закрытости предполагают селекцию, отбор монад-сингулярностей при схождении серий, согласно требованию их совозможности. Лейбниц не мог допустить идею вселенной как поля битвы расходящихся серий, гигантской головоломки без правил[501]. Однако теологическая система, где Бог делает выбор между различными возможными мирами, приводит к сложности барокко, колоссальной системе комбинаций, в которой необходимо выбирать не только сингулярности, но и события, которые их создают[502]. Лейбниц — последователь стоиков, открывших бестелесный предикат события, и предшественник Ницше и Уайтхеда: антикартезианский мир Лейбница есть событие[503][504]. Бытие и точка зрения монады соответствуют процессу селекции, событию, движению вселенной вперёд: монады открыты расходящимся сериям и несовозможностям, поскольку сами развёртывают, актуализируют мир в его бесконечности[502][505][4]. Больше нет Бога, который выбирает лучший из возможных миров: Бог — это чистый процесс[К 25], который утверждает несовозможности и проходит через них[4]. Вместо лейбницевской пирамиды возможных миров возникает Сад расходящихся тропок Борхеса, который развёртывается много раз и разными способами[506]. Монада как нематериальная сущность существует во времени, а не в пространстве, поэтому время есть линия внешнего, которая прерывает гармонию через смерть, уничтожение или «неотношение»[483][507]. Больше нет предустановленной гармонии; расхождения и несовозможности принадлежат одной хаотической вселенной, где бесконечно расходящиеся серии порождают неустранимые сильнейшие разлады и диссонансы. Делёз использует термин «хаосмос» (слово заимствуется у Джойса)[4][508]. Линия времени предлагает новый дар жизни: монады уже живут не в закрытом гармоничном мире, а должны воздействовать друг на друга. Способность к действию и изменению зависит от отношения к памяти, содержащей другие возможные миры и различные способы существования[507].
+
+
+
+
+================================================================
+
+
+
+Siren
+https://github.com/cannc4/siren/
+https://ince.io/Can_Ince_MA_Huddersfield.pdf
+https://ince.io/Siren_ICMC17.pdf
+https://ince.io/Siren_NIME18.pdf
+
+
+
+
+tidal cycles
+https://detund.bandcamp.com/album/cycles
+
+пример кода tidal cycles:
+do
+let snarPat = "~ [sn:2]"
+d1
+$ degradeBy "1 0.9 0.75 0.2 1 0.9 0.2 1 1 0.5 1 1 1 0.7 0.1 1"
+$ fast 8
+$ foldEvery [3,10,15] (#delay (range 0 0.5 $ rand))
+$ every 3 (chop 256)
+$ every 7 ( # pan (slow 1.8 (sine)))
+$ iter (cycleChoose[4,8,12])
+$ s "sk:1 ~ sk:2"
+# pan (range 0 1 $ (slow 3) sine)
+# (slow 6) (speed "1 <1 3 0.7 5.2>")
+# delayfeedback (cycleChoose[0.1,0.2,0.3,0.7, 0.001])
+# delaytime (choose[(1/16),(3/16),(1/32),(5/16),(7/32),(9/32)])
+# orbit 1
+# cps 0.32
+d2
+$ fast 2
+$ stack
+[
+fast 2 $
+degradeBy "1 1 0.3 1 0.3 1 1 1 0.3 1 1 0.4 1 1 0.4 1" $
+((range 0.0 0.8 $ rand) ~>) $ s snarPat
+# delay (range 0.4 0.8 $ rand)
+# gain (range 0.6 1.0 $ rand)
+# delaytime (choose[(1/8),(1/16),(3/16)])
+# delayfeedback (range 0.1 0.9 $ rand) # speed (cycleChoose[0.9,1,2]),
+snarPat # speed (range 1 1.1 $ (slow 128) sine) # pan (range 0.4 0.6 $ rand)
+]
+# release (range 0.07 0.3 $ rand)
+# room (range 0 0.5 $ rand)
+# size (range 0 0.8 $ rand)
+# orbit 1
+d3
+$ slow 1
+$ within (0.2, 0.8) (stut (cycleChoose[5,3,8]) (range 0.3 0.9 $ rand) (cycleChoose[(3/16),(1/16),(1/8),(1/32)]))
+$ s "sk:0" # speed 0.8
+# orbit 1
+d4
+$ degradeBy "0 0.4 0.8 0.3 0.3 0.8 0.2 0.532 0.45 0.1 0.8 0.8 0.3 0.614 0.5 0.8"
+$ fast 4
+$ whenmod 3 2 (hurry (choose[2,4,8,16]))
+$ whenmod 8 7 (#attack 0.2)
+$ sound "violin" # cut "2"
+# gain 0.8
+# begin (range 0 0.5 $ (slow 3) rand)
+# speed (choose[0.125,0.25])
+# lpf (range 2000 11000 $ rand)
+# release (range 0.2 0.4 $ (slow 4) rand)
+# room 0.9
+# size 0.9
+# up (slow 16 (cycleChoose[0,4,7,5,11,9]))
+# orbit 0
+d5
+$ fast 1
+$ every 7 (hurry (choose[2]))
+$ ((cycleChoose[0.25,0.125,0.5]) ~>)
+$ s "bs:3" # cut "5" # up (cycleChoose[0,4,9,11])
+# gain 0.8
+# speed (cycleChoose[0.5,1])
+# end 0.7
+# decay 3
+# orbit 1
+d6
+$ fast 1
+$ loopAt (fast 16 ("<0.5 0.25 0.125 1>"))
+$ chop 64
+$ foldEvery [7,11,19] (0.25 ~>)
+$ foldEvery [6,13] (# accelerate 0.2)
+$ chunk 5 (# speed "<2 4 0.5 1>")
+$ iter (cycleChoose[2,8,4])
+$ s "tm tm*2 click:2 cp:2"
+# release (range 0.02 0.1 $ (slow 8) sine)
+# pan (range 0 1 $ (slow 2) rand)
+# orbit 1
+# gain 0.8
+# speed (cycleChoose[0.25,0.5,1,2])
+d7
+$ every 3 (hurry 4)
+$ striate (cycleChoose[16,32,1])
+$ loopAt (cycleChoose[1,0.5,0.25,0.125])
+$ s "click ~ ~ click ~ ~ cy:2 ~"
+# up (cycleChoose[0,7,9,12])
+# speed (cycleChoose[0.5,1,2,4])
+# release (range 0.01 0.02 $ (slow 3) sine)
+# orbit 1
+# gain 0.7
+d8
+$ slow "8 4 3"
+$ striate 16
+$ every 3 (zoom (0.4, 0.6))
+$ fast "0.5 0.25"
+$ s "lead*2 <lead*8 lead*12 lead*4>"
+# up (choose[0,4,9,11,7])
+# speed (cycleChoose[0.25,0.5,1,2])
+# gain 0.8
+# release (range 0.05 0.2 $ (slow 4) sine)
+# orbit 1
+
+unsolo 8
+
+hush
+
+
+
+================================================================
+
+
+p=ProxySpace.push(s);
+p.makeTempoClock;
+Task
+.loadRelative
+StageLimiter.activate;
+Quarks.install('BatLib')
+
+sc3-Plugins
+Concat and Concat2
+  concatenative synthesis
+  'reconstruct' speech using existing samples
+Decimator and SmoothDecimator
+  Bitcrushing effect
+SawDPW (and PulseDPW)
+  Alternatives to SuperCollider's native Saw and Pulse Ugens
+DFM1
+  scuzzy-sounding filter
+  self oscillation to make rich drones
+CrossoverDistortion
+  savage distortion
+WaveLoss
+  An effect for dropping sections of waveforms
+  Produces a 'degradation' effect
+BenoitLib
+Bjorklund Quark
+  Euclidean Rhythms
+BatLib Quark
+  StageLimiter
+  side-chaining
+ddwSnippets Quark
+  snippets
+
+(
+Quarks.install("https://github.com/jamshark70/ddwSnippets.git");
+)
+
+
+ProxySpace and it's associated JITLib
+http://doc.sccode.org/Overviews/JITLib.html
+
+Mix
+CombN
+
+
+effects proxy
+multichannel expansion
+
+patterns
+
+ProxyMixer class uses SuperCollider's GUI to automatically create a visual mixer to change the levels of all 'instruments' created.
+
+ProxySpace (and JITLib in general) also have great documentation, which i'd recommend:
+http://doc.sccode.org/Tutorials/JITLib/proxyspace_examples.html
+http://doc.sccode.org/Tutorials/JITLib/jitlib_basic_concepts_01.html
+http://doc.sccode.org/Overviews/JITLib.html
+
+patterns
+  Pbind
+
+
+Tdef(\task).stop;
+
+
+
+The Setup.scd file does the following things:
+- Increase the number of buffers available for SuperCollider to load
+- Increase the amount of memory size available to the Server, to allow for more CPU-heavy work
+- Boot the server
+- Display the server Oscilloscope (Which I regularly use as visuals in my set)
+- Start ProxySpace, and make a 60BPM proxy tempo clock
+- Lines 20-27:
+- Creates a Dictionary, d, to hold samples
+- Recursively loads all samples of the correct set in the samples folder. These samples are organised into folders which contain the samples. The name of the folder will be added as an entry to the dictionary, and the samples will be added as sub-entries.
+- For example, if you wanted to reference the second sample in the kick drum folder you would use d["k"][1] (d for the dictionary, "k" as kickdrums are held in directory "k", and 1 as you are referencing the second sample)
+- Loads the SynthDefs.scd file, containing some custom SynthDefs which I use inside of patterns.
+Notably the necessary synthdef for playing samples bplay, and some instruments such as sinfb and ring1.
+8. Loads the Snippets.scd file, which contains some snippets to be loaded into the ddwSnippets Quark, for easy access during performance, which include basic percussion patterns, some functions and some patterns that have a lot of default arguments I might not remember while performing
+9. Starts StageLimiter from the BatLib quark, to protect everyone's ears
+10. Posts a message to show all the above have been completed
+
+
+
+scale: the scale and tuning used - scales can be listed with Scale.directory and tunings with Tuning.directory (default Scale.major(\et12))
+degree: the degree of the scale to be played (default 0)
+octave: the octave of the scale to be played (default 5)
+
+Scala Scale library through quarks such as TuningLib and TuningTheory, and arbitrary scales can be specified
+https://github.com/supercollider-quarks/TuningLib
+https://github.com/thormagnusson/TuningTheory
+
+
+
+
+Prewrite
+.flat
+.stutter
+.asStream
+
+
+Constructing TidalCycles-like 'riffs' containing multiple percussion samples is really quite hard in SuperCollider
+
+Pkey
+
+
+sidechain:
+Take this rehearsal excerpt for example, where the 'bell' sounds are being 'pumped' by the bass drum, it's not too subtle
+https://soundcloud.com/co-3-4-pt/rehearsal_170220_114908
+Or skip to 1.22 in this glitchy excerpt, the irregular pitched-up clap is literally cutting off the atonal chimes underneath it
+https://soundcloud.com/co-3-4-pt/broken_rehearsal_151117_225533
+There's also the first half of this set where I am attempting to riff on some tropes from Psytrance
+https://co34pt.bandcamp.com/album/live-icmus-introducing-bar-loco-15-6-16
+
+
+
+The loop would play over 8 cycles of the ProxySpace TempoClock (p.clock.tempo). This is achieved by using this equation for the rate control:
+
+((BufFrames.ir(buf)/s.sampleRate)*p.clock.tempo/dur)
+
+
+
+It's important to note that the degrees of a scale start from 0 when using patterns, with (0..7) being a full octave of a major or minor scale.
+
+
+пример использования классов
+http://supercollider.sourceforge.net/audiocode-examples/
+atari, или sn76489
+  http://www.fredrikolofsson.com/pages/code-sc.html#plugins
+
+
+
+todo:
+разобрать пример
+
+//A musical example of alternative tunings
+//one of my favourites is the et53 tuning, using it to slightly disturb a central pitch on multiple instruments, sounds really nice in acid-type music
+//by selectively deploying et53, a very narrow pitch range can become normal, making large pitch leaps within an octave seem huge when used.
+(
+p.clock.tempo = 150/60;
+d[\scale] = Scale.chromatic(\et53);
+l = Pbjorklund2(Pwhite(1,13),16)/4;
+//notice the \degree argument - ranges from -8 to +8, but this difference is nowhere near an octave
+~ring3 = Pbind(\instrument,\ring1,\f,Pkey(\freq),\scale,d[\scale],\degree,Pwhite(-8,8),\octave,Pwrand([2,3],[0.8,0.2],inf),\dur,l,\d,0.24,\a,Pexprand(10,400),\pan,0,\amp,1.5);
+~sn = Pbind(\instrument,\bplay,\buf,d["s"][1],\dur,l,\amp,0.8);
+~h = Pbind(\instrument,\bplay,\buf,d["ch"][1],\dur,l,\amp,0.8);
+~k = Pbind(\instrument,\bplay,\buf,d["k"][1],\dur,1,\amp,2);
+~ring3.play;~sn.play;~h.play;~k.play;
+)
+//adding more acid lines which diverge even less. Also adding percussion
+(
+~ring2 = Pbind(\instrument,\ring1,\f,Pkey(\freq),\scale,d[\scale],\degree,Pwhite(-4,4),\octave,5,\dur,l,\d,0.37,\a,Pexprand(1,40),\pan,1,\amp,0.5);
+~ring1 = Pbind(\instrument,\ring1,\f,Pkey(\freq),\scale,d[\scale],\degree,Pwhite(-4,4),\octave,4,\dur,l,\d,0.38,\a,Pexprand(1,40),\pan,-1,\amp,0.5);
+~ring2.play;~ring1.play;
+)
+//another acid line that diverges quite a bit. also open hats
+(
+~oh = Pbind(\instrument,\bplay,\buf,d["oh"][1],\dur,Pseq([0.5,Pseq([1],inf)],inf),\amp,2);
+~oh.play;
+~ring4 = Pbind(\instrument,\ring1,\f,Pkey(\freq),\scale,d[\scale],\degree,Pwhite(-8,8),\octave,7,\dur,l,\d,0.21,\a,Pexprand(1,100),\pan,1,\amp,0.8);
+~ring4.play;
+)
+//repetitive distorted \sinfb riff, using the whole octave
+(
+~sinfb = Pbind(\instrument,\sinfb,\scale,d[\scale],\octave,[5,6],\degree,Place([0,0,-52,[30,20,10],[52,40,25,20],[10,11,9,3,6],[30,36,39,40]],inf),\dur,0.25,\amp,0.5,\fb,Pwhite(10.5,900.5),\rel,Pexprand(0.1,0.5));
+~sinfb.play;
+)
+//remove percussion
+(
+~k.stop;~sn.stop;~h.stop;
+)
+
+
+
+Place
+
+
+Demand
+
+
+
+syncing SuperCollider and TidalCycles: EspGrid
+https://www.youtube.com/watch?v=YlpMFIhlU_k
+*UPDATE* - shortly after this video was made the step of starting Tidal's link to EspGrid was simplified further - now it is just evaluating "espgrid tidal" in your environment.
+
+
+
+
+music:
+Dettmann | Klock - Phantom Studies [Ostgut Ton]
+https://www.youtube.com/watch?v=dsiZO6oAekE
+Basic Channel - Phylyps Trak
+https://www.youtube.com/watch?v=CUD4RaRSSio
+DJ Rashad - I Don't Give A Fuck (Hyperdub 2013)
+https://www.youtube.com/watch?v=SWTsLnYO68U
+Holly Herndon - Interference [Official Video]
+https://www.youtube.com/watch?v=ybzSWlpgJOA
+Mark FELL_Concert PRESENCES électronique 2014
+https://www.youtube.com/watch?v=s15wdk2xQik
+Mobilegirl Boiler Room Berlin DJ Set
+https://www.youtube.com/watch?v=LzjI-pmnIUA
+Black Sun Empire - Cruel and Unusual (FULL ALBUM)
+https://www.youtube.com/playlist?list=PLtm40rX-YnThMy9IHMs4Tgwj5cIo9Kau6
+Skepta - Shutdown
+https://www.youtube.com/watch?v=MQOG5BkY2Bc
+I Dont Like Instrumental
+https://www.youtube.com/watch?v=2L-nP1UDPAw
+Floorplan a.k.a. Robert Hood - Never Grow Old (Re-Plant) [M-PLANT]
+https://www.youtube.com/watch?v=iC6sOXnBglE
+David Guetta - Titanium ft. Sia (Official Video)
+https://www.youtube.com/watch?v=JRfuAukYTKg
+COSMIC ENERGY - PSYTRANCE MIX 2017 [RYDHM DEE]
+https://www.youtube.com/watch?v=HdxQJ_C0kdQ&feature=youtu.be&t=34m2s
+Renick Bell - Fractal Beats 151212 (edit)
+https://soundcloud.com/renick/fractal-beats-151212-edit
+Mory Kante - Yeke Yeke (Hardfloor Remix)
+https://www.youtube.com/watch?v=YDZ9HYCAknc
+Faithless - Insomnia (Official Video)
+https://www.youtube.com/watch?v=P8JEm4d6Wu4&feature=youtu.be&t=2m16s
+Holden - Renata
+https://www.youtube.com/watch?v=2FmFXQSIzCo
+Belisha Beacon - This Is Fine
+https://fractalmeat.bandcamp.com/album/this-is-fine
+
+
+https://www.youtube.com/watch?v=dcNe-LojWpM
+JUtil.monitor(s)
+Tdef
+inf.do
+.play(quant: 4)
+var step = 0;
+inf.do {arg i;
+step = i & 16;
+}
+
+
+https://www.youtube.com/watch?v=4StN13Ql8b4
+заголовок
+эффекты
+ритм 5/4
+использует choose для рандомизации сэмпла
+Pstutter
+dorian
+Pbindef на каждый отдельный параметр на каждой строчке
+второй сет!
+на гамеланах
+Pn, Plazy, Pseq
+третий сет
+t.sync
+t.tempo_
+
+
+https://www.youtube.com/watch?v=CCp00Z5z7MY
+\rate, Pseq([1,1.8],inf)
+
+
+
+some example sources:
+
+Oscillators
+[Saw]
+[Blip]
+
+Noise Sources
+[PinkNoise]
+[LFNoise0]
+
+some example filters:
+[HPF]
+[BPF]
+[Resonz]
+
+
+(
+{
+var source, line, filter;   //local variables to hold objects as we build the patch up
+
+source=LFNoise0.ar(400);
+line=Line.kr(10000,1000,10);
+filter=Resonz.ar(source,line,0.1); //the filtered output is the input source filtered by Resonz with a line control for the resonant frequency
+
+filter // last thing is returned from function in curly brackets, i.e. this is the final sound we hear
+}.scope;
+)

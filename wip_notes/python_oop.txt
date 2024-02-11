@@ -1,0 +1,68 @@
+more:
+  Protocol
+  Self
+  sphinx docstrings
+
+
+sardine:
+  @property
+
+
+
+python oop:
+  @property
+
+  Using relative imports (almost all the time)
+
+  python project static analysis
+  https://luminousmen.com/post/python-static-analysis-tools
+
+  black, flake8, pydocstyle,
+  pyright, mypy
+    I use both mypy and pyright. Pre-commit hook/vscode runs checks for mypy, pyright, as well as pylint, flake8, black, bandit.
+  - TypedDict
+
+  def __call__
+  def __repr__
+  def __str__
+  def __format__
+  def __contains__
+  def __enter__
+  def __exit__
+  def __setattr__
+  def __getattr__
+  def __getattribute__
+  def __getitem__
+
+  Constants.py
+
+  @classmethod
+  @staticmethod
+  @functools.wraps(fxn)
+    это используется для декораторов и правильных docstrings?
+  @Timing('bufferSearch', logargs=True)
+  @convert_pattern_args
+
+  :param str event
+
+  logger
+  slots
+  if isinstance
+
+  class Player(Repeatable):
+  class _DefaultTuning
+  class __scale__
+  class cls:, class instance:
+    это какой-то паттерн?
+
+  def __coerce__ - deprecated
+
+  type hinting
+  Docstrings
+  Iterators, Iterables, and Itertools, def __iter__
+  Generators / yield
+  Exceptions, class PlayerKeyException(Exception):
+  __match_args__
+  pytest, mypy, tox
+
+  f-strings

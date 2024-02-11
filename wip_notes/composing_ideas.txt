@@ -1,0 +1,714 @@
+- альбом треков, которые начинаются одинаково, но все с разным темпом
+
+- берём гласные
+  или форманты
+  смотрим каким они соответствуют гармоникам или обертонам
+    если это корректно, конечно
+  на гласные навешиваем слова и ритмы
+  по обертонам строим контрапункт, подгоняя основной тон как-нибудь
+
+
+- идеи для следующего micromusiclab:
+  - партитура, которую нельзя репетировать
+    например, исполняется каждый раз пара нот, или нота и отзвук следующей
+    берём aslap джона кейджа и играем текущую ноту и предыдущую (отзвук предыдущей)
+      типа откатываем произведение назад тем самым
+    при повторе - нужно сыграть новую пару нот
+    репетировать нельзя, потому что это жест откатывания, который можно осуществить только 1 раз
+    нужно на каком-то органоподобном инструменте исполнять
+  - сделать каденцию (или разрешение напряжения) на мультифониках
+  - 3д объект, на ощупь, как графическая партитура
+  - сыграть что-то на обертонах
+    или наоборот - на их тонах
+  - po-32, казу
+  - взять набор флейт разных, придумать партитуру графическую, которая могла бы работать как
+    synchronizing word
+    или как регулярный граф, разбитый на циклы; каждый из инструментов - это цикл
+    партитура - это вершины
+  - темперация по тембру
+  - может что-то на губы надеть?
+  - можно было бы мелодический comma pump сделать
+  - петь следующую ноту мелодии
+      типа иллюзии, когда слово КРАСНЫЙ написано жёлтым цветом
+      туповато
+      хотя тембрально могло бы быть интересно
+
+
+
+написать нотированную композицию
+  - live coding
+  - микрофон и звуки рта
+  - код в supercollider'е
+
+
+
+
+подумать про dtmf музыку
+
+
+
+
+
+
+(
+g = { arg c;
+  var left = 2.0 ** (3.0/10);
+  var right = 2.0 ** (4.0/10);
+  440.0 * (right ** c[0]) * (left ** c[1]);
+};
+)
+
+
+(
+Synth.new(\triwave, [\freq, g.value([0, 0])]);
+)
+
+
+
+
+
+идея для клипа и музыки
+  примерно как ryoji ikeda делает
+  взять какой-нибудь поток данных
+  который можно визуализировать хорошо
+  например - поискать что-нибудь в магнитосфере земли
+  или в пятнах на солнце
+  или сделать симуляцию - как они противостоят друг другу
+    сразу получаю клип
+    и музыку из потока данных
+  музыка а-ля ксенакис
+
+
+5-limit JI
+2^i 3^j 5^k
+=> 2d regular temperament
+T1, T2, T3:
+T1^a T2^b T3^c = 1 - comma
+T1 ≈ 2, T2 ≈ 3, T3 ≈ 5
+
+      |c| / gcd(a, c) |        0        | -a sign(c) / gcd(a, c)
+     ------------------------------------------------------------
+T =          0        | |c| / gcd(b, c) | -b sign(c) / gcd(b, c)
+
+
+(i, j, k) =>
+x = (i |c| - a k sign(c)) / gcd(a, c)
+y = (j |c| - b k sign(c)) / gcd(b, c)
+
+syntonic comma:
+     1 0 -4
+T =  0 1  4
+(i, j, k) => (i - 4k, j + 4k)
+
+5/4: (-2, 0, 1) => (-6, 4)
+alpha = 2, beta = 2^30/19 (19-tet fifth):
+alpha^(-6) beta^4 ≈ 1.24469 ≈ 5/4
+
+
+For example, 3-limit JI can be temperament-mapped to a one dimensional system using an appropriate comma T1^a T2^b = 1, where a and b are integers. One notable tempering retains the octave T1 = 2
+and tempers T2 to 2^19/12 ≈ 3. Choosing a = 19 and b = −12 results in the familiar 12-TET. This
+comma can be interpreted musically by saying that in this temperament, 19 octaves minus twelve equaltempered perfect twelfths equals a unison.
+
+
+LLsLLLsLLsLLLs
+LLsL
+ LsLL
+  sLLL
+    LLsL
+     LsLL
+      sLLs
+
+
+ещё раз:
+  - фиксирую MOS шкалу
+    канонический пример - LLsLLLs
+  - octave = L+L+s+L+L+L+s
+    generator = L+L+s+L
+  смотрим:
+  LLsL LLs/L LsLL Ls/LL sLLL s/
+  LLsL/LLs L/LLsL/LL sL/LLsL/
+  не прокатывает (ожидаемо)
+  значит тут какая-то другая идея
+  может тут только в пределах одной октавы должно сработать?
+но вопрос - как по координатам вычислить frequency?
+
+непонятно правда как этот пример посчитать, но энивей
+а дальше есть 2 крайних случая:
+  - s = 0 => L = 240, квинта = 3*L = 720.0
+  - s = L => L = 171.43, квинта = 4 * L = 685.71
+  - s = 100, L = 200 => квинта = 700.0
+    логично! тон и полутон
+вообще квинта видимо равна L+L+s+L
+вот вопрос - как это узнать - может через двухмерные цепные дроби/паруса?
+
+
+sc140
+https://archive.org/details/sc140
+https://sccode.org/tag/category/sc140
+https://ia800202.us.archive.org/29/items/sc140/sc140_sourcecode.txt
+https://llllllll.co/t/looking-for-recommendations-on-music-made-with-supercollider/17757
+
+
+magenta
+https://magenta.tensorflow.org/piano-transformer
+
+webern
+https://www.jstor.org/stable/833554?seq=1#page_scan_tab_contents
+https://www.jstor.org/stable/3647771?seq=1#page_scan_tab_contents
+https://digital.sandiego.edu/cgi/viewcontent.cgi?article=1016&context=honors_theses
+http://www.essl.at/works/webernuhrwerk/download.html
+
+
+https://en.wikipedia.org/wiki/Regular_diatonic_tuning
+https://en.wikipedia.org/wiki/Wicki-Hayden_note_layout
+https://en.wikipedia.org/wiki/Harmonic_table_note_layout
+http://homepages.cae.wisc.edu/~sethares/software/TFSdocs/aboutordinalranges.html
+http://homepages.cae.wisc.edu/~sethares/software/TFSdocs/aboutscalesteps.html
+http://homepages.cae.wisc.edu/~sethares/software/TFSdocs/aboutpurerange.html
+http://homepages.cae.wisc.edu/~sethares/software/TFSdocs/aboutdiamond.html
+http://homepages.cae.wisc.edu/~sethares/software/TFSdocs/aboutMOS.html
+http://homepages.cae.wisc.edu/~sethares/software/TFSdocs/aboutspecmap.html
+
+
+можно оказывается по-простому сделать:
+фиксирую MOS шкалу
+канонический пример - LLsLLLs
+непонятно правда как этот пример посчитать, но энивей
+а дальше есть 2 крайних случая:
+  - s = 0 => L = 240, квинта = 3*L = 720.0
+  - s = L => L = 171.43, квинта = 4 * L = 685.71
+  - s = 100, L = 200 => квинта = 700.0
+    логично! тон и полутон
+вообще квинта видимо равна L+L+s+L
+вот вопрос - как это узнать - может через двухмерные цепные дроби/паруса?
+
+во что превращается хроматика? ну так чисто по фану
+по идее в 7L+5s=LsLsLLsLsLsL
+  надо проверить
+  я получил предварительно
+  LsLsLLsLsLLs
+  с точностью до сдвига это одно и то же
+тогда квинта = 4L+3s
+  s = 0 => L = 171.43, квинта = 4 * L = 685.71
+  s = L => L = 100.00, квинта = 7 * L = 700.0
+
+
+0 1 2 3 4 5 6 7 8 9 10 11
+  x   x     x   x   x
+LLsLLLs
+
+0 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18
+    x   x         x    x        x     x     x
+не вкладывается
+ну и ладно
+  надо как-то умнее это делать
+
+как это соотносится с Hex'ом?
+
+
+import math
+import numpy as np
+s=5
+L=7
+a=[math.floor(L/(s+L) * x + eps) for x in range(1, s+L+2)]; a=np.array(a); a[1:]-a[:-1]
+
+That is, the distribution of the two steps forms a Christoffel word
+
+
+может нужен класс для конкретной ноты из k-tet?
+  и добавить для неё методы + и -
+
+как я представляю мелодию:
+  есть решётка
+  на ней ноты (зафиксировали layout)
+  мелодия состоит из последовательных нажатий на ноты
+и есть пачка параметров
+  размер октавы
+  ширина генератора
+
+что я хочу увидеть от dynamic tonality:
+  стартую с 12tet
+  дальше варьирую размер генератора
+  и выписываю какие получаются новые ноты
+  и новые темперации
+
+  вообще по идее я стартую с аккорда скорее
+    потому что тогда я могу выписать предполагаемые JI отношения
+
+  понадобятся какие-нибудь классы, типа
+  hex - двумерная решётка с нотами
+    есть оказывается несколько вариантов
+    у меня был Harmonic Table note-layout
+    есть ещё Wicki-Hayden note layout
+    у них ещё и клавиши повёрнуты в разные стороны
+  k-tet
+  mos scale
+  k-limit
+  slendro
+  pelog
+
+685.71–720 (5-limit):
+       7-tet
+       26-tet
+  7 11-limit
+  | |  1/3-comma vs 19-tet
+  | |  2/7-comma vs 50-tet
+  |    1/4-comma vs 31-tet
+  |    1/5-comma vs 43-tet
+  |
+       12-tet
+       Pythagorean vs 53-tet
+       17-tet
+       22-tet
+       5-tet
+
+
+When the fifths are a little flatter than the 700 cents of the diatonic subset of 12 tone equal temperament, then we are in the region of the historical meantone tunings, which distribute or temper out the syntonic comma. They include
+
+1/3 comma meantone - achieves pure minor thirds 6/5; fifth is 694.786 cents; closely approximated by the diatonic scale in 19 tone equal temperament
+1/4 comma meantone - achieves pure major thirds 5/4 (386.313 cents); fifth is 696.6 cents; closely approximated in 31 tone equal temperament
+1/6 comma meantone[4] - achieves a rational diatonic tritone 45/32; fifth is 698.371 cents; closely approximated in 55 tone equal temperament
+1/11 comma meantone - fifth is 699.99988 cents; almost indistinguishable from 12 tone equal temperament
+When the fifths are exactly 3/2, or around 702 cents, the result is the Pythagorean diatonic tuning.
+
+For fifths slightly narrower than 3/2, the result is a Schismatic temperament, where the temperament is measured in terms of a fraction of a schisma - the amount by which a chain of eight fifths reduced to an octave is sharper than the just minor sixth 8/5. So for instance, a 1/8 schisma temperament will achieve a pure 8/5 in an ascending chain of eight fifths. 53 tone equal temperament achieves a good approximation to Schismatic temperament.
+
+At around 703.4-705.0 cents, with fifths mildly tempered in the wide direction, the result is major thirds with ratios near 14/11 (417.508 cents) and minor thirds around 13/11 (289.210 cents).
+
+At 705.882 cents, with fifths tempered in the wide direction by 3.929 cents, the result is the diatonic scale in 17 tone equal temperament. Beyond this point, the regular major and minor thirds approximate simple ratios of numbers with prime factors 2-3-7, such as the 9/7 or septimal major third (435.084 cents) and 7/6 or septimal minor third (266.871 cents). At the same time, the regular tones more and more closely approximate a large 8/7 tone (231.174 cents), and regular minor sevenths the "harmonic seventh" at the simple ratio of 7/4 (968.826 cents). This septimal range extends out to around 711.111 cents or 27 tone equal temperament, or a bit further.
+
+That leaves the two extremes, what we could call:
+
+the "inframeantone" range with fifths between the lower bound for the regular diatonic of 7 tone equal temperament (685.7143 cents) and the range of historical meantones beginning around 1/3-comma or 19 tone equal temperament (694.786 cents), and with the diatonic "semitones" approaching the size of the diatonic whole tone
+the "ultraseptimal" range from around 712 cents all the way to the upper bound of the regular diatonic at 720 cents or 5 tone equal temperament, and with very small diatonic semitones
+Diatonic scales constructed in equal temperaments can have fifths either wider or narrower than a just 3/2. Here are a few examples:
+
+15, 17, 22, have fifths wider than a just 3/2
+12 (and its multiples), 19, 31, 53, have fifths narrower than a just 3/2
+
+
+
+а ещё у них есть статья про perfect balance
+Our "big" paper about perfect balance, which we have been working for some time, is finally published. It is about the deep and intriguing mathematics behind perfect balance, and its musical ramifications. I have uploaded a preprint; the "version of record" is available at https://doi.org/10.1080/17459737.2017.1395915.
+The paper is the centrepiece of a special issue of the Journal of Mathematics and Music: "Perfect Balance and the Discrete Fourier Transform". The maths is fairly intense—more straightforward introductions to perfect balance can be found in Perfect balance: A novel principle for the construction of musical scales and meters, or XronoMorph: Algorithmic generation of perfectly balanced and well-formed rhythms, or in this video, which accompanies the new paper:
+
+
+
+
+JI граф:
+  фиксируем толерантность к звука (5 центов), и максимальное простое (7 или 11)
+  стартуем с до,
+  гуляем в пределах октавы
+  и делаем bfs
+  перебираем все возможные интервалы вверх и вниз с текущей ноты
+    с учётом толерантности
+  - какой получится граф?
+  - сколько вершин? явно больше 1200/5=240
+  - какой максимальный путь?
+  - можно ли эту процедуру дооптимизировать?
+
+
+закодить что-то в духе In C
+
+
+ismir 2018
+https://nglaz.at.yandex-team.ru/62
+
+
+спектральный альбом
+  есть мысль попробовать заюзать разные спектры
+  например - golomb ruler
+  или спектр какой-нибудь фигуры взять
+
+
+
+взять болеро равеля
+ковернуть его
+  ну или не ковырять а просто стырить чужую фонограмму
+а в конце где все подвисают на одном аккорде растянуть его ещё на столько же минут по времени в духе шелси
+
+just intonation
+https://music.stackexchange.com/questions/30531/what-are-the-characteristic-intervals-or-scales-of-13-limit-harmony-and-beyond
+
+lindenmayer system for timbre generation
+
+supercollider
+  https://composerprogrammer.com/teaching/supercollider/sctutorial/9.1%20Algorithmic%20Strategies.html
+  http://www.computermusicjournal.org
+  разобраться с библиотечкой про спектрализм - что она делает?
+  вообще тут как раз реально анализировать звук в real-time
+  и, например, реализовать hermode tuning
+    закодить всякие microtonal шкалы
+      или поюзать scala
+    закодить двумерные строи
+      попробовать поизучать - как они выбирали 12 нот из континуума вариантов
+      ещё такая мысль
+      12 нот - основано на приближении квинты
+      но можно приблизить и другой интервал
+      при этом функции мы можем вытащить из двумерной шкалы
+      фактически конструкция такая
+        берём другой интервал
+        находим равномерно-темперированное приближение и число нот
+        дальше строим двумерный строй, находим функции
+        и подбираем подходящие ноты
+    есть разные виды вибрато
+      можно было бы их закодить
+    или разные техники игры, например, у Кайла Ганна, быстрый перебор нот в шкале
+    или попробовать закодить такое:
+      есть 2 синта, 2 материала, 2 темы
+      и хочется динамическую систему, которая их как-то смешивает друг с другом
+      как в сонатах
+    закодить сатурацию (как эффект)
+    возможно также есть другие способы закодить смену тембра для произвольного синта?
+      по типу сурдины
+      или типа фольги
+      или препарации ф-но
+      или просто убивать частоты
+    закодить эффект над синтом, чтоб можно было играть на обертонах
+    закодить идею про just intonation
+      делаю tonnetz на квинтах и терциях
+      или на других интервалах
+      и ничего не темперирую
+      получаю бесконечный tonnetz
+      и гуляю по нему, аккордами и прочими способами
+      что закодить - 1) возможно выбор подходящих нот, 2) надо помнить, где мы находимся, в какой точке
+    закодить разные виды шумов?
+      типа какие были в sega game gear
+    закодить swing/свинг
+
+    макам
+      интересен мне в плане модуляции
+      ведь можно же и через арабский лад смодулировать в другую тональность?
+
+  Echos (Byzantine music)
+  Dastgah (Persian traditional music)
+  Maqam (Arabic music)
+  Makam (Arabic, Persian and Turkish classical music)
+  Raga (Indian classical music)
+  Thaat (North Indian or Hindustani music)
+  Melakarta (South Indian or Carnatic music)
+  Pathet (Javanese music for gamelan)
+  Pentatonic scale
+
+
+
+Sethares
+http://sethares.engr.wisc.edu/consemi.html
+http://sethares.engr.wisc.edu/xentone.html#anchor1361990
+http://sethares.engr.wisc.edu/papers/adaptun.html
+http://sethares.engr.wisc.edu/html/soundexamples.html
+http://sethares.engr.wisc.edu/TTSS2.htm
+google: Tuning, Timbre, Spectrum, Scale supercollider
+http://subnaught.org/supercollider/tuning-and-timbre-part-i.html
+
+
+
+algorithmic composer
+  http://www.algorithmiccomposer.com/2011/06/tom-johnsons-self-similar-melodies.html
+  http://www.algorithmiccomposer.com/2011/08/tom-johnsons-algorithmic-compositions.html
+
+
+
+spectralism/xenharmonics/dynamic-tonality
+
+
+
+что я узнал про оркестровку
+  что можно взять 2 разных инструмента
+  дать им 2 разные ноты - интервал
+  а дальше магия - надо смотреть их тембры
+  и где-то в 7-9-11-13 гармониках у них могут получиться совпадения
+  ...
+  что-то типа аддитивного синтеза?
+  ну и вообще забавно
+  это к вопросу оркестровки несколькими синтами
+  можно было бы по идее в суперколлайдере закодить такую функцию проверки - какие интервалы могли бы интересно выстрелить для какой пары синтов
+
+алгоритмы:
+  Моцарт - Musikalisches Würfelspiel
+  https://www.youtube.com/watch?v=fK2MCXpDWB4
+  совсем втупую, примерно как сочиняют фразы
+    есть сколько вариантов для первого слова
+    сколько-то для второго
+    ...
+    и решение - это путь в декартовом произведении
+
+  Шиллингер - система музыкальной композиции
+  
+  Lejaren Hiller, Leonard Isaacson - Liliac suite
+
+  Lejaren Hiller, Robert Baker - MUSICOMP
+
+  Xenakis - Pithoprakta
+
+  Xenakis - ST-xxx (здесь по-моему 3 композиции)
+
+  Gottfried Koenig - Projekt 1
+
+  John Cage - I Ching
+
+  John Cage - HPSCHD
+
+  Зарипов - Уральские напевы
+
+  The large-scale method is the area most explored thus far. It uses nonlinear dynamic systems iteratively to generate chaotic sequences of numbers that are then mapped to various note parameters (pitch, dynamic, rhythm, duration, tempo, instrument selection, attack time, etc.). Four pioneers of these methods are Jeff Pressing, Michael Gogins, Rick Bidlack, and Jeremy Leach.
+
+  The other application of chaos is at the small-scale level, which focuses on sound synthesis and timbre construction rather than on higher-level parameters such as note sequences and rhythms, etc. Two pioneers of these methods are Barry Truax (1990) and Agostino DiScipio (1990). As Truax argues, large-scale applications of chaos to composition do not make good musical sense. Truax believes, however, that "a more inherently micro-level implementation seems desirable if flexible timbre generation is to be performed" (Truax, 1990). What Truax and DiScipio experiment with, then, is applying chaos to granular synthesis, so that a chaotic texture is created by an unpredictable reformulation of the grains of a given sound file. Different degrees of chaos/unpredictability can be employed, furthermore, which deviate different amounts from the original sound that is being granulated: "Depending on the 'degree' of granulation, on the equation system and on the region of the relative logistic map to be explored, the output sounds are clearly derivative from the original or completely extraneous to it" (DiScipio, 1990).
+
+
+закодить алгоритмы для свинга
+
+
+сочинить 12тоновую композицию
+а потом подобрать сдвиги для нот, чтоб оно звучало гармонично/мелодично
+
+funky ритм,
+  но диссонансный звук
+
+можно расширить идею Хабы
+  он рассматривал иногда 24-ступени как 2 по 12
+  почему бы не взять просто 2 произвольные различные темперации нот
+  например, 5edo и 7edo
+  (хотя тут в сумме получится 11 нот, а не 12; если только сдвинуть кого из них ещё)
+  ну да, можно ещё со сдвигом поиграться
+  можно в logic pro заценить
+  diff:   0, -20, 28.57142857, -42.85714286,
+         40, -14.28571429, 0,  14.28571429,
+        -40,  42.85714286, -28.57142857, 20
+
+
+было бы забавно
+провести аналогию с нефтью в земле
+как кровь в человеке
+такая внутренняя пульсирующая система жизненная
+которая фоном музыкальным встроена в композицию
+но при этом и какие-то другие события тоже происходят
+и при этом же если событий - то и тишины нет, остаётся пульсация
+
+закодируем какой-нибудь звук в виде перестановки
+  и переберём их все по очереди
+  1234
+  1243
+  1423
+  4123
+  4132
+  1432
+  1342
+  1324
+  и т. д.
+типа braids получаются
+
+
+наверняка так кто-то делал, но
+  пытаюсь не зная что такое modal interchange как-то проинтерпретировать это название
+  можно взять значит 2 тональности, 2 аккорда
+  и написать по ним какие-то мелодии, в аккордах, скажем, те же i v iv i или что там бывает
+  в одной тональности взять один лад, в другой другой
+  и попробовать прочередовать лады между этими линиями
+
+
+нужно поизучать modes of limited transposition в других числах, не только 12
+
+
+беру код на foxdot, например
+пользователь вводит в него последовательность чисел
+которая представляет собой beta+seq решение
+если оно валидно - я генерирую композицию на основе решения
+  осталось придумать процедуру генерации
+мысль прикольна тем, что супер похожа по духу на двенадцатитоновую технику
+
+
+беру спектральный ряд для нот (y.1, y.2, ...)
+для одной ноты, для другой (1.x, 2.x, ...)
+беру ноту 
+фигачу её ряд в каком-то ритме
+беру следующую ноту
+она вступает вместе со второй гармоникой первой ноты
+то есть, короче
+одновременно звучат ноты с постоянной суммой y+x
+
+
+
+берём дискретную реакцию белоусова-жаботинского
+или вообще какой-нибудь дискретный pde в 2d
+или другие динамические процессы
+и трактуем это как значения параметров синтов
+или высот нот
+(кстати, такие идеи и лет 5 назад приходили
+и делать звуки на основе игры жизнь - не новость)
+
+
+берём последовательности из oeis
+и фигачим из них спектры
+
+
+делаю синты
+в них есть параметры, которые могут варьироваться в каких-то пределах
+фиксирую сид
+рандомизирую несколько точек в пространстве параметров
+я знаю примерное начало пути
+и знаю примерный конец, скажем
+и ищу дальше, скажем, первую точку, последнюю, и кратчайший путь в графе из точек, который по всем проходит
+гамильтонов путь, вот
+
+
+концептуальный трек-кавер на шёнберга, где я буду свистеть его мелодии
+
+
+рассчитать всякие строи, где нечётное число нот, где нет октавы, но есть расстояние в 2 октавы
+	скажем, 17 нот на 2 октавы
+или же пускай оно неравномерно-темперированно, но чтоб мы довольно далеко от октавы были
+	но скажем есть симметрия относительно неё
+
+
+
+
+новый способ модуляции мелодий:
+	- просто берём что есть
+	даже пускай в одной тональности
+	и по 1 центу двигаем всё вниз, скажем
+	скажем, лунную сонату
+	она медленная
+	можно медленно вниз модулировать
+	никто и не заметит
+
+
+а чё
+может песни пописать?
+
+
+на следующий конкурс композиторов
+послать произведение
+loudness war
+начинается нормально
+заканчивается шакальным компрессом
+	получается это будет в духе сатуральной музыки
+можно использовать синтезатор
+подзвучку акустических инструментов
+
+
+ещё идея для жестово-оркестрового сочинения
+  надо инструменты играть друг в друга
+  чтобы инструменты резонировали друг в друга по возможности
+  создавая новые тембры
+
+
+треклисты:
+  first works, selection, the best of the best, crème de la crème:
+    kfr0-1 (aka "Rq - WSaTs Rno" or "Rq - WSaTs Rno v2")
+    kfr2-5
+    kfr3-1 (aka nikolay kapustin)
+    kfr3-2
+    kfr3-5
+    kfr3-7
+    kfr3-8
+    kfr3-9
+  kolyan series:
+    kolyan-gurman v1
+    kolyan-karman v6.1
+    kolyan-banan v1.41
+    kolyan-jazzman v1
+    []
+    []
+    []
+    []
+  op1:
+    migraine v1
+    []
+    []
+    []
+    []
+    []
+    []
+    []
+  moods:
+    fetaboi v3.0 (aka edm)
+    thickgurl v1.3 (aka thick)
+    trip.py v1.1
+    <wat3>
+    retrowave v0.3.3
+    [micro8]
+    []
+    []
+  alts:
+    kolyan-banan v1.4 alt
+    micro2 v1 alt
+    fetaboi v2.6 alt
+    micro4 v4 echo v2 alt
+    kolyan-karman v6.1 alt
+    []
+    []
+    []
+  rhizome:
+    micro4 v4.5.1
+    micro4 echo v2
+    ...
+  vapors:
+    vaporboi v2.6
+    []
+    []
+    []
+    []
+    []
+    []
+    []
+  voices:
+    <soul>
+    drivable-surface v0.2
+
+[] - ещё не начато
+<> - ещё не выложено
+aka - оригинальное название
+а ещё есть заготовка для well-tempered
+
+
+todo:
+  - kolyan-series - это почти то же, что micros, только темперация обычная
+      хотя в kolyan-karman это не так
+    kolyan-series - это в общем-то тоже, что и moods
+    непонятно, да, какая тут концепция
+  - есть ещё op1 трек невыложенный
+  - была ещё картинка на самсунге в виде радужной вагины, надо сохранить
+
+todo:
+  retrowave - marpurg iv (здесь скорее даже just intotation выходит)
+  micro2 - кастомная темперация (30, -50, 60, -20, 70, -60, 40, -20, 80, -10, 30, -20)
+  micro4 - colonna 1 (тоже скорее just intonation)
+  kolyan-karman alt - bali/java slendro siam 7
+  kolyan-karman - siamese tuning
+  какие здесь были версии? с тех пор я всё поменял
+
+
+общие размышления
+допустим я наверну pde
+реакцию белоусова-жаботинского
+придумаю интерпретацию
+или наверну beta+seq в виде аналога додекафонии
+какие тут проблемы?
+кажется проблема, что будет это всё статично
+есть ограничения непонятные
+или так
+композиция (или даже этюд) - это что-то цельное, где есть начало, какая-то бурная середина, и конец
+  это если смотреть на композицию как на нарратив
+как это вытащить из вот этих формальных схем?
+в белоусова-жаботинского, если б я мог навернуть, наверно можно добавить куда-нибудь диссипацию, искуственно
+другое ограничение - что все эти формализмы никак не завязаны на психоакустику
+надо об этом тоже не забывать, как изменять тембр и учитывать спектр
+можно было бы в идеале систему разделить на 2
+  первая - это сама формальная система, которая генерит какие-то числа - даёт динамику
+  вторая - это интерпретатор последовательностей чисел
+может даже не числа тут нужны, а события опять же какие, триггеры
+тогда здесь и форма будет, и объектность, но и нарратив останется, правда
+правда интерпретатор выглядит искусственным, но почему бы и нет
+
+
+
+
+спектрализм
+  анализ - https://www.youtube.com/watch?v=5r_K7roZCWo
+    Jonathan Harvey, Mortuos Plango, Vivos Voco - https://www.youtube.com/watch?v=nYdRzDx1_J4
+    https://en.wikipedia.org/wiki/Mortuos_Plango,_Vivos_Voco
+  https://www.youtube.com/watch?v=MkoIPuawHOk
+    Тембровая композиция. Лекция Николая Хруста
+
+

@@ -1,0 +1,246 @@
+plan:
+    6. triad pairs
+
+
+- Voice Leading Warmup
+    https://www.youtube.com/watch?v=gEp4Ccjgjlw
+    todo:
+        ...
+
+
+
+https://www.youtube.com/playlist?list=PLIHculvWp71pZbB2EoKHzFlreq-LTnr6t
+1. 
+    adam - What Are Sugar Chords?
+    https://www.youtube.com/watch?v=DoOTYEpdYJM
+        On Green Dolphin Street
+        todo:
+            - 6/Dim
+                Fmin7 in Ab 6/Dim
+                Bb7   in Ab 6/Dim
+                Bb7   in Bmin 6/Dim
+                Eb    in Eb 6/Dim
+            - voicings:
+                closed
+                drop-2
+                drop-3
+            - mix all voicings together, to create
+                contrary motion between bass and melody
+
+2.
+    adam - Why Do I Still Suck?
+    https://www.youtube.com/watch?v=rEdtUOGCCnU
+        Thelonius Monk
+            Rhythm-A-Ning
+            Straight, No Chaser
+        todo:
+            - phrasing
+            - swing
+            - syncopation
+    
+    + podcast - Why Do I Sound Bad?
+    https://www.youtube.com/watch?v=dYaEOD4WI7o
+    + podcast - Why Do I Still Suck?
+    https://www.youtube.com/watch?v=f-XUJID1wM8
+        (done)
+    + podcast - Can Public Radio Swing??
+    https://www.youtube.com/watch?v=hhkPyB4gO9U
+
+3.
+    adam - Why Should I Care About Tritone Subs?
+    https://www.youtube.com/watch?v=HZocRkjDZM8
+        todo:
+            - tritone sub
+                   V - I; G7  - Cmaj9 (5 нот)
+                bII7 - I; Db7 - Cmaj9
+            - sneaky V7
+            - Lydian Dominant scale
+            ...
+    + podcast - EASIEST CHORD SUBSTITUTIONS | You'll Hear It
+    https://www.youtube.com/watch?v=L9OUqripvT8
+
+4.
+    adam - The Easy Way To Get Good At Music
+    https://www.youtube.com/watch?v=oRdkepq3ARk
+        about transcribing (done)
+
+5.
+    adam - 4 Flashy Runs (That Are Easier Than You Think)
+    https://www.youtube.com/watch?v=7CCUXzgoHX0
+        about fingering
+            Eb
+            ii - Bb13b9#11 (black + white keys)
+            I - Ebmaj7 (thirds and sevenths)
+            ii -Bb7 whole tone run (black + white keys)
+            I - Eb6 (2 fingers)
+    + podcast - How to Get Started Transcribing
+    https://www.youtube.com/watch?v=GFCDLt4qgCw
+    + podcast - How to Absorb What You Transcribe
+    https://www.youtube.com/watch?v=cqvlgCD2CFc
+
+6.
+    adam - 3 Levels of Triad Pairs
+    https://www.youtube.com/watch?v=mS1rAtvOgXc
+        todo:
+            ...
+    + shorts - Tricky Triad Pairs! 👻🍐
+    https://www.youtube.com/watch?v=mD0-1mMdC4s
+        todo:
+            ...
+    + adam - Learn Triad Pairs in 30 Minutes
+    https://www.youtube.com/watch?v=LgU99CoCJK8
+        todo:
+            ...
+    + adam - Triads to Melt Faces
+    https://www.youtube.com/watch?v=SKY0sSO7FNU&t=780s
+        (includes triad pairs)
+        todo:
+            ...
+    + podcast - 5 Triad Pairs That Sound Great
+    https://www.youtube.com/watch?v=wEyZs59oe8E
+        ...
+        (from comments)
+        1. 5 and 6 triads on major
+        2. 2 (major) and 3 triads on lydian
+        3. b7 and 1 over dominant
+        4. b5 and b6 over altered 
+        5. Major(add b3) triads ascending/descending by minor 3rds over dominant b9s
+    + bob - Total Dominants: Using Triad Pairs on a Blues
+    https://www.youtube.com/watch?v=0CGwki75z6s
+        ...
+    + bob - Mind Altering Dominants
+    https://www.youtube.com/watch?v=S9yrtSNsRks
+        ...
+    
+
+7.
+    adam - The Hard Truth About Learning Music
+    https://www.youtube.com/watch?v=RtKHcSZL8LQ
+        about learning (done)
+
+8.
+    adam - Why Should I Bother Learning Scales?
+    https://www.youtube.com/watch?v=Qbxvt1dXdYY
+        todo:
+            - 7th chords in the modes of ionian
+                ...
+            - secondary dominants
+                - V7-I: mixolydian
+                - V7-i: phrygian dominant (5th mode of harmonic minor)
+                    ? why harmonic
+            - 2-5-1
+
+9. 
+    adam - Bill Evans Chords | Guided Practice Session
+    https://www.youtube.com/watch?v=KSocqJrAKxQ
+        todo:
+            ...    
+
+10.
+    adam - 7 SICK Chord Substitutions
+    https://www.youtube.com/watch?v=hWCX9-DnMG0
+        todo:
+            - 3-6-2-5 turnaround
+            - 6 subs
+                - (no sub) diatonic
+                ...
+
+11.
+    adam - 5 Chords EVERYONE Plays (And You Should Too)
+    https://www.youtube.com/watch?v=hiQdy_q-F2U
+        cookie cutter chords, cookie cutter voicings
+        todo:
+            - Cmaj7
+            - C7 (понизили 7th)
+            - Cm7 (понизили 3rd)
+            - Cm7b5 (понизили 5th)
+            - Co7 (снова понизили 7th)
+                todo:
+                но можно же дальше попробовать пойти!
+                - C-D-Gb-A (понизили 3rd)
+                - C-D-F-A (понизили 5th)
+                - C-D-F-Ab (понизили 7th)
+                ? C-Dd-F-Ab (понизили 3rd)
+                ? C-Dd-E-Ab (понизили 5th)
+                ? C-Dd-E-G (понизили 7th)
+                C-C-E-G (наверно тут можно остановиться уже)
+            - dom7 alt
+            - dom7 alt tritone-sub's #11
+            - (rootless) voicings
+                - major-7
+                    - low one, in fourths (last interval is third) == "so what" voicing
+                        3rd, 13th, 9th, 5th, 7th
+                    - high one, in fourths
+                        7th, 3rd, 13th, 9th, 5th
+                ...
+
+12.
+    adam - Why Does This STUPID Exercise Sound SO GOOD?
+    https://www.youtube.com/watch?v=_5_lEYU5Z1w
+        (stupid) scale running
+        todo:
+            ...
+
+
+podcast - All About Triadic Chromatic Concepts
+https://www.youtube.com/watch?v=wjRRHr2y-fk
+    todo:
+        ...
+
+bob - ‘Musical’ Triad Transformation
+https://www.youtube.com/watch?v=J6jjqSCI0TU
+    todo:
+        - E+ -> Fm (NRT?)
+        E+ == C+
+        C+ -> Fm == V-I (functional!)
+        - ascending: min -> maj -> aug -> (and repeat)
+        - descending: maj -> min -> dim -> (and repeat)
+
+
+
+
+
+- Killin' Harmonic Warmup
+    https://www.youtube.com/watch?v=BbtU55hWnUo
+    done (almost, except for last chord):
+        - diatonic 7th chords up the scale
+            drop 2
+            Fmaj7 Gm7 Am7 Bbmaj7 C7 Dm7 Em7b5 Fmaj7
+        - add secondary dominants
+            Fmaj7 D7 Gm7 E7 Am7 F7 Bbmaj7 G7 C7 A7 Dm7 Em7b5 Fmaj7
+        - secondary dominants with 3rd in the bass
+        - mu chord
+
+        вот что у меня:
+        [0, 7, 11, 16]
+        [1, 7, 9, 16] (в mu chord должно быть [1, 9, 11, 16])
+            но это потому что target chord другой
+        [2, 5, 9, 12]
+        [3, 6, 9, 11]
+        [4, 7, 11, 14]
+        [4, 7, 10, 12]
+        [4, 5, 9, 12]
+        [2, 6, 9, 12]
+        [2, 5, 7, 11]
+        [2, 4, 8, 11]
+        [0, 4, 7, 9]
+        [2, 5, 9, 11]
+        [-1, 4, 7, 12]
+        - нужно чинить voice-crossing
+        - нужно уметь адаптировать voicing
+        [0, 7, 11, 16]
+        [1, 9, 11, 16]
+        [2, 9, 12, 17]
+        [3, 11, 13, 18]
+        [4, 11, 14, 19]
+        [4, 12, 14, 19]
+        [5, 12, 16, 21]
+        [6, 14, 16, 21]
+        [7, 14, 17, 23]
+        [8, 16, 18, 23]
+        [9, 16, 19, 24]
+        [11, 17, 21, 26]
+        [12, 16, 19, 23]: penalty = 1+2+3=6
+            а надо [12, 19, 23, 28]: penalty=1+2+2+2=7
+            и это разумно - потому что planing не оптимален видимо
+            но надо 12, 19 для минимального расстояния между нижним голосом и следующим

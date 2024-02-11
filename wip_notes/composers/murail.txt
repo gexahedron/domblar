@@ -1,0 +1,100 @@
+r - rutracker
+y - youtube
+v - vimeo
+r 1967, Comme un Oeil Suspendu et Poli par le Songe..., for piano
+r 1969, Couleur de Mer, for 15 instruments
+y 1970, Altitude 8000, for orchestra
+y 1970, Où tremblent les contours, for 2 violas
+ry 1972, Estuaire, 2 pieces for piano
+r 1972, L'Attente, for 7 instruments
+y 1972, Au-delà du mur du son, for large orchestra
+y 1973, Les Nuages de Magellan, for 2 ondes Martenot, electric guitar and percussions
+y 1973, La dérive des continents, for viola and string orchestra
+1973, Cosmos privé, for orchestra
+y 1974, Transsahara express, for bassoon and piano
+1975, Sables, for orchestra
+ry 1976, C'est un jardin secret, ma sœur, ma fiancée, une fontaine close, une source scellée for viola solo
+> ry 1976, Mémoire/Erosion, for horn and ensemble
+yyy 1977, Tellur, for guitar
+> 1977, Territoires de l'oubli, for piano
+> 1978, Ethers, for 6 instruments
+> 1978, Treize couleurs du soleil couchant, for ensemble
+ry 1979, Les courants de l'espace, for ondes Martenot and small orchestra
+> 1980, Gondwana, for orchestra
+> 1982, Désintégrations, for 17 instruments and electronic sounds
+> 1984, Vampyr!, for electric guitar, from Random Access Memory
+y 1985, Sillages, for orchestra
+> 1985, Time and again, for orchestra
+y 1986, Atlantys, for 2 DX7 Yamaha synthesizers, from Random Access Memory
+1986, Vision de la cité interdite
+1987, Random Access Memory
+    I. Le Réveil des Machines;
+    II. Sept Degrés du Sommeil;
+    III. Atlantys;
+    IV. Malédiction;
+    V. Orchestres imaginaires;
+    VI. Vampyr!;
+    VII. Souffles des Eléments;
+    VIII. Vision de la Cité interdite;
+    IX. Dépression dans le Continuum
+ry 1988, Vues aériennes, for horn, violin, cello and piano
+y 1990, Le fou à pattes bleues, for flute and piano
+r 1990, Allégories, for 6 instruments and electronic sounds
+y 1991, La dynamique des fluides, for orchestra
+ry 1992, Attracteurs étranges, for cello
+ry 1992, Cloches d’adieu, et un sourire... in memoriam Olivier Messiaen, for piano
+> 1992, Serendib, for 22 musicians
+> 1993, La Mandragore, for piano
+r 1993, La barque mystique, for five instruments
+y? 1993, La Barque mystique for ensemble
+> 1994, L'Esprit des dunes, for ensemble
+y 1995, ...amaris et dulcibus aquis..., for chorus and electronic sounds
+r 1995, Unanswered questions, for flute
+y 1996, Bois flotté, for piano, trombone, string trio, synthetic sounds and synthesized sounds
+y 1996 Le partage des eaux, for large orchestra
+r 1998, Feuilles à travers les cloches, from «Portulan», for flute, violin, cello and piano
+> 2000, Winter Fragments, for flute, clarinet, piano, violin, cello, MIDI keyboard and computer
+r 2002, Les travaux et les jours, for piano
+> 2001, Le Lac, for ensemble
+y 2004, Terre d'ombre, for large orchestra and electronic sounds
+y 2006, Les Ruines circulaires, from «Portulan», for clarinet and violin
+y 2006, Légendes urbaines, for 22 instruments
+y 2006, Seven Lakes Drive, from «Portulan», for flute, clarinet, horn, piano, violin and cello
+y 2007, Contes cruels, for 2 electric guitars and orchestra
+y 2008, Garrigue, from «Portulan», for bass flute, viola, cello and percussions
+y 2008, Liber fulguralis, for ensemble, electronics and video
+y 2009, En moyenne et extrême raison, for 15 instruments and electronics
+y 2010, Les sept Paroles, for orchestra, chorus and electronics
+y 2011, La Chambre des cartes, from «Portulan», for flute, clarinet, horn, piano, percussions, violin, viola and cello
+y 2011, Lachrymae, for alto flute and string quintet
+y 2011, Dernières nouvelles du vent d'ouest, from «Portulan», for viola, horn, piano and percussion
+y 2012, The Bronze Age, for flute, clarinet, trombone, violin, cello and piano
+y 2012, Le Désenchantement du Monde, piano concerto
+y 2013, Reflections / Reflets I - Spleen
+y 2013, Reflections / Reflets II - High Voltage / Haute tension
+y 2014, Un Sogno, for ensemble and electronics
+y 2015, Travel Notes, for 2 pianos and 2 percussions
+y 2016, La Vallée close, sur des sonnets de Pétrarque
+y 2016, Sogni, ombre et fumi, for string quartet
+v 2017, Near Death Experience d'après L'Ile des morts d'Arnold Böcklin, for ensemble and video
+2017, Reflections / Reflets III - Vents et marées / Tidal winds
+y 2018, Cailloux dans l'eau, for piano
+y 2018, Stalag VIIIA, for violin, clarinet, cello and piano
+y 2018, Une lettre de Vincent, for flute and cello
+y 2019, Le Rossignol en amour, for piano
+y 2019, Kinderszenen by Robert Schumann, rereading for flute, cello and piano
+2019, De Pays et d'Hommes Étranges, cello concerto
+y 2021, 'L'Oeil du Cyclone', piano concerto
+y 2020, Mémorial, for piano
+y 2021, Résurgence La Sorgue à Fontaine-de-Vaucluse, for piano
+y 2021, Le Misanthrope d’après Liszt et Molière
+y 2021, Impression, Soleil levant
+y 2021, ...les jours heureux..., for clarinet, horn, violin, viola, percussion and piano
+
+so, no recording:
+    Cosmos privé
+    Vision de la cité interdite
+    Random Access Memory
+    Sables
+    Reflections / Reflets III
+    De Pays et d'Hommes Étranges

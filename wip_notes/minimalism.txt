@@ -1,0 +1,376 @@
+TODO
+- какие сейчас проблемы:
+    - хорошо бы типы добавить, тяжело отличить аккорд от мелодии, и т. д.
+    - куча всяких FIXME
+
+
+
+DONE
+что такое gesture?
+- есть input, chord, [0, 5, 8] (это аккорд)
+- gesture оперирует с индексами: [0, 1, 2] -> выдаёт арпеджио [0, 5, 8] (это мелодия)
+- тогда при применении nrt операции индексы не поменяются, потому что
+    аккорд [0, 5, 8] перейдёт в скажем [1, 5, 8]
+    и мне не надо знать, кто root, а кто 3rd
+
+
+
+Etude 1:
+    4 9 13 (16)
+    5 10 14 (VII - I)
+    4 7 12
+        in F diatonic this is IV - V
+        (in Bb acoustic this would give I - II)
+    2 6 9 (VII - I)
+
+
+Spaceship:
+    посмотрим на scales
+    chords [0, 5, 8] [1, 5, 8] [1, 4, 9] [3, 6, 9] [-1, 4, 8]
+        L, M, dim, SLIDE (0->4)
+        SLIDE = LPR = RPL
+    scales:
+        [0, 1, 5, 8]: ..., HEX(0, 1), ...
+        [1, 4, 5, 8, 9]: A harm maj, HEX(0, 1)
+            первые 3 аккорда - HEX(0, 1) = 0 1 4 5 8 9
+            M - это видимо LPL или PLP
+        [1, 3, 4, 6, 9]: E dia, A acou, C# harm min, OCT(0, 1)
+        [3, 4, 8, 9, 11]: E dia, E harm maj
+            ага! E dia для 2,3,4 аккордов, то есть это "тональная" прогрессия в ней
+            [1, 5, 8] [1, 4, 9] [3, 6, 9]
+            vi - iv - vii - не похоже на progression
+        [0, 4, 5, 8, 11]: C harm maj, A harm min
+    bass двигается как [5, 1, 9-12, 11-12, 4]: G acou, A harm maj
+        ii-vi-iv-V7-i - вполне себе chord progression
+    всего 0 1 3 4 5 6 8 9 11 - 9 нот
+    5, 0; 1 8-12; 9-12 4-12;
+        HEX(0, 1)
+    6-12 11-12; 4 8
+    Тогда, текущая теория такая:
+        - первые 3 аккорда - это HEX(0, 1)
+        - оставшиеся 2 - это каденция V7-I
+        - всё это как-то склеено вместе, не знаю пока что чем
+
+
+
+
+def gen_gesture(chord):
+    # TODO: replace chord with something more generic
+    # these are indexes of input notes
+    # if there's a tuple - then add octaves
+
+    # TODO: the chord could have additional info on
+    # which note is root, which note is 3rd, etc.
+    # could be useful for initial gesture creation
+
+
+
+Modern Love Waltz:
+i: 1, 4, 6, 9 (3+2+3+4);
+    6, 9, 13, 16 = A maj add6; включая 7 - это A acoustic scale
+    или же
+   1, 4, 7, 9 (3+3+2+4): A dom7
+ii: 2, 5, 8, 10 (3+3+2+4)
+    Bb dom7; Bb acoustic?
+
+
+
+voice-leadings:
+припев:
+    4, 7, 9, 13 <-> 5, 8, 10, 14 (всё в +1)
+куплет 2:
+    9, 4 <-> 8, 2 (это исключение, наверно)
+        с другой стороны - здесь возможно форма интервала задаёт сдвиг в другую сторону
+    1, 4 <-> 2, 5
+    1, 9 <-> 2, 10
+    7, 1 <-> 8, 2
+видимо основной voice-leading:
+    1 -> 2
+    4 -> 5
+    6 -> ?8 (6 встречается только в 1 куплете)
+    7 -> 8
+    9 -> 10
+
+
+
+
+
+in the upper room 1:
+[9, 9, 2, 2, 5, 5, [2, 5, 9]] = 2/D minor
+    [5:1, 5-edo:1, 9:1, 9-edo:2, 2+edo:1, 2:2]
+[9, 9, 0, 0, 6, 6, [0, 6, 9]] = 6/F# dim = 9/A min6 = 2/D dom7-rootless
+[9, 9, 1, 1, 4, 7, [1, 4, 7, 9]] = 9/A dom7
+
+[9, 9, 2, 2, 5, 5, [2, 5, 9]] = 2/D minor
+[9, 9, 0, 0, 6, 6, [0, 6, 9]] = 6/F# dim = 9/A min6 = 2/D dom7-rootless
+[9, 9, 1, 1, 7, 7, [1, 7, 9]] = 9/A dom7 (without 4/E, 5th)
+
+[9, 9, 2, 2, 5, 5, [2, 5, 9]] = 2/D minor
+[8, 8, 2, 2, 4, 4, [2, 4, 8]] = 4/E dom7 (without 11/B, 5th)
+[7, 7, 1, 1, 4, 4, [1, 4, 7]] = 1/C# dim = 4/E min6 = 9/A dom7-rootless
+
+[9, 9, 2, 2, 6, 6, [2, 6, 9]] = 2/D major (parallel to 2/D minor)
+[10, 10, 2, 2, 7, 7, [2, 7, 10]] = 7/G minor
+[7, 12, 0, 4, 4, 7, [0, 4, 7]] = 0/C major
+[8, 12, 0, 5, 5, 8, [0, 5, 8]] = 5/F minor
+[6, 14, -3, 6, 0, 9, [0, 2, 6, 9]] = 2/D dom7
+[7, 14, -2, 7, 2, 10, [2, 7, 10]] = 7/G minor
+[7, 16, -2, 7, 0, 10, [0, 4, 7, 10]] = 0/C dom7
+[10, 16, 4, 7, 7, 10, [4, 7, 10]] = 4/E dim = 7/G min6 = 0/C dom7-rootless
+"roots":
+    2, 6, 9 (2/D major)
+    2, 6, 9 (2/D major)
+    1, 2, 4, 9 (also part of 2/D major scale)
+    0, 2, 4, 5, 7 (all notes from 0/C major scale)
+
++3+4 = minor
++4+3 = major
++3+3 = dim / min6
++4+3+3 = dom7
++4+6 = dom7 withouth 5th
+
+
+searching for Pressing scales
+01: [9, 9, 2, 2, 5, 5, [2, 5, 9]] = 2/D minor
+02: [9, 9, 0, 0, 6, 6, [0, 6, 9]] = 6/F# dim = 9/A min6 = 2/D dom7-rootless
+    01+02: Bb harm maj, OCT(0, 2)
+03: [9, 9, 1, 1, 4, 7, [1, 4, 7, 9]] = 9/A dom7
+    02+03: OCT(0, 1)
+
+04: [9, 9, 2, 2, 5, 5, [2, 5, 9]] = 2/D minor
+    03+04: G acou; D harm min
+05: [9, 9, 0, 0, 6, 6, [0, 6, 9]] = 6/F# dim = 9/A min6 = 2/D dom7-rootless
+06: [9, 9, 1, 1, 7, 7, [1, 7, 9]] = 9/A dom7 (without 4/E, 5th)
+
+07: [9, 9, 2, 2, 5, 5, [2, 5, 9]] = 2/D minor
+08: [8, 8, 2, 2, 4, 4, [2, 4, 8]] = 4/E dom7 (without 11/B, 5th)
+    07+08: A harm maj, A harm min
+09: [7, 7, 1, 1, 4, 4, [1, 4, 7]] = 1/C# dim = 4/E min6 = 9/A dom7-rootless
+    08+09: OCT(1, 2) (прошлись по всем octatonic шкалам)
+
+10: [9, 9, 2, 2, 6, 6, [2, 6, 9]] = 2/D major (parallel to 2/D minor)
+    09+10: D dia; D harm maj
+11: [10, 10, 2, 2, 7, 7, [2, 7, 10]] = 7/G minor
+    10+11: C acou; D harm maj; G harm min
+12: [7, 12, 0, 4, 4, 7, [0, 4, 7]] = 0/C major
+    11+12: F dia; C acou; Bb acou
+    10+11+12: C acou
+13: [8, 12, 0, 5, 5, 8, [0, 5, 8]] = 5/F minor
+    12+13: Bb acou; C harm maj; F harm min
+    11+12+13: Bb acou (тут выглядывает sequence типа cube dance, или klumpenhower network)
+14: [6, 14, -3, 6, 0, 9, [0, 2, 6, 9]] = 2/D dom7
+    13+14: OCT(0, 2)
+15: [7, 14, -2, 7, 2, 10, [2, 7, 10]] = 7/G minor
+    14+15: C acou; G harm min
+16: [7, 16, -2, 7, 0, 10, [0, 4, 7, 10]] = 0/C dom7
+    15+16 == 11=12: F dia; C acou; Bb acou
+    14+15+16 == 10+11+12: C acou
+17: [10, 16, 4, 7, 7, 10, [4, 7, 10]] = 4/E dim = 7/G min6 = 0/C dom7-rootless
+    тут типа ничего нового, минус 1 нота
+    но если мы хотил перейти в 01:, тогда F dia; D harm min
+    если вернуть эту ноту, то только F dia остаётся
+Что интересно - любая соседняя пара аккордов работает,
+    в том плане что можно всегда найти какой-то pressing scale
+    с этой парой аккордов
+
+
+если первым написать верхний голос, глянем contrary и similar motions
+[2, 2, 9, 9, 5, 5, [2, 5, 9]]
+[0, 0, 9, 9, 6, 6, [0, 6, 9]]
+[1, 1, 9, 9, 4, 7, [1, 4, 7, 9]] (4-7)
+    contrary (4+5)
+[2, 2, 9, 9, 5, 5, [2, 5, 9]]
+    contrary (4+5)
+[0, 0, 9, 9, 6, 6, [0, 6, 9]]
+[1, 1, 9, 9, 7, 7, [1, 7, 9]]
+07: [2, 2, 9, 9, 5, 5, [2, 5, 9]]
+08: [2, 2, 8, 8, 4, 4, [2, 4, 8]]
+09: [1, 1, 7, 7, 4, 4, [1, 4, 7]]
+(todo: 07+08+09 - попробовать описать как iterable voice leading)
+
+10: [2, 2, 9, 9, 6, 6, [2, 6, 9]]
+11: [2, 2, 10, 10, 7, 7, [2, 7, 10]] = 7/G minor
+12: [4, 0, 7, 12, 4, 7, [0, 4, 7]] = 0/C major (voice-leading!)
+    contrary (0+1, 2+3)
+    oblique (4+5)
+    произошёл шафл - теперь пары (0+4, 1+3, 2+5)
+        contrary (0+4, 1+3)
+        oblique (2+5)
+13: [5,  0, 8, 12, 5, 8, [0, 5, 8]]
+    (2+4) в 10+11+12+13: двигаются одинаково как +1-3+1
+14: [6, -3, 6, 14, 0, 9, [0, 2, 6, 9]] (0-2)
+    contrary (0+4, 1+3, 2+5)
+    недо-шафл (0+2, 1+5)
+        contrary (0+2, 1+5, 3+4)
+15: [7, -2, 7, 14, 2, 10, [2, 7, 10]]
+    дошафлили через oblique (3+4)
+16: [7, -2, 7, 16, 0, 10, [0, 4, 7, 10]] (0-4) (i hear a switch in melody here)
+    contrary (3+4)
+17: [7, 4, 10, 16, 7, 10, [4, 7, 10]]
+    oblique 0+2, 1+5, 3+4
+    шафл: 0+4, 1+3, 2+5
+        oblique (0+4, 1+3, 2+5)
+    о, прикол - это те же самые пары что и в "12:"
++
+[2, 2, 9, 9, 5, 5, [2, 5, 9]]
+    шафл: 0+1, 2+3, 4+5
+    только здесь вылез similar motion
+    но здесь вообще всё прыжком упало вниз
+голоса (10-17):
+    0: chromatic
+    1: F dia, C acou
+    2: chromatic
+    3: F dia, C acou
+    4: chromatic
+    5: chromatic
+
+Что интересно - нету similar motion,
+    только parallel, contrary и oblique
+
+
+какие ноты есть:
+0, 1, 2, 4, 5, 6, 7, 8, 9, 10
+нету 3 и 11
+
+
+попытаюсь убрать удвоение голосов, что найти куски NRT операций
+01: [2, 2, 9, 9, 5, 5, [2, 5, 9]]
+02: [0, 0, 9, 9, 6, 6, [0, 6, 9]]
+03: [1, 1, 9, 9, 4, 7, [1, 4, 7, 9]] (4-7)
+
+04: [2, 2, 9, 9, 5, 5, [2, 5, 9]]
+05: [0, 0, 9, 9, 6, 6, [0, 6, 9]]
+06: [1, 1, 9, 9, 7, 7, [1, 7, 9]]
+
+07: [2, 2, 9, 9, 5, 5, [2, 5, 9]]
+08: [2, 2, 8, 8, 4, 4, [2, 4, 8]]
+09: [1, 1, 7, 7, 4, 4, [1, 4, 7]]
+
+10: [2, 2, 9, 9, 6, 6, [2, 6, 9]]
+11: [2, 2, 10, 10, 7, 7, [2, 7, 10]] = 7/G minor
+12: [4, 0, 7, 12, 4, 7, [0, 4, 7]] = 0/C major (voice-leading!)
+    произошёл шафл - теперь пары (0+4, 1+3, 2+5)
+13: [5,  0, 8, 12, 5, 8, [0, 5, 8]]
+14: [6, -3, 6, 14, 0, 9, [0, 2, 6, 9]] (0-2)
+    недо-шафл (0+2, 1+5)
+15: [7, -2, 7, 14, 2, 10, [2, 7, 10]]
+    дошафлили через oblique (3+4)
+16: [7, -2, 7, 16, 0, 10, [0, 4, 7, 10]] (0-4) (i hear a switch in melody here)
+17: [7, 4, 10, 16, 7, 10, [4, 7, 10]]
+    шафл: 0+4, 1+3, 2+5
+
+несовместимости
+0 - 0+1, 0+2, 0+4
+1 - 1+0, 1+3, 1+5
+2 - 2+3, 2+0, 2+5
+3 - 3+2, 3+1, 3+4
+4 - 4+5, 4+0, 4+3
+5 - 5+4, 5+1, 5+2
+
+тогда совместимые тройки: (0, 3, 5) и (1, 2, 4)
+01: [2, 9, 5] 2/D minor
+02: [0, 9, 6] 6/F# dim = 9/A min6
+03: [1, 9, 7] vs [1, 9, 4]
+    9/A dom7no5th vs 9/A major
+
+04: [2, 9, 5] 2/D minor
+05: [0, 9, 6] 6/F# dim
+06: [1, 9, 7] 9/A dom7no5th (without 4/E, 5th)
+
+07: [2, 9, 5] 2/D minor
+08: [2, 8, 4] 4/E dom7no5th (without 11/B, 5th)
+09: [1, 7, 4] 1/C# dim = 4/E min6
+
+10: [2, 9, 6] 2/D major
+11: [2, 10, 7]  7/G minor
+12: [4, 12, 7] vs [0, 7, 4] 0/C major
+    ii: переход из [2, 10, 7] в [0, 7, 4] выглядит как planing внутри шкалы,
+        если смотреть так по отдельности
+        если это движение внутри Bb acoustic, тогда
+        это vi -> II
+        если это мода C Mixolydian 6/Major-minor, тогда это v -> I
+13: [5, 12, 8] vs [0, 8, 5] 5/F minor
+14: [6, 14, 9] vs [-3, 6, 0] 2/D major vs 6/F# dim
+    looks kind of ugly, a lot of movement everywhere
+    i:
+        [6, 14, 9] = [2, 6, 9]; 4+3 => 2/D major
+        первый переход идёт внутри OCT(0, 2)
+        5/F minor => 2/D major
+        TODO: возможно этот ход как-то объясняется через iterated voice-leading?
+    ii:
+        [-3, 6, 0] = [6, 9, 12] => 6/F# dim
+        второй возможно тоже внутри OCT(0, 2),
+        но во втором больше возможностей для объяснения
+15: [7, 14, 10] vs [-2, 7, 2] 7/G minor
+16: [7, 16, 10] vs [-2, 7, 0] 4/E dim vs 0/C dom7no3
+    i: 4/E dim
+    ii: [-2, 7, 0] = [10, 7, 0]
+        0/C dom7: [0, 4, 7, 10] =>
+        [10, 7, 0] 0/C dom7no3
+17: [7, 16, 10] vs [4, 10, 7] 4/E dim = 7/G min6
+
+
+
+
+Tymoczko iterable voice leading example:
+[0, 2, 7, 11, [0, 2, 7, 11]] 2541 = G add4
+    maj add 9; add 4; ("Gamelan" scale) (это почти пентатоника?)
+[-2, 5, 9, 12, [0, 5, 9, 10]] 5412
+    пары аккордов не работают (если только первое F dia, а второе F acou)
+[-4, 7, 10, 15, [3, 7, 8, 10]] 4125
+[-6, 8, 13, 17, [1, 5, 6, 8]] 4125
+[-8, 11, 15, 18, [3, 4, 6, 11]] 1254
+[-10, 13, 16, 21, [1, 2, 4, 9]] 1254
+[-12, 14, 19, 23, [0, 2, 7, 11]] 2541
+вот тут все ноты есть!
+0: -2,-2,-2,-2,-2,-2: WT0
+1: +3+2+1+3+2+1: OCT(1, 2) (missing E, Bb)
+2: +2+1+3+2+1+3: OCT(0, 1) (missing C, Gb)
+3: +1+3+2+1+3+2: OCT(0, 2) (missing D, Ab)
+Что интересно - каждый из голосов сидит в своей pressing scale
+    а ещё забавно, missing notes образуют WT0
+
+
+
+
+
+
+
+How Does One Create a Minimalist Composition?
+    Choose amazing timbres
+    Great instruments
+    Effects
+    Long-tones
+    Flurried sounds
+    Interlocking patterns
+    Amplification & effects
+    Similar timbres (8 guitars, 6 voices, etc.) or contrasting (rock band, orchestra, etc.)
+    Spoken word (choral spoken word?)
+    Overwhelming sonic combinations, or spare sounds?
+    Fading in/out (of chords, tones, layers, etc.)
+    Choose a stylistic approach or process(es)
+    Audible process
+    Additive/subtractive linear process
+    Notes/chords/sections/phrases before/between/after melody notes
+    Additive/subtractive textural process
+    Additive/subtractive harmonic process (notes expanding registrally from a small core, etc.)
+    Phasing; canon (unison? at expanding/contracting intervals?)
+    Key “rotation” through repetitions that change one note at a time
+    Steady-state
+    Polyrhythmic layers
+    Other types of unpredictable variety
+    Choose a rhythmic approach
+    Are lengths of phrases consistent, or do they vary with the process?
+    Are repetitive patterns symmetrical, or in meters such as 5/4 or 7/8? Or expanding and contracting?
+    Is the music pulse-oriented or free?
+    Choose a notational approach that suits the concept or procedure
+    fully/strictly notated
+    strict notation with loose repetitions
+    musical “cells” with repetitions or improvisations
+    set of instructions
+    Choose a duration and adapt musical process to accommodate it
+    Infinite music (cyclical)
+    Finite music
+    Indivisible: completes one cycle of a process
+    Sectional: different processes occur successively, or same process is repeated with new material
+    Rounded: opening material returns after digression

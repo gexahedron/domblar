@@ -1,0 +1,24 @@
+31 edo
+
+https://www.huygens-fokker.org/docs/terp31.html
+https://www.huygens-fokker.org/docs/terpstra_chord_progressions.html
+
+Rare Chords: Supermothrian Polychords | Maj7b4b8♮13‡14⇂16b23 (harmony in 31-edo)
+    https://www.youtube.com/watch?v=y_nQgNKSl5Y
+
+    dreamy clouds of pitch set into motion through the outwards unfolding of wide and concentric lines
+
+    this piece turned from a demonstrative video to something musically important to me. 
+
+    theory stuff:
+    - i've discussed mothra [6] before on the channel. it's the supermajor hexatonic scale and has it's own set of modes. it's a unique tonal space all together. the "chromatic" equivalent is an 11 pitch space. representing it as a spectral chordscale with the "brightest mode" (10|0) creates the supermothra object. basically, Au7‡2‡6 or ultramajor7 with ‡2 and ‡6 in a more tertian expression. Extending this up gives Moth♮9‡10‡14 or more simply Imoth/IImoth lol.
+
+    - taking this Imoth/IImoth and superimposing it b8 from a central root creates a beautiful upperstructure against a maj7. this is expressed as b8supermoth/Imaj7. Enharmonically equivalent to ‡VIIsupermoth/Imaj7 but the b8 will make the superstructure clearer to the actual player since it creates triplings of the third, seventh, and ninth. 
+
+    - i call this superstructure a hypermajor object because its core base is a maj7 chord while populating the interval spectrum with:
+    3, ‡10, #10 
+    7, ‡14, #14 
+    2, ⇂9, b9 
+    6, ⇂6
+
+    it does not specify a fourth though!! which totally keeps it open as like a dense but still be defined hypermajor base quality open to being pushed lydian, roselike, lydia, ionian, etc.

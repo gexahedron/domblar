@@ -1,0 +1,22 @@
+carlos alpha
+9ed3/2
+
+todo:
+    - strategies:
+        JI/harmonic-series
+        tonnetz
+        7th chords
+        chord progressions
+        iterable voice-leading
+        treat 3/2 as an octave and do usual stuff
+        sine-wave melodies, as in gibber example
+        euclidean rhythms, for percussion and for melodies
+        pentatonic scales
+        modulations
+        minimalist processes
+        mutations
+        timbres, drones, percussion
+        constraints: intervals, ...
+        ...
+
+        9edo contains a pentatonic mos scale produced by stacking 4/9 of 2L 3s (1 3 1 3 1) – with a heptatonic extension – 2L 5s (1 1 2 1 1 2 1, sometimes called "mavila" or "antidiatonic"). Indonesian pelog scales sometimes use five-tone subsets of a seven-tone superset in a similar way, and it has been suggested that Indonesian gamelan music stems from a 9edo tradition. You can also use the 2/9, which generates mos scales of 1L 3s (3 2 2 2) and 4L 1s (2 2 2 2 1) and can be interpreted as either an extremely sharp bug scale or an extremely flat orwell one.

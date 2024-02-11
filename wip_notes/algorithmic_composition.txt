@@ -1,0 +1,32 @@
+
+
+gradually changing processes:
+    gray code
+    ...
+
+
+цель:
+    - constraint-based (+ memory-based, transformations-of-previous-material-based)
+    - generative model
+    - dynamic programming, with paths, several of them actually
+
+
+algorithms/structures:
+    - (глянуть другие файлы и мой блог)
+    - markov chains
+    - constraint-based solver
+        - Torsten Anders PWGL
+        https://www.youtube.com/@musictechuob4049/videos
+        https://github.com/tanders/cluster-engine
+        https://github.com/tanders/cluster-rules
+    - random walk on graph
+    - 1/f
+    - logistic map/fractal music
+    - Schillinger
+    - Jason Yust trees
+    - Donya jazz
+    https://www.youtube.com/watch?v=9Fg54XAr044
+
+    - ? cellular automata
+        1d? 2d?
+    - ? finite-state machines

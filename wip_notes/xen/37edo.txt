@@ -1,0 +1,51 @@
+https://en.xen.wiki/w/37edo
+
+todo:
+lonely woman horace silver
+http://localhost:9999/notebooks/devel/algo_tracker/23edo_exp1.ipynb#
+https://whimsical.com/microtonal-Gj9m646Y3RDRNkv3KCSvLN
+https://www.youtube.com/user/muratgurelll/videos
+https://www.facebook.com/search/top?q=37edo
+
+
+- no-3s
+- porcupine (uses sharp fifth)
+- negri (uses flat fifth)
+- undecimation temperament
+- 7L 2s nonatonic MOS, which in 37edo scale degrees is 0, 1, 6, 11, 16, 17, 22, 27, 32, a scale structure reminiscent of mavila
+- offers close approximations to harmonics 5, 7, 11, and 13
+- 21\37 generates an anti-diatonic, or mavila, scale: 5 5 6 5 5 5 6
+    "minor third" = 10\37 = 324.3 cents
+    "major third" = 11\37 = 356.8 cents
+- 22\37 generates an extreme superpythagorean scale: 7 7 1 7 7 7 1
+    "minor third" = 8\37 = 259.5 cents
+    "major third" = 14\37 = 454.1 cents
+- Shoe temperament
+
+
+https://en.xen.wiki/w/MOS_Scales_of_37edo
+nice diagrams
+
+
+links:
+A case of 37-EDO
+https://yahootuninggroupsultimatebackup.github.io/tuning/topicId_66478.html
+37-edo: new Tonalsoft Encyclopedia page
+https://yahootuninggroupsultimatebackup.github.io/tuning/topicId_104387.html
+http://tonalsoft.com/enc/number/37-edo/37edo.aspx
+monzoblock37
+https://yahootuninggroupsultimatebackup.github.io/tuning-math/topicId_20560.html
+For Carl--5, 7, and 11-limit reduced bases for the 37-et
+https://yahootuninggroupsultimatebackup.github.io/tuning-math/topicId_3191.html
+need a particular lattice basis for 37-edo
+https://yahootuninggroupsultimatebackup.github.io/tuning-math/topicId_20553.html
+
+
+
+Music
+Toccata Bianca 37EDO by Aaron Krister Johnson
+Shorn Brown play and Jellybear play by Andrew Heathwaite
+https://andrewheathwaite.bandcamp.com/track/shorn-brown
+The Kog Sisters by Joe Monzo
+Porcupine Lullaby by Ray Perlner
+https://www.youtube.com/watch?v=8reCr2nDGbw

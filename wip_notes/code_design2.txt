@@ -1,0 +1,145 @@
+current:
+    sc3
+        client
+        instruments
+    edo
+        todo?: rename to edo_math
+    music_math
+    players
+        todo: move to client?
+            todo: make abstract client class?
+    transformations
+    rhythms
+
+
+
+- https://github.com/interactive-sonification/sc3nb
+    maybe it's better for communicating with SuperCollider
+
+
+- chapters:
+    - spectralism
+    - voice-leading
+    - discovery
+    - ...
+
+
+Overall ideal:
+    - Support for various "microtonal" systems/"traditions", with sound examples
+    - No assumptions about the default values
+        - But providing some predefined configs for ease-of-use
+    - Syntax should be 100% python, should be runnable without UI, from command line
+        e. g., "python3 example.py"
+    - Should be flexible to use
+        without heavy machinery, just simple
+            play melody, or play chords,
+            and we just provide list or string
+            (so we need implicit upgrade of classes, from simple list to, e. g., Chords())
+    - Support for
+        composition (form), algorithms, timbres, rhythms, synthesizers, live-coding,
+        analysis, production, extendability/modularity,
+        visualization, code notation (+ parsers), music notation, UI, devices (op1),
+        music knowledge base, some external syntaxes (e. g. xenpaper, .scl files)
+        - совсем идеально - syntax highlighting
+
+
+- d.play
+    - chords
+    - melody
+    - voices in parallel
+    - events
+
+
+dimensions/aspects of sound:
+    Continuous
+    Audible
+    Quantized
+    Scalar
+    Modal (tetrachordal)
+    Timbre
+    Loudness
+    ADSR envelope
+    Duration
+    Panning
+    Phase
+    EQ
+
+- use pydeps
+- python parameter names aliases
+    (py38) gexahedron@Nikolyas-Air domblar % pydeps domblar
+
+- tension and release
+    ?
+
+
+
+
+- оказывается такое работает:
+    chords = Scale([ 4, 5, 7, 9, 10, 13, 14], edo)  # D harm min / A Phrygian dominant
+    d.play(chords, scale, edo,
+        synth_idx=[0],
+        dur=0.3)
+    играет бесконечно вверх
+
+
+нужны новые классы и нотации:
+    - Voices/Melodies/Instruments-Timbres
+    - Gestures
+    - Harmonies (current tonal context, degree, scale, edo, chord)
+    - Context with defaults
+    - виды трансформаций над объектами, например
+        - что-то зависит от чего-то
+            - ритм зависит от текущего аккорда
+            - добавить secondary dominants перед каждым аккордом, но не перед viio
+
+
+improvements:
+    - add knowledge base for various facts
+        so that it's possible to reuse them without expensive recalculations
+
+    - Tymoczko transformation
+        80%;
+        то есть мне в целом ок, но нотация не совпадает с его
+        - нет harmonic consistency
+        - числа другие в transformations
+        - permutation другой
+        - chord у меня без rests
+        - и хорошо бы закодить другие примеры
+
+    - Clock
+        75%
+        в целом ок, просто висит несколько вопросов
+        - что делать между блоками ивентов, в данный момент ничего нет, latency к счастью нет, а вручную добавить в питоне - надо уметь планировать - брать подблоки из будущего блока ивентов
+        - по идее есть 2 вида лайв-кодинга - когда мы модифицируем следующий блок,
+            - и когда мы можем в текущем на лету что-то поменять
+                для этого надо много вещей помнить, и вообще видимо уметь строить дифф
+
+    - Solvers
+    - GUI, knobs
+        UI в виде игры (breakout, pinball, orca, tantrix, guitar hero)
+    - Music theory
+    - Rhythms
+
+
+decolonial directions:
+    - about name "western" (e. g., vs chinese)
+        The ancient Chinese chromatic scale is called Shí-èr-lǜ. However, "it should not be imagined that this gamut ever functioned as a scale, and it is erroneous to refer to the 'Chinese chromatic scale', as some Western writers have done. The series of twelve notes known as the twelve lü were simply a series of fundamental notes from which scales could be constructed."[7] However, "from the standpoint of tonal music [the chromatic scale] is not an independent scale, but derives from the diatonic scale,"[1] making the Western chromatic scale a gamut of fundamental notes from which scales could be constructed as well.
+    - all names in code are in english
+        which is very colonial and problematic
+    - about using name mavila - https://yahootuninggroupsultimatebackup.github.io/makemicromusic/topicId_24548.html
+
+
+
+
+
+archive:
+- как запускать?
+    foxdot делает так:
+        1. supercollider: FoxDot.start
+        2. notebook: from FoxDot import *
+        и можно фигачить
+
+    я буду делать так:
+        1. запустить блок
+        2. notebook: сделать setup - и вернуть класс
+        3. дальше будут всякие разные какие-то режимы

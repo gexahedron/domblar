@@ -1,0 +1,15 @@
+Graphs in music:
+    Graph grammars
+    MOPs
+    Lattice diagram
+    pwgl dag
+    ...
+
+trees:
+    Prolongation tree
+    ...
+
+lattices:
+    type inference algorithms
+        (or lifetime inference)
+    ...

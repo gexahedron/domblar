@@ -1,0 +1,1859 @@
+закодить:
+- вибрато
+- PWM или модуляцию параметра FM тембра
+- связка psg1-psg2-psg3 (lead arpeggio, bass, percussion), chord progressions
+  https://youtu.be/27Z6EMDt6rg?t=199
+
+smrg sc3
+https://github.com/smrg-lm/sc3
+https://github.com/pabloriera/SC3_notebooks
+
+RAD
+  100 patterns
+  64 lines
+в deflemask я видел 32 lines
+
+
+направления, по которым можно работать каждый день:
+- что-то простое
+  - интерфейс
+    трекер - было бы прикольно сделать полоски
+    oscilloscope
+    и ноты
+  - грузины, 22edo
+  - тембры
+    - HERAD
+      http://www.vgmpf.com/Wiki/index.php/HERAD
+    - перкуссия от magical 8bit
+    - трюки для OPL3 (из коммента в ютубе про Megarace):
+      - filter sweeps
+      - sync tones
+      - PWM
+      - phase distortion
+    - DefleMask Cheat Sheet
+      https://www.matthewivic.com/product/the-deflemask-cheat-sheet/
+    - микротональное-пианино - https://scsynth.org/t/good-piano-sound/5818/8
+    - поиграться с furnace tracker
+      - создать арпеджио а-ля Pushing Onwards
+      - или Predestined Fate
+      - или звук а-ля jollybard - porcupine
+  - random processes with memory
+  - abjad, нотация
+    - https://abjad.github.io/api/abjad/score.html?highlight=chord#abjad.score.Chord
+      note colors
+    - HEJI2
+    - Sagittal
+    - 22edo
+  - микротоновые гармонии
+  - ритм
+  - how to code good python docstrings
+  - supercollider
+    https://doc.sccode.org/Classes/Score.html
+    http://madskjeldgaard.dk/posts/2019-08-05-supercollider-how-to-render-patterns-as-sound-files-using-nrt/
+
+
+
+Write your own custom FoxDot function with Python.
+https://crashserver.fr/tutorial-write-your-own-foxdot-custom-function-with-python/
+
+
+
+
+
+- spectralism? ромителли?
+  - todo: поанализировать спектры в SPEAR
+
+    Romitelli - EnTrance analysis
+    https://brahms.ircam.fr/en/analyses/EnTrance/
+
+    cross-synthesis
+
+    https://support.ircam.fr/docs/om-libraries/old/PW-Esquisse.pdf
+
+
+  Marilyn Nonken, Spectralisms in America, 1995-2005 27:32
+  https://medias.ircam.fr/x264cc3
+  Timothy Bausch. Spectral Atoms: An Expanded Approach to the Analysis of Spectral Music 28:18
+  https://medias.ircam.fr/x2f855a
+  Lasse Thoresen, Spectral Mergers 25:26
+  https://medias.ircam.fr/xcad785
+
+  Laura Zattra, Behind the official literature. A history of first encounters between Spectralists and Sound Researchers 33:06
+  https://medias.ircam.fr/x8a75e6
+
+- post-tonal theory
+  https://books.google.de/books?id=x_hgEAAAQBAJ&printsec=frontcover&source=gbs_book_other_versions#v=onepage&q&f=false
+  https://global.oup.com/us/companion.websites/9780197543986/ch4/
+  https://www.blogger.com/blog/post/edit/1164367183620962014/6195127906888126278
+
+- abjad + lilypond
+
+
+- чиптюн-трекер
+  - я так понял по furnace tracker:
+    - на каких-то каналах нота не держится бесконечно, есть envelope, громкость затухает
+      на fm каналах так
+    - если новая нота вставляется - громкость восстанавливается
+    - есть специальная команда off
+    - portamento надо явно прописывать
+    - если это pulse канал - нота держится бесконечно
+      не знаю насколько это практично правда
+
+  - есть вопросы про качество переходов от ноты к ноте
+  может проблема в envelope?
+  - и к gate=0
+
+- fm synthesis - C:M ratio series of order 32 (farey sequence)
+- стандартный music theory
+  - есть кстати мысль покодить musical set theory / transformational music theory
+  забить на tonality сначала,
+  но учесть при этом какую-то консистентность в том,
+  какие мы используем интервалы
+
+- нестандартный music theory
+  - Gamakas
+  https://www.youtube.com/watch?v=AIPraIlSmIk
+
+
+- тембры
+  - добавить LFTri
+
+
+- вся система в целом, интеграция всех частей друг с другом, модульность
+  - какие вообще тут есть идеи?
+    - представляю в голове это как граф в нирване
+    - нужны какие-то API, или блоки
+    - я должен проверить, что граф корректный
+    - и дальше провести симуляцию
+    - и на выходе мы должны получить музыку
+
+- вычислительные системы, логики, теория типов и тональность
+
+
+- мне нужен аналог Pmono
+  то есть прокатит z.set(\freq, 700, \beatFreq, 2, \mul, 0.2);
+
+  - так, надо разобраться с EnvGen
+
+
+
+
+
+vgm
+nsf
+sid
+
+
+структуры:
+  - tonal
+  - rhythm
+  - form
+
+todo:
+  - делаю generative/algorithmic microtonal fm chiptune-трекер
+    должен быть смесью opl2 и game boy
+      - правда ещё есть SID
+      - lfsr?
+      - pcm?
+    - арпеджио
+
+
+  - понять что делать дальше
+    - собрать все файлики воедино
+    - делать блогпосты
+    - выкладывать какие-то музыкальные зарисовки
+    - python oop
+    - выложить коды
+    - барабаны
+    - джаз
+    - improvisation techniques
+    - music theory
+    - mad musical science
+    - barbershop harmonies
+    - set theory
+    - abjad
+    - Kuramoto–Sivashinsky equation for spectral music
+    - какие есть темперации, наиболее далёкие от JI?
+      например MOS-шкалы
+    - fm synthesis
+    - infinite canon - http://cliftoncallender.com/research/infinite_canons/
+    - generator / resonator
+    - sound design
+    - тембры
+    - string quartet
+    - изучить musescore
+    - выложить svan tuning
+      https://yahootuninggroupsultimatebackup.github.io/makemicromusic/topicId_3593.html
+      http://users.bestweb.net/~notr/kartuli/tuning.txt
+    - UI
+      - потестил op-1, вполне прокатит как контроллер
+    - причесать код синта, поправить баги, написать инструкцию
+    - причесать код благосферы; выложить на github
+    - релизнуть альбомы на cdbaby
+    - музыка а-ля:
+      - Simeon Ten Holt
+      - Debussy
+      - Autechre (правда я даже не знаю что это толком)
+      - John Moriarty
+      - jollybard
+      - Erik Satie - Gymnopédies
+
+
+
+Pokémon Red and Blue Score for Sound Chip
+https://www.youtube.com/watch?v=2WG9V6C1Aew
+
+
+
+
+
+Chiptune Techno
+https://www.youtube.com/watch?v=Sf5SIqFL7x0
+  басс + перкуссия + редкие ноты + ещё один pitched шум-голос
+
+
+Carl Vine Sonata:
+While much has been written about Carter’s Piano Sonata and its predecessor,
+Ives’ Concord Sonata, there has been little writing devoted to Vine’s First Piano
+Sonata
+
+
+
+
+live-coding environments:
+  tidalcycles
+    $, #, +|
+  FoxDot
+    https://www.youtube.com/watch?v=CXrkq7u69vU
+      крутая перкуссия
+    https://www.youtube.com/watch?v=W_E-m5alba0
+      !вот тут могут быть клёвые звуки для техно!
+    ['loop', 'stretch', 'play1', 'play2', 'audioin', 'noise', 'dab', 'varsaw', 'lazer', 'growl', 'bass', 'dirt', 'crunch', 'rave', 'scatter', 'charm', 'bell', 'gong', 'soprano', 'dub', 'viola', 'scratch', 'klank', 'feel', 'glass', 'soft', 'quin', 'pluck', 'spark', 'blip', 'ripple', 'creep', 'orient', 'zap', 'marimba', 'fuzz', 'bug', 'pulse', 'saw', 'snick', 'twang', 'karp', 'arpy', 'nylon', 'donk', 'squish', 'swell', 'razz', 'sitar', 'star', 'jbass', 'sawbass', 'prophet', 'pads', 'pasha', 'ambi', 'space', 'keys', 'dbass', 'sinepad']
+  SuperCollider
+  overtone
+  ORCΛ
+  Ixi lang
+  Sonic Pi
+  pure data
+soft:
+  sunvox
+  renoise
+  MilkyTracker
+  Surge
+
+
+
+
+google
+atonal chromatic music analysis debussy stravinsky bartok scriabin book
+
+
+
+что такое структура?
+- я в голове представляю структуру как дерево
+- есть музыкальные фразы, фрагменты мелодий
+- дальше мы к ним можем применять операции всякие
+
+
+22edo новый план, атональный:
+- что, если попробовать убрать scales, оставить всё остальное?
+- ну или не парится про scales, а менять их как хочется
+- как сгенерить мелодию и ритм?
+- исходить из возможных интервалов, мелодий, аккордов
+- и попробовать разные формы и ритмы
+- и повторения
+- попробовать с этой точки зрения проанализировать 3 пьесы Joseph Monzo
+
+
+ещё раз подумать про модульность
+про многие музыкальные теории
+и способы построения композиции
+как собирать музыку из иерархий, логик и прочего
+
+
+22edo план:
+- разобраться с fm-синтезом
+- собрать партитуру elia lrde
+- проанализировать MOS шкалы с точки зрения JI, minor, manor
+- закодить более простые/логические паттерны для перкуссии
+- закодить другие схемы для аккордов (в левой руке) или chord progressions
+- исправить modulations
+
+
+JI, 41 edo, Kite:
+- The Beauty of Extended Just Intonation
+- The Freedom of an Equal Temperament
+- Georgian Polyphonic singing can be done in a 41edo context due to its excellent approximations of prime harmonics and neutral third, as well as Pythagorean seconds and sevenths.
+
+
+! guitar distortion brings out difference tones
+  The Kite Guitar Explained Part 1A (live)
+  https://www.youtube.com/watch?v=JdjoyvWgsYQ
+
+sound synthesis in supercollider
+bubble texture
+https://scsynth.org/t/synthesis-challenge-liquid-bubbly-texture/5378/10
+
+
+porcupine non-mos modes:
+https://www.facebook.com/groups/370122423186931/posts/422796054586234/
+
+Incompossible Approximations:
+- mido
+- python-rtmidi
+- sc3
+
+https://github.com/euwbah/musescore-microtonal-edo-plugin
+
+Gradus ad Parnassum/Microtonality
+We will focus on microtonal solfège and theory: several MOS scales as subscales to 22-EDO
+  superpyth[7], pajara[10], porcupine[7], porcupine[8], machine[6], orwell[9]
+
+22edo
+georgian
+  в основном это будет porcupine[7]
+  в виде 3334333
+  but no middle third! (it's in 34edo; fifth=20; middle third=10)
+
+jollybard - porcupine:
+  - 4 линии - ...
+
+план:
+- fm 2op timbres (+ pluck?)
+- georgian tunings
+- попробовать транскрибировать chqim toronji
+- или арти варди
+- или dala kojas
+
+You don't have to know the theory to enjoy the music, but here's a brief and incomplete sketch: In general, in music with true three-part polyphonic independence and a small melodic range, fifths will be more important than octaves. The fifth will replace the octave as the unit of structural stability and pitch equivalence, and the scale will repeat at the fifth instead of the octave. We can usefully speak of such music as being built around the "quintave" rather than the octave. In a scale based on the quintave, furthermore, the tendency will be to subdivide the fifth not into whole and half steps but into four intervals more nearly equal in size, blurring or erasing the sense of major and minor. Those intervals produce a lowered second, a near-neutral third, and a raised fourth — which, when projected by a fifth, results in a raised eighth degree, a wide octave. The effects of this tendency vary by region in proportion to the tradition of true three-part polyphony, but some form of quintave tuning is common to almost all Georgian music.
+
+P5 = 709.091
+можно видимо ужать октаву слегка до 1195
+
+
+Intervals well-matched by 22-ET
+  Major third - The major third (5:4) is very in-tune, only about 4.5 cents too narrow.
+  Septimal major third - The septimal major third (9:7) is very in-tune, more so than in 31-ET.
+  Greater undecimal neutral second - 22-ET provides a near-perfect match to the greater undecimal neutral second (11:10); by contrast, 31-ET better matches the lesser (12:11) undecimal neutral second.
+  Undecimal tritones - 22-ET provides a good match (within 5.86 cents) to the undecimal tritones, the 11:8 and 16:11 ratios; this match is a little better than in 31-ET.
+  Diatonic semitone - The diatonic semitone (16:15) is nearly perfectly matched in 22-ET; this match is a little closer than in 31-ET.
+
+4:5:6:7:9:11 chords, there are no "simple" MOS scales to support having more than 1
+  simplest scale for full 11-limit harmonies is going to be Orwell[13]
+However, if you look at subset chords, like 4:5:6:11, 4:6:7:11, 4:5:7:9
+  if you want 4:5:6:11 chords, you can use Porcupine[7] to get three of them, or Porcupine[8] to get four
+  Or take 4:5:6:7 chords. In 22edo, you have Pajara[10], which gets you four of them (as well as four utonal counterparts for them)
+  For 4:6:7:11 chords, neither has an MOS smaller than 12 notes that give you a single 4:6:7:11 chord. But in 22edo, with Superpyth[12] you get five of them
+  For 4:5:7:9 chords, both EDOs are pretty simple, but 22edo still wins -- Astrology[6] gets you two of them
+Beyond that, I think 22edo is just easier to navigate because it's not prime. It divides into two copies of 11edo offset by 600 cents, where harmonics 7, 9, 11, and 15 are all on one chain of 11edo, with harmonics 3 and 5 on the other. That means a lot of harmonic relationships can be understood within a microcosm of 11edo, allowing you to "forget about" half the pitches in various contexts.
+Both Porcupine[7] and Pajara[10] gave me a good frame of reference for 7- and 11-limit harmony
+  and being able to play 4:7:9:11:15 chords totally within 11edo offered a very simple path into some very xenharmonic sounds.
+In 22edo, the 5th and 11th harmonics are both flat of Just, so intervals like 11/9, 6/5, 11/7, and 9/5 are all quite out of tune compared to the harmonics themselves
+tempers out 64:63 so that diatonic minor 3rds become equal to 7/6,
+and diatonic minor 7ths become equal to 7/4.
++
+https://www.reddit.com/r/microtonal/comments/9vy48d/fun_22edo_chord_i_just_discovered/
++
+Functional Harmony in Any Regular Temperament
+https://www.reddit.com/r/microtonal/comments/a8gkol/functional_harmony_in_any_regular_temperament/
+
+
+
+
+
+! orwell22.scl
+Orwell[22] 7-limit 6 cents optimized
+22
+!
+42.2392
+114.6679
+156.5802
+198.8363
+271.7320
+313.5924
+385.9890
+428.0889
+469.4472
+542.8804
+584.9577
+657.2815
+699.3588
+772.7920
+814.1503
+856.2502
+928.6468
+970.5072
+1043.4029
+1085.6590
+1127.5713
+1200.0000
+
+
+Taylor-53CS, a 13-limit JI well-temperament: introduction and demo
+https://www.youtube.com/watch?v=tkRq2fy4PyU
+58EDO, Mystery temperament and 2 rings of Pythagorean on the Lumatone
+https://www.youtube.com/watch?v=Keclakcqie8
+
+очень странно но мне
+- очень нравится звук в 14-edo
+  видимо потому что там шкалы - это 7-edo
+
+jupyter todo:
+- jupyter notebook function hotloading
+- sliders, buttons:
+https://ipywidgets.readthedocs.io/en/latest/examples/Using%20Interact.html
+
+
+jupyter notebook --port=9999
+
+
+ready:
+- rhythms (euclidean for each subbeat)
+- chord progressions (smooth, random; + arpeggios)
+- melodies:
+  with euclidean rhythms, wave-like motion;
+  more repeating scale jumps
+  duplicate melody in interval
+- voices (3 voices, bassline with chords and 2 with melody)
+- scales (mos, from 5 notes to 0.6 percent of notes)
+- modulations (full bar)
+- bar repetitions
+- switch edos (9, 12, 15, 17, 19, 22, 23, 26, 27)
+- timbre variations
+- panning
+- percussion (kick, snare, hihat)
+
+todo:
+- understand how to finish
+- сделать количество reps зависимым от tempo (чем быстрее ритм тем можно больше повторов)
+- проредить басс
+- more panning algorithms
+- fm-timbres - variations and instruments; building blocks; percussion; 8 voices
+- add scale names
+- instruments from tidalcycles
+- live-coding тулзы (yield, всякие ручки); gui
+- clap; 808
+- swing
+- fx (reverb, delay, bitcrusher, sidechain, spectral panning)
+- non-edo mos scales; blackwood; zabka scales; ji; barbershop; tonality flux; comma pumps; hexany/eikosany; non-octave
+- tritone substitution; chromatic mediant; turnarounds
+- cadences; special (blues) notes
+- new modulations (modulation through edo scales nestedness)
+- reharmonizations
+- change tempo with preserving everything else as mush as possible
+- dynamic tuning/dynamic timbre
+- major+minor+neutral valencies understanding (+timbre?)
+- better timbre variation
+- memory+motif variations
+- chromaticisms
+- texture?
+- timbre intonations (algorithms for loudness, legato etc.)
+- more rhythms (L-rhythms; standard patterns)
+- more melodic devices
+- move away from thirds and fourths
+- voice interactions
+- morphogenesis
+
+https://sccode.org/tag/category/instrument
+https://sccode.org/1-522
+
+gabberkick
+https://sccode.org/1-5aV
+kicks
+https://sccode.org/1-57g
+neurosnare
+https://sccode.org/1-57f
+clap
+https://sccode.org/1-523
+...
+todo: dtmf
+
+########################
+
+текущая схема-иерархия:
+- edo: ноты от 0 до edo-1
+- scale: подвыборка нот
+- basis: основная нота, нужна для построения chord progressions
+- chord: выборка из 3-4 нот
+- melody: ...
+- beat, subbeat: ...
+- rhythm: ...
+- timbres: ...
+
+
+
+
+EDOs
+10: neutral triad version of blackwood, "neutral tetrad" version of pajara, neutral negri, neutral lemba
+   equalized octokaidecal[10]
+   first actually usable EDO. Decent chords & decent melodic ideas.
+   Sevish's Vidya is a good example of how it can sound
+11: machine[6] (2 2 1 2 2 2), orgone[7] (2 2 1 2 1 2 1)
+   smitonic / warped diatonic scales
+   http://x31eq.com/cgi-bin/rt.cgi?ets=11_14&limit=2_9_7_11
+   http://x31eq.com/cgi-bin/rt.cgi?ets=11_20&limit=2_9_7_11
+   excellent 4:7:9:11 chords, as well as 4:7:9:11:15:17:19 chords
+12: meantone/dominant, superpyth (?), augmented, diminished
+   basis for adaptive tuning
+13: warped diatonic scales which have the pattern 2212221, where "octave" now becomes more like a major 7th
+   father[8], glacial[7] / 2222212
+   738 cent interval, has good 13/8 and 11/8, and a good 7/6, and a decent 9/8
+14: dialtones / DTMF
+   jamesbond, bug/semaphore, hedgehog
+   misses "minor" and "major" thirds entirely,
+     going straight from "subminor" to "neutral" to "supermajor",
+     which makes it very xenharmonic (thought not necessarily *pleasant*)
+! 15: porcupine, blackwood, 5-limit
+16: mavila (Chromatic version of 9edo), armodue, slendro
+   machine[6]: 3 3 1 3 3 3
+   Decent 5/4~16/13 and good 7/4
+   first edo where 3 step interval can sound like "a step" instead of "a leap"
+   sounds like 16-EDO is an "enharmonic" scale for machine[11],
+     much like 19-EDO as an enharmonic underpinning for meantone[12]
+! 17: no-5's system, supra, bleu, nice accurate 3/2, Compatible with a large number of maqamat
+   superpyth, machine, diatonic scale, (non-degenerate) 10-note neutral-third scales
+   17edo Locrian
+18: dual-fifth edo, with two fifths (667¢ and 733¢) that are almost equally off from 3/2
+   dual-fifth MOSes oneirotonic, smitonic
+   10 note scale called "supersharp" which is 2 2 2 2 1 2 2 2 2 1, has major/minor/diminished chords
+! 19: meantone diatonic scale (5L2s proper), Lydian, semaphore
+   negri, godzilla, sensi, keemun, magic
+20: ?
+21: oneirotonic edo with Baroque-sounding semitones and atmospheric neutral thirds and sharp fifths
+   (sub-optimal) whitewood
+! 22: superpyth, porcupine, pajara, orwell, magic, hedgehog, astrology, doublewide
+! 26: flattone, injera, cynder/mothra, Cool lydian
+   14/11 is cool, adds a 3/2 and a 7/4 to 13edo's good approximations of 11/8 and 13/8
+   deserves more attention than it's got so far
+! 27: Great underexplored edo
+   First true tetracot/modus
+   interesting combination of things (superpyth, neutral thirds, augene, sensi), which, however, all exist in smaller EDOs
+   Amazing approximations of intervals like 7/6, 6/5, 5/4 (but its the same as 12EDO), 3/2, 5/3, and 7/4
+   Better than 19edo on the 2.3.5.7.13 subgroup
+also, 29: Very cool diatonic scale; 34, 35, (41 and 53)
+
+
+можно было бы как концепцию ввести понятие замены
+ и заменять только что-то одно при переходе от 16 нот к следующим
+
+
+
+анализ мелодий:
+  - тетрис склеен из кусочно-линейных отрезков, например (и одного орнамента, и двух повторений)
+
+проблемы:
+с другой стороны - я не знаю где начало шкалы, какая мода главная, мажорная, минорная, да и неважно, ладно
+
+есть edo, есть scale
+  - базово буду считать, что scale - это MOS scale, со сдвигами
+  - что такое аккорд тогда?
+    есть базовая нота, а следующие строются с каким-то интервалом вверх от неё
+    и дальше я могу играть этот аккорд
+    i: даёт 3-4 ноты
+    было 0,1,2,3,4,5,6,7,8,9,10,11
+    стало 0,2,4,5,7,9,11
+    а в i попали 0,4,7
+    ну да ладно
+  - давай так, если получится - на первый subbeat играется нота из аккорда, а дальше как получится для мелодии
+  - или придерживаться этих нот только в бассу
+
+
+
+
+
+план
+в процессе
+todo:
+  - сначала добить 12edo:
+    - гармонии - какие-то схемы я уже выписал, можно воспользоваться
+    - формы - надо что-то придумать простое
+      для форм и ритмов у меня уже есть полуготовая система,
+      где можно вести отдельные партии
+
+  - кодить ли basic (bebop) enclosures, 3-note surround, broken 7th?
+  - live-coding performance
+  - microtonal harmonies
+  - chord progressions
+    какие chord progressions закодить?
+  - scale modulations
+    как это кодить?
+    сейчас diatonic scale = [0, 2, 4, 5, 7, 9, 11] # diatonic
+    это типа до мажор
+    common chord modulation: тут надо какой-то поиск делать
+
+  - визуализация - что-нибудь про ML?
+  - потом перейти к другим edo
+
+готово
+  - тембры - закодить 2-op фм-синтез
+
+
+
+форма:
+- ...
+
+https://en.wikipedia.org/wiki/Ii–V–I_progression
+https://en.wikipedia.org/wiki/Altered_chord
+http://localhost:9999/notebooks/Downloads/algorave4/algorave4_studies1.ipynb#
+OPL2 waveforms
+
+https://recarteblog.wordpress.com/2021/05/05/gongfm_sc/
+https://recarteblog.wordpress.com/2021/02/23/example-post-2/
+
+todo:
+  - ii-V-I в 22edo
+  - как выясняется - напрямую аккорды не работают в других шкалах/ладах
+  разобраться бы почему и как они работают тогда
+  - а где hexatonic в zabka шкалах?
+
+что дальше?
+- закодить генерацию прогрессий
+- закодить chord voicing
+- закодить voice leading
+- научиться делать что-то музыкально интересное, зная chord progression
+
+
+прогрессии
+  есть real, есть modal
+  real использует все 12 нот, расстояния внутри 12 нот
+  modal использует 7 нот
+
+
+0 2 4 5 7 9 11
+квинта = 7
+0+4s=7,   4s=7
+2+4s=9,   4s=7
+4+4s=11,  4s=7
+5+4s=12,  4s=7
+7+4s=14,  4s=7
+9+4s=16,  4s=7
+11+4s=17, 4s=6
+собственно, почти везде квинта кроме одной ступени
+круг тогда такой:
+iii–vi–ii–V–I–IV–vii∘
+и это даже не круг а отрезок
+
+основная прогрессия: I-vi-ii-V
+
+
+fifth-based edos (?):
+  8, 13, 5, 22, 17, 12, 31, 19, 7, 23, 16, 9, 11
+// 15; 26, 27
+
+
+
+аккорды
+  tonic < anything; seventh < ninth; third < fifth/thirteenth
+  ещё third и seventh чередуются, когда мы проходим по circle of fifths
+  также
+  In major-key tonality the avoid note is the fourth diatonic scale step, or 11th
+    which is a minor ninth above the 3rd of the chord, and thus very harsh.
+    The available tensions for a dominant seventh chord are 9, ♯11, and 13.
+  In minor harmony the sixth scale step is usually avoided, and the 13th is not regarded as an available tension.
+  https://en.wikipedia.org/wiki/Avoid_note
+
+реализация идеи:
++ один блок - это 4 бита, 16 подбитов = 4 по 4
+- добавить chord прогрессии
+  - квинтовый круг
+    I–IV–vii∘–iii–vi–ii–V–I
+      0-3-6-2-5-1-4-0
+      то есть +3 каждый раз, 3=7-4; 4 = third
+    может попробовать делать рандомные вырезки в 4 аккорда?
+    типа
+      I-IV-iii-ii-
+      или
+      I-iii-vi-V-
+
+    https://musictheory.pugetsound.edu/mt21c/ShorterProgressionsFromTheCircleOfFifths.html
+    ii-V-I
+
+    vi-ii-V-I
+    I-vi-ii-V
+    ii-V-I-vi
+
+    iii-vi-ii-V
+    ii-V-iii-vi
+  - jazz progressions
+    https://musictheory.pugetsound.edu/mt21c/StandardChordProgressions.html
+    II-V-I
+    iii-vi-ii-V (turnaround)
+- добавить euclidean ритмы для chord progressions
+
+
+- а как обосновывается прогрессия I-V-vi-IV?
+  Patricia Taxxon описывает её как склейку двух штук:
+   был цикл C -> G -> Am -> F -> C
+   стало
+    F -> C -> G (IV - I - V)
+    G -> Am -> F (bVII - i - bVI)
+  типа некая бимодальность
+
+
+- музыка в ji
+  - harmonics 12-22
+    harmonics:  3    5    7    9    11   13    15   17   19   21
+    harmonics: 702, 386, 969, 204, 551, 841, 1088, 105, 298, 471
+    11 note scale: 0, 17, 3*3, 19, 5, 3*7, 11, 3, 13, 7, 3*5
+      0, 105, 204, 298, 386, 471, 551, 702, 841, 969, 1088
+  https://en.xen.wiki/w/Gallery_of_just_intervals
+  https://en.xen.wiki/w/List_of_superparticular_intervals
+
+
+
+Music Theory/Complete List of Chord Patterns - Wikibooks, open books for an open world
+https://en.wikibooks.org/wiki/Music_Theory/Complete_List_of_Chord_Patterns
+
+Piano Voicing Techniques – Berklee Online Take Note
+https://online.berklee.edu/takenote/basic-piano-voicing-techniques/
+
+Overtone scales
+https://xenharmonic.fandom.com/wiki/Overtone_scales
+
+google:
+  microtonal jazz theory
+  difference tone triad
+  jazz in just intonation
+  jazz harmony tritone substitution chromatic mediant pentatonic "turnaround"
+
+How to Substitute a Dominant 7 for a Diminished 7 - Learn Jazz Standards
+https://www.learnjazzstandards.com/blog/learning-jazz/jazz-theory/substitute-diminished-7-dominant-7/
+
+5 Jazz Chord Substitutions You Need to Know - Learn Jazz Standards
+https://www.learnjazzstandards.com/blog/learning-jazz/jazz-theory/5-jazz-chord-substitutions-need-know/
+
+(PDF) Modulating or 'Transferring' Between Non-octave Microtonal Scales
+https://www.researchgate.net/publication/308879837_Modulating_or_%27Transferring%27_Between_Non-octave_Microtonal_Scales
+
+Divisions of the Tetrachord
+http://eamusic.dartmouth.edu/~larry/published_articles/divisions_of_the_tetrachord/
+
+Septimal Harmony | Untempered Music
+http://www.garygarrett.me/?cat=297
+
+todo:
+Ups and Downs Notation - Xenharmonic Wiki
+https://en.xen.wiki/w/Ups_and_Downs_Notation
+
+Metallic Harmony - Xenharmonic Wiki
+https://en.xen.wiki/w/Metallic_Harmony
+
+Blacksmith Temperament Modal Harmony (in 15EDO) - Xenharmonic Wiki
+https://en.xen.wiki/w/Blacksmith_Temperament_Modal_Harmony_(in_15EDO)
+
+Armodue - Xenharmonic Wiki
+https://en.xen.wiki/w/Armodue
+
+Kentaku's Approach to 13EDO - Xenharmonic Wiki
+https://en.xen.wiki/w/Kentaku%27s_Approach_to_13EDO
+
+5L 3s/Inthar's approach - Xenharmonic Wiki
+https://en.xen.wiki/w/5L_3s/Inthar%27s_approach
+
+Mason Green's New Common Practice Notation - Xenharmonic Wiki
+https://en.xen.wiki/w/Mason_Green%27s_New_Common_Practice_Notation
+
+Carlos Beta - Xenharmonic Wiki
+https://en.xen.wiki/w/Carlos_Beta
+
+Modal systematization of soid-family scales - Xenharmonic Wiki
+https://en.xen.wiki/w/Modal_systematization_of_soid-family_scales
+
+Mailing list articles by Carl Lumma - Xenharmonic Wiki
+https://en.xen.wiki/w/Mailing_list_articles_by_Carl_Lumma
+
+William Lynch's Thoughts on Septimal Harmony and 22 EDO - Xenharmonic Wiki
+https://en.xen.wiki/w/William_Lynch%27s_Thoughts_on_Septimal_Harmony_and_22_EDO
+
+
+
+рецепт микротонального джаза:
+- wurlitzer
+- некоторый бит
+- собственно микротона
+
+
+идея:
+  - я многого не знаю как делать
+  поэтому
+  я бы просто втупую бы закодил простые всякие идеи
+  - разбиваю песню на блоки
+  каждый блок как-то формируется, формально собирается
+    это нужно для того, чтоб можно было потом навесить операцию мутации
+  дальше блоки состоят из прогрессий аккордов
+    прогрессии генерю через круги и вторичные доминанты
+  формирую каким-то простым любым (самоподобным) способом мелодии, голоса
+    в соответствии с прогрессией аккордов
+  использую мутации для вариаций и морфогенезиса
+  и ещё наверно надо сделать морфогенезис какой-нибудь затухающий
+    или с каденциями
+  возможно как-то запоминаю то, что было проиграно, как память
+    для повторений
+  вот, и всё это буквально и формально надо закодить
+
+  вот, и будут какие-нибудь ручки для лайв-кодинга
+
+
+теория:
+  - ноты / pitches
+    это легко
+    было 12-edo
+    стало n-edo (более сложные варианты пока что не рассматриваю)
+  - шкалы (подмножество нот)
+    это посложнее, но я примерно понимаю что можно сделать
+  - мелодии
+    не знаю
+  - контрапункт (сочетание мелодий)
+    не знаю
+  - passing/neighbour tones
+    не знаю, хотя наверно не очень сложно будет добавить
+  - аккорды
+  - распределение нот в аккордах по октавам
+    пока что не знаю как
+  - прогрессии аккордов
+    есть круги (квинтовый и проч)
+    а так не знаю
+  - замены аккордов
+    не знаю
+  - понимание модальностей (maj, min, aug, dim)
+    не знаю
+  - лады
+    не знаю
+  - голосоведение
+    тут есть какие-то алгоритмы про минимальное голосоведение
+  - разбивка аккордов на более сложные последовательности
+    пока что не знаю, может захардкодить как-то?
+  - тоннетц
+  - модуляции
+    - временные (внутри прогрессий аккордов)
+      не знаю, надо как-то умудриться обобщить понятие parallel chord
+    - постоянные
+  - иерархия шкал - пентатоника/диатоника/хроматика
+  - каденции
+    не знаю
+  - мутации, морфогенезис
+    не знаю
+  - ритмы
+    не знаю : ) возможно они ещё зависят от гармоний
+  - микроритмы
+    не знаю
+  - тембры
+    не знаю, сложно
+  - интонации в тембрах
+  - микширование, мастеринг
+    не знаю, хотя есть техника сайдчейнинга, с кодом
+
+
+план до 4 октября, до ICLC:
+- autotracker
+- закодить что-нибудь из mod7 трансформаций
+- закодить что-нибудь из self-similarity или morphogenesis
+  - dragon curve
+  - infinity series
+
+календарь:
+15: добавил тембров
+16: -
+17: -
+18: -
+19: -
+20: переосмыслил план
+21: закодил темпы (4x4)
+22: изучал прогрессии аккордов
+23: немного кодил, захардкодил одну прогрессию (ii-V-I)
+24: -
+25: -
+26: -
+27: -
+28: немного глянул квинтовый круг
+29: закодил перевод ji дробей в шаги edo
+30:
+ 1:
+ 2:
+ 3:
+ 4:
+
+
+“Neither Tonal nor Atonal”?: Harmony and Harmonic Syntax in György Ligeti's Late Triadic Works - ProQuest
+https://www.proquest.com/openview/c94b1a4ddfa9f3a7c312959a4182c342/1?pq-origsite=gscholar&cbl=18750
+New Lydian Theory for Frank Zappa's Modal Music | Music Theory Spectrum | Oxford Academic
+https://academic.oup.com/mts/article-abstract/36/1/146/2748318
+Brilliant Colors Provocatively Mixed: Overtone Structures in the Music of Debussy | Music Theory Spectrum | Oxford Academic
+https://academic.oup.com/mts/article-abstract/23/1/61/995557?redirectedFrom=PDF
+Comprehensibility and Ben Johnston’s String Quartet No. 9
+https://mtosmt.org/issues/mto.19.25.1/mto.19.25.1.willis.html
+Scalar Shift in Popular Music
+https://mtosmt.org/issues/mto.11.17.4/mto.11.17.4.temperley.html
+Chord Proximity, Parsimony, and Analysis with Filtered Point-Symmetry
+https://mtosmt.org/issues/mto.19.25.2/mto.19.25.2.plotkin.html
+Modeling Diatonic, Acoustic, Hexatonic, and Octatonic Harmonies and Progressions in Two- and Three-Dimensional Pitch Spaces; or Jazz Harmony after 1960
+https://mtosmt.org/issues/mto.10.16.3/mto.10.16.3.waters_williams.html
+Cohn, A Platonic Model of Funky Rhythms
+https://mtosmt.org/issues/mto.16.22.2/mto.16.22.2.cohn.html
+
+Zabka's Plane Dance, Tube Dance, triadic Donut Dance (= Cube Dance)
+Douthett’s Cube Dance, Douthett’s Power Towers (= tetradic Donut Dance)
+Cohn’s Square Dances with Cubes
+
+bitKlavier
+https://www.kadenze.com/courses/reinventing-the-piano-i/info
+https://bitklavier.com/
+https://direct.mit.edu/comj/article/43/2-3/48/94685/Preparing-the-Digital-Piano-Introducing-bitKlavier
+https://direct.mit.edu/comj/article/43/2-3/67/94692/Tuning-Playfully-Composed-and-Adaptive-Tunings-in
+
+NESS project (standing for Next Generation Sound Synthesis)
+http://www.ness.music.ed.ac.uk
+https://direct.mit.edu/comj/article/43/2-3/15/94679/Physical-Modeling-Algorithms-and-Sound-Synthesis
+https://direct.mit.edu/comj/article/43/2-3/31/94681/Large-Scale-Physical-Modeling-Synthesis-Parallel
+
+ещё:
+Milton Babbitt
+Per Nørgård - infinity series
+Donald Knuth
+Pachet
+  music markov constraints pachet github
+  "pachet" "flow machines" github
+  Assisted music creation with Flow Machines: towards new categories of new
+    https://arxiv.org/pdf/2006.09232v2.pdf
+  https://www.helloworldalbum.net/track-by-track/
+  https://skyggewithai.bandcamp.com/album/hello-world
+  https://github.com/kastnerkyle/pachet_experiments
+  Pachet, F., Roy, P.: Non-conformant harmonization: the real book in the style of Take 6
+Torsten Anders (PWConstraints, PMC, Score-PMC, PWMC, PWGL, Orchidée, Situation, Strasheela, OMCS, aiva.ai)
+  Torsten Anders - Tempziner Modulationen
+  https://soundcloud.com/torsten-anders/tempziner-modulationen-2011-2
+  Magnus Lindberg - Engine
+  Hans Tutschku - Die Süsse unserer traurigen Kindheit
+  Örjan Sandred - Kalejdoskop
+  Örjan Sandred - Whirl of Leaves
+  Johannes Kretz - second horizon
+  Jonathan Harvey - Speakings
+Mezzo (библиотека в haskell'е)
+https://www.reddit.com/r/haskell/comments/6holdz/mezzo_music_composition_meets_dependent_types/
+https://github.com/DimaSamoz/mezzo
+OboeJS: A Constraint-Based Approach to Instrument-Specific Algorithmic Composition
+https://direct.mit.edu/comj/article/43/1/8/94626/Between-the-Abstract-and-the-Concrete-A-Constraint
+SuperCollider, MIRLC
+https://direct.mit.edu/comj/article/42/4/9/94830/Music-Information-Retrieval-in-Live-Coding-A
+Jeff Pressing
+  ...
+
+
+music constraint systems PMC, Score-PMC, PWMC (and its successor Cluster Engine), Strasheela, and Orchidée-most are libraries of the composition systems PWGL or OpenMusic. These systems are shown in action by discussions of the composition processes of specific works by Jacopo Baboni Schilingi, Magnus Lindberg, Örjan Sandred, Torsten Anders, Johannes Kretz, and Jonathan Harvey.
+
+
+12tet scales:
+  - 7 diatonic
+  - 7 acoustic
+  - 8 octatonic/diminished
+  - 6 whole-tone
+  - 7 harmonic minor
+  - 7 harmonic major
+  - 6 augmented/hexatonic
+
+  - 5 pentatonic scales
+  - 6 Prometheus/mystic
+  - 6/7/9 blues scale
+  - bebop scale
+  - tritone scale/petrushka chord
+  - istrian scale
+  - 7 zabka hungarian major
+  - 7 zabka spelled heptachords
+
+
+edo on tonnetz:
+ 9, 12, 15, 16/23 (mavila), 17, 19, 22; 26, 27
+9tet:
+12tet: 3,5
+  ? 19
+15tet:
+16tet:
+17tet:
+19tet:
+22tet:
+23tet:
+26tet:
+27tet:
+
+> I do think the 19th harmonic is intentionally approximated in either augmented dominant chords or 7b13 chords.
+
+jazz
+  https://en.wikipedia.org/wiki/Coltrane_changes
+  "minor ninth" – for instance, 8:10:12:14:17
+  https://en.xen.wiki/w/File:Mavila_Jazz_Rhodes_1.mp3
+  https://en.xen.wiki/w/Octatonic_scale
+  Comma pumps corresponding to other commas of 12edo, for example 128/125 or 225/224, may form the basis of interesting chord progressions in jazz or other 12edo music.
+  https://en.xen.wiki/w/User:Rperlner
+    https://en.xen.wiki/w/File:Octatonic_Groove_22_edo.mp3
+    https://en.xen.wiki/w/File:Octatonic_Groove_26_edo.mp3
+  https://en.xen.wiki/w/EdXIII
+  https://en.xen.wiki/w/EdIX
+  BP - https://soundcloud.com/user-824310486/jolly-ride
+  http://chrisvaisvil.com/17-et-jazz/
+    http://micro.soonlabel.com/17-ET/60x60-4001-1-ver2.mp3
+  https://en.xen.wiki/w/5L_2s_MODMOSes - melodic minor / jazz minor
+  39edo, augene - https://en.xen.wiki/w/39edo#Blues_.2F_Jazz_.2F_African-American
+  41-edo, https://en.xen.wiki/w/Kite_Guitar
+    https://en.xen.wiki/w/Kite_Guitar_Chord_Shapes_(downmajor_tuning)
+    https://en.xen.wiki/w/Kite_Guitar_explanation_for_non-microtonalists
+  https://en.xen.wiki/w/Microtonal_Music_by_Gene_Ward_Smith
+    http://micro.soonlabel.com/gene_ward_smith/chromosounds/GWS-GPO-Jazz-chromosounds.mp3
+  https://en.xen.wiki/w/Technical_Notes_for_Newbeams
+    spun
+  https://en.xen.wiki/w/User:Aura/Aura%27s_Ideas_on_Functional_Harmony
+  https://en.xen.wiki/w/Listen
+  https://en.xen.wiki/w/34edo
+    Likewise the 16-cent flat 27\34 approximate 7/4 can be musically useful especially in kleismic or 4L 3s contexts (with generator a 9\34 minor third). On the other hand, the slightly worse and sharper 7/4, 28\34, sounds more like the "dominant seventh" found in blues and jazz – which some listeners are accustomed to. (68edo contains a copy of 34edo and has the intervals 7/4 and 11/8 tuned nearly just.)
+  https://en.xen.wiki/w/4L_3s
+    18edo can be used to make large and small steps more distinct (the step ratio is 3/2, thus 18edo smitonic is distorted 19edo diatonic), or for its nearly pure 9/8. It also makes rising fifths (733.3c, a perfect 5-mosstep) and falling fifths (666.7c, a major 4-mosstep) almost equally off from a just fifth. 18edo is also more suited for conventionally jazz styles due to its 6-fold symmetry.
+  https://en.xen.wiki/w/5L_3s
+    18edo can be used for a large step ratio of 3, (thus 18edo oneirotonic is distorted 17edo diatonic, or for its nearly pure 9/8 and 7/6. It also makes rising fifths (733.3c, a perfect 5-mosstep) and falling fifths (666.7c, a major 4-mosstep) almost equally off from a just perfect fifth. 18edo is also more suited for conventionally jazz styles due to its 6-fold symmetry.
+  https://en.xen.wiki/w/Armodue_armonia
+  Decatonic Swing by Paul Erlich and Ara Sarkissian (jazz)
+
+
+todo
+  мелодии и хроматицизм на тоннеце
+  https://en.wikipedia.org/wiki/Five-limit_tuning
+
+todo
+root-shell-pretty
+https://www.openstudiojazz.com/5-easy-jazz-piano-chords-that-sound-great
+  - понять как перенести на тоннетц
+  - перебрать все варианты, понять какие не работают
+
+todo
+https://en.xen.wiki/w/Omnitetrachordality
+
+todo: аргументы про тональности в тезисе Hearne
+
+• chord progressions / sequences
+• harmonic rhythm
+• variety and quality of chords / simultaneities commonly used • chord extensions / alterations
+• chord voicings
+• chord functionality
+• non-normative sonorites, non-chord tones
+• modulations
+• use of passing chords, secondary dominants, modal mixture
+• use of modes / scales
+
+
+It is really important IMO to stress that many useful scales do have two consecutive half steps. Hungarian minor, Neapolitan major, 8-tone Spanish, Persian, and Enigmatic being five such examples, but there are more.
+
+
+что такое chord progression в рамках just intonation?
+  можно на tonnetz попробовать это сделать
+  embracing comma pumps
+
+
+I don't like when people try to translate heptatonic based thinking and notations to way bigger systems. C major in 22 is 0-7 (381.818182 cents)-13 (709.090909 cents).
+The whole A, B,C, D,E,F,G notation works fine only with heptatonic scales where we have only 3 different pitch classes and their reflections. It sucks for anything else, and circles of fifths also suck outside of 12edo . Keep your seconds (sevenths), thirds (sixths) and fourths (fifths) in 12...
+Even in 12 there are problems with more "modern" (romantic , folk, 20th century ) notations and namings, just because even in 12edo it's not always optimal to use heptatonic thinking - you can treat 12 as 5, 6,7,8,9,10, 11 note system and play various relatively unpopular scales that have "slightly" different tuning in smaller edos.
+"Atonal" integer notation is not liked by microtonalists that want to keep their JI and "normal" music connections, but is the most practical thing ever not only for composing, but also for playing (making transpositions easy to remember) and analyzing existing music.
+22 edo is fine for blues and some pseudo-oriental type music, but is lacking the small intervals (commas) that are usually used in vocal improvisations in these styles.
+
+
+как генерить мелодии:
+  - не знаю
+  - можно фиксировать scale и mode и вытаскивать мелодии оттуда
+    глянуть примеры:
+      reich - piano phase
+      ten holt - canto ostinato
+
+как делать композиции в supercollider:
+  misc, sccode/forsoka.scd:
+    через Routine
+  misc, sccode/beller.scd:
+    через Routine
+  misc, sccode/summer_made_sounds.scd:
+    в принципе тоже через Routine
+
+а что если (не новая идея, но)
+  гармония в 12tet - это 19-limit гармония?
+  1 = 17, 2 = 9, 3 = 19, 7 = 3
+  минор как основа roman numerals; тогда
+    3  : V
+    9  : iio
+    17 : для хроматики, видимо :)
+    19 : III+
+  то есть переписать всю теорию через 17ую и 19ую гармонику
+  а потом попытаться перевести её в другие темперации
+  и заодно поизучать - какие тут комма-пампы
+  https://www.reddit.com/r/musictheory/comments/3w4r4j/exploring_the_19limit_microtonality_implied_in/
+  + "Combination Tones as Harmonic Material" pdf
+  0 : 1/1
+  1 : 19/18 (93.6), 18/17 (98.9), 17/16 (104.95)
+    19/(3*3) vs 3*3/17 vs 17
+  2 : 19/17 (192.55), 64/57 (200.5), 9/8 (203.91)
+    3*3 vs 1/(3*19); vs 19/17
+  3 : 32/27 (294.134), 19/16 (297.5) : 19th harmonic (2.5 cent error)
+    1/(3*3*3) vs 19
+  4 : 24/19 (404.4), 81/64 (407.82) : smaller undevicesimal major third (4.4 cent error)
+    3/19 vs 3*3*3*3
+  5 : 4/3 (498) : perfect fourth (2 cent error)
+  6 : 24/17 (597), 17/12 (603) : тритоны
+  7 : 3/2 (702) : perfect fifth (2 cent error)
+  8 : 128/81 (792.18), 19/12 (795.6) : undevicesimal minor sixth (4.4 cent error)
+  9 : 32/19 (902.5), 27/16 (905.86) : 19th subharmonic (2.5 cent error)
+  10 : 16/9 (996.09), 57/32 (999) : undevicesimal minor seventh (1 cent error)
+  11 : 32/17 (1095.04), 17/9 (1101.04), 36/19 (1106.39)
+  12 : 2/1
+  dorian mode (3, 9, 19): 0 2 3 5 7 9 10 12
+  12 - dorian: 0 2 3 5 7 9 10 12
+  палиндром
+  D   E   F     G   A   B     C    D
+  1/1 9/8 19/16 4/3 3/2 32/19 16/9 2/1
+  мажор: 3-7-10; 19/16-3/2-57/32
+    тогда 0-1-2
+    0-2 = 3/2
+    0-1 = 24/19
+    1-2 = 19/16
+    38:48:57
+
+  0,4,7: 38:48:57
+
+  и да, у меня была идея, что 17 отвечает за диссонансы, а 3 и 19 за консонансы
+  ну ладно, не совсем так, но всё же
+  major: 4:5:6 => 19:24:27 - но это очевидно ошибка
+    на самом деле тут 38:48:57
+  minor: 10:12:15 => 16:19:24
+  4:5:6:7 => ?
+  for these 19-limit triads, the major triad comes out as (19:24:27) and the minor as (16:19:24)
+  the interference beats from these form at for the minor triad (at 3, 5, 8) (fifth, major third, and octave) and major at (3, 5, 9) (fifth, major third, and major second)
+  the fundamental for the minor triad is the root, however the fundamental for the major triad is on the major sixth...
+  so similarily to how in 5-limit JI, an ACE minor triad creates a missing fundamental at F, implying it is part of a maj7 chord, this 19-limit triad (and by extention the 12-ET major triad it very closely approximates) will create a similar effect with the MAJOR triad in reverse, implying that CEG is part of a min7 chord with the phantom root A below... whereas the minor chords missing fundamental falls indeed at the root of the chord unlike with 5-JI
+  I have long had an aesthetic dislike for 12ET's wildly sharp major thirds, and naturally gravitated towards minor thirds even though what i knew of harmonic consonance should imply the M3 should sound smoother. What interests me though is that, context aside, from a pure sound basis, the minor third while in 5-JI is hybrid under/overtonal (Minor of Dominant), the ET minor third seems to be purely overtonal.
+
+  this would put the ET Aminor/Cmajor scale at roughly the ratios:
+  A:B:C:D:E:F:G:A:B:C 48:54:57:64:72:76:81:96:108:114
+
+  The more amusing conclusion from this was that minor triads are more (overtonally) consonant than major triads in ET, which backs up my original hint of the "pleasant" distortion roar of the ET minor wrt the major "wobble". This situation is COMPLETELY reversed in 5-JI with the major triad taking the consonance, and the minor triad wobbling in sorrow at the lack of it's phantom root on the subdominant.
+
+  All in all, the ear forgives a lot of tuning errors and melodic intervals have an ENORMOUS margin for error, but for harmonic intervals the more rich the sound is, the less and less we can ignore the wave beating, and with effects that greatly amplify this beating (like distortion/overdrive)
+
+
+
+Open Studio
+https://www.youtube.com/c/OpenStudioJazz/videos
+
+почему 7, 9, 11, 13?
+  7 - потому что 7/4, наверно, причём tension
+    но фиг знает, мб зависит от тембра ещё
+  9, 11 и 13 - видимо потому что в шкале 7 нот и
+    это удобный способ заиспользовать эти ноты в аккорде
+  b или # - видимо для того, чтоб задать шкалу (условно, lydian)
+
+microtonal/harmonics sound design
+  Square waves
+  https://www.facebook.com/groups/497105067092502/permalink/2218322644970727/
+
+модельные произведения:
+- рахманинов этюд ...
+- дебюсси ...
+- веберн?
+  https://www.youtube.com/watch?v=rXX60ptT5nA
+  https://www.youtube.com/watch?v=FK1iqTTrphM
+- бах прелюдия 1, всякие контрапункты ...
+- барток ...
+  https://www.youtube.com/watch?v=pMV7KaxyBIE
+- бетховен ...
+- яначек струнный квартет 2
+- лигети ...
+- ? хиндемит ludus tonalis
+- ромителли ...
+- симеон тен хольт "canto ostinato"
+- ? köln concerto
+
+мысли про систему:
+- есть высоты нот, мелодии, scales/шкалы, аккорды / гармонии
+- мелодия - волнообразное движение, повторы, вариации
+- тоника и модуляции
+- у шкалы есть моды
+
+
+todo:
+  Extreme Modulation Using Chromatic Harmony
+  https://www.youtube.com/watch?v=tCNihwOxyG4
+
+  https://www.youtube.com/c/MusicMattersGB/videos
+
+  roman parser:
+    - добавить учёт I7 (и прочих) аккордов
+    - добавить учёт secondary dominant
+  - обобщить всё для не 12tet
+  - закодить functional harmony, диаграмму
+  smooth voice leading:
+    - закодить выбор одного из наилучших аккордов в voice leading'е
+    - разобраться с assert'ом
+    - добавить перебор в обратную сторону
+    - (вероятно) добавить учёт инверсий, как динамическое программирование
+    - также инверсии нужно учесть в плане их неравнозначности
+      например, cadential 6-4
+    - добавить учёт изменения числа голосов
+    - понять, можно ли улучшить критерий того, что такое smooth
+  - закодить вывод нот
+
+
+12tet music theory:
+  roman numerals
+
+  (modern) modes / scales
+    major / ionian
+    minor (natural) / aeolian
+    dorian / russian
+    phrygian
+    mixolydian
+    locrian (?)
+      Björk's "Army of Me" is a rare example of a pop song whose verse is written in the Locrian mode.
+
+    melodic minor
+    harmonic minor
+    harmonic major
+    Double harmonic scale
+    Hungarian minor scale
+    acoustic scale / lydian dominant
+    pentatonic
+    blues scale
+    bebop scale
+    whole-tone
+    augmented
+    octatonic / diminished
+    Prometheus scale / Mystic chord
+    Tritone scale / Petrushka chord
+    Istrian scale
+    church modes, greek modes - https://en.wikipedia.org/wiki/Mode_(music)
+
+  функции нот:
+    tonic, subdominant, dominant
+      todo: Subdominant Function - https://www.youtube.com/watch?v=zTqfaJ4JJdI
+      mediant, leading tone, supertonic, submediant
+        todo: Submediant - https://www.youtube.com/watch?v=du-jxmX4sTQ
+    non-chord tones
+      passing tone
+      neighbour tone
+      escape tone
+      double neighbour
+      ...
+  figured bass
+
+  форма / фразировка:
+    sentences and periods
+    12 bar blues
+    ...
+  motion: oblique, contrary, parallel
+
+  seth monaghan:
+    inverted dominants - https://www.youtube.com/watch?v=QdHGyk5_1Og
+    Leading-Tone Seventh Chords
+    Passing V6 in Major
+    Passing v6 in Minor / Lament Bass
+    Applied Chords to IV
+  music matters
+    Submediant Shift
+
+  enharmonics (?)
+  hierarchy of scales / 1-2-3-5-7-12
+
+  intervals:
+-1,  0,  1,  2,  3,  4,  5,  6,  7,  8,  9, 10, 11, 12, 13
+d1, P1, A1
+    d2, m2, M2, A2
+            d3, m3, M3, A3
+                    d4, P4, A4
+                            d5, P5, A5
+                                d6, m6, M6, A6
+                                        d7, m7, M7, A7
+                                                d8, P8, A8
+
+  chords / chord progressions:
+    circle of fifths
+    major functional harmony
+    minor functional harmony
+    Big 18 - https://www.youtube.com/watch?v=hw3GfElNFPA
+    inversions
+    7th chords
+    diminished 7th
+    half-diminished
+    augmented 6th chord
+    mode mixture / borrowed chords
+    chromatic mediants
+    tritone substitution
+    french, german, italian, neapolitan chords (это всё 6th chords?)
+    secondary dominants (applied dominants)
+    secondary diminished chords
+    secondary leading tone chords
+    Pandiatonicism
+    jazz turnarounds
+    constant structures
+    retrofunctional / rock logic
+    giant steps
+    extended tertian chords
+    sus chords (2, 4)
+      IV/5 “sus” chord ~= V7
+    slash chords
+    non-tertian chords:
+      quartal
+      quintal
+      secundal / clusters
+      polychords
+      added-note chords
+        split third
+        split fifth
+  cadences
+    perfect
+    deceptive
+    plagal
+    V7 -> I
+    Cadential Six-Four
+    picardy third
+    machaut cadence
+  modulation
+    enharmonic modulation
+      GM:V7 = f#m:Ger+6
+      fully diminished 7th chords
+    whole tone modulation
+    common tone modulation
+    monophonic modulation
+    direct modulation!
+    repeat sequence and modulate
+    chromatic modulation
+    chromatic (baseline) mediant modulation (может это всё одно и то же)
+    augmented modulation
+    diminished modulation (хотя может это то же что enharmonic)
+  melodies
+    ...
+  voice leading
+    https://musictheory.pugetsound.edu/mt21c/VoiceLeadingTriads.html
+    https://musictheory.pugetsound.edu/mt21c/VoiceLeadingSeventhChords.html
+    https://musictheory.pugetsound.edu/mt21c/VoiceLeadingNCTs.html
+    https://musictheory.pugetsound.edu/mt21c/VoiceLeadingChromaticHarmonies.html
+    https://musictheory.pugetsound.edu/mt21c/JazzChordVoicings.html
+  tension and resolution
+    ...
+
+  Harmonic Rhythm
+  Exceptions Created by Harmonic Sequences
+  Subtonic VII Chord in Popular Music
+  I-V-vi-IV progression
+  i-VII-VI-VII progression
+    or vi-V-IV-V in major
+
+
+rhythms
+  syncopated
+  ...
+
+можно вот так попробовать porcupine:
+163.64
+218.18
+272.73
+381.82
+545.45
+600.0
+709.09
+818.18
+872.73
+981.82
+1036.36
+2/1
+
+Typical turnarounds in jazz include:
+
+I–vi–ii–V[2] (ii–V–I turnaround, circle progression)
+I-VI-ii-V
+I–VI–II–V[4] (I–V/ii–V/V–V)
+I–♭iiio–ii7–V7[5]
+I–vi–♭VI7♯11–V
+V–IV–I (blues turnaround)
+I–♭III–♭VI–♭II7 (Tadd Dameron turnaround)
+iii-VI-ii-V
+
+
+https://en.xen.wiki/w/Collection_of_EDO_impressions
+edos:
+  5, 7, 8 - drone-like edos; overconstrained
+   5: slendro, gamelan, 2.3.7, 3/2 + resolved tonic harmony, emancipation from harmony
+   7: Regular temperament model of a scale used in Thai music;
+      similar to 5; 3/2; "equalized" diatonic scale;
+      equalized mohajira/maqamic[7] and its MODMOS's, porcupine[7], tetracot[7], and mavila[7]
+      if stretch the octaves to about 1230 cents =>
+        every other step of the popular nonoctave 88cET,
+        and which can also be thought of as a nonoctave version of tetracot temperament,
+        with really good 2:3:5 chords
+   8: equalized diminished[8]; equalized sensi[8]; equalized porcupine[8];
+      some kind of quarter tone interval; 10:11:12:13-based harmony; passable 10:11:12:14 chords;
+      nothing "rooted" (unless 750 cents is an acceptable 3/2)
+      2 1 1 1 1 1 1 may trip you out as being sort of like porcupine but with 4:5:6 replaced with 7:9:11
+   9: mavila and pelogic temperament;
+      equalized version of superpelog[9] and orwell[9] and augmented[9]
+      has augmented[6]
+      has a great 7/6
+      667 cent intervals as 3/2, yielding an extreme version of mavila (or 7-limit armodue)
+        which is a very acceptable tuning for pelog selisir;
+      First EDO with recognizable "major" and "minor" chords
+  10: neutral triad version of blackwood, "neutral tetrad" version of pajara, neutral negri, neutral lemba
+      equalized octokaidecal[10]
+      first actually usable EDO. Decent chords & decent melodic ideas.
+      Sevish's Vidya is a good example of how it can sound
+  11: machine[6] (2 2 1 2 2 2), orgone[7] (2 2 1 2 1 2 1)
+      smitonic / warped diatonic scales
+      http://x31eq.com/cgi-bin/rt.cgi?ets=11_14&limit=2_9_7_11
+      http://x31eq.com/cgi-bin/rt.cgi?ets=11_20&limit=2_9_7_11
+      excellent 4:7:9:11 chords, as well as 4:7:9:11:15:17:19 chords
+  12: meantone/dominant, superpyth (?), augmented, diminished
+      basis for adaptive tuning
+  13: warped diatonic scales which have the pattern 2212221, where "octave" now becomes more like a major 7th
+      father[8], glacial[7] / 2222212
+      738 cent interval, has good 13/8 and 11/8, and a good 7/6, and a decent 9/8
+  14: dialtones / DTMF
+      jamesbond, bug/semaphore, hedgehog
+      misses "minor" and "major" thirds entirely,
+        going straight from "subminor" to "neutral" to "supermajor",
+        which makes it very xenharmonic (thought not necessarily *pleasant*)
+! 15: porcupine, blackwood, 5-limit
+  16: mavila (Chromatic version of 9edo), armodue, slendro
+      machine[6]: 3 3 1 3 3 3
+      Decent 5/4~16/13 and good 7/4
+      first edo where 3 step interval can sound like "a step" instead of "a leap"
+      sounds like 16-EDO is an "enharmonic" scale for machine[11],
+        much like 19-EDO as an enharmonic underpinning for meantone[12]
+! 17: no-5's system, supra, bleu, nice accurate 3/2, Compatible with a large number of maqamat
+      superpyth, machine, diatonic scale, (non-degenerate) 10-note neutral-third scales
+      17edo Locrian
+  18: dual-fifth edo, with two fifths (667¢ and 733¢) that are almost equally off from 3/2
+      dual-fifth MOSes oneirotonic, smitonic
+      10 note scale called "supersharp" which is 2 2 2 2 1 2 2 2 2 1, has major/minor/diminished chords
+! 19: meantone diatonic scale (5L2s proper), Lydian, semaphore
+      negri, godzilla, sensi, keemun, magic
+  20: ?
+  21: oneirotonic edo with Baroque-sounding semitones and atmospheric neutral thirds and sharp fifths
+      (sub-optimal) whitewood
+! 22: superpyth, porcupine, pajara, orwell(, magic, hedgehog, astrology, doublewide)
+! 26: flattone, injera, cynder/mothra, Cool lydian
+      14/11 is cool, adds a 3/2 and a 7/4 to 13edo's good approximations of 11/8 and 13/8
+      deserves more attention than it's got so far
+! 27: Great underexplored edo
+      First true tetracot/modus
+      interesting combination of things (superpyth, neutral thirds, augene, sensi), which, however, all exist in smaller EDOs
+      Amazing approximations of intervals like 7/6, 6/5, 5/4 (but its the same as 12EDO), 3/2, 5/3, and 7/4
+      Better than 19edo on the 2.3.5.7.13 subgroup
+  also, 29: Very cool diatonic scale; 34, 35, (41 and 53)
+
+
+Omnitetrachordality
+https://en.xen.wiki/w/Omnitetrachordality
+https://en.xen.wiki/w/MOS_Cradle_Scales
+https://en.xen.wiki/w/MOS_Cradle
+https://en.xen.wiki/w/SN_scale
+https://en.xen.wiki/w/Gallery_of_omnitetrachordal_scales
+http://x31eq.com/7plus3.htm
+
+
+чужое микротональное
+22edo, 27edo - https://brendanbyrnes.bandcamp.com/album/2227-3
+bp https://www.reddit.com/r/microtonal/comments/nkt71c/bohlenpierce_loop_i_did/
+hexany https://www.reddit.com/r/microtonal/comments/n6sz6q/consonant_relations_studies_in_hexany_i/
+22edo https://www.reddit.com/r/microtonal/comments/n1ihkl/22tet_jam_i_dont_know_shit_and_used_the/
+
+
+
+
+As far as college libraries go, I think Genesis of a Music is a must-read and I took some interesting things away from A Theory of Evolving Tonality, although factually speaking neither of these is reliable
+
+
+
+https://en.wikipedia.org/wiki/Traditional_sub-Saharan_African_harmony
+
+17 EDO Chord Progressions
+https://www.reddit.com/r/microtonal/comments/ak9ytt/17_edo_chord_progressions/
+https://drive.google.com/file/d/1YKTTtB9i6_C_HELkLxwYyzkBuSC447c6/view
+Armodue
+https://en.xen.wiki/w/Armodue_armonia
+Mavila
+https://en.xen.wiki/w/Mavila_Temperament_Modal_Harmony
+porcupine
+https://en.xen.wiki/w/Porcupine_Temperament_Modal_Harmony
+Dyadic chord
+Anomalous Saturated Suspensions
+https://en.xen.wiki/w/Dyadic_chord
+Canovian chord
+https://en.xen.wiki/w/Canovian_chord
+https://www.reddit.com/r/microtonal/comments/h8wqhe/19et_theory_sensamagic_dominant_chord/
+Sensamagic chords
+https://en.xen.wiki/w/Sensamagic_chords
+5L+3s
+https://en.xen.wiki/w/5L_3s/Inthar%27s_approach
+
+31 tet
+https://31et.com
+http://www.huygens-fokker.org/docs/terp31.html
+
+bohlen-pierce:
+http://www.huygens-fokker.org/bpsite/modes.html
+
+SCALE NETWORKS AND DEBUSSY
+Though my chief analytical concern will be with Debussy, my broader theoretical aim is to develop a set of concepts and structures useful for analyzing a wide range of post-common-practice scalar music. This paper draws examples from Debussy, Chopin, Liszt, Shostakovich, and Rzewski. In previous work I have used similar ideas to analyze the music of Ravel, Stravinsky, and several jazz improvisers.4 Other theorists, such as Elliott Antokoletz, Carlo Caballero, Clifton Callender, Ian Quinn, and Daniel Zimmerman, have used similar methods to analyze Bartók, Al- brecht, Faure, Scriabin, Reich, and Prokofiev.5 Jose Antonio Martins uses closely-related structures to study Bartók, although his approach is impor- tantly different from mine.6 The fact that similar methods can be used to describe such a broad range of music suggests that we can indeed speak of a scalar tradition—and even a “common practice”—in twentieth- century music: a set of concepts and techniques common to a variety of musical styles, including impressionism, jazz, and minimalism.
+
+
+
+dmitri tymoczko:
+  hierarchy:
+  voice -> chord -> scale -> chromatic aggregate
+  ещё мне понравилась штука, где 2 шкалы пересекались друг с другом, накладывались, перетекали
+  а ещё пример с повышениями аккордов
+    с учётом voice leading и ограничениями на диапазоны голосов
+  а ещё инверсии аккордов
+
+
+Здесь я попробую для себя переформулировать (и закодить) правила контрапункта, но не в 12tet системе,
+а в just intonation'е.
+
+Но сначала надо узнать, что происходит в 12tet.
+
+coursera, курс approaching music theory: melodic forms and simple harmony
+в качестве нот выбран дорийский лад
+консонансы: 3rd (6/5), 5th (3/2), 6th (5/3), 8th (2/1)
+диссонансы: 2nd (9/8), 4th (4/3; странно, да; возможно из-за лидийского лада), 7th (9/5)
+очень диссонансно: тритон (sqrt(2)/1)
+фиксируем басовую линию, и пытаемся построить мелодию выше
+1. первый интервал - октава, а дальше подгоняем ноты так, чтоб было консонантно и чтоб прыжки были как можно меньше
+2. тут уже сложнее, добавляются разумные прыжки; добавляется voice exchange; в конце добавляется каденция; я пока что не понимаю, как это всё закодить
+Немного сбоку - а как перевести лады в just intonation? Вот есть 5-limit схема:
+                     2nd   3rd    4th     5th   6th   7th
+lydian          1    9/8   5/4  25/18     3/2   5/3  15/8
+ionian          1    9/8   5/4    4/3     3/2   5/3  15/8
+mixolydian      1    9/8   5/4    4/3     3/2   5/3   9/5
+dorian          1    9/8   6/5    4/3     3/2   5/3   9/5
+aeolian         1    9/8   6/5    4/3     3/2   8/5   9/5
+phrygian        1  27/25   6/5    4/3     3/2   8/5   9/5
+locrian         1  27/25   6/5    4/3   36/25   8/5   9/5 (но в этом ладу никто не сочиняет)
+Ещё один вопрос - если переходить из лада в лад - меняются ли ноты? Пока что не знаю.
+
+
+
+=========================
+=========================
+
+Какие есть гармонические техники (наверно я ограничусь 13-limit JI):
+
+tonality flux
+todo: построение JI шкал
+todo: классификация интервалов в центах
+otonal и utonal
+otonal-utonal chord progression:
+было 4:5:6:7 (или 1:5/4:3/2:7/4)
+стало 4:x:6:y (или 1:6/5:3/2:12/7, а если mod 2: 3/3:3/5:3/2:3/7 или 1/3:1/5:1/2:1/7)
+то есть x = 24/5, y = 48/7
+harmony area
+microtonal modulations
+более хитрый тоннетц
+...
+
+
+ещё xen.wiki:
+https://en.xen.wiki/w/Composing_Powerstart
+
+
+
+9edo
+  Chords such as 1/1 - 7/6 - 49/36 - 12/7 are therefore natural ones for 9EDO.
+  mavila and pelogic temperament;
+   equalized version of superpelog[9] and orwell[9] and augmented[9]
+   has augmented[6]
+   has a great 7/6
+   667 cent intervals as 3/2, yielding an extreme version of mavila (or 7-limit armodue)
+     which is a very acceptable tuning for pelog selisir;
+   First EDO with recognizable "major" and "minor" chords
+
+  1: 27/25 133.238 large limma, BP small semitone
+    14/13, 13/12, 12/11
+  2: 7/6 266.871 septimal minor third
+  3: 63/50 400.108 quasi-equal major third
+    5/4, 14/11, 9/7
+  4: 49/36 533.742 Arabic lute acute fourth
+    4/3, 11/8
+  5: 72/49 666.258 Arabic lute grave fifth
+    16/11, 3/2
+  6: 100/63 799.892 quasi-equal minor sixth
+    14/9, 11/7, 8/5
+  7: 12/7 933.129 septimal major sixth
+  8: 50/27 1066.762 grave major seventh
+    11/6, 13/7
+  9: 2/1 1200.000 octave
+
+  https://en.xen.wiki/w/9edo
+  9EDO can be notated with conventional notation, including the staff, note names, relative notation, etc. in two ways. The first preserves the melodic meaning of sharp/flat, major/minor and aug/dim, in that sharp is higher pitched than flat, and major/aug is wider than minor/dim. The disadvantage to this approach is that conventional interval arithmetic no longer works. e.g. M2 + M2 isn't M3, and D + M2 isn't E. Chord names are different because C - E - G isn't P1 - M3 - P5.
+
+  The second approach preserves the harmonic meaning of sharp/flat, major/minor and aug/dim, in that the former is always further fifthwards on the chain of fifths than the latter. Sharp is lower in pitch than flat, and major/aug is narrower than minor/dim. While this approach may seem bizarre at first, interval arithmetic and chord names work as usual. Furthermore, conventional 12EDO music can be directly translated to 9EDO "on the fly".
+
+  9EDO contains a pentatonic MOS scale -- 2L 3s (1 3 1 3 1) -- with a heptatonic extension -- 2L 5s (1 1 2 1 1 2 1, sometimes called "mavila" or "antidiatonic"). Indonesian pelog scales sometimes use five-tone subsets of a seven-tone superset in a similar way, and it has been suggested that Indonesian gamelan music stems from a 9EDO tradition.
+
+  Pathological Modes
+  2 1 1 1 1 1 1 1 1L 7s MOS
+
+
+
+Tonal acculturation: Introduction to tonal functions in major tonality
+https://www.youtube.com/watch?v=3gpg1ahK5TQ
+1, establish the drone
+melodic cadences: 1-2-1, 1-7-1
+fifth: 1-5, 5-6-5
+1-3-5
+V(7) - 5-7-2-4, dominant
+5-7, 5-2, 7-4, -3-2-(4)-1
+IV - 4-6-1
+suspensions: Vsus4-3, Isus4-3
+9-8 sus, 4-3 sus, both, on I, IV, V
+submediant, relative minor, VIm, 6-1-3
+4 chords of pop, I, IV, V, VIm,
+IIm - supertonic
+II-V-I
+V/V, 2-#4-6-1
+V64-V53
+inversions, V42, V/4
+V/VIm, 3-#5-7-2
+V/IV, 1-3-5-b7
+V/IIm, 6-#1-3-5
+IVm, 4-b6-1 (bring the sad)
+
+Tonal acculturation: Introduction to tonal functions in minor tonality
+https://www.youtube.com/watch?v=6cQQ0d3X88M
+(harmonic) minor
+1-b3-2-7-1
+1-5-1, 5-b6, b6-5
+b3-2-1
+Im = 1-b3-5
+V(7) = 5-7-2-(4), dominant
+IVm = 4-b6-1, subdominant
+Vsus4-3
+Im9-8, IVm 9-8,  Im 4-3, more suspensions
+V42 = V/4 -> Im / b3 (7-8 appogiatura), b3-2-1
+relative major, bIII, b3-5-b7
+V of bIII, b7-2-4-(b6), dominant of relative major
+V of IVm = 1-3-5-b7, dominant of subdominant
+raised notes #4, 6; diminished sound VIIo7 of V = #4-6-1-b3
+VIIo7 of V -> Vsus4-3(7) -> Im
+V of V, double dominant
+"neapolitan", variation on subdominant, bII/4 = 4-b6-b2 (vs 4-b6-1)
+b2-1-7-1, voice leading
+"german" augmented sixth, bVI#6 = b6-1-b3-#4
+V64-53
+finish with major tonic, "Picardy third"
+IVm 9-8 (in inversion) -> Isus4
+
+Tonal acculturation Introduction to dorian tonality
+https://www.youtube.com/watch?v=XXpd96cAyuM
+1-2-1-b7-1, 1-2-b7-1
+1-5, 5-6-(5)-4-5
+b3-2-b7-1, trills
+1-b3-5-6-4
+b7-2-4, 5-4-b3-(2-b3)-1
+Im = 1-b3-5, with inversions,
+subtonic, bVII = b7-2-4
+subdominant, IV = 4-6-1
+alternating Im and IV
+Im-IV-bVII-Im
+bVII-IV-Im
+tonic Re -> "relative Fa", bIII = b3-5-b7
+  can sound like Lydian, modulation
+Vm = 5-b7-2
+I = 1-3-5, like "Picardy third", but parallel mixolydian
+reconfirming dorian, bIII-IV-Im
+(weak chord) IIm = 2-4-6
+IVm = 4-b6-1, taste of aeolian (minor)
+more aeolian, bVI = b6-1-b3
+sort of plagal sequence, bVI-bIII-bVII-IV-Im
+suspensions, Im9-8, IV4-3
+IVm-I-bVI-bVII-IV-Im
+more cadences, Im-bVII-Im-IV-Im, Im-IV-bVII-bIII-bVII-IV-Im
+
+
+
+
+
+# class FM7(ugn.MultiOutUGen):
+#     @classmethod
+#     def ar(cls, ctlMatrix, modMatrix):
+#         return cls._multi_new('audio', ctlMatrix, modMatrix)
+
+# #     def _init_ugen(self, *inputs):
+# #         self._inputs = inputs
+# #         return self._init_outputs(6, self.rate)
+#     def _init_ugen(self, *inputs):
+#         self._inputs = inputs
+#         self._channels = ugn.ChannelList([
+#             ugn.OutputProxy.new(self.rate, self, 0),
+#             ugn.OutputProxy.new(self.rate, self, 1),
+#             ugn.OutputProxy.new(self.rate, self, 2),
+#             ugn.OutputProxy.new(self.rate, self, 3),
+#             ugn.OutputProxy.new(self.rate, self, 4),
+#             ugn.OutputProxy.new(self.rate, self, 5),
+#         ])
+#         return self._channels
+
+# #     def arAlgo(cls, algo, ctlMatrix, feedback=0.0):
+# #         return cls._multi_new('audio', ctlMatrix, modMatrix)
+
+# chiptune_varsaw(0, 440)
+ctlMatrix = [ [ 300, 0,    1   ],
+  [ 400, math.pi/2, 1   ],
+  [ 730, 0,    0.5 ],
+  [ 0,   0,    0   ],
+  [ 0,   0,    0   ],
+  [ 0,   0,    0   ] ];
+modMatrix = [
+        [0.001, 0.1, 0, 1, 0, 0],
+        [1, 0, 0, 0, 0, 0],
+        [0, 0, 0, 0, 0, 0],
+        [0, 0, 0, 0, 0, 0],
+        [0, 0, 0, 0, 0, 0],
+        [0, 0, 0, 0, 0, 0]
+    ];
+
+@synthdef
+def fm7(out=0, amp=1, spread=0.25, pan=0):
+    sig = FM7.ar(ctlMatrix, modMatrix)
+    sig = Splay.ar(sig, spread=spread, center=pan)
+    sig = sig * amp
+    Out.ar(out, sig)
+
+
+fm7(ctlMatrix, modMatrix)
+# print(FM7._num_outputs())
+
+
+sc3
+https://github.com/madskjeldgaard/vortex
+https://github.com/madskjeldgaard/sleet
+https://scsynth.org/t/portedplugins-formerly-mkplugins-server-plugins-ported-from-elsewhere/3379/
+
+
+
+допустим 4-5 голосов
+голоса никогда не пересекаются (но могут слиться в один)
+у каждого голоса есть допустимый диапазон
+допустим у каждого свой ритм (euclidean, well-formed, balanced, l-systems)
+допустим на основные биты - это будут ноты из аккордов
+  (а промежутки надо заполнить нотами из моды, видимо)
+видимо надо стараться делать root внизу (?)
+
+как организовать форму?
+  я бы сделал как-нибудь просто
+  например как у Скрябина
+  прелюдия 22, #2
+  A1BA2+Coda
+  A1 длится 4+4 такта
+  B - в другой моде, 2+2
+  A2, 6
+  Coda, 2
+  но такая штука довольно креативна по форме - надо уметь 2 превращать в 6
+  и переходить между частями
+  с другой стороны, тут чуть больше структуры:
+  A1 = xxxy+xxxy
+  B  = mnmn, m = rise, n = fall
+  A2 = xxxxx'y
+  Coda = x'z
+нужно уметь закончить на тонике
+
+что я программирую:
+- 4 голоса
+- музыкальная форма, AABA'
+- разница между A и A': A=abcd, A'=abce
+- A или B: xxxx, xxxy, xyxy, xyxz
+- каждый из x, y, z, a, b, c, d - на самом деле 4+4
+- A и B должны как-то контрастировать
+
+такая схема всё ещё сложна, конечно
+
+разбиваю на подзадачи:
+- надо закодить одну ячейку 4x4
+- chord progression: ii - V - I
+  как организовать переход между аккордами?
+  - smooth voice leading: ищу минимум
+  - как-нибудь через мелодии: todo
+
+
+
+# I-vi-ii-V
+notes: [0, 11, 14, 16, 19]
+notes: [-3, 12, 16, 19, 23]
+notes: [2, 12, 16, 17, 21]
+notes: [-5, 11, 16, 17, 21]
+
+notes: [0, 11, 2, 4, 7]
+notes: [9, 0, 4, 7, 11]
+notes: [2, 0, 4, 5, 9]
+notes: [7, 11, 4, 5, 9]
+
+   0 2 4 5 7 9 11
+1: . . .   .   .
+2: .   .   . . .
+3: . . . .   .
+4:     . . . . .
+
+
+
+ещё варианты
+fm синт на питоне
+  https://www.synthtopia.com/content/2020/12/07/fm-synthesis-with-python/
+  https://github.com/ambv/aiotone
+
+
+
+chord progressions:
+  I-V-vi-IV (axis)
+  vi-IV-I-V (also axis)
+  IV-I-V-vi (also axis)
+  i-bVII-bVI-V (andalusian)
+  i-bVII-bVI-bVII (aeolian)
+  I-vi-IV-V (doo-wop)
+  I-bVII-IV-I (mixolydian)
+  i-bIII-bVII-IV (built on IV-I resolutions)
+  i-bVII-v-bVI
+  I-V-ii-IV
+  I-IV-vi-V
+  IV-V-iii-vi (Japanese)
+
+
+not in sci-hub:
+https://www.tandfonline.com/doi/full/10.1080/17459737.2022.2058636
+https://www.tandfonline.com/doi/full/10.1080/17459737.2022.2042410
+https://www.tandfonline.com/doi/full/10.1080/17459737.2022.2049383
+https://www.tandfonline.com/doi/full/10.1080/17459737.2021.2008035
+https://www.tandfonline.com/doi/full/10.1080/17459737.2021.2001699
+https://www.tandfonline.com/doi/full/10.1080/17459737.2021.2002956
+https://www.tandfonline.com/doi/full/10.1080/17459737.2021.1969599
+https://www.tandfonline.com/doi/full/10.1080/17459737.2021.1953169
+
+нет в сети:
+David Temperley - "The Musical Language of Rock"
+
+
+
+Makam and Beyond: a Progressive Approach to Near Eastern Music Theory
+https://www.amazon.de/-/en/Johnny-Farraj/dp/0190658363/ref=sr_1_3?keywords=Inside+Arabic+Music%3A+Arabic+Maqam+Performance+and+Theory+in+the+20th+Century&qid=1667911632&sr=8-3
+turkish makams
+https://www.amazon.de/-/en/gp/product/9944396699/ref=ox_sc_act_title_2?smid=A2C88D37RDMVSG&psc=1
+https://www.amazon.de/-/en/gp/product/9944396974/ref=ox_sc_act_title_3?smid=A1W8FS58TCQGRJ&psc=1
+https://www.amazon.de/-/en/gp/product/6059646182/ref=ox_sc_act_title_4?smid=A2C88D37RDMVSG&psc=1
+https://www.amazon.de/-/en/gp/product/6054518437/ref=ox_sc_act_title_5?smid=A1W8FS58TCQGRJ&psc=1
+https://www.amazon.de/-/en/gp/product/9944396877/ref=ox_sc_act_title_6?smid=A2C88D37RDMVSG&psc=1
+https://www.amazon.de/-/en/gp/product/9757652822/ref=ox_sc_act_title_7?smid=A2C88D37RDMVSG&psc=1
+https://www.amazon.de/-/en/gp/product/0976045516/ref=ox_sc_act_title_8?smid=A3JWKAKR8XB7XF&psc=1
+https://www.amazon.de/-/en/gp/product/9944396842/ref=ox_sc_act_title_9?smid=A301WKE65PGVT5&psc=1
+
+
+части света:
+west world (europe, usa + canada, australia+new zealand?, наверно south korea)
+east europe, balkans; юг россии
+arab world
+sub-saharan africa
+latin america, caribbean
+indigenous people
+asia: china, japan, india, north korea; central asia, south asia, south-east asia
+micronesia, melanesia, polynesia
+
+
+не осилил:
+Jason Yust - Voice-Leading Transformation and Generative Theories of Tonal Structure
+https://mtosmt.org/issues/mto.15.21.4/mto.15.21.4.yust.php

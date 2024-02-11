@@ -1,0 +1,1933 @@
+IIIй альбом на Supercollider'е
+
+============
+
+/Users/gexahedron/Library/Application\ Support/SuperCollider/Extensions
+
+
+todo:
+- strum, ...
+- Moog filter-style Ugens (BMoog, MoogFF, MoogLadder, and MoogVCF)
+- SuperClean
+- FM7
+	https://scsynth.org/t/the-fm7-appreciation-thread/3186/5
+
+https://www.youtube.com/playlist?list=PLXCUkMwOEWQtB-leHHSexTizzcACdozp9
+https://www.youtube.com/playlist?list=PL1Zlv_e8Lv9g2NLtDb0X_VhIw9aR7mcJ7
+
+============
+
+supercollider patterns pitches
+arpeggiator supercollider
+https://www.reddit.com/r/supercollider/comments/ejhwte/making_an_arpeggiator_in_supercollider_with/
+
+faust for supercollider
+https://madskjeldgaard.dk/posts/getting-started-with-faust-for-supercollider/
+
+If you harness the complexity of samples of natural sounds (here, 2 seconds of speech), you can get surprisingly intricate and coherent pieces from simple kernels of code. #supercollider
+https://twitter.com/micksussmusic/status/1322254446613712896
+
+
+decatonic
+A decatonic scale that has been used or considered by Kyle Gann and La Monte Young in 13-limit just intonation is 1/1, 12/11, 32/27, 9/7, 4/3, 132/91, 3/2, 18/11, 16/9, 176/91, and 2/1.[5] About this soundPlay (help·info)
+http://lumma.org/tuning/erlich/erlich-decatonic.pdf
+pajara - https://www.reddit.com/r/musictheory/comments/bbdiy5/pajara_temperament_a_tuning_system_that_supports/
+blackstar - https://www.facebook.com/groups/xenharmonic2/permalink/3108876345799313/
+Just Interpretation of Standard Pentachordal Minor Decatonic scale showing all six 7-limit tetrads - https://www.facebook.com/groups/497105067092502/permalink/1733076560162007/
+https://www.facebook.com/groups/979055042181607/permalink/981720145248430/
+study - https://www.facebook.com/groups/497105067092502/permalink/671847399618267/
+inventions - https://www.facebook.com/groups/xenharmonic2/permalink/1010123329007969/
+song - https://www.facebook.com/groups/xenharmonic2/permalink/646996278654011/
+Omnitetrachordality - https://en.xen.wiki/w/Omnitetrachordality
+
+
+https://thormagnusson.gitbooks.io/scoring/content/PartII/chapter7.html
+supercollider fm synthesis instruments
+https://sccode.org/tag/category/fm
+supercollider schedule event osc
+https://theseanco.github.io/howto_co34pt_liveCode/4-1-Pitch-And-Patterns/
+supercollider physical modelling
+
+
+gexahedrop latest:
+
+gexahedrop - spectral1 v0.2
+gexahedrop - micro1_1.1
+gexahedrop - micro2_5.3
+gexahedrop - micro3_1.2
+gexahedrop - micro4_4.5.1
+gexahedrop - micro5_1.0
+gexahedrop - micro6_1.3
+gexahedrop - retrowave_0.3.3 alted
+gexahedrop - micro7_0.7
+gexahedrop - drivable-surface v0.2
+niko lay / gexahedrop - kolyan-gurman
+gexahedrop - kolyan-karman ver. 6.1
+gexahedrop - kolyan-banan v1.41
+niko lay / gexahedrop - kolyan-jazzman
+gexahedrop - micro4_4 echo_2
+gexahedrop - fetaboi_3.0
+gexahedrop - thickgurl 1.3
+gexahedrop - trip.py_1.1
+gexahedrop - retrowave_0.3.4
+gexahedrop - kolyan-banan alt v1.4
+gexahedrop - micro2_5 alt
+gexahedrop - fetaboi_2.55alt
+gexahedrop - micro4_4 echo_2 alt
+gexahedrop - kolyan-karman ver. 6.1 alt
+gexahedrop - vaporboi_2.6
+gexahedrop - migraine
+niko lay / gexahedrop - kfr0-1
+niko lay / gexahedrop - kfr2-5
+niko lay / gexahedrop - kfr3-1 (nikolay kapustin)
+niko lay / gexahedrop - kfr3-2
+niko lay / gexahedrop - kfr3-5
+niko lay / gexahedrop - kfr3-7
+niko lay / gexahedrop - kfr3-8
+niko lay / gexahedrop - kfr3-9
+
+
+https://www.facebook.com/groups/497105067092502/permalink/2172342392902086/
+Digital performance created in SuperCollider with resonant band-pass filters applied to Brownian signal noise.
+> Thank you! It is somewhat serendipitous to a certain extent, as each "performance" sounds slightly different as the phrasing/fades are controlled by arrays of values that are chosen randomly at run time. The timbre itself makes uses of a library within SuperCollider that mimics physical resonances of real objects, I just played with different filtering parameters until I got something that I liked. I find this timber quite beautiful ... something between bowed strings and a grand organ.
+
+
+
+Amelia Huff
+https://www.facebook.com/groups/xenharmonic2/permalink/3853431914677082/
+Undecimal [12] with superfourth
+22:23:25:26:28:30:31:33:35:37:39:42:44
+0:         1/1              0.0
+1:         23/22          76.9
+2:         25/22          221.3
+3:         13/11          289.2
+4:         14/11          417.5
+5:         15/11          536.9
+6:         31/22          593.7
+7:          3/2             701.9
+8:         35/22         803.8
+9:         37/22         900.0
+10:         39/22        991.1
+11:         21/11       1119.4
+12:          2/1           1200.0
+
+
+https://ceammc.github.io/puredata/help-vanilla-ru/
+cheat sheet по pure data
+
+тембр, supercollider
+биткрашер, decimator
+https://theseanco.github.io/howto_co34pt_liveCode/2-1-Recommended-Addons/
+
+
+SuperCollider tutorial: Easily render generative compositions as sound files using NRT
+https://madskjeldgaard.dk/posts/2019-08-05-supercollider-how-to-render-patterns-as-sound-files-using-nrt/
+
+SynthRender
+One-line code for rendering a SynthDef in SuperCollider.
+https://github.com/chaosprint/SynthRender
+
+
+https://www.ableton.com/en/blog/categories/tutorials/
+
+- исследование темпераций
+	энгармонизм
+
+
+essentially tempered chord
+An "essentially tempered chord" is one that only makes sense if there's tempering going on.
+https://www.facebook.com/groups/xenharmonic2/permalink/3649132455107030/
+https://en.xen.wiki/w/Gentle_chords
+
+
+тембры
+https://github.com/alikthename/Musical-Design-in-Supercollider
+
+dissonance curve
+https://spectraldiscord.com/dismal/
+
+- заценить primaxial[12]
+- заценить темперацию Терри Райли на 12 нот (?)
+
+
+todo
+	Anomalous Saturated Suspensions
+
+todo
+	какая связь между pitch'ами в мелодиях
+		и pitch'ами в гармониях?
+	можно ли сделать какой-то разумный котрапункт двух мелодий
+		каждая из мелодий в своей темперации
+		а интервалы между мелодиями будут из третьей (фантомной) темперации?
+		(также это актуально в связи с контрапунктом через overtone singing)
+	и ещё один вариант для выяснения темперации:
+		Ring modulation produces sounds that are complex and bear little resemblance to any sounds in the natural world. Our perception of pitch is geometric, meaning that multiplication and division of frequencies produces more familiar musical intervals than addition and subtraction. (For example, doubling the frequency of a tone raises its pitch by an octave; multiplying by 3/4 lowers it by a just perfect fourth.) The sum and difference tones (addition/subtraction) of ring modulation have an arithmetic frequency relationship with the input signal and will always produce inharmonic partials (relative to the modulator) unless the modulator frequency is a whole-number multiple of the carrier frequency.
+
+		или прям целую матрицу значений выстроить
+
+
+
+
+
+List of compositions in just intonation
+https://en.wikipedia.org/wiki/List_of_compositions_in_just_intonation
+
+
+5- TO 9-TONE, OCTAVE-REPEATING SCALES
+FROM WILSON'S GOLDEN HORAGRAMS OF THE SCALE TREE
+David J. Finnamore
+http://www.elvenminstrel.com/music/tuning/horagrams/horagram_intro.htm
+
+
+porcupine
+https://www.youtube.com/watch?v=dhBoQEokwqw
+12 tone subset
+degrees in cents:
+ 163.64
+ 218.18
+ 272.73
+ 381.82
+ 545.45
+ 600.0
+ 709.09
+ 818.18
+ 872.73
+ 981.82
+ 1036.36
+ 2/1
+
+микротоналисты с текстами:
+Иван Вышнеградский
+Harry Partch
+
+Bill Sethares
+
+James Tenney
+	From Scratch: Writings in Music Theory
+	Meta-Hodos and Meta Meta-Hodos: A Phenomenology of 20th Century Musical Materials and an Approach to the Study of Form
+
+	http://www.plainsound.org/JTwork.html
+
+	https://www.youtube.com/channel/UCEzSaoPnxCJVzXxA9obuRWg/videos
+	https://soundcloud.com/user1401258/chromatic-canon-by-james-tenney-just-intonation-versionromatic-canon
+	http://www.dnk-amsterdam.com/media/music/02Tenney-SpactralVariationsNo1.mp3
+	http://www.ubu.com/sound/tenney.html
+	Meta (+) Hodos
+
+	The Early Works of James Tenney
+		Larry Polansky
+		http://eamusic.dartmouth.edu/%7Elarry/published_articles/tenney_monograph_soundings/index.html
+
+	статьи по нему
+		http://robertwannamaker.com/WritingsFrameset.htm
+		http://eamusic.dartmouth.edu/%7elarry/published_articles/tenney_monograph_soundings/index.html
+		http://www.frogpeak.org/unbound/polansky/about_jim_tenney.pdf
+		https://www.tandfonline.com/doi/pdf/10.1080/07494460701671491
+Erv Wilson
+	Microtonality and the Tuning Systems
+Ben Johnston
+	Maximum Clarity
+	Comprehensibility and Ben Johnston’s String Quartet No. 9
+		https://mtosmt.org/issues/mto.19.25.1/mto.19.25.1.willis.html
+	13-Limit Extended Just Intonation in Ben Johnston's String Quartet #7
+		Johnson, Timothy Ernest
+	Harmony, Voice Leading, and Microtonal Syntax in Ben Johnston’s String Quartet No. 5
+		Daniel Huey
+	Pantonality generalized: Ben Johnston’s artistic researches in extended just intonation
+		Marc Sabat
+	Ben Johnston's Extended Just Intonation: A Guide for Interpreters
+		John Fonville
+	Ben Johnston's Fourth String Quartet
+		Randall Shinn
+Lou Harrison
+Mark Sabat
+
+
++ Tom Johnson
+
+
+
+путь для dynamic timbre:
++ нужен трек с мелодией и гармониями в supercollider'е
+	есть пример с семплами ф-но - но я хочу без семплов
+	- нужен трек с синтезированными звуками (для дальнейшей настройки тембра), с мелодией и гармониями
+	есть такой трек!
+	mm_fm.scd
+	правда не хватает аккордов или voice leading'а
+- нужно взять какую-нибудь темперацию и переделать мелодию и гармонии под неё
+	возьму miracle 21 или 31
+	или blackjack (а это и есть miracle 21)
+		https://soundclick.com/share.cfm?id=706344
+		Joseph Pehrson - Blackjack
+	или porcupine
+	или 22-edo
+- нужно переделать тембры вручную под эту темперацию
+- дальше можно обобщать
+	темперации
+	гармонии и мелодии
+	тембры
+
+
+todo:
+сделать noise трек (minimal noise; типа синта)
+сделать модулярный трек, с feedback loop'ами
+	<>>
+сделать rhythm tiling трек
+	попробовать tiling не только в ритме, но и в tuning, или в timbre
+изучить fourier scratching
+изучить pulsar synthesis
+сделать трек, принимающий на вход звуки с микрофона или пользовательские семплы
+сделать трек, принимающий на вход какой-то seed и (в чём-то радикально, а в чём-то не очень) меняющийся от этого
+
+
+
+vcv rack + supercollider
+https://www.facebook.com/groups/supercollider/?multi_permalinks=10158705223819533&notif_id=1596740037932574&notif_t=group_highlights&ref=notif
+
+
+stern-brocot:
+https://en.xen.wiki/w/Metallic_MOS#Stern-Brocot_tree
+https://en.xen.wiki/w/Mathematics_of_MOS
+ScaleLabyrinth-Final
+PATHS ON STERN-BROCOT TREE AND WINDING NUMBERS OF MODES
+stern brocot tree http://cut-the-knot.org
+
+
+http://joowonpark.net/cmpe/
+Computer Music Practice Examples
+https://www.youtube.com/c/JooWonPark/videos
+http://joowonpark.net/cmpe/
+
+
+
+project euchler - это модулярный синт на суперколлайдере
+ссылка с ютуба
+https://www.youtube.com/watch?v=9bc2buq9c2k
+
+
+SynthDef for granular clouds generation
+https://gist.github.com/bjornmossa/92b93c060a44e31b63387811b4a873ea
+
+
+supercollider
+TuningLib
+https://github.com/celesteh/TuningLib
+
+https://jahya.net/blog/quickref-for-supercollider
+https://mostlypat.wordpress.com/category/supercollider-tutorial/
+Tutorials/A-Practical-Guide
+pdf - A Gentle Introduction to SuperCollider
+Scoring Sound - https://leanpub.com/ScoringSound/read
+Spectral Modeling Synthesis - https://depts.washington.edu/dxscdoc/Help/Classes/SMS.html
+https://github.com/madskjeldgaard/awesome-supercollider
+New Pulsar Generator (nuPg)
+https://www.marcinpietruszewski.com/the-new-pulsar-generator
+granular
+https://github.com/passivist/GRNLR/wiki/The-Prototype
+
+
+
+supercollider
+https://ccrma.stanford.edu/courses/tu/cm2008/lectures.shtml
+Faking Objected-Oriented Programing in Supercollider with Events
+https://web.archive.org/web/20141008053015/http://www.tmroyal.com/supercollider-pseudoclasses-with-events.html
+http://composerprogrammer.com/teaching/supercollider/sctutorial/tutorial.html
+https://leanpub.com/ScoringSound/read
+http://fredrikolofsson.com/f0blog/?q=supercollider
+MiniBee & SuperCollider Tutorials
+	http://roosnaflak.com/tech-and-research/minibee-tutorials/
+tutorials
+http://doc.sccode.org/Browse.html#Streams-Patterns-Events%3EA-Practical-Guide
+http://doc.sccode.org/Browse.html#Tutorials%3EGetting-Started
+http://doc.sccode.org/Browse.html#Tutorials%3EJITLib
+http://doc.sccode.org/Browse.html#Tutorials%3EMark_Polishook_tutorial
+https://github.com/brunoruviaro/SuperCollider_Tutorials
+2017-2018_WS (Supercollider + Unity)
+https://github.com/redFrik/udk18-Discrete_Structures
+http://earslap.com
+http://codehop.com/page/2/
+
+
+videos
+https://www.youtube.com/user/elifieldsteel/videos
+SuperCollider and Time
+	https://medias.ircam.fr/xb090dd_supercollider-and-time
+2020 - Audio Signal Processing and SuperCollider
+	https://www.youtube.com/playlist?list=PL1Zlv_e8Lv9g2NLtDb0X_VhIw9aR7mcJ7
+
+
+
+изучаю supercollider:
+  https://www.listarc.bham.ac.uk/lists/sc-users/index.html
+  miscelanneous - https://www.daniel-mayer.at/software_en.htm
+  gamelan - https://afmusic.co.uk/2019/03/24/virtual-gamelan/
+  https://ccrma.stanford.edu/~ruviaro/texts/A_Gentle_Introduction_To_SuperCollider.pdf
+  http://composerprogrammer.com/teaching/supercollider/sctutorial/tutorial.html
+  http://rhoadley.net/courses/tech_resources/supercollider/tutorials/cottle/CMSC7105.pdf
+  http://www.dewdrop-world.net/sc3/tutorials/index.php
+
+  http://www.celesteh.com/blog/tag/supercollider/
+
+  примеры - http://sccode.org
+  https://github.com/brianlheim/SpectralismTools.sc
+
+
+
+
+
+popular quarks:
+	wslib
+	mathlib
+	atk
+	superdirt
+	bjorklund
+	xml
+	ctk
+	modality
+	cruciallib
+	feedback
+	ddw
+	jitlibextensions
+	miscellaneouslib
+	batlib
+	wavesets
+	vowel
+	adclib
+	jitlib
+	filelog
+	utopia
+	tabbedview
+	safetynet
+
+
+google:
+lindenmayer system for timbre generation
+
+
+supercollider
+https://github.com/brianlheim/SpectralismTools.sc
+https://composerprogrammer.com/teaching/supercollider/sctutorial/tutorial.html
+
+
+чтоб не жужжало в ушах
+нужно накидывать Los Pass Filter'ы
+BLowPass
+
+
+https://github.com/hatcatpat/q
+A Supercollider library to help speed up livecoding, as well as some utilities for audio-visual livecoding
+> I've been working on a bunch of classes to make livecoding faster/easier. Its mostly a wrapper around Pdefs and Pbind/Pseq/etc.
+An example of the general gist, instead of writing "Pstutter( 8, Pseq([ 1,2,3 ], inf) )" you can just write "S(1,2,3,\st,8)".
+Basically, down with brackets.
+There are also a few neat features like MIDI, FX routing, KR bus synths, a Pbind just for Pfuncs, and some audio-visual tools (wip)
+
+
+
+SuperCollider Tips
+http://nathan.ho.name/posts/supercollider-tips/
+Exploring Modal Synthesis
+http://nathan.ho.name/posts/exploring-modal-synthesis/
+его github
+https://libraries.io/github/snappizz
+https://github.com/nhthn?tab=repositories
+
+
+
+Announcing two new UGens I'm making:
+1) XPlayBuf: a PlayBuf alternative that loops and fades.
+Apart from it being a shortcut to a loop player that fades on trigger and boundaries, it also avoids the precision glitch supercollider has with (not so) long or slow buffers
+https://github.com/elgiano/xplaybuf
+2) NasalDemons: an arbitrary memory block player.
+Cast a pointer to whatever memory address you want. If you manage not to crash scsynth, you'll get awesome noise. That's it, avoiding a glitch in one UGen, and providing another one just for glitches.
+https://github.com/elgiano/NasalDemons
+Both are provided as source only. Build instructions and HelpFiles included.
+
+
+чужое:
+Seven Beginnings - Research-Creation Series #1
+	анализ
+	https://www.actorproject.org/tor/research-creation-series/seven-beginnings
+https://petet.itch.io/valence-aleator
+	круто
+	микротональная игра
+
+
+patches
+https://patchstorage.com/mm-ocean-night-soundscape/
+https://patchstorage.com/mm-eli-fieldsteels-reverb-implementation-with-servertree/
+https://patchstorage.com/mm-koji-kondos-zeldas-select-theme/
+https://patchstorage.com/mm-eli-fieldsteels-combl-implementation/
+https://patchstorage.com/mm-eli-fieldsteels-shepard-tones-implementation/
+https://patchstorage.com/mm-several-synth-experiments/
+https://patchstorage.com/mm-minimal-farben-style-playable-project/
+https://patchstorage.com/mm-non-symmetric-live-coding-example/
+https://patchstorage.com/mm-physical-modelling/
+https://patchstorage.com/mm-ezconv/
+https://patchstorage.com/mm-fm-dx7-style-synth/
+https://patchstorage.com/mm-stochastic-bell-clouds/
+https://patchstorage.com/mm-synth-arrays-and-routine-iterations/
+https://patchstorage.com/mm-wavetable-synth/
+https://patchstorage.com/mm-granulator-synth-with-full-gui/
+https://patchstorage.com/mm-additional-no-sample-wavetable-experiments/
+https://patchstorage.com/mm-more-interesting-fm-synthesis/
+https://patchstorage.com/mm-symphonic-ensemble/
+
+
+supercollider examples/ algorithmic/computer music
+Computer Music Practice Examples/RMHS
+	https://www.youtube.com/c/JooWonPark/videos
+	http://joowonpark.net/cmpe/
+
+
+OM-Partch
+	https://www.facebook.com/groups/xenharmonic2/permalink/3254696864550593/
+	https://github.com/charlesneimog/OM-Partch/
+
+
+todo: теории микротонов в OM-Partch
+1. Harry Partch's tonality-diamond
+2. Ben Johnston system of string quartet no. 2 and 3
+3. Moment of Symmetry (mainly for microtonal keyboards) of Erv Wilson
+4. CPS for no centric microtonal music of Erv Wilson
++ mos-scales и dynamic tonality
++ посчитать закодить несколько шкал из dynamic tonality
++ Spectralism
+ещё
+https://en.xen.wiki/w/MicrotonalTheory
+Just Intonation: an infinite world of rational numbers and numerous models: the harmonic series, integer frequency ratios, tonality diamonds, eikosany, etc.
+Equal tunings: each one a subtle monoculture of intervals. May be treated as temperaments, or not
+In Western common practice music, the (somewhat forgotten) use of historical temperaments (meantones, well temperaments) with 12 or more unequal notes per octave
+Musical traditions of indigenous, ancient, and/or non-Western cultures
+	Arabic, Turkish, Persian
+	Indian (North, South)
+	African
+	Thai
+	Pre-Columbian South American (e.g. Maya, Inca, Aztec..)
+	Indonesian (Java, Bali)
+	Ancient Greek, Byzantine
+Regular Temperaments (including Linear Temperaments): a centuries-old practice that has recently undergone a mathematical facelift, in which Just Intonation is selectively and regularly detuned in various ways, to better meet a variety of compositional desires
+Pergens, a way of classifying regular temperaments, constructing lattices for them, and determining their notation.
+Moment of Symmetry, a means of iterating a single generative interval, modulo a period interval, to produce scales of two step-sizes. Brought to you by Erv Wilson
+	Graham complexity, a complexity measure which works well with MOS scales and rank two regular temperaments.
+Empirical This is a form of hands-on, field research as opposed to a form of acoustical or scale engineering where tunings are specifically derived from listening and playing experiments carried out in the pitch continuum.
+Tetrachordal Scales, which use divided fourths as building blocks for composition.
+Isoharmonic chords/scales
+Pretty Pictures that represent scales in one way or another
+Notation(pretty pictures for a the purpose of writing music down)
+Nominal-Accidental Chains A common approach to notation
+the notion of a Scalesmith who builds scales, with various methods, perhaps for single occasions
+	Counter-intuitive, random, arbitrary scales
+	Numerology-based, computationally demanding scales
+	Scale stretching
+	Acoustically-based (resonant frequencies of performance space, for example)
+(Corollaries, traces left by other reality tunnels, which by themselves are completely trivial and obvious)
+Redundancy in a tuning system
+
+
+
+to listen:
+https://prestorecords.bandcamp.com/album/point-line-cloud
+Xentonality
+https://sethares.engr.wisc.edu/xentone.html
+Speculative Exomusicology
+https://sethares.engr.wisc.edu/exo.html
+
+https://sethares.engr.wisc.edu/makam/makam.html
+Here are the sound files from the paper "Experiments on the Relationship between Perde and Seyir in Turkish Makam Music" by Can Akkoç, William A. Sethares, and M. Kemal Karaosmanoğlu, which is published in Music Perception. Detailed descriptions of the sound examples can be found in the paper. If the files do not play in your browser, you can download them by right-clicking and choosing save-as. You can find a version of the paper here
+
+
+
+adaptive tuning
+music examples from the book
+	http://extras.springer.com/2005/978-1-84628-113-6/sound/Chapter09
+https://github.com/ArneKramerSunderbrink/adaptivetuning
+http://subnaught.org/supercollider/tuning-and-timbre-part-i.html
+http://subnaught.org/supercollider/tuning-and-timbre-part-ii.html
+http://barthopkin.com/175-2/
+Paulina Sundin, Monty Adkins - Beyond Pythagoras
+	http://divergencepress.net/2015/02/02/2015-2-2-reinventing-harmony-in-splintered-echoes-2014/
+Now&Xen Podcast: 018 - William Sethares
+https://www.youtube.com/watch?v=r3jRo3WnijU
+Adaptation of Sethares' dissonance measurement function to Python
+https://gist.github.com/endolith/3066664
+
+
+
+cadences
+https://reverbmachine.com/blog/a-guide-to-cadences
+
+fm
+https://scsynth.org/t/coding-fm-synthesis-algorithms/1381
+http://danielnouri.org/docs/SuperColliderHelp/Tutorials/Mark_Polishook_tutorial/Synthesis/14_Frequency_modulation.html
+https://www.soundonsound.com/techniques/more-frequency-modulation
+
+
+что это
+http://depts.washington.edu/dxscdoc/Help/Classes/Chromagram.html
+
+
+
+pya
+https://pub.uni-bielefeld.de/download/2938412/2938426/pya-examples.pdf
+https://github.com/interactive-sonification/pya
+
+
+
+todo - supercollider ссылки
+http://community.dur.ac.uk/nick.collins/teaching/supercollider/advanced/index.html
+http://community.dur.ac.uk/nick.collins/teaching/bibliography/computermusic.html
+http://community.dur.ac.uk/nick.collins/teaching/bibliography/computermusic.html#sc
+
+
+
+
+книги
+https://zeh.media/praktika/knigi/5970328-poleznoye-chteniye
+ещё книги
+https://www.facebook.com/groups/electronicmusicphilosophy/permalink/2991667880917336/
+
+
+
+supercollider
+  https://composerprogrammer.com/teaching/supercollider/sctutorial/2.4%20Modulation%20Synthesis.html
+  Brian Questa piece_for_string1
+    https://www.youtube.com/watch?v=thD3Lu8uUkI&feature=youtu.be
+  supercollider machine drum
+
+
+
+
+
+algorithmic harmony
+Hugo Riemann’s musical function theory was the program
+for attributing to every possible chord one of three possible harmonic functions,
+Tonic (T), Dominant (D), and Subdominant (S)
+
+todo
+	set theory
+		Xenakis - Herma
+
+
+
+
+https://mirrors.ircam.fr/pub/planetccrma/software/supercollider.html
+SC: Ambiem
+SC: bbcut2
+SC: beqsuite ugens
+SC: bhob ugens
+SC: blackrain ugens
+SC: dewdrop
+SC: josh ugens
+SC: ljpc classes
+SC: mathlib
+SC: mcld ugens
+SC: membrane ugens
+SC: midifile
+SC: redclasses
+SC: stk ugens
+SC: swingosc
+SC: symbolic machines
+SC: tag systems ugens
+
+JITLibExtensions - Some extensions to the common JITLib classes
+PolyBuf - Easily load and access a bunch of audio files into collections of buffers in SuperCollider
+Convenience - Load entire sample banks or folder structures (folders within folders) of audio files into easily accessible collections of buffers. And more.
+Repetition.sc - A set of tools to build a Stream of Events using symbols and a sort of language in the language
+The Ambisonic Toolkit - Toolkit for working with spatial sound in the ambisonic domain
+Vowel - Convenience Class for Vowel Creation
+PitchShiftPA - Phase Aligned pitch shifting
+CaosPercLib - a Collection of Percussion Classes for SuperCollider
+CaosBox - a not-so-common LiveCoding/AlgoRave music GUI secuencer/processor for the CaosPercLib
+f0plugins - chip tune UGens
+Particular - particle synthesis on a per particle basis (to be used with patterns)
+miSCellaneous_lib - various SuperCollider extensions and tutorials: patterns, fx sequencing, granulation, wave folding, sieves, combined lang and server gui control, live coding, single sample feedback, generalized functional iteration synthesis
+Synthdefs - Synthdef Pool
+SynthDefPool — a public library of handy SynthDefs
+SCLOrkSynths — Collection of SuperCollider SynthDefs (synth definitions) for use with Patterns
+DX7-SuperCollider - accurate Yamaha DX-7 clone. Programmed in Supercollider
+Benjolis - Instrument inspired by Rob Hordijk's chaotic Benjolin synth
+granular-synth - A simple granular synth GUI, with a handy time/frequency graph
+granular from Discrete Structures course - loads a folder of files into buffers and granulates everything.
+LNX Studio - a Digital Audio Work Station. Repository
+TXmodular - TXmodular is a production environment fully written in SC
+
+
+
+
+начать кодить синты
+	поиграться при этом с
+		темперацией,
+		гармониками,
+		fm-синтезом,
+		8-битным звучанием,
+		звучанием как в fez (home)
+	since classic synth tones can produce odd plasticky effects when tuned exactly to their own overtones.
+
+
+google
+	supercollider classes
+	humanizing drum pattern supercollider
+	can supercollider record sound as sample
+	supercollider sethares adaptive tuning
+	supercollider sethares "dynamic tonality"
+	slendro pelog scale transposition
+	supercollider "just intonation" examples
+	just intonation tuner supercollider
+	just intonation timbre spectralism
+	SuperCollider Music Information Retrieval
+	phase vocoder supercollider
+	cross synthesis supercollider
+
+	dynamic spectra synthesis
+	sound synthesis in python
+	hidden markov model sonata form
+	computer music sonata form
+
+
+spatial
+	http://www.ambisonictoolkit.net/documentation/supercollider/
+	https://ccrma.stanford.edu/workshops/gaffta2010/spatialsound/examples.shtml
+	https://www.youtube.com/watch?v=EH55K0J17xE
+
+analysis / resynthesis
+	http://cnmat.org/SDIF/ICMC2000/
+	http://www.klingbeil.com/timbre/
+
+dissonance curves
+http://ecmc.rochester.edu/ecmc/docs/supercollider/scbook/Ch15_Machine_Listening/jslachdissonance/help/Dissonance.html
+https://github.com/supercollider-quarks/DissonanceLib
+Compositional research on dissonance curves
+http://ecmc.rochester.edu/ecmc/docs/supercollider/scbook/Ch15_Machine_Listening/jslachdissonance/help/Roughness%20and%20sensory%20dissonance.html
+
+
+
+Rethinking the Computer Music Language: SuperCollider
+	https://www.mitpressjournals.org/doi/abs/10.1162/014892602320991383
+
+
+
+
+
+THE AXIAL CHORD — A BASIS FOR 2.3.7.11 HARMONY
+https://www.xenharmonikon.org/2020/04/27/the-axial-chord-a-basis-for-2-3-7-11-harmony/
+
+
+todo
+что почитать?
+jedrzejewski
+mcm 1
+mcm 2
+mcm 3
+mcm 4
+mcm 5
+mcm 6
+mcm 7
+Tom Johnson, Franck Jedrzejewski - Looking at Numbers
+
+
+todo
+как соотносятся mos scales и dynamic tonality?
+как будто бы как-то неочевидно
+http://homepages.cae.wisc.edu/~sethares/software/TFSdocs/aboutMOS.html
+
+
+todo
+Modern Approaches: Processing Rhythms
+https://daily.redbullmusicacademy.com/2016/03/modern-approaches-processing-rhythms
+
+Breaking Away From The 'Original Beat Recipe'
+https://ask.audio/articles/music-theory-breaking-away-from-the-original-beat-recipe
+
+
+todo:
+слушая fm синтез
+типа так
+(
+{
+var modfreq, modindex;
+modfreq= MouseX.kr(1,440, 'exponential');
+modindex=MouseY.kr(0.0,10.0);
+SinOsc.ar(SinOsc.ar(modfreq,0,modfreq*modindex, 440),0,0.25)!2
+}.scope
+)
+есть ощущение, что во многих точках слышно несколько разных высот одновременно
+можно было бы с этим поиграть
+в плане построения мелодий
+
+
+todo:
+22edo
+	notations
+		up/down
+		quarter tone
+		Porcupine
+		Erlich
+		saggital
+		revised up/down
+	какие есть MOSы:
+
+
+
+todo:
+визуализация шкал
+zigzags in MOS scales
+
+todo:
+surge
+	https://surge-synth-team.org/tuning-workbench-synth/
+sevish-vst
+	попробовать открыть в supercollider'е
+
+
+
+todo
+http://math.ucr.edu/home/baez/week234.html
+
+
+zeta
+From: gwsmith@gwi.net (Gene Ward Smith)
+Newsgroups: sci.math
+Subject: Re: number theoretic (or statistical?) basis of music theory and harmony
+Date: 8 May 1998 16:59:27 GMT
+
+: Kjinnovatn wrote:
+
+: Here's a little puzzler that I've been wondering about: If you
+: investigate the number-theoretic basis of music theory, it all hinges
+: on the fact that certain simple fractional powers of 2 "accidentally"
+: happen to be very close to simple fractions.
+
+I noticed a quarter century ago (but never published) that this
+Diophantine approximation problem is closely connected to the Riemann
+Zeta function, in that good values correspond to high values along
+lines whose real part is fixed. This relationship extends into the
+critical strip, and along the line Re(z) = 1/2, which allows some
+amusing formulas to come into play. One can distinguish different
+microtonal systems by the argument of zeta, and adjust them by
+slightly stretching or shrinking the octave to the nearest Gram point,
+with an eye to slight improvements of the approximations involved on
+average, in some sense of average.
+
+You may now double your fun by bringing in group theory, and noting
+that a microtonal system is also closely related to homomorphisms from
+finitely generated subgroups of the group of positive rational numbers
+under multiplication to the free group of rank one.  The kernels of
+these homomorphims determine the relations between such systems--a
+system with 81/80 in the kernel behaves very differently in terms of
+harmonic theory than one without 81/80 in the kernel.
+
+
+
+-Having broken out of the MOS conceptual box, I find 22edo a LOT more versatile, intuitive, and appealing than I did before.  In fact it's appalling to me just how rigid my thinking used to be, that I literally could not allow myself to play by ear because I wanted everything to fit into a smallish MOS.  Now that I'm cool with the idea of MODMOSes, tetrachordal scales, generating scales out of chord progressions, as well as allowing scales to shift and modulate according to chord changes, I just don't feel the constraints that I used to.
+
+
+
+так
+dynamic timbre:
+- фиксирую выбор нот в октаве
+- подбираю тембр
+- играю этим инструментом в этой шкале
+
+
+
+todo
+comma from edo
+https://www.facebook.com/groups/497105067092502/permalink/829025517233787/
+
+
+M =
+[[5,8,0],[0,0,1]]
+https://en.xen.wiki/w/POTE_tuning
+POTE tuning is the short form of Pure-Octaves Tenney-Euclidean tuning, a good choice for a standard tuning enforcing a just 2/1 octave.
+import numpy as np
+m=np.array([[5,8,0],[0,0,1]])
+import math
+w=[1, 1./math.log2(3), 1./math.log2(5)]
+v=m*w
+p=np.matmul(v.T, np.linalg.inv(np.matmul(v, v.T)))
+t=np.matmul(np.array([1,1,1]).T,p)
+pote=t/t[0]
+array([ 1., 11.66497435])
+wtf
+array([0.2, 2.33299487])
+2799.593844
+159.593844
+ну вообще это близко к тому, что я должен получить из TOP
+
+256/243
+http://www.robertinventor.com/tuning-math/s___6/msg_5350-5374.html
+	240, 84.66378778
+2 = 8
+3 = -5
+5 = 0
+
+256/243   (2)^8/(3)^5
+map   [[5, 8, 0], [0, 0, 1]]
+generators   240.0000000   2795.336214
+badness   534.3548699   rms   12.75974144   g_w   3.472662942
+ets   [5, 10, 15, 20, 25, 30]
+
+
+cents(n/d) * log(p)/log(n*d)
+5
+8
+11.1 (wtf)
+
+top per
+238.87
+
+top gen
+158.78
+
+вообще же
+240
+по идее должен получить
+159.53112571691713
+
+cents(a/b) = 1200 log_2(a/b)
+
+21.5 = 1200.0*math.log(81/80)/math.log(2)
+21.5 cents · log(2)/log(81·80) = 1200.0*math.log(81/80)/math.log(81*80)
+
+1200.0*math.log(256/243)/math.log(256*243)
+5.665686528656701
+1200.0*math.log(256/243)/math.log(256*243)*math.log(3)/math.log(2)
+8.979900688761893
+
+1200-5.665686528656701=
+1194.3343134713432
+/ 5 =
+238.86686269426863
+3:
+1901.9550008653878+8.979900688761893=
+1910.939900688762
+/5=
+382.1879801377524
+5:
+2786.313713864835
+/5=
+557.2627427729669
+5/3=2786.313713864835-1910.939900688762
+
+log(xy) = log(x) + log(y)
+math.log(256/243)/math.log(256*243)=
+(log(256)-log(243))/(log(256)+log(243))
+
+
+получил TOP
+
+for 2 we get
+1200 * log(256 / 243) / log(256 * 243) = 5.666
+so, 1200 - 5.666 = 1194.334 cents
+for 3 we get
+1200 * log(256 / 243) / log(256 * 243) * log(3) / log(2) = 8.980 cents
+so, 1901.955 + 8.980 = 1910.935 cents
+for 5 we don't do anything
+so, 2786.314 cents
+so, in theory we get:
+5/3 = 2786.314 - 1910.935 = 875.379 cents
+so,
+period = 1194.334 * 240 / 1200 = 238.867 cents
+generator = 875.379 modulo 238.867 = 158.778 cents
+
+
+> BTW, if you scale TOP to have pure octaves you get POTT, not POTE
+
+
+ещё подход:
+> I'm very familiar with Sethares and Blackwood. The diatonic scale doesn't have to be meantone -- it can be Pythagorean, superpyth/archy, etc. -- so it doesn't make any sense to relate the "valid tuning range" of meantone to Blackwood's recognizable diatonic tunings or to 12-note fifth-generated MOSs in general. I can assure you that the predefined tuning ranges in the dynamic tonality software were not "calculated" based on anything essentially connected with the underlying temperaments themselves.
+> One may wish to use meantone with 5- or 19-note MOSs. It's arbitrary to pick one MOS and then use it to define the "valid tuning range" of the underlying temperament, in part because the same MOS may well arise from some other temperament too, and in part because one may not wish to use that MOS or any MOS at all when using the temperament.
+> What would make far more sense as a choice of "valid tuning range" for a temperament class, Nick, would be to specify a absolute cutoff on damage, or else a multiplicative factor times the damage of the optimal tuning of the temperament. Of course either such kind of cutoff would involve an arbitrary choice, but would still make a lot more sense than what I think you described in the dynamic tonality software (didn't you say the range for the generator for Srutal was 0-120 cents? that's extremely asymmetrical around the optimum 105-110 cents, so it must have to do with an MOS of a particular cardinality arising or something)...
+> well the ranges would be 2-dimensional "areas" if the octave can be tempered, right? That makes them a bit complicated to specify. But typically (if I'm willing to fish around for timbres that work well with a particular tuning of a temperament) I might just go out to TOP Damage = 10 (or the POTT equivalent for pure octaves, making a 1-dimensional range). That's the outer hexagon in Fig. 5 of my Middle Path paper, the same diagram you see here:
+> 5-limit Projective Tuning Space, showing equal temperaments and rank-two temperaments (or "temperament families")
+
+
+
+
+
+fm
+https://sccode.org/tag/category/fm
+https://sccode.org/tag/category/frequency%20modulation
+
+
+Audio demonstrations of auditory scene analysis
+http://webpages.mcgill.ca/staff/Group2/abregm1/web/downloadstoc.htm
+
+Musical Illusions
+https://www.wnycstudios.org/podcasts/radiolab/articles/292109-musical-illusions
+disk
+http://philomel.com/index.php
+
+
+журналы:
+https://www.tandfonline.com/loi/tmam20
+https://www.mitpressjournals.org/loi/comj
+https://www.mtosmt.org/issues/issues.php
+https://read.dukeupress.edu/journal-of-music-theory/issue
+Leonardo Music Journal
+music theory spectrum
+Perspectives of New Music,
+Contemporary Music Review,
+Music Theory Online,
+College Music Symposium
+Music Analysis,
+Journal of Musicology,
+the Journal of Musicological Research,
+Empirical Musicology
+Music Analysis, Theory and Practice
+Journal of Music Theory
+Journal of Mathematics and Music
+https://www.cambridge.org/core/journals/twentieth-century-music/all-issues
+
+
+
+Ambisonics
+https://www.youtube.com/watch?v=VvI56TnY8tA
+https://www.youtube.com/watch?v=EH55K0J17xE
+
+22edo
+https://www.youtube.com/watch?v=brOOVIBFd3k
+
+logic pro
+https://www.youtube.com/watch?v=sqm8Q3jlNVI
+и дальше
+
+timbre:
+Timbre is a Many-Splendored Thing
+https://www.mcgill.ca/timbre2018/program
+https://www.youtube.com/playlist?list=PLo6KfdKWjMnBumZaMcfhTskPV5daVwezO
+https://www.youtube.com/watch?v=cYlryLxJZqw
+https://www.youtube.com/watch?v=cW3b3SZ_W0M
+https://www.youtube.com/watch?v=hxokGu4qnSM
+https://www.youtube.com/watch?v=FDy9BK-W59Y
+
+timbre blogs:
+https://www.actorproject.org/oor/amazing-moments-in-timbre
+https://www.actorproject.org/oor/timbre-lingo
+
+
+
+https://versal.com/learn/1vmfne/introduction
+https://versal.com/learn/4xprut/lessons/1
+
+
+
+
+
+todo:
+http://homepages.cae.wisc.edu/~sethares/software/TFSdocs/aboutdiamond.html
+http://homepages.cae.wisc.edu/~sethares/software/TFSdocs/aboutpurerange.html
+http://homepages.cae.wisc.edu/~sethares/software/TFSdocs/aboutMOS.html
+
+
+todo:
+семейства от paul erlich
+5-limit Projective Tuning Space, showing equal temperaments and rank-two temperaments (or "temperament families")
+https://www.facebook.com/groups/497105067092502/permalink/643039992499008/
+
+
+todo:
+ещё семейства
+http://x31eq.com/catalog.htm
+
+правда же можно от темперации можно перейти
+к эллиптической кривой?
+неправда, нужно ещё зафиксировать соотношение генератора к октаве
+
+
+кодинг dynamic tonality в python:
+todo
+- использую как базис 2,3,5, без нормализации
+- вписать eikosany и прочее в эту парадигму
+
+todo:
+Well, an algorithm, yes. The list of MOS scales (number of notes per period of each) is the same as the set of denominators of the semiconvergents of the continued fraction of the generator/period ratio.
+
+кстати
+https://en.xen.wiki/w/Orwell_on_an_Isomorphic_Keyboard
+
+
+syntonic continuum:
+686-720
+7-tet -> 5-tet
+7 LLLsLLs
+http://homepages.cae.wisc.edu/~sethares/software/TFSdocs/aboutsyntonic.html
+
+
+давай начнём с meantone family
+81/80 <-> 5/4 ~= 2^-2 (3/2)^4
+	81 = 3**4
+	80 = 5 * 2**4
+	вытаскиваем отсюда степени для
+	2/1, 3/2, 5/4
+	получаем соотношение между ними
+	представляем их как 3 вектора
+	можно ли рассчитать число нот на клавиатуре, в одной октаве?
+	по идее можно, нужно найти фундаментальную область
+	4 * v3 = 2 * v2 + v5
+	v2 = [0, 1] - октава
+	v3 = [1, 1] - квинта
+	на клавиатуре есть координаты x, y
+	а, не, лол, видимо число нот в октаве может быть неограниченно
+	как вычислиь tuning range? 5-edo <=> 7-edo
+
+1
+6/5
+5/4
+4/3
+3/2
+8/5
+5/3
+2
+
+1/1
+2/1
+-
+3/2
+4/3
+-
+5/4
+6/5
+8/5
+почему нет 9/5?
+а, потому что мы рассматриваем 5 odd-limit
+5 is the highest allowable odd number for the intervals of the scale
+-
+7-limit tonality diamond:
+1/1, 8/7, 7/6, 6/5, 5/4, 4/3, 7/5, 10/7, 3/2, 8/5, 5/3, 12/7, 7/4, 2/1
+-
+
+
+
+1
+6/5
+5/4
+4/3
+3/2
+8/5
+5/3
+2
+
+0  5 -6  2 -1  7 -4 1
+0 −3  4 -1  1 -4  3 0
+2->G1
+3->G2
+5->G3
+81/80 = (-4, 4, -1)
+null space:
+(1 0 -4
+ 0 1  4)
+6/5: 1,1,-1
+1 = α0β0 < α5β−3 < α−6β4 < α2β−1 < α−1β1 < α7β−4 < α−4β3 < α1β0
+дальше вычитание соседних столбцов
+ 5 -11  8 -3  8 -11  5
+-3   7 -5  2 -5   7 -3
+*
+(x1, x2)
+>
+(0, 0)
+cone bounded below by x2 = 11x1/7 and bounded above by x2 = 8x1/5
+α^11/7 < β < α^8/5
+α = 2
+вот и получается!
+
+вроде бы базис 2, 3/2, 5/4 более естественный
+потому что выйдет
+region is the cone bounded below by x2 = 4x1/7 and bounded above by x2 = 3x1/5. This
+corresponds to the region α4/7 < β < α3/5, which is again identical with Blackwood’s range of
+recognizable diatonic tunings and to the 12-note MOS scale generated by fifths.
+квинта - 4/7, 3/5, 7/12
+с другой стороны - деление на 2 довольно условно само по себе, вдруг я захочу bohlen-pierce или ещё чего
+	а может 4/7 = 11/7 - 1, 3/5 = 8/5 - 1? и всё?
+
+
+- porcupine
+	generator pitches: 150 - 160 - 171.4
+	https://en.xen.wiki/w/Porcupine
+	250/243
+	makes (4/3)^2 equivalent to (6/5)^3
+	https://en.xen.wiki/w/Porcupine_family
+	https://en.xen.wiki/w/Porcupine_Temperament_Modal_Harmony
+	Partial list of the MODMOS's of Porcupine[7]!
+		https://yahootuninggroupsultimatebackup.github.io/tuning-math/topicId_19020.html
+	dynamic tonality показывает range между 7-edo и 8-edo
+
+The 5-limit parent comma for the porcupine family is 250/243, the maximal diesis or porcupine comma. Its monzo is |1 -5 3>, and flipping that yields <<3 5 1|| for the wedgie. This tells us the generator is a minor whole tone, the 10/9 interval, and that three of these add up to a fourth, with two more giving the minor sixth. In fact, (10/9)^3 = 4/3 * 250/243, and (10/9)^5 = 8/5 * (250/243)^2. 3\22 is a very recommendable generator, and MOS of 7, 8 and 15 notes make for some nice scale possibilities.
+
+
+250=5*5*5*2
+243=3*3*3*3*3
+
+(1,-5,3)
+null space:
+(3 0 -1
+ 0 3  5)
+
+1  : ( 0, 0, 0)
+6/5: ( 1, 1,-1)
+5/4: (-2, 0, 1)
+4/3: ( 2,-1, 0)
+3/2: (-1, 1, 0)
+8/5: ( 3, 0,-1)
+5/3: ( 0,-1, 1)
+2  : ( 1, 0, 0)
+
+2*3 x 3*8 = 2*8
+>>> n = np.array([[3,0,-1],[0,3,5]])
+>>> fractions = np.array([[0,1,-2,2,-1,3,0,1],[0,1,0,-1,1,0,-1,0],[0,-1,1,0,0,-1,1,0]])
+>>> temperings=np.matmul(n,fractions)
+array([[ 0,  4, -7,  6, -3, 10, -1,  3],
+       [ 0, -2,  5, -3,  3, -5,  2,  0]])
+>>> temperings[:, 1:]-temperings[:,:-1]
+array([[  4, -11,  13,  -9,  13, -11,   4],
+       [ -2,   7,  -8,   6,  -8,   7,  -2]])
+below: 11/7, 9/6 => 11/7
+above: 4/2, 13/8 => 13/8
+
+попробую другой базис
+2, 3/2, 5/4
+250=(5/4)^3 * 2^7
+243=(3/2)^5 * 2^5
+=>
+250/243 = (2, -5, 3)
+null space:
+(3, 0, -2
+ 0, 3,  5)
+
+
+1                   : ( 0, 0, 0)
+6/5 = 3/2 / 5/4     : ( 0, 1,-1)
+5/4                 : ( 0, 0, 1)
+4/3 =   2 / 3/2     : ( 1,-1, 0)
+3/2                 : ( 0, 1, 0)
+8/5 =   2 / 5/4     : ( 1, 0,-1)
+5/3 = 2 * 5/4 / 3/2 : ( 1,-1, 1)
+2                   : ( 1, 0, 0)
+
+>>> n = np.array([[3,0,-2],[0,3,5]])
+>>> fractions = np.array([[0,0,0,1,0,1,1,1],[0,1,0,-1,1,0,-1,0],[0,-1,1,0,0,-1,1,0]])
+>>> temperings=np.matmul(n,fractions)
+array([[ 0,  2, -2,  3,  0,  5,  1,  3],
+       [ 0, -2,  5, -3,  3, -5,  2,  0]])
+>>> temperings[:, 1:]-temperings[:,:-1]
+array([[ 2, -4,  5, -3,  5, -4,  2],
+       [-2,  7, -8,  6, -8,  7, -2]])
+below: 4/7, 1/2
+above: 1, 5/8
+
+очень странно
+может надо сложить?
+(4+5)/(7+8) = 9/15
+получаю из этого 15-edo
+теперь надо получить MOS, например
+или вытащить 7-edo и 8-edo
+как получить 4/7 и 5/8?
+
+
+The 5-limit parent comma for the porcupine family is 250/243, the maximal diesis or porcupine comma. Its monzo is |1 -5 3>, and flipping that yields <<3 5 1|| for the wedgie. This tells us the generator is a minor whole tone, the 10/9 interval, and that three of these add up to a fourth, with two more giving the minor sixth. In fact, (10/9)^3 = 4/3 * 250/243, and (10/9)^5 = 8/5 * (250/243)^2. 3\22 is a very recommendable generator, and MOS of 7, 8 and 15 notes make for some nice scale possibilities.
+
+
+250=5*5*5*2
+243=3*3*3*3*3
+(10/9)^3 = 4/3 * 250/243
+вытаскиваю 5/3/3
+нормализую - 10/9
+получаю (10/9)^3=4/3
+получаю, что 10/9 - generator
+
+тогда
+10/9 = (1, -2, 1) если брать базис (2,3,5)
+null space:
+(3 0 -1
+ 0 3  5)
+получаю вектор (2, -1)
+2x1-x2
+below: 11/7, 9/6 => 11/7
+above: 4/2, 13/8 => 13/8
+x1 * 11/7 < x2 < x1 * 13/8
+x1 * 3/8 < 2x1-x2 < x1 * 3/7
+
+
+хорошо, базис (2,3/2,5/4)
+null space:
+(3, 0, -2
+ 0, 3,  5)
+10/9 = 2 * 5/4 / (3/2) / (3/2) = (1, -2, 1)
+получаю вектор (1, -1)
+below: 4/7, 1/2
+above: 1, 5/8
+x1 * 4/7 < x2 < x1 * 5/8
+x1 * 3/8 < x1-x2 < x1 * 3/7
+
+generator pitches: 150 - 160 - 171.4
+а должен был по идее получить:
+x1 * 1/8 < 10/9 < x1 * 1/7
+о, я знаю откуда взять эту тройку
+(10/9)^3 = 4/3 * 250/243
+вот слева степень 3 стоит
+2->x1, 3->x2, 5->?
+10/9 = (2x1-x2)/3 на самом деле в базисе (2,3,5)
+
+
+я кажется почти догнал
+мне нужно из 250/243 вытащить какую-то степень чего-то, что очень близко к другой дроби
+почему так:
+81/80 = 1
+<=>
+5/4 = 2^(-2) (3/2)^4
+и отсюда получаем, что 3/2 - generator
+
+в magic и hanson вроде тоже несложно вытащить генератор
+magic = 5/4 (пытаемся приблизить 3/2)
+hanson = 6/5 (пытаемся приблизить 3/2)
+
+
+miracle:
+Miracle temperament is a regular temperament discovered by George Secor in 1974 which has as a generator an interval, called secor, that serves as both 15/14 and 16/15 semitones. In terms of 13-limit extensions, it is discussed in miraculous, benediction, and manna.
+Some temperaments have 11/9 as a "neutral third", meaning it's exactly half of a 3/2 (tempering out 243/242), and other temperaments (in the gamelismic clan) have 8/7 as exactly a third of 3/2. Miracle is distinguished by doing both of these things at the same time, so 3/2 is divided into six equal parts. This is in fact the generator of miracle temperament, called a "secor", and it represents both 16/15 and 15/14.
+Miracle can also be thought of as a cluster temperament with 10 clusters of notes in an octave. The small chroma interval between adjacent notes in each cluster is very versatile, representing 45/44 ~ 49/48 ~ 50/49 ~ 55/54 ~ 56/55 ~ 64/63 all tempered together.
+225/224
+Miracle is the temperament with a generator of a neutral semitone, meaning a semitone serving as both a 15/14 and a 16/15, discovered by George Secor; the generator is called a "secor" because of this. While not particularly striking as a 5-limit temperament, it is one of the very best linear temperaments in the 7 and 11 limits. It is well-served in all limits by 72-equal.
+225=5*5*3*3
+224=2*2*2*2*2*7
+ага, тут уже 7-limit
+
+
+
+magic
+Magic has certain properties that commend it as a step up in complexity from traditional harmony:
++ Every non-trivial 7-limit interval is better tuned than in 12edo.
++ It is the simplest mapping with the above property.
++ It is only slightly more complex than meantone (both work well with a 19 note gamut).
++ 5-limit intervals are simpler than other 7-limit intervals.
+It fails to be a panacea because:
+- It has no proper MOS scales of between 3 and 16 notes.
+- It is more complex than meantone
+- The 3/2 approximation is 5 times as complex as the 5/4 approximation (the generator) so modulation by fifths is more constrained than you may be used to.
+
+
+
+
+
+
+
+magic continuum:
+3125/3072
+The magic comma completely defines the 5-limit magic continuum, which has an ordinal tuning range that spans 3-tet, through 22-tet, 19-tet, (and many others) and all the way to 10-tet.
+360-400
+10-tet -> 3-tet
+10 LssLssLsss
+http://homepages.cae.wisc.edu/~sethares/software/TFSdocs/aboutmagic.html
+3/2 = 2^-1 (5/4)^5
+
+The 5-limit parent comma for the magic family is 3125/3072, the small diesis or magic comma. Its monzo is |-10 -1 5>, and flipping that yields <<5 1 -10|| for the wedgie. This tells us the generator is a major third, and that to get to the interval class of fifths will require five of these. In fact, (5/4)^5 = 3 * 3125/3072.
+
+
+3125=5^5
+3072=2^10*3
+
+(-10,-1,1)
+null space:
+(1 0 10
+ 0 1  5)
+
+1  : ( 0, 0, 0)
+6/5: ( 1, 1,-1)
+5/4: (-2, 0, 1)
+4/3: ( 2,-1, 0)
+3/2: (-1, 1, 0)
+8/5: ( 3, 0,-1)
+5/3: ( 0,-1, 1)
+2  : ( 1, 0, 0)
+
+2*3 x 3*8 = 2*8
+>>> n = np.array([[1,0,10],[0,1,5]])
+>>> fractions = np.array([[0,1,-2,2,-1,3,0,1],[0,1,0,-1,1,0,-1,0],[0,-1,1,0,0,-1,1,0]])
+>>> temperings=np.matmul(n,fractions)
+array([[ 0, -9,  8,  2, -1, -7, 10,  1],
+       [ 0, -4,  5, -1,  1, -5,  4,  0]])
+>>> temperings[:, 1:]-temperings[:,:-1]
+array([[-9, 17, -6, -3, -6, 17, -9],
+       [-4,  9, -6,  2, -6,  9, -4]])
+* (x1, x2) > (0, 0)
+...
+
+
+
+hanson continuum
+15552/15625
+The Hanson comma completely defines the 5-limit Hanson continuum, which has an ordinal tuning range that spans 11-tet, through 15-tet, 19-tet (and many others) and all the way to 4-tet.
+300-327
+4-tet -> 11-tet
+11 ssLssLssLsL
+http://homepages.cae.wisc.edu/~sethares/software/TFSdocs/abouthanson.html
+3/2 = 2^-1 (6/5)^6
+
+
+
+Blackwood
+todo: глянуть
+http://www.robertinventor.com/tuning-math/s___6/msg_5350-5374.html
+256/243
+256=2^8
+243=3^5
+(8,-5,0)
+null space:
+(5 8 0)
+а дальше?
+Paul Erlich говорит, что тут ещё и период хитрый
+кстати не понимаю какой он тут
+нашёл период, получается 1200/5 = 240 центов
+
+
+
+Mavila
+135:128
+135=3^3*5
+128=2^7
+(-7, 3, 1)
+
+null space:
+(1 0  7
+ 0 1 -3)
+
+1  : ( 0, 0, 0)
+6/5: ( 1, 1,-1)
+5/4: (-2, 0, 1)
+4/3: ( 2,-1, 0)
+3/2: (-1, 1, 0)
+8/5: ( 3, 0,-1)
+5/3: ( 0,-1, 1)
+2  : ( 1, 0, 0)
+
+>>> n = np.array([[1,0,7],[0,1,-3]])
+>>> fractions = np.array([[0,1,-2,2,-1,3,0,1],[0,1,0,-1,1,0,-1,0],[0,-1,1,0,0,-1,1,0]])
+>>> temperings=np.matmul(n,fractions)
+array([[ 0, -6,  5,  2, -1, -4,  7,  1],
+       [ 0,  4, -3, -1,  1,  3, -4,  0]])
+>>> temperings[:, 1:]-temperings[:,:-1]
+array([[-6, 11, -3, -3, -3, 11, -6],
+       [ 4, -7,  2,  2,  2, -7,  4]])
+* (x1, x2) > (0, 0)
+below: 3/2
+above: 11/7
+x1 * 3/2 < x2 < x1 * 11/7
+generator:
+(3/2)^3 = 2 * 8/5
+=> по идее генератор = 3/2, от 1200*1/2 до 1200*4/7
+от 600 до 685.71
+да, всё так
+
+
+
+comma pumps
+
+Candidate 5-limit commas
+81/80 (meantone)
+128/125 (augmented)
+135/128 (mavila)
+250/243 (porcupine)
+256/243 (blackwood)
+648/625 (diminished)
+2048/2025 (srutal)
+3125/3072 (magic)
+6561/6250 (ripple)
+15625/15552 (hanson)
+16875/16384 (negri)
+20000/19683 (tetracot)
+20480/19683 (superpyth)
+32805/32768 (helmholtz)
+
+5-limit commas NOT tempered out by 12-equal:
+
+135/128 (mavila)
+250/243 (porcupine)
+256/243 (blackwood)
+3125/3072 (magic)
+15625/15552 (hanson)
+16875/16384 (negri)
+20000/19683 (tetracot)
+20480/19683 (superpyth)
+
+
+
+в приложении есть ещё семейства:
+	augmented, bug, compton, dbl_meantone, dicot, diminished, escapade, father,
+	gammic, hanson, magic, mavila, orwell, porcupine, sensipent, schismatic,
+	smite, srutal, sycamore, syntonic, tetracot, wuerschmidt
+
+
+syntonic: 81/80, понятно
+	685.71 - 700 - 720
+porcupine: 250:243, вроде разобрался
+	150 - 160 - 171.43
+magic: 3125:3072
+	360 - 375 - 400
+hanson: 15625:15552, вроде понятно, todo
+	- 313.04 -
+augmented: 128/125
+	200 - 266.67 - 400
+dicot: 25/24
+	301.92 - 353.22 - 402.55
+father: 15/16
+	592.95 - 738.5 - 790.6
+mavila:	135:128
+	600 - 666.67 - 685.71
+srutal: 2048:2025
+	0 - 100 - 120
+
+bug: 27/25
+	900 - 933.33 - 960
+
+compton: 531441:524288
+double meantone: что это?
+	пишут, что это injera
+	https://en.xen.wiki/w/Meantone_family#Injera
+	The wedgie for injera is <<2 8 8 8 7 -4||, which tells us it has a half-octave period and a generator which can be taken as a fifth or fourth, but also as a 15/14 semitone difference between a half-octave and a perfect fifth. Injera tempers out 50/49, equating 7/5 with 10/7 and giving a tritone of half an octave. A major third up from this tritone is the 7/4. 38edo, which is two parallel 19edos, is an excellent tuning for injera.
+diminished: ?
+escapade: ?
+gammic: ?
+orwell: 225:224, 1728:1715, 2430:2401, 6144:6125,...
+	257.14 - 266.67 - 276.92
+sensipent: 78732:78125
+schismatic: ?
+smite: ?
+sycamore:
+	54.55 - 61.54 - 70.59
+tetracot: 20000:19683
+	171.43 - 177.78 - 184.62
+wuerschmidt:
+	800 - 816 - 825
+
+
+Luna[25]
+From "A Middle Path", bottom of p. 172:
+
+". . . the general rule for Tenney-optimal temperament of a single comma is
+as follows. Make sure the comma, n/d is a positive pitch difference in JI. i.e., n is
+greater than d. Next, consider each of the prime numbers in succession. If the prime p
+has a positive sign in the comma’s vector representation – that is, if it appears as a
+factor of n – then temper that prime narrow by
+cents(n/d) · log(p)/log(n·d).
+If the prime p has a negative sign in the comma’s vector representation – that is, if it
+appears as a factor of the d – then temper that prime wide by this same amount. If the
+comma does not involve prime p at all, we will adopt the convention that prime p
+remains just.
+xxviii The maximum damage of any interval, which is minimized by this
+temperament strategy, is then
+cents(n/d) · log(2)/log(n·d)
+or
+1200 · log(n/d)/log(n·d)."
+
+The vanishing comma of Luna (lunisma?) is 274877906944:274658203125, which is simply 2^38·3^-2·5^-15, hence represented as [38 -2 -15>.
+
+Cam Taylor: Oh so Luna can be thought of as (125;128)^5=8;9, but with the generator = (4:5)^1/2, [distinct from 8;9 or 9;10 in good tunings], that's handy for me, and way easier to think about. Sorry this is not directly related to optimal tunings. Am reading through too.
+
+
+So using our recipe above, starting with prime 2, we have to narrow it by
+cents(n/d) · log(p)/log(n·d),
+or
+1.38429029670304·0.0131580944585798
+=0.0182146224821141 cents, making prime 2
+1200-0.0182146224821141
+=1199.98178537752 cents.
+For prime 3 we have to widen by
+1.38429029670304·0.0208550862977959
+=0.0288694935989433 cents, making prime 3
+1901.95500086539+0.0288694935989433
+=1901.98387035899 cents
+For prime 5 we have to widen by
+1.38429029670304·0.0305521491985583
+=0.0422930436789877 cents, making prime 5
+2786.31371386483+0.0422930436789877
+=2786.35600690851 cents.
+
+
+Since the period of Luna is the approximation of prime 2, we already know it is
+1199.98178537752 cents.
+Now to find our generator, we can note the approximation of 5/4 is
+2786.3560069085-2*1199.98178537752
+=386.39243615346 cents; this is arrived by stacking 2 generators in Luna, so half of it or
+193.19621807673 is the TOP generator.
+So TOP Luna has a period of 1199.98178537752 cents and a generator of 193.19621807673 cents.
+
+
+Now to calculate the POTT generator, we simply scale so as to get pure octaves. Here that results in:
+193.19621807673*1200/1199.98178537752
+=193.199150618057 cents.
+So POTT Luna has a period of 1200 cents and a generator of 193.199150618057 cents.
+
+
+
+For example, the diaschisma, 2048:2025 (in vector notation, [11 -4 -2>), can be expressed as the difference between an octave, 2/1 ([1 0 0>) and a stack of two identical “just augmented fourths”, each 45:32 ([-5 2 1>). If the diaschisma vanishes, two “augmented fourths” will become equal to one “octave”. The “octave” cannot, therefore, itself be a generator of the resulting temperament, but a “half- octave” can. With octave-repetition assumed, the half-octave becomes the period. The dieses 128:125 ([7 0 -3>) and 648:625 ([3 4 -4>), when tempered out, can similarly be seen to result in “third-octave” and “quarter-octave” periods, respectively. Such fractions-of-octave periods, though, are clearly not intervals of equivalence, either psychoacoustically or culturally. So the applicability of the term “linear temperament” to all 2-dimensional temperaments is dubious.
+
+то же, что и srutal
+	0 - 100 - 120
+
+2048=2^11
+2025=3^4 * 5^2
+(11, -4, -2)
+
+null space:
+(2 0 11
+ 0 1 -2)
+
+1  : ( 0, 0, 0)
+6/5: ( 1, 1,-1)
+5/4: (-2, 0, 1)
+4/3: ( 2,-1, 0)
+3/2: (-1, 1, 0)
+8/5: ( 3, 0,-1)
+5/3: ( 0,-1, 1)
+2  : ( 1, 0, 0)
+
+>>> n = np.array([[2,0,11],[0,1,-2]])
+>>> fractions = np.array([[0,1,-2,2,-1,3,0,1],[0,1,0,-1,1,0,-1,0],[0,-1,1,0,0,-1,1,0]])
+>>> temperings=np.matmul(n,fractions)
+array([[ 0, -9,  7,  4, -2, -5, 11,  2],
+       [ 0,  3, -2, -1,  1,  2, -3,  0]])
+>>> temperings[:, 1:]-temperings[:,:-1]
+array([[-9, 16, -3, -6, -3, 16, -9],
+       [ 3, -5,  1,  2,  1, -5,  3]])
+* (x1, x2) > (0, 0)
+below: 3
+above: 16/5
+x1 * 3 < x2 < x1 * 16/5
+generator:
+(45/32)^2 = 2
+=> по идее генератор = 45/32, применённый 2 раза равен периоду
+то есть надо смотреть на границы для x1/2
+как это сделать?
+
+xen.wiki считает, что генератор - это fifth
+valid range: [600.000 to 720.000] (2 to 5)
+nice range: [701.955, 706.843]
+strict range: [701.955, 706.843]
+
+
+от 1200*1/2 до 1200*4/7
+от 600 до 685.71
+да, всё так
+
+
+todo: может попробовать сгенерить MOS Scale дерево? да оттуда повытаскивать всю инфу про коммы?
+
+
+как найти генератор:
+https://www.facebook.com/photo/?fbid=10210573459474133&set=gm.849007645235574
+
+- как быть с дробями, которые не сидят в этой решётке?
+	с другой стороны - они там есть, просто мы не выдаём вектор для 2
+- как быть с темперацией 2 комм и больше?
+	по идее надо найти ближайшую точку к плоскости, а не к линии
+- какие коммы у miracle tuning'а? и какой генератор в итоге?
+
+
+============
+
+todo:
+	Sethares:
+		Bill and the Sierpinski Triangles
+		https://sethares.engr.wisc.edu/otherperson/sierpinski.html
+
+
+	попробовать синтезировать звук, где обертона складываются с округлением к нотам 12edo
+		типа там нет 7ой гармоники, только приближение
+		и нет 11ой
+		и тому подобное
+		такой aliasing
+
+	22 edo
+	dynamic tonality
+		какие там темперации или семейства? 3 ли там семейств или их больше? можно ли как-то другие системы вписать?
+			типа cps, bohlen-pierce, aphex twin
+		какие там гармонии?
+		вот есть vst surge - как он умеет держать распознаваемую высоту ноты? как мне запилить таких синтов?
+
+22edo:
+	brendan byrnes - neutral paradise:
+		1 entrance
+		2 hysteria
+		3 fluorescent city
+		5 electric plains
+		10 light tunnels
+		12 llurion
+	https://www.youtube.com/playlist?list=PL3mH2gZZv-Naff4R7euxY12msnJBbStvl
+	https://en.xen.wiki/w/22edo#Music
+	http://micro.soonlabel.com/22-edt/
+	http://micro.soonlabel.com/22-ET/
+
+	https://en.xen.wiki/w/William_Lynch%27s_Thoughts_on_Septimal_Harmony_and_22_EDO
+	https://en.xen.wiki/w/22edo
+	http://lumma.org/tuning/erlich/erlich-decatonic.pdf
+	Now&Xen Podcast: 22edo Room Talks
+		https://www.youtube.com/watch?v=brOOVIBFd3k
+
+	есть шкала в 12 нот
+	superpyth
+	313131131311
+	0,3,4,7,8,11,12,13,16,17,20,21
+	сходу как-то не очень интересно звучит
+
+
+middle path:
+	https://en.xen.wiki/w/Middle_Path_table_of_five-limit_rank_two_temperaments
+	https://en.xen.wiki/w/Middle_Path_table_of_seven-limit_rank_two_temperaments
+	https://en.xen.wiki/w/Middle_Path_table_of_eleven-limit_rank_two_temperaments
+
+fm synthesis:
+	есть статьи про треки John Chowning'а
+
+голос:
+	купить zoom
+
+hardware синт:
+	попробовать ipad
+
+cps, eikosany:
+	послушать
+	https://anaphoria.bandcamp.com/album/the-creation-of-the-worlds
+	https://anaphoria.bandcamp.com/track/gending-boehme
+
+
+dynamic tonality:
+	todo:
+		разобраться - какие там ноты на клавиатуре в разных семействах
+		кажется там MOS шкалы
+		как они выводятся из comm'ы?
+
+	The TransFormSynth divides all possible 2-D tuning continua into a number of independent (smaller) tuning continua. Each is named after a particular comma (e.g, Syntonic, Magic, and Hanson) and can be chosen from the little green menu underneath the master volume.
+
+	http://homepages.cae.wisc.edu/~sethares/software/TFSdocs/aboutsyntonic.htmlv
+	https://en.xen.wiki/w/81/80
+	5/4 ~= 2^-2 * (3/2)^4
+	7/4 ~=
+	11/8 ~=
+	The syntonic comma completely defines the 5-limit syntonic continuum, which has an ordinal tuning range that spans 5-tet, through 22-tet, 17-tet, 12-tet, 19-tet, (and includes many others) all the way to 7-tet. This is described in great detail in our article from the winter 2007 issue of the Computer Music Journal "Isomorphic Controllers and Dynamic Tuning: Invariant Fingering Over a Tuning Continuum."
+
+	http://homepages.cae.wisc.edu/~sethares/software/TFSdocs/aboutmagic.html
+	https://en.xen.wiki/w/Magic
+	3/2 ~= 2^-1 * (5/4)^5
+	7/4 ~=
+	11/8 ~=
+	The magic comma completely defines the 5-limit magic continuum, which has an ordinal tuning range that spans 3-tet, through 22-tet, 19-tet, (and many others) and all the way to 10-tet.
+
+	http://homepages.cae.wisc.edu/~sethares/software/TFSdocs/abouthanson.html
+	https://en.xen.wiki/w/Kleismic_family#Hanson
+	3/2 ~+ 2^-1 * (6/5)^6
+	7/4 ~=
+	11/8 ~=
+	The Hanson comma completely defines the 5-limit Hanson continuum, which has an ordinal tuning range that spans 11-tet, through 15-tet, 19-tet (and many others) and all the way to 4-tet.
+
+
+
+	5-limit
+	Selected Intervals in 5-limit Just Intonation
+	1/1	the unison
+	6/5	the just minor third
+	5/4	the just major third
+	4/3	the just fourth
+	3/2	the just fith
+	8/5	the just minor sixth
+	5/3	the just major sixth
+	2/1	the octave
+
+
+	про tone diamond:
+	It is impossible for a musical system to simultaneously have maximal regularity, harmonicity, and consonance. The tone diamond enables explicit compromises between these three features. For example, when the marker is placed on the dot in the center of the upper triangle, the deviations from maximal regularity, harmonicity, and consonance are shared equally, and so are each relatively small.
+
+
+
+
+
+=============
+
+
+
+ингредиенты
+	низкие ноты - перкуссия и ритм
+		хз
+		хочется навернуть humanizing
+	средние ноты - басс
+		хз
+	высокие ноты - мелодия, гармония, контрапункт, фактура, плотность
+		темперация
+		спектральный подход
+		dynamic tonality
+			базово понятно, надо закодить
+			есть ещё момент про спектры и гармоники - тут надо изучать
+				было бы прикольно обернуть в ооп
+				типа даю на вход синт и список гармоник
+	форма
+		хз
+	3d
+		хз, но знаю что почитать
+	продакшн, мастеринг, сведение
+		хз
+	вокал, вокодинг
+		хз
+	гитара и спецэффекты
+		хз
+	сэмплирование
+		хз
+
+	тема
+	гармония
+	фактура
+	плотность
+	полифония
+	форма
+	ударная секция
+
+
+
+
+
+
+/*
+SUM & DIFFERENCE TONE PITCH GENERATOR TOOL
+inspired by CLAUDE VIVIER'S "COULEURS"
+Each of the functions below takes a "modulator" and "carrier" pitch
+(in MIDI notes) and returns an array of MIDI notes representing the
+sum and/or difference tones created by "ring modulating" the two pitches.
+Using multiple harmonics of the mod and/or carrier yields a larger
+pitch collection and the s/d tones are different in each octave.
+Read the original blog post for more information:
+www.lawtonhall.com/blog/claude-viver-couleurs
+Free to use, share, and adapt.
+Created by Lawton Hall in 2020.
+*/
+
+(
+/* SUM TONES ONLY with MODULATOR HARMONICS  */
+
+var modPitch, carrierPitch, modHarmonics, ringMod;
+modPitch = 60;            // modulator pitch (MIDI note)
+carrierPitch = 21;        // carrier pitch (MIDI note)
+modHarmonics = 5;         // number of modulator harmonics
+ringMod = Array.fill(modHarmonics, {
+	|i|
+	((modPitch.midicps * (i+1)) + carrierPitch.midicps).abs.cpsmidi;
+});
+ringMod.postln;
+);
+
+
+(
+/* DIFFERENCE TONES ONLY with MODULATOR HARMONICS  */
+
+var modPitch, carrierPitch, modHarmonics, ringMod;
+modPitch = 60;            // modulator pitch (MIDI note)
+carrierPitch = 21;        // carrier pitch (MIDI note)
+modHarmonics = 5;         // number of modulator harmonics
+ringMod = Array.fill(modHarmonics, {
+	|i|
+	((modPitch.midicps * (i+1)) - carrierPitch.midicps).abs.cpsmidi;
+});
+ringMod.postln;
+);
+
+
+(
+/* SUM & DIFFERENCE TONES with MODULATOR HARMONICS  */
+
+var modPitch, carrierPitch, modHarmonics, ringMod;
+modPitch = 60;            // modulator pitch (MIDI note)
+carrierPitch = 21;        // carrier pitch (MIDI note)
+modHarmonics = 5;         // number of modulator harmonics
+ringMod = Array.fill(modHarmonics, {
+	|i|
+	[
+		((modPitch.midicps * (i+1)) + carrierPitch.midicps),
+		((modPitch.midicps * (i+1)) - carrierPitch.midicps),
+	].abs.cpsmidi;
+});
+ringMod.postln;
+);
+
+
+(
+/* SUM & DIFFERENCE TONES with MOD & CARRIER HARMONICS  */
+
+var modPitch, carrierPitch, modHarmonics, carrierHarmonics, ringMod;
+modPitch = 60;            // modulator pitch (MIDI note)
+carrierPitch = 21;        // carrier pitch (MIDI note)
+modHarmonics = 3;         // number of modulator harmonics
+carrierHarmonics = 2;     // number of carrier harmonics
+ringMod = Array.fill(modHarmonics, {
+	|i|
+	Array.fill(carrierHarmonics, {
+		|j|
+		[
+			(modPitch.midicps * (i+1)) + (carrierPitch.midicps * (j+1)),
+			(modPitch.midicps * (i+1)) - (carrierPitch.midicps * (j+1))
+		].abs.cpsmidi;
+	})});
+ringMod.postln;
+);
+
+
+
+Orchestration Treatises
+Open access to orchestration treatises / Traités d'orchestration disponibles en accès libre.
+Berlioz, L. H. (1856). A Treatise upon modern instrumentation and orchestration (Vol. 7). J. Alfred Novello.  Link
+Clarke, H. (1893). A Manual of Orchestration: Designed Especially to Enable Amateurs to Follow Intelligently the Performance of Orchestral Music. J. Curwen & sons, Limited. Link
+Czerny, C., & Bishop, J. (1848). School of practical composition. Link
+Fidler, F. G. (1921). A handbook of orchestration. K. Paul, Trench, Trubner & Company, Limited. Link
+Forsyth, C. (1914). Orchestration. Courier Corporation. Link
+Gevaert, F. A. (1863). Traité général d'instrumentation; exposé méthodique des principes de cet art, dans leur application à l'orchestre, à la musique d'harmonie et de fanfares, etc. Link
+Gevaert, F. A. (1885). Nouveau traité d'instrumentation. Lemoine & fils. Link
+Hofmann, R. (1893). Practical instrumentation. Augener. Link
+Kling, H. (1905). Modern orchestration and instrumentation : or, The art of instrumentation ; containing detailed descriptions of the character and peculiarities of all instruments and their practical employment. Based on German 2nd Edition. Translated by Gustav Saenger. New York: Carl Fischer, 1905. Link
+Kœchlin, C. (1959). Traité de l'orchestration: en quatre volumes (Vol. 3). Eschig. Link
+Piston, W. (1955). Orchestration. WW Norton. Link
+Prout, E. (1899). The orchestra: orchestral techniques and combinations, Vol. I. London, UK: Augener & Co.  Link
+Riemann, H. (1888). Catechism of Musical Instruments (Guide to Instrumentation). Translated from German (translator unknown). London: Augener & Co, 1888. Link
+Rimsky-Korsakov, N. (1913). Principles of orchestration, with musical examples drawn from his own works. (M. Shteĭnberg, Ed., E. Agate, Trans.). New York, NY: Dover Publications. Link
+Wagner, J. (1959). Orchestration: a practical handbook. New York, NY: McGraw-Hill. Link
+Widor, C. M. (1906). The technique of the modern orchestra: a manual of practical instrumentation. London, UK: J. Williams, limited. Link
+
+
+
+tools:
+https://github.com/Sin-tel/scala_ft_convert
+	This tool converts scala files (.scl) to 0CC famitracker detune settings (.csv).
+https://github.com/Sin-tel/justidraw
+	Experimental DAW
+https://github.com/Sin-tel/harmony_relaxation
+	just intonation harmony exploration
+https://github.com/someknave/CombinationProductSets
+	собственно cps
+	https://www.facebook.com/groups/ErvWilsonDiscussionGroup/permalink/1799652663509852/
+http://eamusic.dartmouth.edu/%7Elarry/software.html
+	Larry Polansky software
+http://doxygen.just-intonation.org
+	JustIntonation is an open-source application for various platforms that allows the user to hear and play music in just intonation and other temperaments, independent of the musical key.
+https://github.com/luvsound/pippi
+	Pippi: Computer Music With Python
+	https://pippi.world/docs/tutorials/
+	https://github.com/luvsound/astrid
+https://github.com/DaveSeidel/music-tools/tree/master/conbination-product-sets
+	ещё cps, eikosany, в питоне
+https://github.com/SCLOrkHub/SCLOrkSynths
+	Collection of SuperCollider SynthDefs (synth definitions).
+https://git.iem.at/pd/vstplugin/-/releases
+	позволяет открывать vst плагины в суперколлайдере!
+https://github.com/pygae/clifford
+	мб полезно
+https://github.com/levinericzimmermann/nongkrong
+	ещё cps
+
+
+
+
+скачал
+	https://github.com/jsiemasko/Schemawound
+		ещё всякие разные скрипты с музыкой
+	https://github.com/efairbanks/supercollider-scripts
+		всякие разные скрипты
+
+
+https://github.com/musikinformatik/SuperDirt
+https://github.com/calumgunn/StageMaster
+https://medium.com/@heisterkamp/tidal-adventures-ab627f05ef7c

@@ -1,0 +1,539 @@
+todo:
+    chord progressions + modulations
+
+    dur
+    видимо всё равно придётся обрубать хвост
+    amp
+    pan
+    sustain - вручную посылать note on/note off (см. chani's eyes, 1:20, fm2 - https://www.youtube.com/watch?v=g_3Sl7bmlaY); интересно, работает ли такое в mpe, или может я могу найти аппроксимацию
+
+kursk studies:
+- похоже на до минор
+- иногда есть хроматика
+
+
+composition:
+- mavila vs porcupoid + some spectral chords?
+    porcupoid7 - 0, 3/5, 6/8, 9/11, 12/14, 15/17, 18/20
+    mavila7    - 0, 3/4, 6/7, 9/10, 13/14, 16/17, 19/20
+
+
+links
+https://en.xen.wiki/w/23edo
+https://en.xen.wiki/w/File:Teclado_Icositrif%C3%B3nico.PNG
+https://ia800703.us.archive.org/12/items/TractatumDeModiSephiratorum/ModiSephiratorum.pdf
+https://en.xen.wiki/w/Harmony_of_23edo
+https://en.xen.wiki/w/Armodue_armonia
+http://www.armodue.com/ricerche.htm
+https://open.spotify.com/album/5CaqJjVmXQLjRPO679xtbR
+https://en.xen.wiki/w/5L_4s
+https://en.xen.wiki/w/5L_4s/Inthar%27s_approach
+https://en.xen.wiki/w/5L_3s#Intervals_5
+
+
+0 - 1/1
+
+3  - 156.52 - 12/11, 11/10 - "Whole step" between A-B or C-D (smaller than step from B-C)
+4m - 208.70 - 9/8 - Large step appearing between B-C or E-F
+5p - 260.87 - 7/6
+
+6  - 313.04 - 6/5 - Minor third
+7m - 365.22 - 16/13 - Major third (21 cents flat of 5/4)
+8p - 417.39 - 14/11
+
+9   - 469.57 - ?
+10m - 521.74 - ? (21 cents wider than 500 cents, P4)
+11p - 573.91 - 7/5, 18/13
+
+12p - 626.09 - 10/7, 13/9
+13m - 678.26 - "Blown fifth" interval (24 cents flat of a 3/2 perfect fifth)
+14  - 
+
+15p -
+16m -
+17  - 886.96 - Major sixth (3 cents sharp of 5/3)
+
+18p -
+19m -
+20  -
+
+porcupoid7 - 0,  3/5,  6/8,  9/11, 12/14, 15/17, 18/20
+                m2/A2 m3/A3 d4/A4  d5/A5  d6/M6  d7/M7
+mavila7    - 0,  3/4,  6/7,  9/10, 13/14, 16/17, 19/20
+                m2/M2 m3/M3 d4/P4  P5/A5  m6/M6  m7/M7
+интересно - в porcupoid7 нет P5
+
+mavila7, modes
+4334333: 0,4,7,10,14,17,20 (major, augmented)
+3343334: 0,3,6,10,13,16,19 (minor)
+3433343: 0,3,7,10,13,16,19 (major)
+4333433: 0,4,7,10,13,17,20 (major)
+3334334: 0,3,6,9,13,16,19  (minor)
+3343343: 0,3,6,10,13,16,20 (minor)
+3433433: 0,3,7,10,13,17,20 (major)
+
+sorted by brightness:
+3334334: 0,3,6,9,13,16,19  (minor) (shift=4)
+3343334: 0,3,6,10,13,16,19 (minor) (shift=1)
+3343343: 0,3,6,10,13,16,20 (minor) (shift=5)
+3433343: 0,3,7,10,13,16,19 (major) (shift=2)
+3433433: 0,3,7,10,13,17,20 (major) (shift=6)
+4333433: 0,4,7,10,13,17,20 (major) (shift=3)
+4334333: 0,4,7,10,14,17,20 (major, augmented) (shift=0)
+
+porcupoid7, modes:
+3335333: 0,3,
+3353333:
+3533333:
+5333333: 0,5,8,11,14,17,20
+3333335:
+3333353:
+3333533:
+
+Important mosses include:
+mavila 2L5s 4334333 (13\23, 1\1)
+mavila 7L2s 133313333 (13\23, 1\1)
+    superdiatonic, armodue
+    in armodue notation, 333133331 -> 1234567891
+
+sephiroth 3L4s 2525252 (7\23, 1\1)
+    sLsLsLs = JKLMNOPJ
+semiquartal 5L4s 332323232 (5\23, 1\1)
+    JKLMNOPQR = LsLsLsLsL
+https://en.xen.wiki/w/3L_7s
+    Harmonically, the arrangement forming a chord (degrees 0, 1, 4, 7, 10) is symmetrical – not ascending but rather descending, and so reminiscent of ancient Greek practice
+    https://ia600706.us.archive.org/23/items/TractatumDeModiSephiratorum/ModiSephiratorum.pdf
+    Kosmorsky's Sephiroth modes
+    Kosmorsky has argued that the most significant modes of 23 edo are those of the 2 2 2 3 2 2 3 2 2 3 scale (3L 7s fair mosh); This is derived from extending the ~1/3 comma tempered 13th Harmonic, two of which add up to the 21st harmonic and three add up to the 17th harmonic almost perfectly. Interestingly, the chord 8:13:21:34 is a fragment of the fibonacci sequence.
+
+
+
+exp0:
+    1 melody
+    todo: motifs built from scale, arpeggiation (chords as melodies),
+    m-r interaction, leaps as intervals, motif transformation operations,
+    modulations (pivot, ...), implied harmony or chord progressions;
+exp1: 2 melody lines, in counterpoint in intervals
+- start with intervals?
+- bass, arpeggio
+    Don't Take Five (16-EDO)
+    https://www.youtube.com/watch?v=LLgClI8pyNw
+    1/1, 5/3, 6/5
+
+- я так понимаю, в каком-то смысле, отчасти - 16edo вкладывается в 23edo
+    типа armodue, mavila7, mavila9
+
+
+https://en.xen.wiki/w/5L_3s#Intervals_5
+father8
+
+Oddly, despite the fact that it fails to approximate these harmonics, it approximates the intervals between them (5/3, 7/3, 11/3, 7/5, 11/5, 11/7) and combinations of them (15/8, 21/16, 33/32, 35/32, 55/32, 77/64) very well. The lowest harmonics well-approximated by 23edo are 9, 13, 15, 17, 21, and 23.
+
+2.5/3.11/7.9.13.17
+all of (5/3, 7/3, 11/3, 7/5, 11/5, 11/7) are pretty good
+         6    5     3    11    3     8
+
+ 0 - 1/1
+ 1 - ?
+ 2 - ! 17/16
+ 3 - ! 12/11, 11/10
+ 4 - ! 9/8
+ 5 - ! 7/6
+ 6 - ! 6/5
+ 7 - ! 16/13
+ 8 - ! 14/11
+ 9 - ? 21/16, 17/13
+10 - ?
+11 - 7/5, 18/13
++
+12 - 10/7, 13/9
+13 - ?
+14 - ? 32/21, 26/17
+15 - 11/7
+16 - 13/8
+17 - 5/3
+18 - 12/7
+19 - 16/9
+20 - 11/6, 20/11
+21 - 32/17
+22 - ?
+23 - 2/1
+
+
+mavila7, 2L 5s (mavila, anti-diatonic)
+[0, 3, 6, 9, 13, 16, 19, 23]
+steps - [3, 3, 3, 4, 3, 3, 4]
+mavila9, 7L 2s (mavila superdiatonic)
+[0, 3, 6, 9, 12, 13, 16, 19, 22, 23]
+steps - [3, 3, 3, 3, 1, 3, 3, 3, 1]
+
+father5, 3L 2s (oneiro-pentatonic)
+[0, 5, 10, 14, 19, 23]
+steps - [5, 5, 4, 5, 4]
+father8, 5L 3s, oneirotonic
+[0, 1, 5, 6, 10, 14, 15, 19, 23]
+steps - [1, 4, 1, 4, 4, 1, 4, 4]
+
+sephiroth7, 3L 4s (mosh)
+[0, 2, 4, 9, 11, 16, 18, 23]
+steps - [2, 2, 5, 2, 5, 2, 5]
+sephiroth10, 3L 7s (sephiroid)
+[0, 2, 4, 6, 9, 11, 13, 16, 18, 20, 23]
+steps - [2, 2, 2, 3, 2, 2, 3, 2, 2, 3]
+
+porcupoid7, 3 3 3 5 3 3 3	1L 6s (antiarcheotonic)
+[0, 3, 6, 9, 12, 15, 18, 23]
+steps - [3, 3, 3, 3, 3, 3, 5]
+porcupoid8, 3\23
+[0, 3, 6, 9, 12, 15, 18, 21, 23]
+steps - [3, 3, 3, 3, 3, 3, 3, 2]
+
+
+fibonacci chord - 8:13:21:34
+
+
+
+5
+father5
+bug5: 5 5 5 5 3	4L 1s (bug pentatonic)
+6
+machinoid6: 4 4 4 4 4 3	5L 1s
+7
+mavila7: 3 3 4 3 3 3 4      2L 5s
+porcupoid7: 3 3 3 5 3 3 3   1L 6s
+sephiroth7: 2 5 2 5 2 5 2   3L 4s
+smitonic7: 5 1 5 1 5 1 5	4L 3s
+8
+father8
+porcupoid8
+9
+mavila9
+bug9: 3 2 3 2 3 2 3 2 3	5L 4s (bug semiquartal)
+10
+sephiroth10
+
+
+carlo serafini
+http://www.seraph.it/blog_files/926007c7483e4abc5a48d582c0667947-105.html
+http://www.seraph.it/blog_files/b2bf6f252efd467ee36ecc332a4872ac-106.html
+http://www.seraph.it/blog_files/add481fdf4ae8c3afe56a0d2cb6dd672-164.html
+http://www.seraph.it/blog_files/9e630d3f8ba93ab8264a3862dac950ce-192.html
+http://www.seraph.it/blog_files/694f0a26d29cd2a215f37754dd8428c3-237.html
+http://www.seraph.it/blog_files/9c6c54c593bc4720c8bd775fd5e244f4-261.html
+
+
+https://www.facebook.com/groups/xenharmonic2/posts/635133579840281/
+http://soundcloud.com/nanovibr.../a-rest-in-the-desert-23edo Hi, i am still aiming to convert a guitar to some EDO , So i have investigated 23-edo and there are some particular accurate intervals present.
+0:          1/1               
+  1:         52.174 cents..33/32 =            53.273c     
+  2:        104.348 cents..17/16 =           104.955c    
+  3:        156.522 cents..12/11  =          150.637c..23/21   =         157.493c     
+  4:        208.696 cents..26/23  =          212.253c     
+  5:        260.870 cents..7/6 =  266.871c  
+  6:        313.043 cents.. 6/5        =     315.641c (close)    
+  7:        365.217 cents..21/17    =        365.825c  (very close)
+  8:        417.391 cents..  14/11  =          417.508c(very close)      
+  9:        469.565 cents..21/16    =        470.781c (very close)     
+ 10:        521.739 cents.. 23/17    =        523.319c   
+ 11:        573.913 cents..39/28    =        573.657c     
+ 12:        626.087 cents..56/39   
+ 13:        678.261 cents..34/23     
+ 14:        730.435 cents..32/21     
+ 15:        782.609 cents..11/7    
+ 16:        834.783 cents..34/21    
+ 17:        886.957 cents..5/3     
+ 18:        939.130 cents..12/7    
+ 19:        991.304 cents..23/13     
+ 20:       1043.478 cents..11/6    
+ 21:       1095.652 cents..32/17    
+ 22:       1147.826 cents..64/33    
+ 23:          2/1            
+The semitone type 17/16 has multiple of 2 present, and so does the microtone 33/32.
+minor3rd=6/5 is reasonably close.
+The lower major3rd = 21/17 is interesting because it is almost spot on and features the fibbonacci series numbers 1,2,3,5,8,13,21,34....
+34/2 = 17 And the reciprocal interval 34/21 is very very close to phi
+The upper major third =14/11 has the reciprocal octave interval = 11/7 which are 2 consecutive Lucas numbers from 1,3,4,7,11,18.....
+A Very close approximation for the value of pi as you know = 22/7
+The very close perfect fourth type interval = 21/16 also has the fibbonacci numbers since = 21/(2*8)
+21-16 = 5, Always another fibonacci number in the series.
+So i have used some intervals from this 23-edo to write a short piece for guitar and classical strings.
+
+Thanks for the listen guys, Yes Gene, i would be honoured, i'll make sure i don't delete the track. And btw the 7th note in the scale : 365.217 cents..,21/17=365.825cents, just closer is 100/81 = 364.807cents which as you know is the sound of up by two intervals of (10/9) for a nice sounding majorthird-esque harmony which is used in this piece also
+
+I'm really intrigued by the melodic fragments you've used here - it sounds like you're using a lot of 209c whole steps and 104c half steps, which of course offers a "warped" meantone feel. Also the major sixth leaps are nice. I can't tell - when you use a melodic "fifth", is it the 730 cent one or the 678 cent one?
+
+Also you recognised the 208.696c whole step used, yes i used it frequently. And closer = 44/39= 208.835c which is the progression of intervals (16/13)up * (11/12)dwn ,or, (4/3)up * (11/13)dwn. i quite like the sound of this whole step perfect second type interval. It seems to sound ok and tuneful to me.
+
+thanks for listening Dustin, i am fascinated with phi and fibonnaci numbers and sister Lucas numbers so i chose the fifth to be the one close to 32/21=729.219c The note in 23-edo =730.435 c. And 32-21 = 11, Always another Lucas number. i'll look into Mavila on xenwiki now, i've heard a lot about it. Also in this piece is the most used 104c half step but on occasion included with it in sequence ( played fast) the 52.174cent quarter step
+
+Sorry, I just noticed that:
+23edo: 11thnote = 573.913 cents..39/28 = 573.657cents
+And 39/28 = (3/2)up * (13/14) down an interesting looking diminished fifth interval, doesn't necessarily have to be close to a 7/5 or 10/7 or 11/8 or 16/11 ?
+Do the interval ratio fractions close to the EDO note always have to be low numbers to hold interest? if they can be split into two intervals in this way?
+
+Thanks a lot for the listen folks!. So it looks like i'll be making a 23edo guitar as my first attempt since it has 23edo note7: 365.217 cents.. 2/phi= 366.910cents
+23edo note9: 469.565 cents..(phi^2)/2= 466.181cents
+23edo note14: 730.435 cents..4/(phi^2)= 733.819cents
+23edo note16: 834.783 cents.. phi = 833.090cents. i have just checked 26-edo and 6/5 & 5/3 is very close, so is 8/7 , 10/9 and yes phi looks very close. So then again, i'll take more time to think with care about refretting a guitar.
+
+
+
+
+
+todo:
+- 23edo antidiatonic has an abundance of very accurate 17:21:23 chords
+    - I'll have to try 23edo mavila. @tprice found a superfourth chord 0\23-7\23-10\23 that's quite consonant and close to 17:21:23
+- sixth is really close to 13:8
+- mavila fifth and an oneiro fifth
+- 14:11 is part of the sound of 23edo
+- ? 5|3s
+- Sarlocrian (14141444) oneiro modmos
+    - that's important in 23edo sarlocrian (slslslll), the 521 resolves to the flat 573 tritone
+    https://en.xen.wiki/w/5L_3s/Inthar%27s_approach
+    ? https://en.xen.wiki/w/13edo/Inthar%27s_approach
+- 23edo Dylydian (44414141) is great too
+    - I like sharp tritones around 12\23 or 11\21
+    - 23edo Dylydian also has ~23/16
+- mavila
+- armodue
+- 23ed1214c
+- ? this is just 3L 4s in 23edo, i thought the tuning was interesting. this is the rast scale pattern LssLLss. compared to hemififths you get septimal superfifths and subfourths and what would have been major and minor triads sounds more like sus4 and sus2. plus i like augmented seconds in scales and the large steps are like those
+- JI buzz, 17/8, 1304 in 23edo's 0-261-522-939-1304
+- 0-submin3-sup4 is an important sound in the mnarian mode in harder tunings like 18edo and 23edo
+    - it has quite the semifourth/semiquartal flavor
+- the N7-S4 is great in 23edo; yeah 0-313-522 is great
+- ? 23edo has a lot of undecimal
+- 0.000 - 313.043 - 521.739 - 678.261 - 991.304 - 1408.696
+- Superfourths are so great
+    There's so much that's lost when only looking at tertian triadic harmony
+- how would i play a 23edo maliva[9] scale? > step sizes are 133313333
+- 23edo is a good closed circle of 14/11
+- others might wish to look at it as a temperament of various subgroups, like 2.9.13.15.21.33 or 2.5/3.7/3.11/3
+- ? luachoid; phi like intervals; neji
+- 23edos harmony is really growing on me. You get a nice 81:100:120:144 chord and it also has a decent 13/9 you can use in it
+- might want to try 23edo's 3333335
+- ? 7L 1s porcutonic; 33333332
+- 23edo semaphore is like mavila semaphore
+- ? approximate-locrian
+- ? also a rather odd interpretation of hanson (can't comfirm this one)
+- ? ripple (can't comfirm this one)
+
+
+- blackwood 23edo etude, Stephen Weigel analysis
+    pelog - mavila[7]
+    slendro - father[5]
+    auxiliary tones
+    melodies, with similar contour
+    rhythmic augmentation
+    ostinato
+    common tones
+    alternating 5ths
+
+
+
+
+23edo impressions
+Bozu: This one defies my categorization as well as 11edo and 13edo, but with so many options for notes, maybe there is something there. I haven't really deemed this one worth much time investigating. To my ears, after playing with it for a couple of minutes, everything just sounds off, but not weird enough to pique my interest.
+Nicolai: Hyperchromatic version of 9EDO's mavila.
+Inthar: Shimmery oneirotonic. I particularly recommend the Sarlocrian (14141444) oneiro modmos.
+Keenan: Mavila system similar to 16, but has superpelog in addition. Nothing to write home about.
+Mike: same as the above but with mavila and 16-EDO and some other stuff too.
+Yourmusic Productions: Not enough songs using this to get a proper opinion. Definitely one of the tougher ones to get to grips with.
+
+
+
+23edo 5|3s
+
+
+conversely Sarlocrian sLsLsLLL is more concordant in 23edo oneiro with hardness 4/1
+
+what do you think of the 0 2 6 9 11 15 19 23 scale in 23edo btw (edited)
+
+this 23edo chord also coincidentally ends up being super close to 17:21:23
+
+technically In The Zoon is in 23edo and 23ed1214c
+
+Another neat thing about 23edo mavila is that the sixth is really close to 13:8
+
+fun fact, 23edo is the first edo to contain every heptatonic MV3 scale
+
+Your "all known seven note MV3 forms" page is really cool. Have been mulling over these results. The conditional versions are really interesting. 
+
+https://en.xen.wiki/w/User:Xenoindex/Heptatonic_MV3
+
+Also curious what you might get for eight note MV3 forms, as MV3 of odd numbers of notes and even numbers of notes sometimes show differing properties and structural behaviors.
+
+
+I find 23edo interesting because it has a mavila fifth and an oneiro fifth, and both scales sound pretty natural. Sevish takes advantage of this in Neon Tetra Elemental
+
+
+14/11 is part of the sound of 23edo
+
+
+
+23edo antidiatonic has an abundance of very accurate 17:21:23 chords
+
+
+
+the fifth in 16edo is... not great, even as mavila-supporting edos go. 23edo is similar but a little less intense, and also gives you a very good imitation of 12edo melodies
+
+
+Mavila is weird. You can‘t even get close to optimizing both 6/5 and 5/4 like you can with meantone. Instead, you can either optimizes 6/5 and 16/13 (53edo) or 21/17 (23edo), or you can optimize 5/4 and 13/11 (25edo) or 20/17 (34edo)
+
+23edo Dylydian also has ~23/16
+
+23edo Dylydian (44414141) is great too, I like sharp tritones around 12\23 or 11\21 (edited)
+
+the LLLSLSLS modmos of oneiro seems to shine at hardnesses between 3/1 and 4/1
+
+
+
+https://sevish.com/scaleworkshop/?name=&data=52.17391304347826%0A260.8695652173913%0A313.04347826086956%0A521.7391304347826%0A11%5C23%0A782.6086956521739%0A991.3043478260869%0A1200.&freq=151.5
+23edo sarlocrian (14141444) is fire 
+
+
+that's important in 23edo sarlocrian (slslslll), the 521 resolves to the flat 573 tritone
+whereas in 18edo sarlocrian i think the 600 tritone's more unstable than the 533 superfourth 
+
+
+this is just 3L 4s in 23edo, i thought the tuning was interesting. this is the rast scale pattern LssLLss. compared to hemififths you get septimal superfifths and subfourths and what would have been major and minor triads sounds more like sus4 and sus2. plus i like augmented seconds in scales and the large steps are like those
+https://sevish.com/scaleworkshop/?name=Rank%202%20scale%20(7%5C23%2C%202%2F1)&data=260.869565%0A365.217391%0A469.565217%0A730.434783%0A991.304348%0A1095.652174%0A1200.000000&freq=440&midi=69&vert=5&horiz=1&colors=white%20black%20white%20white%20black%20white%20black%20white%20white%20black%20white%20black&waveform=square&ampenv=perc-medium
+
+
+one way 21edo is interesting is the extreme contrast between the extremely consonant 114c semitone and the dissonant 57c quasi-quartertone
+23edo too
+
+
+The 10\23 superfourth in 23edo sounds similar to 27/20 to me
+
+
+some intervals having near-JI buzz is part of the sound of an edo even tho it's not everything
+for example 23/16 being v accurate in 21edo or 17/8 being very accurate in 23edo
+these are still noticeable in chords even when they don't fit into accurate harmonic series JI chords (edited)
+for example the 1304 in 23edo's 0-261-522-939-1304
+
+
+0-submin3-sup4 is an important sound in the mnarian mode in harder tunings like 18edo and 23edo. (edited)
+it has quite the semifourth/semiquartal flavor
+
+
+the N7-S4 is great in 23edo
+
+yeah 0-313-522 is great
+
+23edo has a lot of undecimal
+
+0.000 - 313.043 - 521.739 - 678.261 - 991.304 - 1408.696 in 23edo
+
+
+What are some superfourth chords in 23edo that you know?
+Trying to just add familiar whole and semitones to the 522c super4th just makes it sound like 18edo or 12edo (edited)
+
+that's a good point
+
+wait would a 23edo superfourth chord be 0c + ~521c + a third or more note(s)? (edited)
+
+anything of the form 0-x-522 where x is between 104 and 417 inclusive sounds alright but adding other notes is something I don't fully get yet, idk (edited)
+
+23edo might be dual to 18edo as a super4th edo
+it has a submajor 3rd instead of a supraminor 3rd and a bigger neutral 2nd instead of a sinaic, and a quasi 12edo semitone instead of two semitone sizes
+I should try it more (edited)
+
+
+
+I'll have to try 23edo mavila. @tprice found a superfourth chord 0\23-7\23-10\23 that's quite consonant and close to 17:21:23
+
+Superfourths are so great
+There's so much that's lost when only looking at tertian triadic harmony
+
+I would say 23edo is the highest edo you could call fifthless, since it has nothing in the range [4\7, 3\5]
+
+how would i play a 23edo maliva[9] scale?
+> step sizes are 133313333
+
+23edo is a good closed circle of 14/11
+
+
+you seem to have missed my point. An EDO can have multiple mappings for harmonics that are all more or less equally valid but lead to wildly different errors. Consider, for example, 23edo. Primes 3, 5, 7, 11, and 19 all fall almost exactly half-way between two 23edo steps, so for each of those primes, we have two potential mappings, all of which we can combine in various permutations. Moreover, many of these mappings will be inconsistent with the best mappings of harmonics 9, 15, 21, 33, etc. We get a very different picture of 23edo depending on what limit we look at in; some may be perfectly happy to treat it as a 5-limit Mavila temperament and go no further, while others might wish to look at it as a temperament of various subgroups, like 2.9.13.15.21.33 or 2.5/3.7/3.11/3.
+
+this is kinda a fair point, the fact that its a good 2.5/3.7/3.11/3 tuning isn't very obvious from a table of odd harmonics?
+
+
+since basic luachoid is 23edo which has a lot of higher phi like intervals
+those intervals could be help in constructing a neji approximation
+
+23edos harmony is really growing on me. You get a nice 81:100:120:144 chord and it also has a decent 13/9 you can use in it
+
+
+might want to try 23edo's 3333335
+
+
+i'll be calling 7L 1s porcutonic since there's another temperament including 23edo's greeley which isn't nec what people look for in porcupine
+but sounds vaguely similar
+
+23edo semaphore is like mavila semaphore
+
+I think 23edo can have a 7-note locrian scale that can be called locrian even if it doesn't have perfect stacked fifths like a diatonic mode
+
+For starters I think locrian has a lot of hate because most people think of locrian particularly in the context of 12edo, where the tonic triad sounds super unstable, but in a different tuning like 23edo, the major scale's tonic triad would sound unstable while locrian's tonic triad would sound pretty stable and resolved
+
+oh I'm sorry I just meant approximate-locrian
+
+I'd like to imagine in an alternate universe a culture that uses a particular tuning such as 23edo where it imo arguably has an in-tune locrian heptatonic scale but a very out-of-tune major heptatonic scale
+
+so they predominantly write in locrian and the majority of people assume the major scale is somehow inherently out-of-tune and unstable to write in
+
+for exampl, 23edo has mavila (678.261) and father (730.435)
+
+in 23edo i can actually hear the 17th harmonic blend in in that scale
+
+
+
+
+23edo music:
+- https://soundcloud.com/search?q=23edo
+- https://micro.soonlabel.com/23edo/
+- мой плейлист в ютубе - https://www.youtube.com/playlist?list=PLlT2Gj--oLkMQdZOMd4OYGWASWme2nSLa
+- bandcamp
+https://cityoftheasleep.bandcamp.com/track/permethrin-suite-23edo
+https://cityoftheasleep.bandcamp.com/album/transfinity-2
+https://cryptic-ruse.bandcamp.com/album/unfertile
+https://andrewheathwaite.bandcamp.com/track/pentaswing
+https://spectropolrecords.bandcamp.com/track/jacky-ligon-numenoctagon
+- soundcloud
+https://soundcloud.com/shunya-kiyokawa/23edo-klavier8
+https://soundcloud.com/nanoharmony/sun-ice-23edo-guitar
+https://soundcloud.com/corgi_boi/iridescent-sunrise
+https://soundcloud.com/togenom/koutei-no-koutei-23edo
+https://soundcloud.com/mikebattagliaexperiments/sets/the-mavila-experiments
+- https://en.xen.wiki/w/23edo#Music
+Promethean Elegies, by Ben Fuhrman
+Curiosity Finds a Frown, by Stephen Weigel
+Boogie Pie by Aaron Krister Johnson
+Chris Vaisvil
+    23 Chilled
+    Mindaugas Rex Lithuaniae (in Superpelog-9 tuning)
+Carlo Serafini
+    Desert Winds
+    23 Laments
+    Doomsday 23
+    Barber’s Adagio For Strings
+    Nubian Dance
+    Around the bonfire
+Allegro Moderato by Easley Blackwood: Easley Blackwood - 23 NOTES (MIDI realization)
+Tutim Dennsuul
+    Indigorange
+    Wignud
+    Harid
+
+dead links:
+The Family Supper by Warren Burt
+Igliashon Jones
+    Icositriphonic Heptatonic MOS
+    His Wandering Kinship with Ashes
+Chromatic canon, by Claudi Meneghin
+X. J. Scott
+    Cosmic Chamber
+    Daisies on the Beach
+Doomsday Clock (23 edo, remastered) | SoundCloud by müesk
+A Rest In The Desert play by Gary Mcandrew

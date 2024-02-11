@@ -1,0 +1,309 @@
+spectral toolkit
+https://www.michaelnorris.info/downloads/mmass4.pdf
+    Typical development strategies for ‘one-chord development’
+        – TRANSPOSITION
+        – SPECTRAL FILTRATION
+        – SPECTRAL DISTORTION (STRETCHING/COMPRESSION)
+        – MODULATION BETWEEN TIMBRE-CHORDS
+        – MUTATION BETWEEN TIMBRE-CHORDS
+        – INTERPOLATION BETWEEN TIMBRE-CHORDS
+    Now what?
+        ■ Output is listed from most prominent partial to least prominent
+        ■ Think about which partials you want to use — do you want to use all of
+        them?
+        ■ Ensemble size? How many partials can you use
+        ■ How are you going to create progressions?
+        ■ Maybe you need a number of timbre-chords to work through?
+        ■ How long is each one going to last?
+        ■ How are you going to ‘articulate’ or ‘ornament’ each chord?
+        ■ What role will melody play?
+
+
+
+TODO: чтобы закодить что-то спектральное, хорошо бы понять, что это
+
+
+
+Tristan Murail - Chaque chose en son temps 2.mp3
+Tristan Murail - Chaque chose en son temps 1.mp3
+Tristan Murail - Questions à Tristan Murail.mp3
+Tristan Murail - L’objet musical.mp3
+Tristan Murail - Le timbre - Désintégration.mp3
+Tristan Murail - Serendib et l’Esprit des Dunes 1.mp3
+Tristan Murail - Serendib et l’Esprit des Dunes 2.mp3
+Tristan Murail - Désintégration.mp3
+Tristan Murail - L'esprit des dunes.mp3
+Gérard Grisey - Le temps musical.mp3
+Gérard Grisey - Analyse et écoute partielle de Talea.mp3
+Gérard Grisey - Le temps étalé.mp3
+(fr) TristanMurail_29fevrier2018.mov_1080.mp4
+(fr) TristanMurail_28fevrier2018.mov_1080.mp4
+(fr) Angelo Orcalli - Spectral analysis and its transfer to musical writing.mp4
+(fr) François-Xavier Féron - L’exploration musicale de données sonagraphiques, enjeux et évolution des pratiques compositionnelles dans Les Espaces acoustiques (1974-1985) de Gérard Grisey.mp4
+Greg Strohman - Designing a comprehensive model of tonalness as an empirical basis for a general theory of musical harmony.mp4
+Emmanuel Amiot - Discrete Fourier transform of some musical structures.mp4
+
+
+
+mtosmt
+    Combination-Tone Class Sets and Redefining the Role of les Couleurs in Claude Vivier’s Bouchara
+        https://mtosmt.org/issues/mto.14.20.2/mto.14.20.2.christian.html
+    Encoding Post-Spectral Sound: Kaija Saariaho’s Early Electronic Music at IRCAM, 1982–87
+        https://mtosmt.org/issues/mto.21.27.3/mto.21.27.3.morrison.html
+    The Poetics and Politics of Ambiguity: Overtone Structures and Equal Temperament in Works by Julian Anderson and Rand Steiger
+        https://www.mtosmt.org/issues/mto.22.28.2/mto.22.28.2.stephenson.html
+    Spectral Meter: Dramatizing Entrainment and Communicating Form in Gérard Grisey’s Vortex Temporum I (1994–96)
+        https://mtosmt.org/issues/mto.18.24.2/mto.18.24.2.jakubowski.html
+    A Taxonomy of Orchestral Grouping Effects Derived from Principles of Auditory Perception
+        https://mtosmt.org/issues/mto.22.28.3/mto.22.28.3.mcadams.html
+    
+
+
+Claude Viver's "Couleurs": Generating Pitch Structures Through Ring Modulation
+    https://www.lawtonhall.com/blog/claude-viver-couleurs
+Michael Norris - Spectral toolkit
+    https://www.michaelnorris.info/downloads/mmass4.pdf
+
+
+Bauer course:
+    introduction
+        https://music.arts.uci.edu/abauer/5.4/week1.html
+    basic concepts, Vivier
+        https://music.arts.uci.edu/abauer/5.4/week4.html
+    Grisey
+        https://music.arts.uci.edu/abauer/5.4/week5.html
+    Murail
+        https://music.arts.uci.edu/abauer/5.4/week6.html
+    Saariaho, Haas
+        https://music.arts.uci.edu/abauer/5.4/week7.html
+    Romanian spectralists
+        https://music.arts.uci.edu/abauer/5.4/week8.html
+    Romitelli, Lehman
+        https://music.arts.uci.edu/abauer/5.4/week9.html
+    Ligeti, Scelsi
+        https://music.arts.uci.edu/abauer/5.4/week3.html
+    Messiaen
+        https://music.arts.uci.edu/abauer/5.4/week2.html
+    todo: previous course
+        https://music.arts.uci.edu/abauer/spectral/
+
+
+mannfishh
+    https://www.youtube.com/@mannfishh/videos
+Romitelli "Flowing down too slow"
+    https://youtu.be/_JCmScCm-3w?t=1546
+Romitelli "Amok Koma"
+    https://youtu.be/lBz9FakHzEQ?t=3472
+Introduction to Gerard Grisey's "Partiels"
+    https://www.youtube.com/watch?v=mq74L2vVvsw
+Grisey interview
+    https://www.angelfire.com/music2/davidbundler/grisey.html
+Harvey Spectralism
+    https://music.arts.uci.edu/abauer/spectral/readings/Harvey_Spectralism.pdf
+todo: spear, sdif
+Macaque – A tool for spectral processing and transcription
+    https://www.tenor-conference.org/proceedings/2017/01_Hajdu_tenor2017.pdf
+SPECTRAL SYNTHESIS USING SPEAR & iDENSITY
+    https://www.youtube.com/watch?v=8RrYdXRrtpA
+murail ethers
+    https://www.youtube.com/watch?v=CqHbVzmtSrs
+    pdf
+        https://felixpastor.files.wordpress.com/2011/05/felixpastor_ethers.pdf
+about Grisey Prologue
+    http://archive.soundamerican.org/sa_archive/sa9/sa9-gerard-grisey.html
+
+
+https://doc.sccode.org/Classes/SMS.html
+
+spectral tools for composition:
+    - create harmonic series
+    - sum and difference tones
+
+Partiels
+    - The opening of Partiels is derived from an electronic sonogram analysis of the attack of a low E2 on a trombone.[3] This spectrum is orchestrally synthesized through the assignment of different instruments to each harmonic partial in such a way as to harmonically and gesturally model the dynamic temporal evolution of the attack.[4] Thus the opening features the successive entrance of lower partials with the fifth and ninth partials being louder than lower ones, including the fundamental, and all higher partials gradually trailing off in amplitude. Each partial is approximated to the nearest quarter tone. A low bass reinforces the fundamental an octave lower on the open E1 string.
+    - Partiels also makes use of sum and difference tones to create harmonies.[5]
+
+
+Notable works (from Wikipedia):
+    Voyage into the Golden Screen (1968)
+    Stimmung (1968)
+    Clang (1972)
+    Partiels (1975)
+    Gondwana (1980)
+    Lonely Child (1980)
+    Mortuos Plango, Vivos Voco (1980)
+    Trois airs pour un opéra imaginaire (1982)
+    Vortex Temporum (1996)
+    in vain (2000)
+
+
+challenges:
+    - how to analyze sound in real-time?
+        - or even in fast-forward time in buffer?
+
+
+
+
+todo
+Amy Bauer
+https://music.arts.uci.edu/abauer/5.4/
+https://music.arts.uci.edu/abauer/spectral/
+https://music.arts.uci.edu/faculty/amy-bauer
+https://music.arts.uci.edu/abauer/
+https://music.arts.uci.edu/abauer/video.html
+
+
+
+todo
+Spectralism
+https://en.wikipedia.org/wiki/Spectral_music
+spectral jazz (Steve Lehman)
+
+https://fdleone.com/2014/01/28/spectral-music/
+Tristan Murail - Barque Mystique
+    What we notice is that the music does not use melodic motives, or harmonic progressions to establish phrases or periods.  Instead what we hear are sound textures and gestures.  When the instruments play fast passage work, it has the effect of arpeggiated chords and not as melodic content.  The music has a somewhat static quality, and it appears that what the composer has in mind is an examination of the sounds for their own sake.
+
+This idea of rejecting the motif as the principal constituent element of a composition and of establishing timbre instead was posited by Grisey during a presentation at the Darmstadt courses in 1978:
+    The material derives from the natural growth of sonority, from the macrostructure and not the other way round. In other words there is no basic material (no melodic cell, no complex of notes or note values). [François Rose, “Introduction to the Pitch Organization of French Spectral Music”, Perspectives of New Music, Vol. 34, No. 2 (Summer, 1996), pp. 6-39.]
+
+Iancu Dumitrescu, Ana-Maria Avram write what is called hyper-spectralism. These composers will focus on dense choral textures, and repetitive drones, sometimes centering on a single note for several minutes
+
+
+
+In more recent years, only a handful of composers have been identified as using spectral techniques in Western cinema. In the 1983 film, Het raadsel van de Sfinks (The riddle of the sphinx), the soundtrack’s timbral exploration was the result of composer Luc Brewaeys. This film was a compositional turning point for Brewaeys, with the influence of Murail and Grisey causing him to move away from his post-serial qualities to that of spectralism (Renders and Vandenhouwe, 2001, online). Hughes Dufourt’s piece Hommage à Charles Nègre (1986) was composed for the film Quai Bourbon of Luc Riolon, with choreography and production by Daniel Larrieu (Hugues Dufourt, n.d., online). The movie is about a 19th century French photographer named, as Dufourt’s title suggests, Charles Négre. The music is designed to be in the background, an approach not always taken in film scoring today. Throughout the work there are no strong rhythmical elements, but a slowly evolving sound structure that captures the colour and mood of the film using only six instruments (Rutherford-Johnson, 2004, online). In 1987, the quality of Dufourt’s work was recognised when Hommage received the Prize of the Jury for the Music Cinema Festival (Molino, 2000, online).
+English composer François Evans was recognised by La.M.P.(Lampmusic) to be the only composer using spectral techniques in writing for film (Spectral Film Music, 2004, online).
+
+en dubbing
+    Tristan Murail : Questions to … Tristan Murail 01:07:14
+    https://medias.ircam.fr/x082d25_tristan-murail-questions-to-trist
+    Tristan Murail : All in good time (first part) 01:19:03
+    https://medias.ircam.fr/x48029f_tristan-murail-all-in-good-time-first-p
+    Tristan Murail : All in good time (second part) 01:19:03
+    https://medias.ircam.fr/xdcc432_tristan-murail-all-in-good-time-second
+
+Tristan Murail : Questions à… Tristan Murail 01:07:14
+https://medias.ircam.fr/x2822cb_tristan-murail-questions-a-tristan
+Tristan Murail : Chaque chose en son temps (première partie) 01:19:03
+https://medias.ircam.fr/x6f3941_tristan-murail-chaque-chose-en-son-temps
+Tristan Murail : Chaque chose en son temps (deuxième partie) 01:19:03
+https://medias.ircam.fr/x079777_tristan-murail-chaque-chose-en-son-temps
+Tristan Murail : Le son musical 01:28:14
+https://medias.ircam.fr/xa13ada_tristan-murail-le-son-musical
+Tristan Murail : L’objet musical 02:12:34
+https://medias.ircam.fr/x4c2f71_tristan-murail-lobjet-musical
+Tristan Murail : Le timbre - Désintégration 02:42:05
+https://medias.ircam.fr/x7539be_tristan-murail-le-timbre-desintegratio
+
+Tristan Murail : Désintégration - Serendib 01:49:46
+https://medias.ircam.fr/x3222ee_tristan-murail-desintegration-serendib
+Tristan Murail : Serendib et l’Esprit des Dunes 01:50:53
+https://medias.ircam.fr/xfc7e9b_tristan-murail-serendib-et-lesprit-des
+Tristan Murail : Désintégration 02:07:45
+https://medias.ircam.fr/x3a207e_tristan-murail-desintegration
+Tristan Murail : L'esprit des dunes 02:14:24
+https://medias.ircam.fr/xb19ddb_tristan-murail-lesprit-des-dunes
+
+Gérard Grisey : Le temps étalé 01:25:26
+https://medias.ircam.fr/x281495
+Gérard Grisey : Le temps musical 58:33
+https://medias.ircam.fr/x54e432
+Gérard Grisey : Analyse et écoute partielle de Talea 51:18
+https://medias.ircam.fr/x0b540b_gerard-grisey-analyse-et-ecoute-partiell
+
+
+?
+    Jean-Marc Chouvel : Les enjeux théoriques et musicaux de la notion de concordance harmonique. Retour sur la physique de l’harmonie 39:58
+    https://medias.ircam.fr/xcc85b3_jean-marc-chouvel-les-enjeux-theoriques
+    L’étude des propriétés spectrales du sheng 01:01:44
+    https://medias.ircam.fr/x9ff30c_letude-des-proprietes-spectrales-du-sheng
+    Julie Delisle, Mikhail Malt, Caractérisation spectrale des sons de sheng: entre interactions, adaptations et technique instrumentale 02:00:51
+    https://medias.ircam.fr/x738065
+    Manuel Gaulhiac : Structuration spectrale de l’espace harmonique 39:13
+    https://medias.ircam.fr/xad68a2_manuel-gaulhiac-structuration-spectrale
+    Camille Lienhard : L’harmonie et ses « principes naturels », de Rameau à Grisey. À propos d’une problématique transhistoriqueCamille Lienhard 44:49
+    https://medias.ircam.fr/x7afd4f_lharmonie-et-ses-principes-naturels
+    Angelo Orcalli : L’analyse spectrale et son transfert à l’écriture musicale 57:24
+    https://medias.ircam.fr/x668a39_angelo-orcalli-lanalyse-spectrale-et-so
+    Cesar Birschner & Manuel Gaulhiac : Le transtonalisme dans les six premières Cartas Celestes pour piano de Almeida Prado 40:33
+    https://medias.ircam.fr/xb5f75b_cesar-birschner-manuel-gaulhiac-le-tra
+    Gianluca Dai Pra: Subdominant – Tonic – Dominant’s relations before and after Rameau. Harmonic functions and triadic relations from modal triads to Lewin’s 1982 A Formal Theory of Generalized Tonal Functions 44:40
+    https://medias.ircam.fr/x2ae2fd_gianluca-dai-pra-subdominant-tonic-do
+    Bruno Torrésani: Spectral analysis for non-stationary signals, with applications to sound analysis and synthesis 58:22
+    https://medias.ircam.fr/x7b8d10_spectral-analysis-for-non-stationary-signa
+
+
+
+Other musical works using Orchidée:
+    Daniel Fígols Cuevas, Kaala, 2012, CNSMDP, Paris
+    Marc Garcia Vitoria, Mimesis, 2011, Paris[4]
+    Alec Hall, Striped Noise, New York, 2011[5]
+    Javier Torres Maldonado, Un posible dia, Paris, 2011[6]
+    Marc Garcia Vitoria, The P Extensions, 2010, Geneva[7]
+    Christopher Trapani, Cognitive Consonance, Le 104, 2010, Paris[8]
+    Christopher Trapani, Westering, Carnegie Hall, New York, 2010[9]
+    Marco Suarez Cifuentes, Poetry for //dark-/ dolls, 2009, IRCAM, Paris[10]
+    Fernando Villanueva Carretero, Bukowski Madrigals, 2009, IRCAM, Paris[11]
+    Kenji Sakai, Astral/Chromoprojection, 2009, IRCAM, Paris[12]
+    Gérard Buquet, L'Astre échevelée, 2009, IRCAM, Paris[13]
+    Miguel Farías, Mambo Lines, 2011, Geneva
+
+backlog/links
+    omtristan
+        https://github.com/openmusic-project/OMTristan/blob/master/sources/TMlibrairie-OM.lisp
+    esquisse
+        https://github.com/openmusic-project/Esquisse/blob/master/sources/esquisse.lisp
+        ; HARM-SERIES NTH-HARM FREQ-MOD RING-MOD M-VIR-FUN FSHIFT FDISTOR HARM-DIST VIRT-FUND BEST-FREQ BEST-TRANSP
+    om-ji
+        https://github.com/charlesneimog/OM-JI
+    
+    
+    spectral-pop
+    https://medias.ircam.fr/media/programs/spectralpop_HD.pdf
+    https://medias.ircam.fr/x9b615c_concert-complet
+
+
+
+
+
+Murail thoughts:
+    Khoom (with Michiko Hirayama), Pranam I, Pranam II, Anahit (one of Scelsi’s most beautiful pieces, for violin and ensemble) and Manto
+
+    Memoire-Erosion, written, I believe, in 1975, in which I tried to simulate processes based on filtering, echo and feedback (the use of several tape recorders that pass sounds from one to another).
+
+    vocal groups experimenting with the Mongolian techniques of diffracting harmonic partials. (The Harmonic Choir of David Hykes may be the best known, but this ensemble was preceded by the Rome- based group Prima Materia, whose members associated regularly with Scelsi.)
+
+    Cerha is the author of a series of pieces for orchestra, Spiegel, in which the orchestra is often
+    treated as a generator of complex harmonies with strong electronic connotations. One finds
+    a sense of time similar to the ‘smooth time’ of Ligeti, but also a great expressive force.
+
+
+Steve Lehman thoughts:
+    Michaël Levinas (b. 1949), Roger Tessier (b. 1939), and Hugues Dufourt (b. 1943) Mesías Maiguashca
+
+    Philippe Hurel (b. 1955), Jean-Luc Hervé (b. 1960), Rozalie Hirs (b. 1965), Joshua Fineberg (b. 1969), Magnus Lindberg (1958), Julian Anderson (b. 1967)
+
+    Jonathan Harvey (1939–2012), Gilles Tremblay (1932–2017), Claude Vivier (1948–1983), Kaija Saariaho (b. 1952), Georg Friedrich Haas (b. 1953), Philippe Leroux (b. 1959), Marco Stroppa (b. 1959), Marc-André Dalbavie (b. 1961), and Ana-Maria Avram (b. 1961)
+
+    Steve Lehman
+    mannfishh
+
+    Grisey, “Paris 1978: chez Tristan Murail avec Hugues Dufourt,” in Écrits,
+
+    François-Bernard Mâche transcribed his own voice from a spectrogram in Le son de voix (1964)
+
+    Nicolas Donin identifies this piece as perhaps the earliest known use of instrumental synthesis methods, or what he calls “sonic imprints”; see Donin, “Sonic Imprints: Instrumental Resynthesis in Contemporary Composition,” in Musical Cultures of the Twentieth Century: Musical Listening in the Age of Technological Reproduction, ed. Gianmario Borio (Farnham, UK: Routledge, 2016), 329–330.
+
+    For more on the influence of Scelsi’s music on l’Itinéraire, see Murail, “Scelsi and l’Itinéraire: The Exploration of Sound,” Contemporary Music Review 24, no. 2/3 (2005): 181–185.
+
+    For a description of the algorithm used in IANA, see Ernst Terhardt et al., “Algorithm for Extraction of Pitch and Pitch Salience from Complex Tonal Signals” The Journal of the Acoustical Society of America 71, no. 679 (1982): 679–688. The algorithm was originally built into the IANA program by Gérard Assayag in the mid-eighties, and it was later ported to the Max environment by Todor Todoroff; for a historical description of its implementation in software, see Eric Daubresse and Gérard Assayag, “Technology and Creation: The Creative Evolution,” Contemporary Music Review 19, no. 2 (2000): 72.
+
+    See Chen (2010) for a detailed account of Tempus Ex Machina and its rhythmic structure. 
+    See Hervé (2001) for a comprehensive analysis of Vortex Temporum
+
+
+
+some other thoughts (not mine):
+    1. Find the virtual fundamental of the diatonic pitch collection. Complementary parts play harmonic partials of that fundamental.
+    2. Consider the diatonic melody’s pitches as the same partials of changing funda- mentals to be calculated (for instance, suppose all pitches are seventh partials of different fundamentals). Then, obtain other partials of those fundamentals by transposing the pitch collection by an interval corresponding to an integer-ratio in frequency.
+    Techniques related to virtual fundamentals have been around for some time. Tim Howell discusses their use in Magnus Lindberg’s Kinetics (1988-1989):
+    The acoustic properties of [these serially derived] chords are [then] analysed in relation to the overtone series, as group of partials issued from one fundamental. That spectral analysis allows all chromatic constituents to be viewed in relation to an underlying fundamental, which may be deployed in their re-harmonisation; this can transform initial dissonance into sonorous chords. [2], p. 239.

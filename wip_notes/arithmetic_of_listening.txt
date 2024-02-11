@@ -1,0 +1,148 @@
+The Arithmetic of Listening
+errata
+https://www.kylegann.com/Arithmetic.html
+
+
+notes:
+
+
+If you start with the last 9/8, on the note C, and circle around to the beginning again, you get
+C      D       E   ...
+  9/8    10/9    16/15    9/8    10/9    9/8    16/15
+which are the intervals of what is defined as the most basic and consonant just-tuned major scale
+(called by Harry Partch “the Ptolemaic sequence”):
+ C    D    E    F    G    A     B    C
+1/1  9/8  5/4  4/3  3/2  5/3  15/8  2/1
+
+Pythagorean:
+ C    D     E     F    G     A      Bb     B      C
+1/1  9/8  81/64  4/3  3/2  27/16  16/9  243/128  2/1
+
+3 and 5:
+  A     E     B     F#
+ 5/6   5/4  15/8  45/16
+  F     C     G     D
+ 2/3   1/1   3/2   9/4
+  Db    Ab    Eb    Bb
+ 8/15  4/5   6/5   9/5
+includes Ptolemaic
+
+
+means (arithmetic and harmonic)
+(проще глянуть картинку)
+OEBPS/images/38.jpg
+ C    D-  D   Eb  E   F   G   Ab  A   Bb   B   C
+1/1 10/9 9/8 6/5 5/4 4/3 3/2 8/5 5/3 9/5 15/8 2/1
+
+
+In the key of C, D can be consonant with 3/2 G,
+or it can be consonant with 5/3 A,
+but it cannot be consonant with both.
+This is a fundamental problem of the history of keyboard tuning and just intonation.
+
+
+Guillaume de Machaut's Notre Dame Mass (or Messe de Nostre Dame, nostre being old French for notre)
+
+
+todo: Mistuning in C-D-F-G
+
+Interestingly, if one looks at seventh chords in 1/4-comma meantone, most of them have a minor seventh of 1006.9 cents. But two usable seventh chords, those built on B (B D F G#) and E (E G B C#) have minor sevenths (more accurately, augmented sixths) of 965.8 cents, which is remarkably close to the pure 7/4 minor seventh of 968.8 cents. This fact had been noted in the eighteenth century. Theorist Giordano Riccati (1709–1790) called the meantone dominant B–D–F–G# “more tranquil and consonant” than the other dominant sevenths (and one would have to include E–G–B–C# as well), for which reason E was prized as being a particularly expressive key.4 (The dominant on E would yearn to resolve to A, and there was no such key—a poignant thought.) The idea of the different keys having different qualities or colors is one that lasted well through the nineteenth century and seems quizzical in the context of equal temperament, but it has its origins in the resources that different keys had available in meantone.
+
+про MOS шкалы:
+R.H.M. Bosanquet, in his 1876 work An Elementary Treatise on Musical Intervals and Temperament, defined a regular temperament as one whose usable perfect fifths are all the same size.7 By this definition, all of these meantone temperaments are regular, as are equal temperament and Pythagorean tuning. Furthermore, regular temperaments can be placed within a continuum on the basis of the size of their perfect fifths.
+
+
+meantones and edos:
+1/4-comma vs 31edo (5,8,10,18)
+1/3-comma vs 19edo (3,5,6,11)
+2/7-comma vs 50edo (8,13,16,29)
+1/6-comma vs 55edo (9,14,18,32)
+  55edo, each step is virtually syntonic
+55edo
+Mozart:
+C C# Db D D# Eb E F F# Gb G G# Ab A A# Bb B (C) = 17
+ 4  1  4 4  1  4 5 4  1  4 4  1  4 4  1  4 5    = 55
+можно до 19 ключей просто довести по идее, разбив ещё две 5 на 4+1
+получится
+ 4  1  4 4  1  4 4 1 4  1  4 4  1  4 4  1  4 4 1
+не знаю чем это может быть полезно
+
+many pitches:
+11 pitches - orlando gibbons - The Lord Salisbury his Pavane and Galliard
+Domenico Scarlatti - Sonata in E Minor, numbered Kirkpatrick 394/Longo 275, Its middle section (76-83)
+18 pitches - John Bull - fantasia on Ut Re Mi Fa Sol La
+14 pitches - Mozart - “Dissonance” Quartet (composed in 1785 and more formally known as String Quartet No. 19 in C Major, K. 465), opening
+
+
+In Johnston's notation:
+F-A-C, C-E-G, and G-B-D are all perfectly tuned 4:5:6 major triads
++ raises a pitch by 81/80
+# raises it by 25/24, b lowers it by 24/25
+7 lowers it by 35/36, ^ raises it by 33/32
+13 raises it by 65/64
+
+
+3,7-limit vs 36edo
+
+
+Of these twelve intervals, nine are within fifteen cents of a quarter tone (fifty cents between two equal-tempered steps), and six of those—12/11, 11/9, 11/8, 16/11, 18/11, and 11/6—are within three cents. These six are the ones that use only 2, 3, and 11 as factors.
+
+In particular, 11/9 is a useful neutral third between major (5/4) and minor (6/5), while 11/6 is a similarly neutral seventh.
+
+попробовать
+12/11, 11/10, 11/9, 14/11, 15/11, 11/8, 16/11, 22/15, 11/7, 18/11, 20/11, 11/6
+
+
+harmonic 13th
+Ratio   Cents
+1/1     0
+14/13   128.3
+13/12   138.6
+16/13   359.5
+13/10   454.2
+18/13   563.4
+13/9    636.6
+20/13   745.8
+13/8    840.5
+22/13   910.8
+13/7    1071.7
+208/105 1183.4
+
+
+
+todo:
+
+works based entirely on overtones of a single fundamental, including
+  La Monte Young's The Well-Tuned Piano
+  James Tenney's Spectral Canon for Conlon Nancarrow
+  Hyperchromatica
+
+  Larry Polansky has also written pieces, such as B'rey'sheet,
+  Robert Carl, such as Infinity Avenue, that proceed from one harmonic series to another.
+
+72tet
+  Harry Partch (Two Studies on Ancient Greek Scales, 1946)
+  Ivor Darreg (On the Enharmonic Tetrachord, 1965)
+
+
+mayumi tsuda - microtonal works (1990-2000)
+  harmonic 13th
+Harry Partch - Letter The Wayward
+  ?
+Theater of Eternal Music - Pre-Tortoise Dream Music
+  ?
+Ben Johnston - Suite for Microtonal Piano
+  ?
+Harry Partch - Barstow
+  https://www.youtube.com/watch?v=VE4_PoNigAc
+  ?
+
+Ben Johnston - String Quartet No. 7
+  https://www.youtube.com/watch?v=gYsJNrLiYiM
+
+Kyle Gann 8x8 tuning
+
+
+===========================
+
+Julian Anderson - Book of Hours
