@@ -1,0 +1,112 @@
+https://github.com/Prezzodaman/pymod
+    play Amiga mods in python
+
+https://github.com/chr15m/algotracker
+    algorithmically generate Amiga tracker module music files
+    jsons
+    https://chr15m.github.io/algotracker/
+
+https://github.com/bintracker/bintracker
+    programmable music tracker
+
+https://github.com/hundredrabbits/Orca
+    2d gui
+
+https://github.com/BespokeSynth/BespokeSynth/
+    flow-based, node-based
+
+https://github.com/gesellkammer/maelzel
+    computer music in python
+    datatypes to define notes, chords, sequences, lines, voices, scores, etc
+    can be combined with soundfiles and samples, rendered as notation and synthesized in realtime
+    composition, music notation, sound analysis and synthesis, feature extraction, transcription and machine learning
+
+https://github.com/helio-fm/helio-sequencer
+    microtonal + polymetric DAW
+
+https://github.com/amiika/ziffers
+    Numeric notation for composing algorithmic and generative music using Sonic Pi
+
+https://github.com/chuckkh/Rationale
+    microtonal music composition sequencer in Python and C++
+
+https://github.com/flipcoder/textbeat
+    tracker, with chords
+    plaintext music sequencer and midi shell, with vim playback and the powers of music theory
+    Strumming
+    Arpeggiation
+    Tuplets and polyrhythms
+    MIDI CC automation
+    Vibrato, pitch, and mod wheel control
+    Dynamics
+    Accents
+    Velocity
+    Inversions
+    Midi channel stacking
+    Note length
+    Delays
+    Scales and modes by name
+    Markers, repeats, callstack
+
+https://github.com/superctr/mmlgui
+    Music Macro Language, editor and compiler GUI
+    Supports Sega Mega Drive sound chips (YM2612, SN76489)
+
+https://github.com/philburk/hmsl
+    Hierarchical Music Specification Language, Forth tools for experimental music from the 1980's
+
+https://github.com/shimpe/mitola
+    supercollider quark for microtonal music composition; microtonal counterpart to panola
+
+https://github.com/lucretiomsp/Coypu
+    convenient methods and classes for Pharo designed for live coding performances using Kyma or other musica languages by sending OSC messages
+
+https://github.com/nnirror/facet
+    Facet is an open-source live coding system for algorithmic music and synthesis. With a code editor in the browser and a pair of NodeJS servers running locally on your machine, Facet can generate and sequence audio, MIDI, OSC, and image data.
+
+https://github.com/WeirdConstructor/HexoSynth
+    hexagonal modular synthesizer plugin (VST3, CLAP)
+
+https://github.com/Jackojc/cane
+    MIDI sequencer DSL designed around vectors and euclidean rhythms
+    https://discord.com/invite/UVYAtpYYD2
+
+https://github.com/tmhglnd/mercury
+    livecoding language + visuals
+    https://mercury-playground.pages.dev/
+    https://discord.com/invite/vt59NYU
++
+https://github.com/tmhglnd/total-serialism
+    Toolbox full of Algorithmic Composition methods
+
+https://github.com/SamueleGiraudo/Bud-Music-Box
+    Generative music through operads
+    +
+    https://github.com/SamueleGiraudo/Calimba
+
+https://github.com/Gwion/Gwion
+    strongly timed musical programming language
+    inspired by ChucK, but adding a bunch of high-level features, templating, first-class functions and more
+    https://discord.com/invite/KmHqbTKSmS
+
+https://github.com/ideoforms/isobar
+    Python library for creating and manipulating musical patterns, designed for use in algorithmic composition, generative music and sonification. Can be used to generate MIDI events, MIDI files, OSC messages, or custom events
+
+
+https://github.com/supercollider/supercollider
+    supercollider
+
+https://github.com/tidalcycles/Tidal
+    tidalcycles
+
+https://github.com/tidalcycles/strudel
+    strudel
+
+https://github.com/gibber-cc/gibber
+    gibber
+
+https://github.com/Bubobubobubobubo/sardine
+    sardine
+
+https://github.com/dxinteractive/xenpaper
+    xenpaper
