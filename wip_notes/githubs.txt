@@ -57,6 +57,10 @@ https://github.com/philburk/hmsl
 
 https://github.com/shimpe/mitola
     supercollider quark for microtonal music composition; microtonal counterpart to panola
+    https://github.com/shimpe/panola
+
+https://github.com/sdclibbery/limut
+    Live coding music and visuals within a browser using WebAudio and WebGL
 
 https://github.com/lucretiomsp/Coypu
     convenient methods and classes for Pharo designed for live coding performances using Kyma or other musica languages by sending OSC messages
@@ -92,6 +96,11 @@ https://github.com/Gwion/Gwion
 https://github.com/ideoforms/isobar
     Python library for creating and manipulating musical patterns, designed for use in algorithmic composition, generative music and sonification. Can be used to generate MIDI events, MIDI files, OSC messages, or custom events
 
+https://github.com/cutelabnyc/nested-tuplets
+    js DSL for describing and generating nested tuplets
+
+https://github.com/j5v/xetune
+    XeTune is a visualiser and basic editor for multiple microtonal tunings.
 
 https://github.com/supercollider/supercollider
     supercollider
@@ -107,6 +116,9 @@ https://github.com/gibber-cc/gibber
 
 https://github.com/Bubobubobubobubo/sardine
     sardine
+
+https://github.com/e-lie/renardo
+    continuation of foxdot
 
 https://github.com/dxinteractive/xenpaper
     xenpaper

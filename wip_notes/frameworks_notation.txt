@@ -282,6 +282,8 @@ news
         https://github.com/efairbanks/cybin
     Pharo
         https://github.com/lucretiomsp/PharoLiveCoding
+        =>
+        https://github.com/lucretiomsp/Coypu
     Algorithmic tracker music generator
         https://chr15m.github.io/algotracker/
     ORCΛ
