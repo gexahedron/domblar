@@ -1,0 +1,392 @@
+[(-28, 1), (-27, 1),
+(-22, 1), (-21, 2), (-20, 3), (-19, 3), (-18, 4), (-17, 2), (-16, 1),
+(-13, 2),
+(-11, 1), (-10, 2), (-9, 4), (-8, 4), (-7, 1),
+(-1, 2), (0, 10), (1, 6), (2, 22), (3, 1),
+(9, 2), (10, 2), (11, 8), (12, 1), (13, 2),
+(16, 3),
+(18, 7), (19, 9), (20, 6),
+(24, 2), (25, 3), (26, 2), (27, 8), (28, 16), (29, 4), (30, 2), (31, 1), (32, 1), (33, 1), (34, 1), (35, 1), (36, 1), (37, 5), (38, 16), (39, 4), (40, 5),
+(45, 4)]
+
+видимо придётся сделать 2 транскрипции
+  фактическую, где например бывают подскоки на 1 шаг и интервалы в 62
+  и приблизительную идеализированную нотную
+
+2-0:
+  0: 4,
+  31: 1,
+  35: 1, 36: 7, 37: 11, 38: 14, 39: 3, 40: 2, 41: 3,
+  44: 1, 45: 1, 46: 1, 47: 1
+  53: 1,
+  55: 2, 56: 1, 57: 1,
+  59: 1,
+  61: 1, 62: 2, 63: 1,
+2-1:
+  -6: 2,
+  0: 6,
+  7: 1, 8: 1, 9: 4, 10: 3,
+  11: 3, 12: 5, 13: 4, 15: 1, 16: 2, 17: 12, 18: 3, 19: 4, 20: 3, 21: 3, 23: 1, 24: 2,
+
+0: 10
+2: 22
+19: 9
+28: 16
+38: 16
+
+(38, 17, 21): 3
+(37, 17, 20): 2
+(38, 19, 19): 2
+
+(37, 10, 27): 3
+(38, 12, 26): 2
+(38, 11, 27): 2
+(38, 9, 29): 2
+
+
+ух ты, проблемка:
+>>> ratio_to_cents(8,7)+ratio_to_cents(4,3)
+729.2190926654876
+>>> ratio_to_cents(10,9)+ratio_to_cents(11,8)
+733.7216544988169
+причём нижний и верхний голоса не меняются
+при этом в 63-edo:
+  12+26 в одном случае, в другом 10+29
+хм, забавно
+есть ещё вариант все 10/9 заменить на 11/10
+ещё есть проблемы с 6/5:
+  они используют 310, 6/5=315, и маппится оно в 322.5, 17 шагов, хотя есть ещё 16 шагов = 303.5
+
+63 edo:
+ 0: 1/1
+ 1: (хотелось бы не использовать этот интервал)
+ 2:
+ 3:
+ 4:
+ 5: [~100 центов]
+ 6: 16/15
+ 7: 27/25 (?) (нужен для мелодических шагов)
+ 8: 12/11
+ 9: 11/10 = 1\7, ~171
+10: 10/9
+11: 9/8
+12: 8/7
+13: 15/13
+14:
+15: 13/11
+16: [19/16, ~300 центов]
+17: 6/5
+18: 17/14 (?), 11/9 (любопытно, что 2 интервала)
+19:
+20: 5/4
+21: [24/19, ~400 центов]
+22: 14/11
+23: 9/7
+24: 13/10
+25:
+26: 4/3
+27:
+28:
+29: 11/8
+30:
+31: 7/5
+32:
+33:
+34:
+35:
+36:
+37: 3/2
+38:
+39:
+40: 17/11 (?)
+41: 11/7
+42:
+43:
+44: 13/8
+45: 18/11
+46:
+47:
+48:
+49:
+50:
+51:
+52:
+53:
+54:
+55: 11/6
+56:
+57: [15/8]
+58: [~1100 центов]
+59:
+60:
+61:
+62: (хотелось бы не использовать этот интервал)
+63: 2/1
+
+миноры: 10:12:15 vs 16:19:24
+56edo, 63edo
+
+попробую поискать систему с:
+133, 183 - из 3,5-limit-ji
+1200/7=171
+~11/9=347
+204, 386, 702
+возможно ~30-34 центов => как минимум 34-edo надо рассматривать
+171 vs 183 => сложно их развести, но можно попробовать 63edo
+и с ошибкой не более чем 5 центов (это же касается и интервала в 1200 центов тоже)
+34, 133, 171, 183, 204, 347, 386, 702
+да, можно попробовать 63-edo:
+>>> [1195/63*x for x in [2,7,9,10,11,18,20,37]]
+[37.93650793650794, 132.77777777777777, 170.71428571428572, 189.6825396825397, 208.65079365079364, 341.42857142857144, 379.3650793650794, 701.8253968253969]
+
+- грузины
+  - записать себе в файл все полезные команды ffmpeg
+  - выложить код, с анализом
+    - почистить от всего ненужного
+      - выкинуть redux, заменить на 63edo (сделать ноты?)
+        - пофиксить pitch shift?
+        - вопрос ещё в том, что можно ноты иногда сдвигать до соседних
+        понять бы как с этим быть
+          кажется - можно на слух глянуть как они поют по одиночке каждый
+          и исправить ноты
+        - но зато можно ещё потом глянуть - какие аккорды похожи друг на друга, какие стали совпадать, хотя раньше мб не совпадали
+      - что-то сделать с tony, попытаться сделать его необязательным
+    - проанализировать ещё с точки зрения - где аккорд, а где мелодическая-полифония
+  - допроверить ноты в dale kojas
+    https://www.audiolabs-erlangen.de/resources/MIR/2018-ISMIR-LBD-ThroatMics/GVM019_DaleKojas_DidgoriVillage_Didgori_20160707
+    https://soundcloud.com/mravalzhamieri
+
+
+https://www.audiolabs-erlangen.de/resources/MIR/2017-GeorgianMusic-Scherbaum
+
+
+georgian:
+	7edo, 22edo, 34edo, tetracot, ji, 56edo, 63edo, sevond
+	Explaining some Georgian Tuning Experiments
+	https://www.youtube.com/watch?v=wQ37KLxF_9w
+	https://www.facebook.com/groups/xenharmonic2/permalink/1239427779410855/
+
+
+on georgian tuning:
+  Fwiw, Erkvanidze is a polarizing figure even within the tiny world of Georgian tuning/modal theory and performance practice. So his whole system should be taken with a grain of salt.
+  On the other hand, there aren't many formal papers that lay out alternate viewpoints. Stuart Gelzer has a couple of papers out that offer such alternate interpretations, but the differences are subtle. Gelzer's ideas are based on small changes to the tuning of the octave and the 5th, and on equal or nearly-equal step sizes of approximately a neutral 2nd. (If anybody wants to read the papers, let me know!) But whatever way you slice it, the basic phenomenon is the same: a lot of neutral intervals and non-"Just" tunings used harmonically as well as melodically.
+
+
+
+
+
+it makes sense to at least use an interpretation that shows why 12edo minor triads are so good, 16:19:24. Prime 19 in action
+16:19:24 is the secret sauce that makes 12ed2 work so well.
+
+Jude Thomas
+I generally prefer 6/5 or 7/6 over 19/16 in the minor triad because with 6/5 there is a 5/4 between the 3rd & 5th of the chord (I notice some nasty beating with 19), and with 7/6 the whole triad slots into an overtone series.
+What I do love is have 19 without a 3/2, and I especially love clusters of 17:19:21:23—they ring pretty hard. But of course that's all my sonic biases talking, and I'll have to check your scale out.
+
+Cam Taylor
+https://www.facebook.com/groups/xenharmonic2/permalink/1196246793728954/
+Just designed what I consider to be a fantastic 12-tone rational well-temperament all tunable using only 3 different perfectly just intervals - 2:3 (16:24), 16:17 and 16:19.
+
+"In general, in music with true three-part polyphonic independence and a small melodic range, fifths will be more important than octaves. The fifth will replace the octave as the unit of structural stability and pitch equivalence, and the scale will repeat at the fifth instead of the octave. We can usefully speak of such music as being built around the "quintave" rather than the octave. In a scale based on the quintave, furthermore, the tendency will be to subdivide the fifth not into whole and half steps but into four intervals more nearly equal in size, blurring or erasing the sense of major and minor. Those intervals produce a lowered second, a near-neutral third, and a raised fourth — which, when projected by a fifth, results in a raised eighth degree, a wide octave. The effects of this tendency vary by region in proportion to the tradition of true three-part polyphony, but some form of quintave tuning is common to almost all Georgian music."
+
+So, in one of their scales, the one that stacks 3/2s subtended by four steps, the acute 4th transposed up onto that 3/2 makes an acute (acute or augmented?) octave. Ascending in frequency, there's a neutral-ish 7th and then a sharp octave with nothing inbetween.
+
+https://www.facebook.com/groups/xenharmonic2/permalink/1239427779410855/
+so my "result": there is some system or scale underlying especially older recordings of georgian chant that I will call old georgian scale for now, which I would describe as 7-edo well temperament, or something more or less unequal close to 7-edo. this could also be the fourths repeating non octave scale or the fifths repeating one (stated by georgians), at least in principle, as it is so movable that it is impossible to say. but there are reasons why I would see it different, that become more clear with the whole story: you get the proclaimed old fourth or fifths repeating scales if you combine exacte 7-equal steps with pure fifths and fourths! (exacte to one or two cent). and also there might be some diminished octaves in recordings, but there are at least as many diminished fourths and fifths!
+My theory is that the underlying old georgian scale is much more present in the oldest recordings, but there are still other intervals, often more vertically, between the three voices, then horizontal.. so the melodies are more or less 7-(un-)equal, but then there are "purer" (and sometimes also "other") intervals between the voices. this leads to a quite movable and unpredictable system, if not unstable, but very alive. (there is also something that fits the exact same description in africa by the way...).
+if recordings are more recent they get closer to 12 edo, with purer and also old georgian intervals mixed in, still the same tendency to the old scale in horizontal melody, especially if sung by just one singer, and other, mostly purer, intervals between the voices...
+the reason why I stick with a uneven 7-edo in stead of the similar scales that georgian "folklorists" state as the old georgian system is that they claim to have gotten them from old georgian recordings, and that you can get exactely the same scales by mixing 7-edo with some pure intervals. (which would also be the much easier way to sing them by ear, and which makes them contained in my theory). also I have some georgian instruments (around 10) and the have everything from exacte 7-edo, to exacte 12-edo, and different unequal 7-edo scales. some of these are even exacte 7-edo frets with the bridge positioned "wrong" (for that system) and the strings tuned so that one fifth (the one used as the ending consonance) gets pure.
+
+one thing suddenly makes sense: as I said somewhere above, georgian songs in 22 edo did make more sense than I could understand why when I once tried that: of course! the fourth can be devided in to 3 equal parts, which are really close to some of the typical linear intervals, then the fifth can still be better than it would be going on the same steps, and with it the octave gets pure, and the other voices can play almost pure major, minor, and natural 7ths..
+that comes very close to 7edo with purer fourth and fifth, and purer intervals vertically between the voices..
+still there are some intervals that are even different and it is also only close... but astonishingly close..
+actually one main problem is the unpure fifth as ending consonance..
+
+there is a underlying melodic or linear scale, that could be 7 edo, or a fourth divided in equal tones, or a fifth divided in equal tones... I believe it to be meant to be 7 edoish or something close, but only because I have an instrument with 7edo frets from georgia, and because other theories from georgians contain some 7 edo steps without being 7edo.. and as they always correct notes, especially fifths and oktaves when they are between voices, those scales are hard to separate... if you make the fifth more pure in 7 edo, add a pure fifth to a fourth that is divided in to equal tones, and make tetracot a little uneaven, you get almost the same, at least for singing tempered steps by ear, and with added more consonant intervals between voices...
+for the "old" linear georgian scale that then gets modified, at least vertically you could use most scales that have slightly smallish whole steps, and no halfsteps, as long as fifths and octaves and also other intervals get modified and purified anyway..
+would be an interesting test: would we hear the difference of one linear (melodic) step, if it was tuned as one tetracot step, one third of a fourth, and one step of 7 edo?
+of course it make much more difference after a few of them, but as there is a tendency to change or purify fifths, fourths, and even sometime thirds.....
+
+I try to describe (again) why I try to fit georgian music in 22 edo:
+(I play songs and voices that are tradidional songs most of the time, but they may be hard to understand, as I search in between, and they also have 5 tact groups and so on..) (actually one is "tu ase turpa", which I linked above somewhere, and also "gogo gogo", which is the beginning of this post [and "mse shina da"]).
+the reason is the porcupine equal division of the fourth, that is kind of close to some melodic scales in old georgian music, combined with the possibility to add a purer fifth, and other pure intervals between the voices. also natural sevenths (georgian songs even start on a natural seventh chord without the third.. or actually they start on the fifth, but have a voice a third above, and one on the fundamental..).
+I am searching by ear, just for what sounds georgian, but I am much more interested since I understood why this sounded weird but right, even though it is kind of far from how the georgian system actually works...
+for example there is one georgian musician who measured scales from old recordings and stated one first, that actually has the fourth divided in to three slightly unequal steps (the outer ones are exacte 7edo steps [and he claimed not to have known that, neither, that there are instruments with 7edo frets in georgia], and the middle step is exactely so much smaller to make the fourth pure...) at first he claimed this as a fourth repeating scale that thus has no octave.. or a small one (and some people have said that that is why georgians sing small oktaves, but I dont believe that, actually you can find any interval in any size if you search in georgia). later the same musician added a new scale, which is the same with yet another step size, which turned out to be the size necessary to add a pure fifth to the scale.. and so also to get to the octave... if you start to add purer intervals between the voices and everything sung wildly by ear, it could well be 7edo steps with pure fourths and fifths, or a pure fourth divided in to equal tones and a added fifths, and that, you can get in 22 edo, and with the possibility to add purer intervals between voices, and natural 7ths, as well as some other things that also do remind me.. like the kind of sub minor..
+
+Julian Malerman
+The main reason I would err in the direction of a tetracot-type scale as a standardised Georgian performance tuning over 22-ED2 is that 22 really doesn't represent that lovely neutral third so prominent in those performances very well. The essence of Georgian folk tuning practice, insofar as I can discern based on my truly minuscule experience, is a mixture of pure fourths and fifths with rounded 11-limit intervals (specifically 11/10 and 11/9) with flexible octaves relative to the fourths, fifths, ninths and various neutral intervals involved. (My purely mathematical guess here is that the octave dilates or contracts about fifteen to thirty-five cents from purity, but I'm not great at "eyeballing" such specific intervals in performance.) 22 is a lovely tuning, and it does get the seconds right, but it doesn't really encompass what makes those interweaving harmonies so beautiful and strange, which is that not-major-not-minor feel.
+
+Cam Taylor
+Администратор
+I know it's comparatively very large, but 63edo might serve as a good model for intonation, where only some pitches are used at a time. 63edo contains 7-equal, as well as very near pure tunings of most ratios involving primes up to at least 23. In 63's patent val, the tuning of 9:10 is 1\7, while 8:9s are just a little wider than pure, and there is also an intermediate major second not too far from 17:19.
+From what I've heard of Georgian vocal music, a good range of thirds are used including middle thirds close to 2\7 (or indeed 32:39) - this is the regular augmented second in 63-equal, while the regular diminished fourth is very close to 13:16.
+34-equal is a great equal model if one middle third is enough, and ratios of 7 aren't given too much emphasis, but I think the next smallest equal system that does justice to what I know of Georgian music is 63.
+Obviously equal tunings are not the best at modelling these kinds of subtle nuances, but 63 might have small enough steps to be able to mimic most intonations pretty well. Its fourths and fifths are also quite a bit purer than those of either 22 or 34-equal's.
+
+Cam Taylor
+Администратор
+When I play in 63 I use it as a rank-1 gentle tuning, so I have the Pythagorean intervals closest at hand, with 7\ (25:27, ~12:13, ~13:14) at 12:00, 11\ (39:44, ~8:9) at 2:00 and 4\ (22:23, ~21:22) at 4:00. But if you were playing with Georgian music I'd make sure I had the 9\ (1\7edo) and 11\ (juster major second) intervals at hand. Their difference is 2\, which represents the syntonic comma, but two of those is 4\, the usual smallish minor second, so you should be able to move around pretty well with those three axes.
+Bonus: 9\+11\=20\ (~4:5), 9\+9\=18\ (32:39) and 11\+11\=22\ (11:14), so lots of good middle and major thirds. Minor thirds are a little further away but should still be OK. I wonder which would be the best mapping overall
+
+Cam Taylor
+Администратор
+upon listeneing to a few recordings of Hamlet Gonashvili again, and it seems like the septimal-like sevenths and thirds aren't really bang on 4:7 and 6:7, but a bit more like in 17(34)edo or 22edo, you can kind of hear this archy thing going on, where the fourths get kind of tempered to bring you into a smoothish seventh lower than 9:16 but still higher than a pure 4:7. Maybe the choice of 34edo as a basic skeleton is even more well-informed than I'd thought.
+
+Cam Taylor
+Администратор
+Another equal temperament I was going to mention was 56, because of the fact it contained 7edo but also a closer 2:3 (though I thought a bit wide as a model). However 56d(? using the second best 4:7)=17+17+22 is also a great archy tuning with fifths only slightly wider than 17, plus it contains a better 4:5 and 5:6 than 22, as well as two middle thirds ~32:39 and ~14:17, and two middle seconds very close to 13:14 and 11:12 as well as its semitone very close to 16:17 and its small major second at 1\7!
+
+this idea of having a 2D system was something I just wanted to suggest to you (you must have read my mind). If we decide to have a 2D system whose period is a seventh-octave and whose generator is a small interval sounding like a "mistuned prime", then the question is how we map the 5/4 in terms of periods and generators in this system. As far as your description goes in your video, I would suggest to you to try the temperament which I discovered several years ago and which I decided to call sevond. It's the one where an octave is equated with layering 7 narrow major seconds of 10/9 on top of each other -- i.e. instead of 10/9, your narrow major seconds then have a size of a seventh-octave (that's why I called it sevond, as for "seven seconds in an octave"). Should I express the target approximations in terms of period and generator pairs, an octave is then [7,0], a fifth is [4,1], a major third is [2,2]. The factor which vanishes in the temperament is 5000000/4782969. The generator would probably be chosen somewhere between 20 and 21.7 cents, depending on how much mistuning we want in our target intervals.
+http://x31eq.com/cgi-bin/rt.cgi?ets=7_7bccc&limit=5&tuning=po&fbclid=IwAR0r-r_PhH8Z3JU2S5wDkhyZukQeUJsB4fdERcCL-NPm3UQGwJzPLDv6gdE
+
+Cam Taylor
+Администратор
+Just watched this, and I had to try out some of these progressions for myself. Here are some thoughts that came to me while playing those types of progressions, especially
+e.g. from D
+D-A-C
+D-G-B\
+D-F/-A
+Bb/-(D)-F/-A
+*C/-E~\-G/
+D-A
+Obviously the tuning of the chord on the seventh degree is the most puzzling, but it seems your 7-equal plus pure fifth tuning worked REALLY well for this, sounded pretty much exactly how I remember it. The middle third in the middle is key, so it must be lowered from its possibly expected vertical position of 4:5 above the root to something closer to the 7-equal third, which is an almost just 32:39, a little below half a perfect 2:3 fifth.
+The thing you said about two different melodic steps in the bass rings true - if one descends by a usual 9:8 major second twice, the modal root must be adjusted as it should sit 4:5 above the bass. 4:5 major thirds are usually pretty close to just as far as I can hear, but perfect fifths are not noticeably narrowed as in meantone, so the 80:81 comma must come into play. It comes in exactly as the difference between these two melodic steps in the bass
+Except what would usually be simply 9:10 and 8:9 steps become shrunken and stretched respectively, so the comma is even more obvious. 22edo and 34edo each do this, with the smaller step also representing 10:11, but I think the small step sounds great when it actually IS the 7-edo whole tone around 19:21, the 22edo middle second for me (and, it seems, for you too) is a tad too low. That way two small tones make that great 7edo middle third, slightly smaller than half of a perfect fifth, but exactly half of a 7edo fifth. And so the comma (80:81) can be measured as the difference between the 7edo fifth and the [ad]just[ed] fifth, however that usually comes to a slightly smaller size than the just value of 80:81
+Then there's the question of the minor thirds. If a near-just 4:5 and 2:3 are assumed, that makes these minor thirds 5:6 except probably in some of those open seventh voicings, like D-A-C.
+So how is 5:6 divided? as the middle third is already made of two small tones (large middle seconds), and we're shrinking that by "a comma", then we end up having one ~7edo large middle second, and one smaller middle second, closer to 11:12. When we play these progressions in 34edo, our step sizes become 4\34 and 5\34, along with our larger major second of 6\34. However, when we tune to 22edo, we only get one size of "middle second~small tone", 3\22, plus our slightly too large major second of 4\22
+
+Cam Taylor
+Администратор
+This leads me to push 63edo as the best theoretical equal framework, as 9:10=1\7EDO, it contains both near-just fourths and fifths (between than either 22 or 34edo), and 7EDO steps, and the 1-step comma, represents:
+*the difference between medium and large major seconds (~11:12 and 1\7) which make up a large minor third ~5:6
+*the difference between smaller and larger middle thirds in the middle divisions of a perfect fifth, e.g. my hypothesises ~32:39:48 (or ~18:22:27) for the penultimate triad, and its inverse, ~26:32:39 (or ~22:27:33)
+*the difference between the 7-equal fifth and the "just" fifth, ditto 7edo fourth and just fourth. Here this is exactly 1/9th of a 7EDO step.
+*the difference between a regular minor seventh (two stacked perfect fourths) and a "natural seventh" ~4:7 approximation
+the 2-step comma represents:
+*80:81
+*the difference between the 1\7 middle second and the ~8:9 major second
+*the difference between ~32:39 and ~4:5 thirds
+etc.
+63EDO is getting quite big as a pitch set, but it might be good to show all these subtleties (if I'm not just making them up), as well as being a subdivision of 7EDO containing many just intervals
+
+Cam Taylor
+Администратор
+Hadn't watched this video yet. This is Petr's sevond, and very close to 63-equal. 56-equal would be another option.
+
+1
+Нравится
+ · Ответить · Поделиться · 4 г.
+Cam Taylor
+Администратор
+In either case, the 1-step comma is Petr's comma, between 4\7 and 2:3, and also 63:64 if relevant, and also 507:512 (39/32:16/13) or 242:243 (11/9:27/22), also 64:65 (6/5:39/32 and 16/13:5/4) or 54:55 (6/5:11/9 and 27/22:5/4 AND 12/11:10/9!) if relevant; the 2-step comma is 80:81, 44:45, 39:40, etc if relevant.
+
+David Stützel
+Автор
+Joakim Bang Larsen suggested 50 edo for georgian music in another thread in xanharm math group.. made a video:
+https://youtu.be/kB6-h2Hwd3E
+I'll have to compare some of those tunings... but 50 edo is interesting for this, as it puts a scale very similar to the one I used in 22 edo (a fourth split in to 3 equal steps, then a different step that leads to a better fifth, and makes the same tetrachord get to an octave), but tuned a little "better" but with meantonsish fifths instead of superpythish ones..
+so the melodic georgian scale is very similar betwenn 22 and 50 edo, mosts of the other intervals are even also simiar(ish) as you can get purer thirds and 7ths in superpyth, or in meantone, but from different parts of a chain of fifth... (the 7th is not as good here, but other things are better, and I also think I do prefer a minor 7th here that is not the closest to natural 7th, but the higher one that mixes better with the whole sytem, and perhaps also the melodic step from the octave to the natural 7th is too big for georgian typical steps.. [this 7th might actually be the weakest point in this system for georgian music..])
+so this is almost like a mirror thing.. does that make any sense? and is it just by chance? that not only making fifths a little smaller or a little bigger leads to the "same" prime 5 and 7 intervals, but also the "same" "georgian" melodic scale.
+does this scale have a name, by the way? is it just porcupine? the one other step between the fourth and fifth could also be seen as a leftover step at the end of a chain of same size steps.. )
+
+https://www.facebook.com/groups/xenharmonic2/permalink/3122997844387163/
+Cam Taylor
+Администратор
+Holy crap this is next level! Doesn't sound much like something that 41 would nail, but it might do an okay job at emulating the basics. I'm also hearing quite prominent 3:5, 4:7, alongside the small tone we know is close to 1\7, sounds quite a bit like 10:11 to me most of the time (which still works in 41-equal). Pure fifths and quintal sonorities seemingly coming from nowhere, such cool counterpoint!!! If there's any kind of sheet music to this one out there, I want it.
+Josh Musikantow
+Автор
+I'd love sheet music as well, but it's a purely oral tradition, and finding a transcription has eluded me. Yes, that close to 1/7 of octave I think is actually 1/4 of 3:2, which is pretty close to 10:9, and would be equivalent to 10:9 in tetracot. And yes, definitely does go into the 7-limit.
+Cam Taylor
+Администратор
+In tetracot it's exactly 1/4 of 2:3, but I don't see why it has to be an exact quarter here, as there's no fixed pitch or modulation in the traditional sense. I can see it being a large neutral second really anywhere from about 150-180c, so approximate or exact 9:10, 10:11 and 11:12 can all work in the right circumstances if JI ratios are involved
+Josh Musikantow
+Автор
+In practice, yes, it can be any of those. But I don't think they have different musical names to distinguish those intervals. They think of them as all being in the same category. I'm not theorizing that they are always exactly equal in performance, but the people do seem to have a notion of that sub major second type interval, and understand the fifth can be divided into 4 of these.
+Casey Hale
+Cam Taylor , I thought i heard a pretty clear 9:4 at one point, too, so that raises the distinction between that and the approx. 1\7 step. But maybe there's no 9:8, actually, and 9:4 arises harmonically not melodically?
+Josh Musikantow
+Автор
+But 9:4 is still consistent with a 1/4 3:2 generator. Just go up 8 of those. I don't know if Monkey-20 (a 7-limit tetracot extension) would be sufficient or not to try to emulate this. There would be only one 7:6, and five 7:4's (no 7:5's), but there would be a few 7-limit intervals to work with. Also, it's unclear how the octaves work, or if there are any.
+Cam Taylor
+Администратор
+yeah, 4:6:9, hence my "quintal" comment
+
+Lillian Hearne
+Администратор
+Yo! Ok so yeah I used tetracot with the quarter fifth as the period, and the small step between the 7 of these and an octave as the generator, so yeah, what you said!
+Lillian Hearne
+Администратор
+Reading down from Josh Musikantow's quoting of the wikipedia article (don't know why I never thought to look there) may match what I heard of this group perhaps better than my tetracot explanation though, and leads to a 3d temperament that combines Porcupine and Tetracot oooooo that's epic for 2.3.5.11 (my fav subgroup 😍) with gens of octave, (3/2)^1/4 and (4/3)^1/3. I'll have to look into scale structures for this temperament 😃, see if I can find some that are omnitetrachordal or SIS (simple, inversionally symmetric). This isn't so much how they would have thought of it of course, the description on wikipedia better a better one of practice, and Josh's comments on it.
+Lillian Hearne
+Администратор
+Acutally there are just two generators - (3/2)^1/4 and (4/3)^1/3, so it's a 2D temperament. You make the octave by adding 4 Tetracot generators to 3 Porcupine generators. There'd be another way to define it. For example, you can define Meantone as being generated by a mean-tone ~ 192c and a semitone ~ 107c or however big it is I don't remember.
+Lillian Hearne
+Администратор
+when you define it this way though you don't get to MOS scales that repeat at a (sensible) period as immediately, but there's probably sense in defining it in this more melodic way, especially for Georgian tuning, as it seems more connected to the way the system works in practice than a definition by a generator within an octave period.
+Lillian Hearne
+Администратор
+But both the Porcupine and Tetracot generators represent 10/9, so can't really do that...
+Lillian Hearne
+Администратор
+The Georgian scale with the fourth steps to a fifth as well as three to a fourth in the other direction from a drone could be represented as LLLLsss, with L as tetracot gen and s as Porcupine gen (or a bit sharp of), as a MODMOS of LsLsLsL with a gen of 342c (L+s) within an octave. Hard to say what actually represents what though, since in their original temperaments both L and s were 10/9...
+Lillian Hearne
+Администратор
+I'm ending up at Amity temperament for now: http://x31eq.com/cgi-bin/rt.cgi?ets=46%2653&limit=2.3.5.11
+Ok no not that. This is probably stupid.
+yeah the tetracot thing was better haha
+
+
+
+about Erkvanidze system
+https://www.facebook.com/groups/xenharmonic2/permalink/3234359439917669/
+Anyone here ever messed around the scales used in Georgian polyphonic music?
+https://arrow.tudublin.ie/cgi/viewcontent.cgi?article=1005&context=fema
+172 - 154 - 172 - 204 - 172 - 154 - 172
+Chain of fifths:
+702 - 702 - 670 - 702 - 652 - 702 - 670
+Thirds of 326, 376, and 344
+
+David Stützel
+this scale is what happens if you mix two systems: 7edo steps (172 cent) and pure or purer intevalls: the 154 cent step makes the fourth a pure one, the 204 adds a pure fifth..
+in principle that is kind of true, but I still find it misleading if you proclaim this as the georgian scale.. because I hear a mix of systems, that is much more complex or open, but with some rules: like if you favor 7 edo steps in melodic lines, but with some purer intervals added, and they are in fact often fifths and fourths.. but neither are sung 7 edo steps actually exact, because that is almost impossible, as they are no pure but tempered intervals, nor are all the fourths or fifths in melodic sung lines pure, they are often quite different..
+then there is something else: the intervals in harmony between voices, are also not always pure, but they tend much more to purity then the melodic lines, which tend more to the 7 equal, or often 7 slightly unequal.. this mixed, very movable system often changes from village to village, or from singers to singers.. like in some ensembles, one singer is kind of the reverence pitch for the rest of the ensemble, like an authority, or personality.. otherwise, it can vary, whether the bass, or the fundamental or the melody is kind of the reverence tone in any given moment of any given melody..
+but the principle of steps, that can be close to seven edo, or at least bigger then halfsteps but smaller then whole steps, especially for melodic intervals, with a tendency for purer or also other intervals between voices seems to be the principle.. though, of course, without any thinking or theory, other things happen a lot too.. like what sounds like almost 7 edo harmony, but of course not precise..
+I remember trying to talk to the georgian with the help of a georgian friend, who said he ha measured the scale above from recordings: by tuning a piano after old recordings.. that seems almost impossible to me, as the same person did not know that his measurements containd a mix of 7edo steps and pure intervalls.. it is very hard to sing 7 edo steps by ear, then tune a piano after a polyphonic record in which everything moves much more complex, and no scale stays the same actually.. then from Hz he calculated cents, and got the scale above, with 7 edo steps much too correct for this method in my understanding....
+I did something different: I searched a lot for instruments, with finger holes or frets in georgia, and also talked to players and builders.. and there are for example panduris, with 7edo frets.. (though there are also panduris with 12 edo frets, and also with 7 slightly uneven divisions of the octave..). actually most books and people who are known authorities about those topics in georgia told beautiful stories, that did not make any sense in a scientific way.. some also did tell me similar stories when asked about instruments that I knew to be not from georgia at all, (like a flute that was developed for rudolf steiner schools that they had lying around in the state museum of traditional georgian music instruments) but they did not know.. one builder though had a geometric way of "calculating" edo steps, so I know that at least his 7 edo was actually mathematical 7 edo.. but then panduris have movable bridges, that are often "misplaced" later, so that a fifth or fourth is purer, which of course changes them away from 7 edo.. but as they are not played high up the fret board usually, that kind of puts them closer to the idea fo 7edo + purer fourths or fifths.. though they in this case can not be both purer.... then the 3 empty strings are tuned by ear in some way that makes the beginning sound purer, which is usually a doubled fundamental with a fifth above...
+(most other instruments have movable systems, or something in between 7edo and a scale closer to our major or minor.. )
+todays singing sounds mostly like strange voice polyphony, with tuning only slightly strange, like a leftover of older systems, like an exotic seasoning.. there are typical notes in known songs, that tend to have more of that seasoning.. very old songs can be very strange, like as strange as 7 edo harmony, but much more movable and uneven..
+there is said to be another tradition with similar principles somewhere in africa: also 7 edo-ish scales with purer harmony added.. I dont remeber where that was but I found that once in a music ehtnology book..
+David Stützel
+only now looked at the link: at least by surname Erkvanidze, the one who gave the workshop, was the georgian I mentioned above, with whom my georgian friend and I had talked.. and who said he had measured this scale from old records, in a way that makes me wonder.. as I said: it is hard to sing tempered 7edo intervals that pure in a very moving and mixed system, where everything is changing most of the time, depending on direction, mood, linear vs harmonic.. and to measure from that a 7 edo intervall without knowing that it is a 7 edo interval (we asked, he said he had no idea) on a cent exact... sounds very interesting at the very least..
+
+... you could try to sing a 154, which would be very difficult!
+or you could try to hit a pure fourth, which would be much easyer.. if you got 7edo steps before that, a 154 would just happen because of the perfect fourth.. it would be the left over step.. of course, the sung 7edo steps would not be as exacte, but that would not matter to the ear.. so the 154 would also not be exactly that number, but what ever is left over to the pure fourth.. that is in a way the same thing Erkvanidze tries to put in numbers, but I believe it to be come to in practical singing in my way..
+
+David Stützel
+georgian instruments: I have a panduri with 3 stings and 12 edo frets, and another one with 7edo frets. both are used for three voiced chords, not just melodies.. I do have a chonguri which is 4 sting, with one shorter string, similar to a five string banjo, only the short string is in the middle.. and that is supposed to be fretless, but mine is 12 edo frettet.. then I have wind instruments, and they are all more or less in between some normal scale and 7 edo.. a gudastwiri, bagpipe, with two pipes that both have finger holes, and both are slightly uneven 7edo, and the singer traditionally sings a third voice which is as strange as the bagpipe.. no pure interval there, and they are not played melodic, but kind of polyphonic, also not corrected to pure intervals with fingering. they also have fifths that are unpure.. georgian duduki, which is kind of the same as turkish or Armenian duduk, but the Armenian one is tuned like a major, or f sharp minor, and they play other microtonal notes with embochure and half open holes all the time, sounding like turkish or arabian maqam.. the georgian duduki has the fingerholes strange, again, somewhere in between 7edo and more normal scales.. so they are not the same, but all the notes are smaller then whole tones and bigger then half steps.. usually closer to whole steps.. the notes are very bendable though, and they are changed a lot by good players.... they can actually play chromatic or microtonal, even though that is not easy on that instrument.. then there are recorder like instrments that tend to be more major scales, but that may be a modern thing, and zurna, which is like a short oboe, very loud, and also in between major and 7edo.. often those wind instruments, at least the ones with reeds are played in three voiced harmony, like the traditional singing, or sometimes two voices, with one sometimes being a bordune with circualr breathing, or a bordune that sometimes goes one note down, like a chord change or modulation, and then up again. in this case the scales above do change .. most other instruments are fretless, like bowed string instruments, or can be tuned different like harps..
+I have seen astonishing things, like a 7edo fretted panduri playing chords or actually they are three voices, and a recorder like salamuri which has normal major scales playing together and sounding good.. the strings of panduris are often tuned non 7edo, and the bridge is missplaced so as to enable one purer chord, which is used for beginning and ending, and it has no third, two voices go to the same note, and one is a fifth above..but that tuning of the empty stings and moving the bridge may also be a modern thing, as this combination does not make too much sense.. (and believe me, I have asked all the important people music wise in georgia, why they have two panduri frettings: 7 edo and 12 edo, and I never got any usefull answer.. and of course I have asked some again and again.. you always get the same answers: buy this one, it is better! (the 12 edo one) but then if you ask: but why do you have two types then, you dont get anything.. or: the panduri has three stings, the chonguri has 4.. or: panduris have frets, chonguris dont.. but why? and you get the same answer again.. which sounds unbelievable, and I did talk to builders and players who could play both well, and where very interlligent people.. and my georgian and russian are limited, but I had georgian friends translating, who have studdied music in germany.. still I found the most interesting thnigs with hand and feet.. like one builder showed me the tools he used to construct the fret positions.. then when we tried to contact him again, with Koka Nikoladze a few years later, he had died unfortuately, and his brother told us, that he had made those tools from tools for a barbicue, like this meant he had just been crazy.. but he had not been, because he had understood the geometry of edos.. and it turned out that other builders we asked, actually used fixed measurement marked on little pieces of wood by him, so they just copied his fret positions, but without understanding how they where constructed.. or the underlying geometry or mathematics..
+
+Cam Taylor
+Администратор
+Btw, 63edo and 56edo work quite well as equal division approximations to some of the things that happen in traditional Georgian harmony, including 7edo and also a very near pure fifth. The former contains 152c, 171c, 210c seconds and 324c, 343c, 362c, 381c thirds (among many others). The latter contains 150c, 171c, 214c seconds, 321c, 343c, 364c, 386c thirds etc. 70edo would also work. 154c, 171c, 206c seconds, 326c, 343c, 377c thirds.
+Out of these three, 56-equal has the widest fifth, a little wider than that of 17-equal, while 70edo's fifth is 41+29, just a little wider than pure, but not wide enough for the gentle region. All three also feature a bunch of other great intervals which may or may not be employed. I have also heard near-pure 4:7, 3:5, 4:5 also in performances of Georgian vocal harmony.
+
+Janne Karimäki
+Cam Taylor I made some calculations of which EDO's split their best P4's and P5's exactly into 3 and 4 parts, respectively. Here are some of them: 7, 95, 116, 123, 130, 137, 144, 253, 383, 506, 2660. You can do the splitting trivially, by multiplying any EDO you like (for one reason or another) by 2, 3, 4, 6, or 12, but then the new best P4's and P4's may not be the same as for the starting EDO. For example, the ones you gave 56, 63, and 70 are multiples of 7, but their best P4's and P5's are not divisible by 3 and 4, respectively, because their best P4's and P5's are not the same as for 7EDO. Interestingly, 72EDO lacks this divisibility property: its best P4 is divisible by 3, but its best P5 is divisible by 2 only. However, 144EDO does have its best P5 divisible by 4. Now, the property of having the best P4s and P5s being exactly divisible by 3 and 4 may not be the highest in priority with respect to suitable tunings for Georgian music, but it is certainly one aspect worthy of consideration.
+
+Janne Karimäki
+Of some other EDOs already considered for Georgian music, 22 has P4/3, but not P5/4, 34 doesn't have P4/3, but has P5/4. The chain of EDOs: 27, 34, 41, 48, 55, 62, 69, 76, 83 all have P5/4, but don't have P4/3.
+
+Cam Taylor
+Администратор
+I've never performed or seriously studied any Georgian music aside from just listening, singing and playing along, but I'm not 100% sure splitting the best perfect fourth into 3 equal parts and the best perfect fifth into 4 equal parts is what really defines the style. Roughly equal, for sure. 7edo or near-equal, for sure. For a theoretical framework it seems the most obvious to have near-pure fourths/fifths and a near-7-equal coexisting, as in the EDOs I gave. 34 is quite usable, but some interval are not quite where they want to be. Ditto I think 27, 41, 48, etc which probably don't improve too much
+
+Janne Karimäki
+Steve Martin OK, you probably figured out my notation already, but here is a detailed explanation for all who might be interested: Now, P4 is shorthand for perfect fourth, and P5 is shorthand for perfect fifth. Ideally, e.g., in Just Intonation, P4/3 = (4/3)^(1/3) and P5/4 = (3/2)^(1/4). For an EDO the best approximation of 4/3 is used for P4, and the best approximation of 3/2 is used for P5. Then, for P4/3 to exist in that EDO, the best degree for P4 must be divisible by 3, and for P5/4 to exist in that EDO, the best degree for P5 must be divisible by 4. For example, in 34-EDO, the best degree for P4 is 14, which is not divisible by 3, and the best degree for P5 is 20, which is divisible by 4. Thus 34-EDO is suitable for music where the perfect fifth is divided into four equal equal intervals.
+
+Janne Karimäki
+Cam Taylor, David Stützel, and all others interested, I agree with Cam that having a near pure fifth and/or fourth would be one of the important criteria. Some sources say that Georgian scales can have the fifth 3/2 or fourth 4/3 as their period. Any ED2 that has near pure fifths is also compatible with periods of 3/2 or 4/3. Thus, 34, 41 and 48 could be good choices. Having the fifth exactly split into 4 parts, or the fourth exactly into 3 parts, is not so important, at least not for large ED2s (that was an interesting theoretical question for me to study a little bit). However, an ED2 that has a good P5, and (P5)/4 also has the neutral third N3 = (P5)/2, which may be of value here. Cam, you said that you can hear the intervals 3:5 and 4:5 in Georgian vocal harmony. That imposes a question concerning the thirds (and sixths): do we want good major thirds (~5/4), or neutral thirds (e.g. 49/40 or 11/9), or both, or the whole set: good minor, neutral and major thirds? Now, 34ED2 has all those, so I wonder what the problems are with it. It doesn't have a good 7/4, so, maybe that is one of the problems? That problem can be fixed by splitting 34ED2 to 68ED2. Other solutions would indeed be 41ED2 or 48ED2, or even 53ED2. But OK, the question of thirds is somewhat still in the air for me, and I would be interested in any comments on that. A third relevant topic, in addition to the questions concerning the period and the thirds, is indeed what kind of neutral, or major, seconds should be available. It seems reasonable that we should have one close to the 7ED2 step, so maybe between 165 and 175 cent, but could it also be wider, in the 10/9, or 9/8, neighborhood? And if we have one or more wider seconds (than 1\7ED2), a rough division of the octave into 7 parts would imply at least one narrower (than 1\7ED2) second to exist, maybe in the range 145 to 170. The scales 56ED2, 63ED2, and 70ED2 that Cam suggested, and some others, have all those (27ED2 would impose a ~133.3 cent or a smaller one, so maybe that is too small?). David has pointed out that Georgian scales are movable. If I understand correctly, that would indicate a large number of fixed pitches, so some large EDO's proposed here should not be dismissed at first hand. If authentic Georgian music needs many pitches, and one has some technical challenges to implement a large scale, then one has some technical challenges to produce authentic Georgian music. If you are happy with less "authentic" sounding music, and want to use a small number number of tones, then you need to choose where your compromises should be. In any case, I'm here because of David Stützel's awesome experiments on Georgian music. It is an amazing musical culture, and I happen to have have some interest towards 34EDO, because it is quite rarely used even among microtonalists.
+
+Cam Taylor
+Администратор
+Janne Karimäki really good comments! For thirds, I'd say 5:6, 32:39 and 4:5 or thereabouts are good references for the music I've heard. Notice that because 7-equal pretty much nails 32:39, and 28-equal pretty much nails 4:5, 56-equal is a great choice for those three. Seconds, probably something in the neighborhood of 11:12 or perhaps a little smaller (though I agree 1\9 is indeed too small) and 10:11, and also 8:9. I didn't think I'd heard too much 9:10, but thinking over it now there must be some occurring for example between 5/3 and 3/2..
+Thinking of other "good" equal temperaments, 29 might do a passable job at emulating rough step sizes, but won't be accurate enough on any of the verticalities besides 2:3. 46-equal does fairly well though of course it's not exactly equally divisible. 53-equal does very well, though again not equally divisible in any of those three ways. 72-equal does reasonably well and contains most of the equal divisibility, but fifths and fourths are tempered a little more, and the neutral third 333c and 350c are not quite ideal in my opinion.
