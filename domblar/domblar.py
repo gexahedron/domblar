@@ -39,7 +39,33 @@ class Domblar:
         if self.mode == Mode.beat_tracker:
             self.beat_tracker = BeatTracker(client=self.client)
 
+        self.setup_context(context)
+
+        self.tmp_preset_name = 'instrument_preset'
+
+        if self.mode != Mode.analysis:
+            self.synths = setup_instruments(
+                self.client,
+                synth_count,
+                self.context, self.vst_name, self.init_preset_name,
+                self.pitch_bend_sensitivity)
+            self.tracker = Tracker(client=self.client, synth_count=synth_count)
+
+    def setup_context(self, context):
         match context:
+            case 'portafm':
+                FIXME: 1. MPE -> Normal; 48 -> 2
+                self.vst_name = 'chipsynth PortaFM'
+                # FIXME - create preset
+                # self.init_preset_name = 'portafm_preset'
+                self.init_preset_name = None
+                self.pitch_bend_sensitivity = 48
+            case 'md':
+                self.vst_name = 'chipsynth MD'
+                # FIXME - create preset
+                # self.init_preset_name = 'md_preset'
+                self.init_preset_name = None
+                self.pitch_bend_sensitivity = 2
             case 'dexed':
                 self.vst_name = 'Dexed.vst3'
                 self.init_preset_name = 'dexed_preset'
@@ -52,12 +78,6 @@ class Domblar:
                         self.vst_name = 'OPL.vst3'
                 self.init_preset_name = None
                 self.pitch_bend_sensitivity = 1
-            case 'portafm':
-                self.vst_name = 'chipsynth PortaFM'
-                # FIXME - create preset
-                # self.init_preset_name = 'portafm_preset'
-                self.init_preset_name = None
-                self.pitch_bend_sensitivity = 48
             case 'tyrelln6':
                 match platform.system():
                     case 'Linux':
