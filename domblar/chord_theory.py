@@ -442,6 +442,7 @@ class ChordKB():
 
 # build once
 # FIXME: better precalculate this and store this as a DB or binary file
+# TODO: use sqlite
 ALL_CHORDS = []
 ALL_CHORDS.append(ChordKB('maj', edo=12, intervals=[0, 4, 7]))
 ALL_CHORDS.append(ChordKB('min', edo=12, intervals=[0, 3, 7]))

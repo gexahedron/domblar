@@ -4,7 +4,6 @@ from enum import Enum, auto
 
 from domblar.chord_theory import chords_to_voices
 from domblar.players import play, play_non_edo
-from domblar.sc3.client import SC3Client
 from domblar.sc3.instruments import assign_instrument, setup_instruments
 from domblar.tracker import Tracker
 from domblar.beat_tracker import BeatTracker
@@ -21,8 +20,12 @@ class Mode(str, Enum):
 
 
 class Domblar:
-    def __init__(self, synth_count, context, mode='once'):
-        self.client = SC3Client()
+    def __init__(self, context, synth_count=None, mode='once'):
+        self.client = None
+        if context != 'python-sc3':
+            from domblar.sc3.client import SC3Client
+            self.client = SC3Client()
+            assert synth_count is not None
         self.synth_count = synth_count
         self.context = context
         self.mode = mode
@@ -63,13 +66,16 @@ class Domblar:
                         self.vst_name = 'TyrellN6.vst'
                 self.init_preset_name = None
                 self.pitch_bend_sensitivity = 2
+            case 'python-sc3':
+                self.vst_name = None
+                pass
             case _:
-                print(f'Unknown vst {context}')
+                print(f'Unknown vst/context: {context}')
                 assert False
 
         self.tmp_preset_name = 'instrument_preset'
 
-        if self.mode != Mode.analysis:
+        if self.mode != Mode.analysis and self.vst_name is not None:
             self.synths = setup_instruments(
                 self.client,
                 synth_count,
