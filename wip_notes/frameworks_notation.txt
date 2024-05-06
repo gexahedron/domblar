@@ -1,3 +1,7 @@
+updates/fresh:
+https://untwelve.org/static/javascript_demos/microcsound.html
+
+
 парсеры в питоне
     pyparsing
         https://pyparsing-docs.readthedocs.io/en/latest/pyparsing.html
