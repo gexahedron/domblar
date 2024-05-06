@@ -17,7 +17,10 @@ def restart():
     for proc in psutil.process_iter():
         try:
             if proc.name() == 'scsynth':
-                proc.kill()
+                proc.terminate()
+                # TODO: maybe not terminate(), but kill()
+                procs = [proc]
+                gone, alive = psutil.wait_procs(procs, timeout=3, callback=on_terminate)
                 break
         except Exception as _:
             pass
