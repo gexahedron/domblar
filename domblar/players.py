@@ -205,8 +205,8 @@ def play_voices(voices, timbres, scale, edo, client, dur=0.25, sus=None):
 
 
 # TODO: currently unused
-def play_triads(sub_scale, degrees, dur, scale, edo, client):
-    chords = []
-    for deg in degrees:
-        chords.append(triad(sub_scale, deg, edo))
-    play(chords, scale, edo, client, dur=dur)
+# def play_triads(sub_scale, degrees, dur, scale, edo, client):
+#     chords = []
+#     for deg in degrees:
+#         chords.append(triad(sub_scale, deg, edo))
+#     play(chords, scale, edo, client, dur=dur)
