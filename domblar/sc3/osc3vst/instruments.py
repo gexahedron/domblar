@@ -2,7 +2,7 @@ import time
 from typing import Optional
 
 from domblar.synths import Synth
-from domblar.sc3.client import SC3Client
+from domblar.sc3.osc3vst.client import SC3Client
 
 
 def update_instruments(context):

@@ -3,10 +3,16 @@ import time
 from enum import Enum, auto
 
 from domblar.chord_theory import chords_to_voices
-from domblar.players import play, play_non_edo
-from domblar.sc3.instruments import assign_instrument, setup_instruments
+from domblar.players import vst_play, sc3_play, play_non_edo
+from domblar.sc3.osc3vst.instruments import assign_instrument, setup_instruments
 from domblar.tracker import Tracker
 from domblar.beat_tracker import BeatTracker
+
+from sc3.all import *
+from domblar.sc3.pythonic.instruments import *
+from domblar.sc3.pythonic.fxs import *
+from domblar.sc3.pythonic.rhythms import *
+from domblar.sc3.pythonic.sc3_stuff import *
 
 
 class Mode(str, Enum):
@@ -23,7 +29,7 @@ class Domblar:
     def __init__(self, context, synth_count=None, mode='once'):
         self.client = None
         if context != 'python-sc3':
-            from domblar.sc3.client import SC3Client
+            from domblar.sc3.osc3vst.client import SC3Client
             self.client = SC3Client()
             assert synth_count is not None
         self.synth_count = synth_count
@@ -43,7 +49,7 @@ class Domblar:
 
         self.tmp_preset_name = 'instrument_preset'
 
-        if self.mode != Mode.analysis:
+        if self.mode != Mode.analysis and self.vst_name is not None:
             self.synths = setup_instruments(
                 self.client,
                 synth_count,
@@ -54,7 +60,7 @@ class Domblar:
     def setup_context(self, context):
         match context:
             case 'portafm':
-                FIXME: 1. MPE -> Normal; 48 -> 2
+                # FIXME: 1. MPE -> Normal; 48 -> 2
                 self.vst_name = 'chipsynth PortaFM'
                 # FIXME - create preset
                 # self.init_preset_name = 'portafm_preset'
@@ -88,31 +94,24 @@ class Domblar:
                 self.pitch_bend_sensitivity = 2
             case 'python-sc3':
                 self.vst_name = None
-                pass
+                restart()
             case _:
                 print(f'Unknown vst/context: {context}')
                 assert False
 
-        self.tmp_preset_name = 'instrument_preset'
-
-        if self.mode != Mode.analysis and self.vst_name is not None:
-            self.synths = setup_instruments(
-                self.client,
-                synth_count,
-                self.context, self.vst_name, self.init_preset_name,
-                self.pitch_bend_sensitivity)
-            self.tracker = Tracker(client=self.client, synth_count=synth_count)
 
     def set_synth(self, synth_idx, synth_name, synth_name2=None, proportion=None,
                   shift=0, param_count=None):
         if self.mode == Mode.analysis:
             return
+        if self.vst_name is None:
+            return
         if synth_idx in self.instruments and self.instruments[synth_idx] == synth_name:
             return
         import importlib
         import sys
-        importlib.reload(sys.modules['domblar.sc3.instruments'])
-        from domblar.sc3.instruments import update_instruments
+        importlib.reload(sys.modules['domblar.sc3.osc3vst.instruments'])
+        from domblar.sc3.osc3vst.instruments import update_instruments
         self.synths = update_instruments(self.context)
         assign_instrument(synth_idx, synth_name, self.synths, self.client,
                             synth_name2=synth_name2, proportion=proportion,
@@ -148,11 +147,18 @@ class Domblar:
                 return
             case Mode.once:
                 # FIXME: remove this, by reusing tracker
-                play(chords_or_voices, scale, edo, self.client,
-                        dur=dur, sus=sus, delay=delay, synth_idx=synth_idx,
-                        muls=muls, rep=rep,
-                        amps=amps, voice_amps=voice_amps,
-                        )
+                if self.vst_name is not None:
+                    vst_play(chords_or_voices, scale, edo, self.client,
+                             dur=dur, sus=sus, delay=delay, synth_idx=synth_idx,
+                             muls=muls, rep=rep,
+                             amps=amps, voice_amps=voice_amps,
+                            )
+                else:
+                    sc3_play(chords_or_voices, scale, edo, [chiptune_varsaw],
+                             dur=dur, sus=sus, delay=delay, synth_idx=synth_idx,
+                             muls=muls, rep=rep,
+                             amps=amps, voice_amps=voice_amps,
+                            )
             case Mode.tracker:
                 from domblar.chord_theory import Voices
                 if not type(chords_or_voices) is Voices:

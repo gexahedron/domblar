@@ -2,7 +2,7 @@ from copy import deepcopy
 import threading
 import time
 
-from domblar.sc3.client import SC3Client
+from domblar.sc3.osc3vst.client import SC3Client
 from domblar.patterns import Patternable
 
 class BeatTracker():
