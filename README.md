@@ -12,7 +12,8 @@ Check out the [https://soundcloud.com/gexahedrop/sets/domblar-showcase](https://
 
 # Setup:
 
-1. Install Dexed VST, version 0.9.7 (version 0.9.6 has problems with parameter automation) - [https://github.com/asb2m10/dexed/releases/tag/NIGHTLY](https://github.com/asb2m10/dexed/releases/tag/NIGHTLY)
+1. Code dependens on some libraries, to install them run `pip install -r requirements.txt` in terminal.
+2. (This step is unnecessary, in case you don't want to use VSTs) Here's a sample instruction on how to install one of the VSTs: Dexed VST, version 0.9.7 (version 0.9.6 has problems with parameter automation) - [https://github.com/asb2m10/dexed/releases/tag/NIGHTLY](https://github.com/asb2m10/dexed/releases/tag/NIGHTLY)
   * on MacOS
     * put .vst3 file to "/Library/Audio/Plug-ins/VST3" folder;
     * (on MacOS only) because version 0.9.7 is unsigned, run in terminal `sudo xattr -rd com.apple.quarantine /Library/Audio/Plug-Ins/VST3/Dexed.vst3` (which also requires sudo, unfortunately).
@@ -22,7 +23,6 @@ Check out the [https://soundcloud.com/gexahedrop/sets/domblar-showcase](https://
     * copy preset `assets/presets/dexed_preset.vstpreset` to `~/.vst3/presets/Digital\ Suburban/Dexed/` folder (create folder if it doesn't exist)
   * install SuperCollider (on Linux I found the easiest to install Supercollider via ansible-tidalcycles)
   * install VSTPlugin for SuperCollider - get binaries here https://git.iem.at/pd/vstplugin/-/releases - and put the VSTPlugin folder to ~/.local/share/SuperCollider/Extensions/ - and then run "Recompile Class Library" from SuperCollider, Menu -> Language -> Recompile Class Library
-2. Code is dependent on pyOSC3 library, to install it run `pip install pyOSC3` in terminal.
 
 ## Current restrictions/assumptions:
 

@@ -1,0 +1,5 @@
+pyOSC3>=1.2
+sc3>=1.1.3a0
+ipywidgets>=8.0.4
+psutil
+numpy
